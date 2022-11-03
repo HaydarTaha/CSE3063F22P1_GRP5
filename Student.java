@@ -29,6 +29,10 @@ public class Student {
         this.studentID = id;
     }
 
+    void fName(String firstName){
+        this.fName=firstName;
+    }
+
 
     public static void main(String args[])
     {
