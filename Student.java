@@ -45,6 +45,9 @@ public class Student {
         this.courseGrade=courseGrade;
     }
 
+    void changeGmailAddress(String gmailAddress){
+        this.gmailAddress = gmailAddress;
+    }
 
 
 
