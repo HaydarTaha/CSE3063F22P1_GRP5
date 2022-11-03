@@ -33,8 +33,12 @@ public class Student {
         this.fName=firstName;
     }
 
-    void addlName(String lastName){
+    void changelName(String lastName){
         this.lName = lastName;
+    }
+
+    void changeGmailAddress(String gmailAddress){
+        this.gmailAddress = gmailAddress;
     }
     public static void main(String args[])
     {
