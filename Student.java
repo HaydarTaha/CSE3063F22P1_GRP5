@@ -10,9 +10,9 @@ public class Student {
     int GPA;
     String courseGrade;
     String gmailAddress;
-    List<String> currentSelectedCourses = new ArrayList<>();
-    List<String> completedCourses = new ArrayList<>();
-    List<String> mandatoryCourses = new ArrayList<>();
+    List<String> currentSelectedCourses;
+    List<String> completedCourses;
+    List<String> mandatoryCourses;
     public Student(int studentID, String fName, String lName, int GPA, String courseGrade, List<String> currentSelectedCourses, List<String>completedCourses, List<String>mandatoryCourses, String gmailAddress){
         this.studentID = studentID;
         this.fName = fName;
@@ -25,7 +25,7 @@ public class Student {
         this.gmailAddress = gmailAddress;
 
     }
-    void addStudentID(int id){
+    void changeStudentID(int id){
         this.studentID = id;
     }
 
@@ -35,6 +35,9 @@ public class Student {
 
     void addlName(String lastName){
         this.lName = lastName;
+    }
+    void addGpa(int gpa){
+        this.GPA = gpa;
     }
     public static void main(String args[])
     {
