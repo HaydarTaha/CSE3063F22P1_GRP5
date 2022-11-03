@@ -29,16 +29,25 @@ public class Student {
         this.studentID = id;
     }
 
-    void fName(String firstName){
+    void changefName(String firstName){
         this.fName=firstName;
     }
 
     void addlName(String lastName){
         this.lName = lastName;
     }
+
     void addGpa(int gpa){
         this.GPA = gpa;
     }
+
+    void changeCourseGrade(String courseGrade){
+        this.courseGrade=courseGrade;
+    }
+
+
+
+
     public static void main(String args[])
     {
 
