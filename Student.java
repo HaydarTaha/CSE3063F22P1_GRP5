@@ -12,7 +12,7 @@ public class Student {
     List<String> currentSelectedCourses = new ArrayList<>();
     List<String> completedCourses = new ArrayList<>();
     List<String> mandatoryCourses = new ArrayList<>();
-    public Student(int studentID, String fName, String lName, int GPA, String courseGrade, List<String> currentSelectedCourses, List<String>completedCourses, List<String>mandatoryCourses){
+    public Student(int studentID, String fName, String lName, int GPA, String courseGrade, List<String> currentSelectedCourses, List<String>completedCourses, List<String>mandatoryCourses, String gmailAddress){
         this.studentID = studentID;
         this.fName = fName;
         this.lName = lName;
