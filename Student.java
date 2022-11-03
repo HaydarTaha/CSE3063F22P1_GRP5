@@ -37,7 +37,7 @@ public class Student {
         this.lName = lastName;
     }
 
-    void addGpa(int gpa){
+    void changeGpa(int gpa){
         this.GPA = gpa;
     }
 
