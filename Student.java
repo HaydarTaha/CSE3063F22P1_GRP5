@@ -8,6 +8,7 @@ public class Student {
     String lName;
     int GPA;
     String courseGrade;
+    String gmailAddress;
     List<String> currentSelectedCourses = new ArrayList<>();
     List<String> completedCourses = new ArrayList<>();
     List<String> mandatoryCourses = new ArrayList<>();
@@ -20,6 +21,7 @@ public class Student {
         this.currentSelectedCourses = currentSelectedCourses;
         this.completedCourses = completedCourses;
         this.mandatoryCourses = mandatoryCourses;
+        this.gmailAddress=gmailAddress;
 
     }
 
