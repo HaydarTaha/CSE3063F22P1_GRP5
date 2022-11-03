@@ -25,7 +25,9 @@ public class Student {
 
     }
 
-
+    void addlName(String lastName){
+        this.lName = lastName;
+    }
     public static void main(String args[])
     {
 
