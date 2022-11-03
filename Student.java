@@ -33,7 +33,7 @@ public class Student {
         this.fName=firstName;
     }
 
-    void addlName(String lastName){
+    void changelName(String lastName){
         this.lName = lastName;
     }
 
