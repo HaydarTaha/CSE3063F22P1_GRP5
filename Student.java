@@ -1,6 +1,7 @@
 import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Hashtable;
 
 public class Student {
     int studentID;
@@ -21,8 +22,15 @@ public class Student {
         this.currentSelectedCourses = currentSelectedCourses;
         this.completedCourses = completedCourses;
         this.mandatoryCourses = mandatoryCourses;
-        this.gmailAddress=gmailAddress;
+        this.gmailAddress = gmailAddress;
 
+    }
+    void addStudentID(int id){
+        this.studentID = id;
+    }
+
+    void fName(String firstName){
+        this.fName=firstName;
     }
 
     void addlName(String lastName){
