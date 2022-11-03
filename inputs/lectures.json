@@ -1,0 +1,323 @@
+[
+  {
+    "name": "Calculus I",
+    "courseCode" : "MATH1001",
+    "prerequisite" : [""],
+    "credit" : 6 ,
+    "courseType" : 5 ,
+    "semester" : 1,
+    "theoreticalCourseHour" : 4 ,
+    "practicalLessonHour" : 0
+  },
+  {
+    "name": "Basic Chemistry",
+    "courseCode" : "CHEM1007",
+    "prerequisite" : [""],
+    "credit" : 6 ,
+    "courseType" : 5  ,
+    "semester" : 1,
+    "theoreticalCourseHour" : 4,
+    "practicalLessonHour" : 0
+  },
+  {
+    "name": "Computer Programming I",
+    "courseCode" : "CSE1141",
+    "prerequisite" : [""],
+    "credit" : 6 ,
+    "courseType" : 5 ,
+    "semester" : 1 ,
+    "theoreticalCourseHour" : 3 ,
+    "practicalLessonHour" : 2
+  },
+  {
+    "name": "Physics 1",
+    "courseCode" : "PHYS1101",
+    "prerequisite" : [""],
+    "credit" : 4 ,
+    "courseType" : 5 ,
+    "semester" : 1 ,
+    "theoreticalCourseHour" : 3,
+    "practicalLessonHour" : 0
+  },
+  {
+    "name": "Physics Lab I",
+    "courseCode" : "PHYS1103",
+    "prerequisite" : [""],
+    "credit" : 2 ,
+    "courseType" : 5  ,
+    "semester" : 1 ,
+    "theoreticalCourseHour" : 0,
+    "practicalLessonHour" : 2
+  },
+  {
+    "name": "Atatürk's Prin. & History I",
+    "courseCode" : "ATA121",
+    "prerequisite" : [""],
+    "credit" : 2  ,
+    "courseType" : 5 ,
+    "semester" : 1 ,
+    "theoreticalCourseHour" : 2
+    "practicalLessonHour" : 0
+  },
+  {
+    "name": "Introduction to Computer Eng.",
+    "courseCode" : "CSE1100",
+    "prerequisite" : [""],
+    "credit" : 2 ,
+    "courseType" : 5 ,
+    "semester" : 1 ,
+    "theoreticalCourseHour" : 2 ,
+    "practicalLessonHour" : 0
+  },
+  {
+    "name": "Turkish Language I",
+    "courseCode" : "TRD 121",
+    "prerequisite" : [""],
+    "credit" : 2 ,
+    "courseType" : 5 ,
+    "semester" : 1 ,
+    "theoreticalCourseHour" : 2 ,
+    "practicalLessonHour" : 0
+  },
+  {
+    "name": "Calculus II",
+    "courseCode" : "MATH1002",
+    "prerequisite" : [""],
+    "credit" : 6 ,
+    "courseType" : 5 ,
+    "semester" : 2 ,
+    "theoreticalCourseHour" : 4  ,
+    "practicalLessonHour" : 0
+  },
+  {
+    "name": "Physics Lab II",
+    "courseCode" : "PHYS1104",
+    "prerequisite" : [""],
+    "credit" : 2 ,
+    "courseType" : 5 ,
+    "semester" : 2 ,
+    "theoreticalCourseHour" : 0  ,
+    "practicalLessonHour" : 2
+  },
+  {
+    "name": "Computer Programming II",
+    "courseCode" : "CSE1142",
+    "prerequisite" : ["CSE1141"],
+    "credit" : 7 ,
+    "courseType" : 5  ,
+    "semester" : 2 ,
+    "theoreticalCourseHour" : 3  ,
+    "practicalLessonHour" : 2
+  },
+  {
+    "name": "Physics II",
+    "courseCode" : "PHYS1102",
+    "prerequisite" : [""],
+    "credit" : 4 ,
+    "courseType" : 5 ,
+    "semester" : 2 ,
+    "theoreticalCourseHour" : 3  ,
+    "practicalLessonHour" : 0
+  },
+  {
+    "name": "Nontechnical Elective I",
+    "courseCode" : "NTE I",
+    "prerequisite" : [""],
+    "credit" : 3 ,
+    "courseType" : 1 ,
+    "semester" : 2 ,
+    "theoreticalCourseHour" : 2  ,
+    "practicalLessonHour" : 0
+  },
+  {
+    "name": "Atatürk's Prin. & History II",
+    "courseCode" : "ATA122",
+    "prerequisite" : [""],
+    "credit" : 2 ,
+    "courseType" : 5 ,
+    "semester" : 2 ,
+    "theoreticalCourseHour" : 2  ,
+    "practicalLessonHour" : 0
+  },
+  {
+    "name": "Linear Algebra",
+    "courseCode" : "MATH2056",
+    "prerequisite" : [""],
+    "credit" : 4 ,
+    "courseType" : 5  ,
+    "semester" : 2 ,
+    "theoreticalCourseHour" : 3   ,
+    "practicalLessonHour" : 0
+  },
+  {
+    "name": "Turkish Language II",
+    "courseCode" : "TRD 122",
+    "prerequisite" : [""],
+    "credit" : 2 ,
+    "courseType" : 5 ,
+    "semester" : 2  ,
+    "theoreticalCourseHour" : 2 ,
+    "practicalLessonHour" : 0
+  },
+  {
+    "name": "Differential Equations",
+    "courseCode" : "MATH2055",
+    "prerequisite" : ["MATH1001"],
+    "credit" : 4  ,
+    "courseType" : 5  ,
+    "semester" : 3  ,
+    "theoreticalCourseHour" : 3   ,
+    "practicalLessonHour" : 0
+  },
+  {
+    "name": "Data Structures",
+    "courseCode" : "CSE2025",
+    "prerequisite" : ["CSE1142"],
+    "credit" : 8 ,
+    "courseType" : 5 ,
+    "semester" : 3 ,
+    "theoreticalCourseHour" : 3 ,
+    "practicalLessonHour" : 2
+  },
+  {
+    "name": "Discrete Comp. Structures",
+    "courseCode" : "CSE2023",
+    "prerequisite" : [""],
+    "credit" : 6 ,
+    "courseType" : 5 ,
+    "semester" : 3 ,
+    "theoreticalCourseHour" : 3 ,
+    "practicalLessonHour" : 0
+  },
+  {
+    "name": "Electric Circuits",
+    "courseCode" : "EE2031",
+    "prerequisite" : ["PHYS1102"],
+    "credit" : 5 ,
+    "courseType" : 5 ,
+    "semester" : 3 ,
+    "theoreticalCourseHour" : 3,
+    "practicalLessonHour" : 0
+  },
+  {
+    "name": "Introduction to Economics",
+    "courseCode" : "ECON2003",
+    "prerequisite" : [""],
+    "credit" : 4 ,
+    "courseType" : 5 ,
+    "semester" : 3 ,
+    "theoreticalCourseHour" : 3  ,
+    "practicalLessonHour" : 0
+  },
+  {
+    "name": "Nontechnical Elective I",
+    "courseCode" : "NTE II",
+    "prerequisite" : [""],
+    "credit" : 3 ,
+    "courseType" : 1 ,
+    "semester" : 3 ,
+    "theoreticalCourseHour" : 2 ,
+    "practicalLessonHour" : 0
+  },
+  {
+    "name": "Numerical Methods",
+    "courseCode" : "MATH2059",
+    "prerequisite" : ["MATH1001"],
+    "credit" : 4 ,
+    "courseType" : 5 ,
+    "semester" : 4 ,
+    "theoreticalCourseHour" : 3  ,
+    "practicalLessonHour" : 0
+  },
+  {
+    "name": "Analysis of Algorithms",
+    "courseCode" : "CSE2046",
+    "prerequisite" : ["CSE2025"],
+    "credit" : 6  ,
+    "courseType" : 5 ,
+    "semester" : 4  ,
+    "theoreticalCourseHour" : 3  ,
+    "practicalLessonHour" : 0
+  },
+  {
+    "name": "",
+    "courseCode" : "",
+    "prerequisite" : [""],
+    "credit" :  ,
+    "courseType" :  ,
+    "semester" :  ,
+    "theoreticalCourseHour" :   ,
+    "practicalLessonHour" :
+  },
+  {
+    "name": "",
+    "courseCode" : "",
+    "prerequisite" : [""],
+    "credit" :  ,
+    "courseType" :  ,
+    "semester" :  ,
+    "theoreticalCourseHour" :   ,
+    "practicalLessonHour" :
+  },
+  {
+    "name": "",
+    "courseCode" : "",
+    "prerequisite" : [""],
+    "credit" :  ,
+    "courseType" :  ,
+    "semester" :  ,
+    "theoreticalCourseHour" :   ,
+    "practicalLessonHour" :
+  },
+  {
+    "name": "",
+    "courseCode" : "",
+    "prerequisite" : [""],
+    "credit" :  ,
+    "courseType" :  ,
+    "semester" :  ,
+    "theoreticalCourseHour" :   ,
+    "practicalLessonHour" :
+  },
+  {
+    "name": "",
+    "courseCode" : "",
+    "prerequisite" : [""],
+    "credit" :  ,
+    "courseType" :  ,
+    "semester" :  ,
+    "theoreticalCourseHour" :   ,
+    "practicalLessonHour" :
+  },
+  {
+    "name": "",
+    "courseCode" : "",
+    "prerequisite" : [""],
+    "credit" :  ,
+    "courseType" :  ,
+    "semester" :  ,
+    "theoreticalCourseHour" :   ,
+    "practicalLessonHour" :
+  },
+  {
+    "name": "",
+    "courseCode" : "",
+    "prerequisite" : [""],
+    "credit" :  ,
+    "courseType" :  ,
+    "semester" :  ,
+    "theoreticalCourseHour" :   ,
+    "practicalLessonHour" :
+  },
+  {
+    "name": "",
+    "courseCode" : "",
+    "prerequisite" : [""],
+    "credit" :  ,
+    "courseType" :  ,
+    "semester" :  ,
+    "theoreticalCourseHour" :   ,
+    "practicalLessonHour" :
+  }
+
+]
