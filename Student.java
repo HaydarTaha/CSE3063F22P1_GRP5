@@ -25,6 +25,10 @@ public class Student {
 
     }
 
+    void fName(String firstName){
+        this.fName=firstName;
+    }
+
 
     public static void main(String args[])
     {
