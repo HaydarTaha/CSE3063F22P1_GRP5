@@ -85,14 +85,6 @@ public class Courses {
         this.credit = credit;
     }
 
-    public Courses(){
 
-
-
-
-
-
-
-    }
 
 }
