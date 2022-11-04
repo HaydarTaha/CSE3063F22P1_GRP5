@@ -56,7 +56,7 @@
     "credit" : 2  ,
     "courseType" : 5 ,
     "semester" : 1 ,
-    "theoreticalCourseHour" : 2
+    "theoreticalCourseHour" : 2,
     "practicalLessonHour" : 0
   },
   {
@@ -458,7 +458,7 @@
     "semester" : 7 ,
     "theoreticalCourseHour" : 2  ,
     "practicalLessonHour" : 0
-  },
+  }
 
 
 ]

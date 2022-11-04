@@ -4,6 +4,10 @@ public class Courses {
     private String courseCode;
     private String prerequisite;
     private int credit;
+    private int courseType;
+    private int semester;
+    private int theoreticalCourseHour;
+    private int practicalLessonHour;
 
     public String getName() {
         return name;
