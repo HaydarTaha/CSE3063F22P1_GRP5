@@ -9,6 +9,38 @@ public class Courses {
     private int theoreticalCourseHour;
     private int practicalLessonHour;
 
+    public void setCourseType(int courseType) {
+        this.courseType = courseType;
+    }
+
+    public void setSemester(int semester) {
+        this.semester = semester;
+    }
+
+    public void setTheoreticalCourseHour(int theoreticalCourseHour) {
+        this.theoreticalCourseHour = theoreticalCourseHour;
+    }
+
+    public void setPracticalLessonHour(int practicalLessonHour) {
+        this.practicalLessonHour = practicalLessonHour;
+    }
+
+    public int getSemester() {
+        return semester;
+    }
+
+    public int getTheoreticalCourseHour() {
+        return theoreticalCourseHour;
+    }
+
+    public int getPracticalLessonHour() {
+        return practicalLessonHour;
+    }
+
+    public int getCourseType() {
+        return courseType;
+    }
+
     public String getName() {
         return name;
     }
