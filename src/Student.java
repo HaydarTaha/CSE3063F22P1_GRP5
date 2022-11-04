@@ -5,7 +5,7 @@ public class Student {
     int studentID;
     String fName;
     String lName;
-    int GPA;
+    double GPA;
     String courseGrade;
     String gmailAddress;
     List<String> currentSelectedCourses;
@@ -39,10 +39,10 @@ public class Student {
     }
     String getlName() { return this.lName; }
 
-    public void changeGpa(int gpa){
+    public void changeGpa(double gpa){
         this.GPA = gpa;
     }
-    int getGPA() { return this.GPA; }
+    double getGPA() { return this.GPA; }
 
     public void changeCourseGrade(String courseGrade){
         this.courseGrade=courseGrade;
@@ -63,7 +63,7 @@ public class Student {
     String getGmailAddress() { return this.gmailAddress; }
 
     void printStudentInfo(){
-        System.out.println( "Student ID: " +this.studentID+ "\nName: " +this.fName+ " " +this.lName+ "\nGPA: " +this.GPA+ "\nEmail Address: " +this.gmailAddress+ "\nCurrent Selected Courses: " +this.currentSelectedCourses+ "\nCompleted Courses: " +this.completedCourses+ "\nCourses Needed to Finish to Graduate: " +this.mandatoryCourses);
+        System.out.println( "Student ID: " +this.studentID+ "\nName: " +this.fName+ " " +this.lName+ "\nGPA: " +this.GPA+ "\nEmail Address: " +this.gmailAddress+ "\nCurrent Selected Courses: " +this.currentSelectedCourses+ "\nCompleted Courses: " +this.completedCourses+ "\nCourses Needed to Finish to Graduate: " +this.mandatoryCourses +"\n");
     }
     public static void main(String args[]){
         List<String> Test = new ArrayList<>();
@@ -71,7 +71,18 @@ public class Student {
         Test.add("2");
 
         Student newS = new Student(123, "Mert", "Özincegedik", 3, "A",Test,Test,Test,"gmail.com");
-
+        List<String> testTwo = new ArrayList<>();
+        testTwo.add("3");
+        testTwo.add("4");
+        newS.printStudentInfo();
+        newS.changeStudentID(321);
+        newS.changefName("Burak");
+        newS.changelName("Soyad");
+        newS.changeGpa(3.12);
+        newS.changeCompletedCourses(testTwo);
+        newS.changeCurrentSelectedCourses(testTwo);
+        newS.changeMandatoryCourses(testTwo);
+        newS.changeGmailAddress("burak@gmail.com");
         newS.printStudentInfo();
 
     }
