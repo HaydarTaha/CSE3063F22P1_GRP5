@@ -1,0 +1,16 @@
+[
+  {
+    "studentId": "150119745",
+    "fName": "Haydar Taha",
+    "lName":  "Tunç",
+    "GPA": 2.72,
+    "gmailAddress": "tahatunc163@gmail.com",
+    "currentSelectedCourses": ["Database"],
+    "completedCourses": {
+      "CSE1142": "AA",
+      "CSE1141": "BA"
+    },
+    "mandatoryCourses": ["CSE2025"],
+    "failedCourses": ["EE2031"]
+  }
+]
