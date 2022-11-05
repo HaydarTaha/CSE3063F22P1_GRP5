@@ -27,4 +27,22 @@ public class Output {
             e.printStackTrace();
         }
     }
+
+    public void randomID(){
+        int number19 = 150119000;
+        int number18 = 150118000;
+        int number17 = 150117000;
+        int number16 = 150116000;
+
+        int studentId;
+
+        for (int i = number18; i<number19; i=i+4){
+            studentId=i;
+        }
+
+
+
+
+
+    }
 }
