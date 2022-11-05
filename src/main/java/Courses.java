@@ -30,7 +30,6 @@ public class Courses {
     }
 
     public int getTheoreticalCourseHour() {
-
         return theoreticalCourseHour;
     }
 
@@ -75,6 +74,10 @@ public class Courses {
     }
 
     public Courses(){
+
+
+
+
 
 
 
