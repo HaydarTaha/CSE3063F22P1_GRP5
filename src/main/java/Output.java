@@ -43,13 +43,24 @@ public class Output {
         FileWriter fileWriter = new FileWriter("./inputs/studentIDs.json");
 
         JSONArray jsonArray = new JSONArray();
+        for (int i: studentId19){
+            JSONObject jsonObject = new JSONObject();
+            jsonObject.put("studentId", i);
+            jsonArray.add(jsonObject);
+        }
 
         for (int i: studentId18){
             JSONObject jsonObject = new JSONObject();
             jsonObject.put("studentId", i);
             jsonArray.add(jsonObject);
         }
-        for (int i: studentId19){
+
+        for (int i: studentId17){
+            JSONObject jsonObject = new JSONObject();
+            jsonObject.put("studentId", i);
+            jsonArray.add(jsonObject);
+        }
+        for (int i: studentId16){
             JSONObject jsonObject = new JSONObject();
             jsonObject.put("studentId", i);
             jsonArray.add(jsonObject);
