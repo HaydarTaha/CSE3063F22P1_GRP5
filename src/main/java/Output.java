@@ -1,4 +1,4 @@
-import netscape.javascript.JSException;
+import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
 import java.io.*;
@@ -11,20 +11,18 @@ public class Output {
         BufferedReader lNameBr = new BufferedReader(new FileReader(lName));
 
         String fNameStr, lNameStr;
+        JSONArray jsonArray = new JSONArray();
+        JSONObject jsonObject = new JSONObject();
+        FileWriter fileWriter = new FileWriter("./inputs/studentNames.json");
 
-        JSONObject json = new JSONObject();
-        try {
-            while ((fNameStr =fNameBr.readLine()) != null && (lNameStr = lNameBr.readLine()) != null){
-                json.put("name", fNameStr + " " + lNameStr);
-            }
-        } catch (JSException e){
-            e.printStackTrace();
+        while ((fNameStr =fNameBr.readLine()) != null && (lNameStr = lNameBr.readLine()) != null){
+            JSONObject json = new JSONObject();
+            json.put("fName", fNameStr);
+            json.put("lName", lNameStr);
+            jsonArray.add(json);
         }
+        PrintWriter out = new PrintWriter(fileWriter);
+        out.write(jsonArray.toString());
 
-        try (PrintWriter out = new PrintWriter(new FileWriter("./inputs/studentNames.json"))){
-            out.write(json.toString());
-        } catch (Exception e){
-            e.printStackTrace();
-        }
     }
 }
