@@ -6,18 +6,6 @@ public class Courses {
     private int credit;
     private int courseType;
     private int semester;
-
-    public Courses(String name, String courseCode, String prerequisite, int credit, int courseType, int semester, int theoreticalCourseHour, int practicalLessonHour) {
-        this.name = name;
-        this.courseCode = courseCode;
-        this.prerequisite = prerequisite;
-        this.credit = credit;
-        this.courseType = courseType;
-        this.semester = semester;
-        this.theoreticalCourseHour = theoreticalCourseHour;
-        this.practicalLessonHour = practicalLessonHour;
-    }
-
     private int theoreticalCourseHour;
     private int practicalLessonHour;
 
@@ -85,6 +73,14 @@ public class Courses {
         this.credit = credit;
     }
 
+    public Courses(){
 
+
+
+
+
+
+
+    }
 
 }
