@@ -1,17 +1,30 @@
+import java.io.File;
+import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.HashMap;
+import org.json.simple.JSONObject;
+import org.json.simple.JSONArray;
+import org.json.simple.parser.JSONParser;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+import java.io.IOException;
+import java.util.Map;
+
 
 public class Student {
     private int studentID;
     private String fName;
     private String lName;
     private double GPA;
-    private String courseGrade;
     private String gmailAddress;
     private List<String> currentSelectedCourses;
-    private List<String> completedCourses;
+
+    private CompletedCourses completedCourses;
     private List<String> mandatoryCourses;
-    private List<String> failedCourses;
+    private FailedCourses failedCourses;
 
     public void setStudentID(int studentID) {
         this.studentID = studentID;
@@ -29,9 +42,6 @@ public class Student {
         this.GPA = GPA;
     }
 
-    public void setCourseGrade(String courseGrade) {
-        this.courseGrade = courseGrade;
-    }
 
     public void setGmailAddress(String gmailAddress) {
         this.gmailAddress = gmailAddress;
@@ -41,7 +51,7 @@ public class Student {
         this.currentSelectedCourses = currentSelectedCourses;
     }
 
-    public void setCompletedCourses(List<String> completedCourses) {
+    public void setCompletedCourses(CompletedCourses completedCourses) {
         this.completedCourses = completedCourses;
     }
 
@@ -49,99 +59,58 @@ public class Student {
         this.mandatoryCourses = mandatoryCourses;
     }
 
-    public List<String> getFailedCourses() {
+    public FailedCourses getFailedCourses() {
         return failedCourses;
     }
 
-    public void setFailedCourses(List<String> failedCourses) {
+    public void setFailedCourses(FailedCourses failedCourses) {
         this.failedCourses = failedCourses;
     }
 
-    int getStudentID() { return this.studentID; }
+    int getStudentID() { return studentID; }
 
-    String getfName() { return this.fName; }
+    String getfName() { return fName; }
 
-    String getlName() { return this.lName; }
+    String getlName() { return lName; }
 
-    double getGPA() { return this.GPA; }
+    double getGPA() { return GPA; }
 
-    String getCourseGrade() { return this.courseGrade;}
+    List<String> getCurrentSelectedCourses() { return currentSelectedCourses; }
 
-    List<String> getCurrentSelectedCourses() { return this.currentSelectedCourses; }
+    CompletedCourses getCompletedCourses() { return completedCourses; }
 
-    List<String> getCompletedCourses() { return this.completedCourses; }
+    List<String> getMandatoryCourses() { return mandatoryCourses; }
 
-    List<String> getMandatoryCourses() { return this.mandatoryCourses; }
+    String getGmailAddress() { return gmailAddress; }
 
-    String getGmailAddress() { return this.gmailAddress; }
-
-    public Student(int studentID, String fName, String lName, int GPA, String courseGrade, List<String> currentSelectedCourses, List<String> completedCourses, List<String> mandatoryCourses, String gmailAddress, List<String> failedCourses){
-        this.studentID = studentID;
-        this.fName = fName;
-        this.lName = lName;
-        this.GPA = GPA;
-        this.courseGrade = courseGrade;
-        this.currentSelectedCourses = currentSelectedCourses;
-        this.completedCourses = completedCourses;
-        this.mandatoryCourses = mandatoryCourses;
-        this.gmailAddress = gmailAddress;
-
-        this.failedCourses = failedCourses;
-    }
-    public void changeStudentID(int id){
-        this.studentID = id;
-    }
-
-    public void changefName(String firstName){
-        this.fName=firstName;
-    }
-
-    public void changelName(String lastName){
-        this.lName = lastName;
-    }
-
-    public void changeGpa(double gpa){
-        this.GPA = gpa;
-    }
-
-    public void changeCourseGrade(String courseGrade){
-        this.courseGrade=courseGrade;
-    }
-
-    public void changeCurrentSelectedCourses(List<String>currentCourses){ this.currentSelectedCourses = currentCourses; }
-
-    public void changeCompletedCourses(List<String>completedCourses){ this.completedCourses = completedCourses; }
-
-    public void changeMandatoryCourses(List<String>mandatoryCourses){ this.mandatoryCourses = mandatoryCourses; }
-
-    public void changeGmailAddress(String gmailAddress){
-        this.gmailAddress = gmailAddress;
-    }
 
     void printStudentInfo(){
-        System.out.println( "Student ID: " +this.studentID+ "\nName: " +this.fName+ " " +this.lName+ "\nGPA: " +this.GPA+ "\nEmail Address: " +this.gmailAddress+ "\nCurrent Selected Courses: " +this.currentSelectedCourses+ "\nCompleted Courses: " +this.completedCourses+ "\nCourses Needed to Finish to Graduate: " +this.mandatoryCourses +"\n");
+        //System.out.println( "Student ID: " +this.studentID+ "\nName: " +this.fName+ " " +this.lName+ "\nGPA: " +this.GPA+ "\nEmail Address: " +this.gmailAddress+ "\nCurrent Selected Courses: " +this.currentSelectedCourses+ "\nCompleted Courses: " +this.completedCourses+ "\nCourses Needed to Finish to Graduate: " +this.mandatoryCourses +"\n");
     }
-    /*
-    public static void main(String args[]){
+
+    public static Student createStudent(){
+        Student student = new Student();
+        student.setStudentID(150119643);
+        student.setfName("Mert");
+        student.setlName("Özincegedik");
+        student.setGPA(3.22);
+        student.setGmailAddress("mertozincegedik@marun.edu.tr");
+        List<String>currentSelectedCourses = new ArrayList<>();
+        currentSelectedCourses.add("CSE1141");
+        currentSelectedCourses.add("CSE1142");
+    }
+    public static void main(String args[]) throws IOException {
         List<String> Test = new ArrayList<>();
         Test.add("1");
         Test.add("2");
 
-        Student newS = new Student(123, "Mert", "Özincegedik", 3, "A",Test,Test,Test,"gmail.com", failedCourses);
-        List<String> testTwo = new ArrayList<>();
-        testTwo.add("3");
-        testTwo.add("4");
-        newS.printStudentInfo();
-        newS.changeStudentID(321);
-        newS.changefName("Burak");
-        newS.changelName("Soyad");
-        newS.changeGpa(3.12);
-        newS.changeCompletedCourses(testTwo);
-        newS.changeCurrentSelectedCourses(testTwo);
-        newS.changeMandatoryCourses(testTwo);
-        newS.changeGmailAddress("burak@gmail.com");
-        newS.printStudentInfo();
+        byte[] jsonData = Files.readAllBytes(Paths.get("C:\\Users\\mert_\\IdeaProjects\\CSE3063F22P1_GRP5\\inputs\\lectures.json"));
+        ObjectMapper objectMapper = new ObjectMapper();
+        Student student = objectMapper.readValue(jsonData, Student.class);
+        System.out.println("Stu obj\n"+student);
+
+
 
     }
-    */
+
 }
