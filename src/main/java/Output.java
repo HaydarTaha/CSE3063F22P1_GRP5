@@ -20,11 +20,34 @@ public class Output {
         } catch (JSException e){
             e.printStackTrace();
         }
+        System.out.println("************************");
+        creatingStudentID();
+        System.out.println("************************");
 
         try (PrintWriter out = new PrintWriter(new FileWriter("./inputs/studentNames.json"))){
             out.write(json.toString());
         } catch (Exception e){
             e.printStackTrace();
         }
+    }
+
+    public static void creatingStudentID(){
+        int number19 = 150119000;
+        int number18 = 150118000;
+
+        int[] studentId19 = new int[250];
+        int[] studentId18 = new int[250];
+
+        for (int i = 0; i<250; i++){
+            studentId18[i]=number18+4*i;
+            System.out.println(studentId18[i]);
+        }
+
+        for (int i = 0; i<250; i++){
+            studentId19[i]=number19+4*i;
+            System.out.println(studentId19[i]);
+        }
+
+
     }
 }
