@@ -14,17 +14,31 @@ public class Output {
     public static void creatingStudentID() throws IOException {
         int number19 = 150119000;
         int number18 = 150118000;
+        int number17 = 150117000;
+        int number16 = 150116000;
 
         int[] studentId19 = new int[250];
         int[] studentId18 = new int[250];
+        int[] studentId17 = new int[250];
+        int[] studentId16 = new int[250];
 
         for (int i = 0; i<250; i++){
-            studentId18[i]=number18+4*i;
-            System.out.println(studentId18[i]);
+            studentId19[i]=number19 + 4 * i;
+            System.out.println(studentId19[i]);
         }
         for (int i = 0; i<250; i++){
-            studentId19[i]=number19+4*i;
-            System.out.println(studentId19[i]);
+            studentId18[i]=number18 + 4 * i;
+            System.out.println(studentId18[i]);
+        }
+
+        for (int i = 0; i<250; i++){
+            studentId17[i]=number17 + 4 * i;
+            System.out.println(studentId17[i]);
+        }
+
+        for (int i = 0; i<250; i++){
+            studentId16[i]=number16 + 4 * i;
+            System.out.println(studentId16[i]);
         }
         FileWriter fileWriter = new FileWriter("./inputs/studentIDs.json");
 
