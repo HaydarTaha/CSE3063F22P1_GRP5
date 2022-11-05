@@ -1,0 +1,66 @@
+{"Students": [
+  {
+  "studentID": 150119643,
+  "fName": "Mert",
+  "lName": "Özincegedik",
+  "GPA": 3.12,
+  "gmailAddress": "mertozincegedik@marun.edu.tr",
+  "currentSelectedCourses": [
+    "CSE1142",
+    "CSE1143"
+  ],
+  "completedCourses": {
+    "course": [
+      {
+        "name": "CSE!!41",
+        "grade": "AA"
+      },
+      {
+        "name":"Cse 1142",
+        "grade": "AA"
+      }
+    ],
+    "courseGrade": ["AA","BB"]
+  },
+  "mandatoryCourses": [
+    "IE3081",
+    "CSE3063"
+  ],
+  "failedCourses": {
+    "courseName": ["CSE1141", "CSE1142"],
+    "courseGrade": ["FF", "FD"]
+  },
+  "phoneNumbers": [
+    123456,
+    987654]
+  },
+  {
+    "studentID": 150119643,
+    "fName": "Mert",
+    "lName": "Özincegedik",
+    "GPA": 3.12,
+    "gmailAddress": "mertozincegedik@marun.edu.tr",
+    "currentSelectedCourses": [
+      "CSE1142",
+      "CSE1143"
+    ],
+    "completedCourses": {
+      "courseName": ["CSE1141", "CSE1142"],
+      "courseGrade": ["AA","BB"]
+    },
+
+    "mandatoryCourses": [
+      "IE3081",
+      "CSE3063"
+    ],
+    "failedCourses": {
+      "courseName": ["CSE1141", "CSE1142"],
+      "courseGrade": ["FF","FD"]
+    },
+    "phoneNumbers": [
+      123456,
+      987654
+    ]
+  }
+]
+}
