@@ -121,6 +121,7 @@ public class Student {
     void printStudentInfo(){
         System.out.println( "Student ID: " +this.studentID+ "\nName: " +this.fName+ " " +this.lName+ "\nGPA: " +this.GPA+ "\nEmail Address: " +this.gmailAddress+ "\nCurrent Selected Courses: " +this.currentSelectedCourses+ "\nCompleted Courses: " +this.completedCourses+ "\nCourses Needed to Finish to Graduate: " +this.mandatoryCourses +"\n");
     }
+    /*
     public static void main(String args[]){
         List<String> Test = new ArrayList<>();
         Test.add("1");
@@ -142,4 +143,5 @@ public class Student {
         newS.printStudentInfo();
 
     }
+    */
 }
