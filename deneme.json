@@ -1,66 +1,72 @@
-{"Students": [
-  {
-  "studentID": 150119643,
-  "fName": "Mert",
-  "lName": "Özincegedik",
-  "GPA": 3.12,
-  "gmailAddress": "mertozincegedik@marun.edu.tr",
-  "currentSelectedCourses": [
-    "CSE1142",
-    "CSE1143"
-  ],
-  "completedCourses": {
-    "course": [
-      {
-        "name": "CSE!!41",
-        "grade": "AA"
-      },
-      {
-        "name":"Cse 1142",
-        "grade": "AA"
-      }
-    ],
-    "courseGrade": ["AA","BB"]
-  },
-  "mandatoryCourses": [
-    "IE3081",
-    "CSE3063"
-  ],
-  "failedCourses": {
-    "courseName": ["CSE1141", "CSE1142"],
-    "courseGrade": ["FF", "FD"]
-  },
-  "phoneNumbers": [
-    123456,
-    987654]
-  },
+[
   {
     "studentID": 150119643,
     "fName": "Mert",
     "lName": "Özincegedik",
-    "GPA": 3.12,
+    "gpa": 3.12,
     "gmailAddress": "mertozincegedik@marun.edu.tr",
     "currentSelectedCourses": [
       "CSE1142",
       "CSE1143"
     ],
-    "completedCourses": {
-      "courseName": ["CSE1141", "CSE1142"],
-      "courseGrade": ["AA","BB"]
-    },
-
+    "completedCourses": [
+      {
+        "courseName": "CSE1141",
+        "courseGrade": "AA"
+      },
+      {
+        "courseName": "Cse 1142",
+        "courseGrade": "AA"
+      }
+    ],
     "mandatoryCourses": [
       "IE3081",
       "CSE3063"
     ],
-    "failedCourses": {
-      "courseName": ["CSE1141", "CSE1142"],
-      "courseGrade": ["FF","FD"]
-    },
-    "phoneNumbers": [
-      123456,
-      987654
+    "failedCourses": [
+      {
+        "courseName": "CSE1141",
+        "courseGrade": "FF"
+      },
+      {
+        "courseName": "Cse 1142",
+        "courseGrade": "FF"
+      }
+    ]
+  },
+  {
+    "studentID": 150117002,
+    "fName": "Burak",
+    "lName": "Aslan",
+    "gpa": 3.12,
+    "gmailAddress": "burakaslan17@marun.edu.tr",
+    "currentSelectedCourses": [
+      "CSE1141",
+      "CSE1142"
+    ],
+    "completedCourses": [
+      {
+        "courseName": "CSE1140",
+        "courseGrade": "AA"
+      },
+      {
+        "courseName": "Cse 1148",
+        "courseGrade": "AA"
+      }
+    ],
+    "mandatoryCourses": [
+      "IE3081",
+      "CSE3063"
+    ],
+    "failedCourses": [
+      {
+        "courseName": "CSE1140",
+        "courseGrade": "FF"
+      },
+      {
+        "courseName": "Cse 1145",
+        "courseGrade": "FF"
+      }
     ]
   }
 ]
-}
