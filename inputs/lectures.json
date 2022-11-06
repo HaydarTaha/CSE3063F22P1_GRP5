@@ -9,6 +9,7 @@
       "credit": 6,
       "courseType": 5,
       "semester": 1,
+      "courseYear": 1,
       "theoreticalCourseHour": 4,
       "practicalLessonHour": 0
     },
@@ -21,6 +22,7 @@
       "credit": 6,
       "courseType": 5,
       "semester": 1,
+      "courseYear": 1,
       "theoreticalCourseHour": 4,
       "practicalLessonHour": 0
     },
@@ -33,6 +35,7 @@
       "credit": 6,
       "courseType": 5,
       "semester": 1,
+      "courseYear": 1,
       "theoreticalCourseHour": 3,
       "practicalLessonHour": 2
     },
@@ -45,6 +48,7 @@
       "credit": 4,
       "courseType": 5,
       "semester": 1,
+      "courseYear": 1,
       "theoreticalCourseHour": 3,
       "practicalLessonHour": 0
     },
@@ -57,6 +61,7 @@
       "credit": 2,
       "courseType": 5,
       "semester": 1,
+      "courseYear": 1,
       "theoreticalCourseHour": 0,
       "practicalLessonHour": 2
     },
@@ -69,6 +74,7 @@
       "credit": 2,
       "courseType": 5,
       "semester": 1,
+      "courseYear": 1,
       "theoreticalCourseHour": 2,
       "practicalLessonHour": 0
     },
@@ -81,6 +87,7 @@
       "credit": 2,
       "courseType": 5,
       "semester": 1,
+      "courseYear": 1,
       "theoreticalCourseHour": 2,
       "practicalLessonHour": 0
     },
@@ -93,6 +100,7 @@
       "credit": 2,
       "courseType": 5,
       "semester": 1,
+      "courseYear": 1,
       "theoreticalCourseHour": 2,
       "practicalLessonHour": 0
     },
@@ -105,6 +113,7 @@
       "credit": 6,
       "courseType": 5,
       "semester": 2,
+      "courseYear": 1,
       "theoreticalCourseHour": 4,
       "practicalLessonHour": 0
     },
@@ -117,6 +126,7 @@
       "credit": 2,
       "courseType": 5,
       "semester": 2,
+      "courseYear": 1,
       "theoreticalCourseHour": 0,
       "practicalLessonHour": 2
     },
@@ -129,6 +139,7 @@
       "credit": 7,
       "courseType": 5,
       "semester": 2,
+      "courseYear": 1,
       "theoreticalCourseHour": 3,
       "practicalLessonHour": 2
     },
@@ -141,6 +152,7 @@
       "credit": 4,
       "courseType": 5,
       "semester": 2,
+      "courseYear": 1,
       "theoreticalCourseHour": 3,
       "practicalLessonHour": 0
     },
@@ -153,6 +165,7 @@
       "credit": 3,
       "courseType": 1,
       "semester": 2,
+      "courseYear": 1,
       "theoreticalCourseHour": 2,
       "practicalLessonHour": 0
     },
@@ -165,6 +178,7 @@
       "credit": 2,
       "courseType": 5,
       "semester": 2,
+      "courseYear": 1,
       "theoreticalCourseHour": 2,
       "practicalLessonHour": 0
     },
@@ -177,6 +191,7 @@
       "credit": 4,
       "courseType": 5,
       "semester": 2,
+      "courseYear": 1,
       "theoreticalCourseHour": 3,
       "practicalLessonHour": 0
     },
@@ -189,6 +204,7 @@
       "credit": 2,
       "courseType": 5,
       "semester": 2,
+      "courseYear": 1,
       "theoreticalCourseHour": 2,
       "practicalLessonHour": 0
     },
@@ -201,6 +217,7 @@
       "credit": 4,
       "courseType": 5,
       "semester": 3,
+      "courseYear": 2,
       "theoreticalCourseHour": 3,
       "practicalLessonHour": 0
     },
@@ -213,6 +230,7 @@
       "credit": 8,
       "courseType": 5,
       "semester": 3,
+      "courseYear": 2,
       "theoreticalCourseHour": 3,
       "practicalLessonHour": 2
     },
@@ -225,6 +243,7 @@
       "credit": 6,
       "courseType": 5,
       "semester": 3,
+      "courseYear": 2,
       "theoreticalCourseHour": 3,
       "practicalLessonHour": 0
     },
@@ -237,6 +256,7 @@
       "credit": 5,
       "courseType": 5,
       "semester": 3,
+      "courseYear": 2,
       "theoreticalCourseHour": 3,
       "practicalLessonHour": 0
     },
@@ -249,6 +269,7 @@
       "credit": 4,
       "courseType": 5,
       "semester": 3,
+      "courseYear": 2,
       "theoreticalCourseHour": 3,
       "practicalLessonHour": 0
     },
@@ -261,6 +282,7 @@
       "credit": 3,
       "courseType": 1,
       "semester": 3,
+      "courseYear": 2,
       "theoreticalCourseHour": 2,
       "practicalLessonHour": 0
     },
@@ -273,6 +295,7 @@
       "credit": 4,
       "courseType": 5,
       "semester": 4,
+      "courseYear": 2,
       "theoreticalCourseHour": 3,
       "practicalLessonHour": 0
     },
@@ -285,6 +308,7 @@
       "credit": 6,
       "courseType": 5,
       "semester": 4,
+      "courseYear": 2,
       "theoreticalCourseHour": 3,
       "practicalLessonHour": 0
     },
@@ -297,6 +321,7 @@
       "credit": 4,
       "courseType": 5,
       "semester": 4,
+      "courseYear": 2,
       "theoreticalCourseHour": 2,
       "practicalLessonHour": 0
     },
@@ -309,6 +334,7 @@
       "credit": 5,
       "courseType": 5,
       "semester": 4,
+      "courseYear": 2,
       "theoreticalCourseHour": 2,
       "practicalLessonHour": 2
     },
@@ -321,6 +347,7 @@
       "credit": 7,
       "courseType": 5,
       "semester": 4,
+      "courseYear": 2,
       "theoreticalCourseHour": 3,
       "practicalLessonHour": 2
     },
@@ -333,6 +360,7 @@
       "credit": 4,
       "courseType": 5,
       "semester": 4,
+      "courseYear": 2,
       "theoreticalCourseHour": 3,
       "practicalLessonHour": 0
     },
@@ -345,6 +373,7 @@
       "credit": 10,
       "courseType": 5,
       "semester": 5,
+      "courseYear": 3,
       "theoreticalCourseHour": 0,
       "practicalLessonHour": 0
     },
@@ -357,6 +386,7 @@
       "credit": 7,
       "courseType": 5,
       "semester": 5,
+      "courseYear": 3,
       "theoreticalCourseHour": 3,
       "practicalLessonHour": 2
     },
@@ -369,6 +399,7 @@
       "credit": 7,
       "courseType": 5,
       "semester": 5,
+      "courseYear": 3,
       "theoreticalCourseHour": 3,
       "practicalLessonHour": 2
     },
@@ -381,6 +412,7 @@
       "credit": 5,
       "courseType": 5,
       "semester": 5,
+      "courseYear": 3,
       "theoreticalCourseHour": 3,
       "practicalLessonHour": 0
     },
@@ -393,6 +425,7 @@
       "credit": 7,
       "courseType": 5,
       "semester": 5,
+      "courseYear": 3,
       "theoreticalCourseHour": 3,
       "practicalLessonHour": 2
     },
@@ -405,6 +438,7 @@
       "credit": 4,
       "courseType": 5,
       "semester": 5,
+      "courseYear": 3,
       "theoreticalCourseHour": 3,
       "practicalLessonHour": 0
     },
@@ -417,6 +451,7 @@
       "credit": 5,
       "courseType": 5,
       "semester": 6,
+      "courseYear": 3,
       "theoreticalCourseHour": 3,
       "practicalLessonHour": 0
     },
@@ -429,6 +464,7 @@
       "credit": 7,
       "courseType": 5,
       "semester": 6,
+      "courseYear": 3,
       "theoreticalCourseHour": 3,
       "practicalLessonHour": 2
     },
@@ -441,6 +477,7 @@
       "credit": 6,
       "courseType": 5,
       "semester": 6,
+      "courseYear": 3,
       "theoreticalCourseHour": 3,
       "practicalLessonHour": 0
     },
@@ -454,6 +491,7 @@
       "credit": 7,
       "courseType": 5,
       "semester": 6,
+      "courseYear": 3,
       "theoreticalCourseHour": 3,
       "practicalLessonHour": 2
     },
@@ -466,6 +504,7 @@
       "credit": 5,
       "courseType": 5,
       "semester": 6,
+      "courseYear": 3,
       "theoreticalCourseHour": 3,
       "practicalLessonHour": 0
     },
@@ -478,6 +517,7 @@
       "credit": 4,
       "courseType": 5,
       "semester": 7,
+      "courseYear": 4,
       "theoreticalCourseHour": 0,
       "practicalLessonHour": 2
     },
@@ -490,6 +530,7 @@
       "credit": 5,
       "courseType": 5,
       "semester": 7,
+      "courseYear": 4,
       "theoreticalCourseHour": 3,
       "practicalLessonHour": 0
     },
@@ -502,6 +543,7 @@
       "credit": 5,
       "courseType": 3,
       "semester": 7,
+      "courseYear": 4,
       "theoreticalCourseHour": 3,
       "practicalLessonHour": 0
     },
@@ -514,6 +556,7 @@
       "credit": 5,
       "courseType": 3,
       "semester": 7,
+      "courseYear": 4,
       "theoreticalCourseHour": 3,
       "practicalLessonHour": 0
     },
@@ -526,6 +569,7 @@
       "credit": 6,
       "courseType": 5,
       "semester": 7,
+      "courseYear": 4,
       "theoreticalCourseHour": 3,
       "practicalLessonHour": 2
     },
@@ -538,6 +582,7 @@
       "credit": 2,
       "courseType": 5,
       "semester": 7,
+      "courseYear": 4,
       "theoreticalCourseHour": 2,
       "practicalLessonHour": 0
     },
@@ -550,6 +595,7 @@
       "credit": 3,
       "courseType": 2,
       "semester": 7,
+      "courseYear": 4,
       "theoreticalCourseHour": 2,
       "practicalLessonHour": 0
     }
