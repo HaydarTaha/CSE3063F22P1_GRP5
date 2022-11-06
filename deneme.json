@@ -5,7 +5,7 @@
     "lName": "Özincegedik",
     "gpa": 3.12,
     "currentYear": 3,
-    "currentSemester": "fall",
+    "currentSemester": "Fall",
     "currentSelectedCourses": [
       "CSE1142",
       "CSE1143"
@@ -41,7 +41,7 @@
     "lName": "Aslan",
     "gpa": 3.12,
     "currentYear": 3,
-    "currentSemester": "fall",
+    "currentSemester": "Fall",
     "currentSelectedCourses": [
       "CSE1141",
       "CSE1142"
