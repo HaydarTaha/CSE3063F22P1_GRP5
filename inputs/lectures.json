@@ -1,5 +1,5 @@
-{
-  "lectures": [
+
+  [
     {
       "name": "Calculus I",
       "courseCode": "MATH1001",
@@ -554,4 +554,3 @@
       "practicalLessonHour": 0
     }
   ]
-}
