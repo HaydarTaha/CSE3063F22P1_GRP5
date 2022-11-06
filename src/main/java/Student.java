@@ -72,7 +72,7 @@ public class Student {
         this.completedCourses = completedCourses;
     }
 
-    public void setMandatoryCourses(List<String> mandatoryCourses) {
+    public void setAvailableCourses(List<String> mandatoryCourses) {
         this.availableCourses = mandatoryCourses;
     }
 
@@ -96,6 +96,6 @@ public class Student {
 
     List<CompletedCourses> getCompletedCourses() { return completedCourses; }
 
-    List<String> getMandatoryCourses() { return availableCourses; }
+    List<String> getAvailableCourses() { return availableCourses; }
 
 }
