@@ -1,22 +1,74 @@
-{"Students":[
+[
   {
-    "studentId": "150119745",
-    "fName": "Haydar Taha",
-    "lName": "Tunç",
-    "GPA": 2.72,
-    "gmailAddress": "tahatunc163@gmail.com",
+    "studentID": 150119643,
+    "fName": "Mert",
+    "lName": "Özincegedik",
+    "gpa": 3.12,
+    "currentYear": 3,
+    "currentSemester": "fall",
     "currentSelectedCourses": [
-      "Database"
+      "CSE1142",
+      "CSE1143"
     ],
-    "completedCourses": {
-      "CSE1142": "AA",
-      "CSE1141": "BA"
-    },
-    "mandatoryCourses": [
-      "CSE2025"
+    "completedCourses": [
+      {
+        "courseName": "CSE1141",
+        "courseGrade": "AA"
+      },
+      {
+        "courseName": "Cse 1142",
+        "courseGrade": "AA"
+      }
+    ],
+    "availableCourses": [
+      "IE3081",
+      "CSE3063"
     ],
     "failedCourses": [
-      "EE2031"
+      {
+        "courseName": "CSE1141",
+        "courseGrade": "FF"
+      },
+      {
+        "courseName": "Cse 1142",
+        "courseGrade": "FF"
+      }
     ]
   },
-]}
+  {
+    "studentID": 150117002,
+    "fName": "Burak",
+    "lName": "Aslan",
+    "gpa": 3.12,
+    "currentYear": 3,
+    "currentSemester": "fall",
+    "currentSelectedCourses": [
+      "CSE1141",
+      "CSE1142"
+    ],
+    "completedCourses": [
+      {
+        "courseName": "CSE1140",
+        "courseGrade": "AA"
+      },
+      {
+        "courseName": "Cse 1148",
+        "courseGrade": "AA"
+      }
+    ],
+    "availableCourses": [
+      "IE3081",
+      "CSE3063"
+    ],
+    "failedCourses": [
+      {
+        "courseName": "CSE1140",
+        "courseGrade": "FF"
+      },
+      {
+        "courseName": "Cse 1145",
+        "courseGrade": "FF"
+      }
+    ]
+  }
+]

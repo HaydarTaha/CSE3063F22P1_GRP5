@@ -19,12 +19,31 @@ public class Student {
     private String fName;
     private String lName;
     private double gpa;
-    private String gmailAddress;
+    private int currentYear;
+    private String currentSemester;
     private List<String> currentSelectedCourses;
 
     private List<CompletedCourses> completedCourses;
-    private List<String> mandatoryCourses;
+    private List<String> availableCourses;
     private List<FailedCourses> failedCourses;
+
+
+
+    public int getCurrentYear() {
+        return currentYear;
+    }
+
+    public void setCurrentYear(int currentYear) {
+        this.currentYear = currentYear;
+    }
+
+    public String getCurrentSemester() {
+        return currentSemester;
+    }
+
+    public void setCurrentSemester(String currentSemester) {
+        this.currentSemester = currentSemester;
+    }
 
 
 
@@ -45,10 +64,6 @@ public class Student {
     }
 
 
-    public void setGmailAddress(String gmailAddress) {
-        this.gmailAddress = gmailAddress;
-    }
-
     public void setCurrentSelectedCourses(List<String> currentSelectedCourses) {
         this.currentSelectedCourses = currentSelectedCourses;
     }
@@ -58,7 +73,7 @@ public class Student {
     }
 
     public void setMandatoryCourses(List<String> mandatoryCourses) {
-        this.mandatoryCourses = mandatoryCourses;
+        this.availableCourses = mandatoryCourses;
     }
 
     public List<FailedCourses> getFailedCourses() {
@@ -81,8 +96,6 @@ public class Student {
 
     List<CompletedCourses> getCompletedCourses() { return completedCourses; }
 
-    List<String> getMandatoryCourses() { return mandatoryCourses; }
-
-    String getGmailAddress() { return gmailAddress; }
+    List<String> getMandatoryCourses() { return availableCourses; }
 
 }

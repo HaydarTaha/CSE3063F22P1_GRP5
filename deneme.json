@@ -4,7 +4,8 @@
     "fName": "Mert",
     "lName": "Özincegedik",
     "gpa": 3.12,
-    "gmailAddress": "mertozincegedik@marun.edu.tr",
+    "currentYear": 3,
+    "currentSemester": "Fall",
     "currentSelectedCourses": [
       "CSE1142",
       "CSE1143"
@@ -19,7 +20,7 @@
         "courseGrade": "AA"
       }
     ],
-    "mandatoryCourses": [
+    "availableCourses": [
       "IE3081",
       "CSE3063"
     ],
@@ -39,7 +40,8 @@
     "fName": "Burak",
     "lName": "Aslan",
     "gpa": 3.12,
-    "gmailAddress": "burakaslan17@marun.edu.tr",
+    "currentYear": 3,
+    "currentSemester": "Fall",
     "currentSelectedCourses": [
       "CSE1141",
       "CSE1142"
@@ -54,7 +56,7 @@
         "courseGrade": "AA"
       }
     ],
-    "mandatoryCourses": [
+    "availableCourses": [
       "IE3081",
       "CSE3063"
     ],
