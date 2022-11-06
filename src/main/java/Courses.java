@@ -8,6 +8,10 @@ public class Courses {
     private int credit;
     private int courseType;
     private int semester;
+
+
+
+    private int courseYear;
     private int theoreticalCourseHour;
     private int practicalLessonHour;
 
@@ -29,6 +33,13 @@ public class Courses {
 
     public int getSemester() {
         return semester;
+    }
+    public int getCourseYear() {
+        return courseYear;
+    }
+
+    public void setCourseYear(int courseYear) {
+        this.courseYear = courseYear;
     }
 
     public int getTheoreticalCourseHour() {
