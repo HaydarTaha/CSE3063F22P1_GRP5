@@ -1,4 +1,4 @@
-public class FailedCourses {
+public class FailedCourses extends Courses {
     private String courseName;
     private String courseGrade;
 

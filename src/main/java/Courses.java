@@ -1,6 +1,6 @@
 import java.util.List;
 
-public class Courses {
+public class Courses  {
 
     private String name;
     private String courseCode;

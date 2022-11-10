@@ -5,7 +5,7 @@
     "lName": "Ozincegedik",
     "gpa": 3.12,
     "currentYear": 3,
-    "currentSemester": "fall",
+    "currentSemester": 6,
     "currentSelectedCourses": [
       "CSE1142",
       "CSE1143"
@@ -41,7 +41,7 @@
     "lName": "Aslan",
     "gpa": 3.12,
     "currentYear": 1,
-    "currentSemester": "fall",
+    "currentSemester": 2,
     "currentSelectedCourses": [
       "CSE1141",
       "CSE1142"
@@ -77,7 +77,7 @@
     "lName": "Tunc",
     "gpa": 3.55,
     "currentYear": 4,
-    "currentSemester": "fall",
+    "currentSemester": 8,
     "currentSelectedCourses": [
       "CSE2222",
       "CSE3333"
@@ -113,7 +113,7 @@
     "lName": "Dursun",
     "gpa": 3.12,
     "currentYear": 3,
-    "currentSemester": "fall",
+    "currentSemester": 6,
     "currentSelectedCourses": [
       "CSE1141",
       "CSE1142"
