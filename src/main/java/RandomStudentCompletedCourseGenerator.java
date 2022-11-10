@@ -1,5 +1,6 @@
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Random;
 
 public class RandomStudentCompletedCourseGenerator{
 
@@ -80,8 +81,56 @@ public class RandomStudentCompletedCourseGenerator{
                 randomNumber = (int) (Math.random() * range) + min;
                 randomStudentCompletedCourseNumber.add(randomNumber);
             }
-
         }
         return randomStudentCompletedCourseNumber;
+    }
+
+    public static String assignRandomGrades() throws IOException{
+
+        String[] grades = {"AA","BA","BB","CB","CC","DC","DD","FF"};
+        String[] studentsArray = new String[500];
+
+        Random random = new Random();
+        int number=0;
+        int number2=0;
+        String randomLetter="";
+
+        number = random.nextInt(8);
+        number2 = random.nextInt(2);
+
+        switch(number){
+            case 0:
+                randomLetter = "AA";
+            case 1:
+                randomLetter = "BA";
+            case 2:
+                randomLetter = "BB";
+            case 3:
+                randomLetter = "CB";
+            case 4:
+                randomLetter = "CC";
+            case 5:
+                randomLetter = "DC";
+            case 6:
+                randomLetter = "DD";
+            case 7:
+                if (number2==1) {
+                    randomLetter = "FF";
+                }
+        }
+      /*  FileWriter fileWriter = new FileWriter("./inputs/studentGrades.json");
+        JSONArray jsonArray = new JSONArray();
+
+        for (String i: studentsArray){
+            JSONObject jsonObject = new JSONObject();
+            jsonObject.put("courseName", null);
+            jsonObject.put("courseGrade", i);
+            jsonArray.add(jsonObject);
+        }
+        PrintWriter printWriter = new PrintWriter(fileWriter);
+        printWriter.write(jsonArray.toString());
+*/
+        return randomLetter;
+
     }
 }
