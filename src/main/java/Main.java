@@ -27,9 +27,10 @@ public class Main {
 
         File studentsJsonFile = new File("inputs\\students.json");
         Student[] students = objectMapper.readValue(studentsJsonFile, Student[].class);
-        List test2 = new ArrayList();
-        test2.add(test.addCourseNames(students, courses));
-        System.out.println(test2);
+        RandomStudentCompletedCourseGenerator randomStudentCompletedCourseGenerator = new RandomStudentCompletedCourseGenerator();
+        randomStudentCompletedCourseGenerator.addCourseNames(students, courses);
+            System.out.println(students[0].getCompletedCourses());
+
 
         File inputJsonFile = new File("inputs\\input.json");
         Input[] inputs = objectMapper.readValue(inputJsonFile, Input[].class);
