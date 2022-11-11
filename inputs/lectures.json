@@ -179,9 +179,7 @@
     {
       "name": "Differential Equations",
       "courseCode": "MATH2055",
-      "prerequisite": [
-        "MATH1001"
-      ],
+      "prerequisite": [""],
       "credit": 4,
       "courseType": 5,
       "semester": 3,
@@ -191,11 +189,9 @@
     },
     {
       "name": "Data Structures",
-      "courseCode": "CSE2025",
-      "prerequisite": [
-        "CSE1142"
-      ],
-      "credit": 8,
+      "courseCode": "CSE2225",
+      "prerequisite": ["CSE1242"],
+      "credit": 7,
       "courseType": 5,
       "semester": 3,
       "courseYear": 2,
@@ -205,9 +201,7 @@
     {
       "name": "Discrete Comp. Structures",
       "courseCode": "CSE2023",
-      "prerequisite": [
-        ""
-      ],
+      "prerequisite": [""],
       "credit": 6,
       "courseType": 5,
       "semester": 3,
@@ -218,9 +212,7 @@
     {
       "name": "Electric Circuits",
       "courseCode": "EE2031",
-      "prerequisite": [
-        "PHYS1102"
-      ],
+      "prerequisite": ["PHYS1102"],
       "credit": 5,
       "courseType": 5,
       "semester": 3,
@@ -229,26 +221,11 @@
       "practicalLessonHour": 0
     },
     {
-      "name": "Introduction to Economics",
-      "courseCode": "ECON2003",
-      "prerequisite": [
-        ""
-      ],
+      "name": "Engineering Economy",
+      "courseCode": "ECON2004",
+      "prerequisite": [""],
       "credit": 4,
       "courseType": 5,
-      "semester": 3,
-      "courseYear": 2,
-      "theoreticalCourseHour": 3,
-      "practicalLessonHour": 0
-    },
-    {
-      "name": "Nontechnical Elective I",
-      "courseCode": "NTE II",
-      "prerequisite": [
-        ""
-      ],
-      "credit": 3,
-      "courseType": 1,
       "semester": 3,
       "courseYear": 2,
       "theoreticalCourseHour": 2,
@@ -257,48 +234,40 @@
     {
       "name": "Numerical Methods",
       "courseCode": "MATH2059",
-      "prerequisite": [
-        "MATH1001"
-      ],
+      "prerequisite": ["MATH1001"],
       "credit": 4,
       "courseType": 5,
-      "semester": 4,
+      "semester": 3,
       "courseYear": 2,
       "theoreticalCourseHour": 3,
       "practicalLessonHour": 0
     },
     {
       "name": "Analysis of Algorithms",
-      "courseCode": "CSE2046",
-      "prerequisite": [
-        "CSE2025"
-      ],
+      "courseCode": "CSE2246",
+      "prerequisite": ["CSE2225"],
       "credit": 6,
       "courseType": 5,
       "semester": 4,
       "courseYear": 2,
       "theoreticalCourseHour": 3,
-      "practicalLessonHour": 0
+      "practicalLessonHour": 2
     },
     {
-      "name": "Engineering Economy",
-      "courseCode": "ECON2004",
-      "prerequisite": [
-        ""
-      ],
-      "credit": 4,
+      "name": "Principles of Programming Languages",
+      "courseCode": "CSE2260",
+      "prerequisite": ["CSE1242"],
+      "credit": 6,
       "courseType": 5,
       "semester": 4,
       "courseYear": 2,
-      "theoreticalCourseHour": 2,
-      "practicalLessonHour": 0
+      "theoreticalCourseHour": 3,
+      "practicalLessonHour": 2
     },
     {
       "name": "Electronics",
       "courseCode": "EE2032",
-      "prerequisite": [
-        "EE2031"
-      ],
+      "prerequisite": ["EE2031"],
       "credit": 5,
       "courseType": 5,
       "semester": 4,
@@ -309,9 +278,7 @@
     {
       "name": "Systems Programming",
       "courseCode": "CSE2138",
-      "prerequisite": [
-        ""
-      ],
+      "prerequisite": [""],
       "credit": 7,
       "courseType": 5,
       "semester": 4,
@@ -320,18 +287,17 @@
       "practicalLessonHour": 2
     },
     {
-      "name": "Introduction to Probability and Statistics",
-      "courseCode": "STAT2053",
-      "prerequisite": [
-        ""
-      ],
-      "credit": 4,
+      "name": "Probability and Statistics for Computer Engineering",
+      "courseCode": "STAT2253",
+      "prerequisite": [""],
+      "credit": 5,
       "courseType": 5,
       "semester": 4,
       "courseYear": 2,
       "theoreticalCourseHour": 3,
       "practicalLessonHour": 0
     },
+
     {
       "name": "Summer Practice",
       "courseCode": "CSE3000",
