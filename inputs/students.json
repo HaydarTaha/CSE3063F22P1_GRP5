@@ -37,19 +37,15 @@
     "lName": "Aslan",
     "gpa": 3.12,
     "currentYear": 1,
-    "currentSemester": 3,
+    "currentSemester": 2,
     "currentSelectedCourses": [
       "CSE1141",
       "CSE1142"
     ],
     "completedCourses": [
       {
-        "courseName": "CSE1140",
-        "courseGrade": "AA"
-      },
-      {
-        "courseName": "Cse 1148",
-        "courseGrade": "AA"
+        "courseName": "",
+        "courseGrade": ""
       }
     ],
     "availableCourses": [

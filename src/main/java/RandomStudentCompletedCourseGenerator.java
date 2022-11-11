@@ -48,7 +48,7 @@ public class RandomStudentCompletedCourseGenerator{
 
                     }
                     student.setCompletedCourses(completedCoursesList);
-
+                    completedCoursesList = new ArrayList<>();
                 }
                /* case 3 -> semesterThreeCoursesNames.add(course.getName());
                 case 4 -> semesterFourCoursesNames.add(course.getName());
