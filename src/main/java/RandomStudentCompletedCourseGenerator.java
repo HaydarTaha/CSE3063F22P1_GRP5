@@ -6,7 +6,9 @@ import java.util.Random;
 
 public class RandomStudentCompletedCourseGenerator{
 
-    public List<String> addCourseNames(Student[]students, Courses[] courses) throws IOException {
+    public void addCourseNames(Student[]students, Courses[] courses) throws IOException {
+        CompletedCourses completedCoursesTest = new CompletedCourses();
+        List<CompletedCourses> completedCoursesList = new ArrayList<>();
         int y = 0;
         Random randomCourseAdder = new Random();
         int randomNumber = 0;
@@ -21,9 +23,9 @@ public class RandomStudentCompletedCourseGenerator{
         List<String> semesterEigthCoursesNames = new ArrayList<String>();
         for (Courses course : courses) {
             switch (course.getSemester()) {
-                case 1 -> semesterOneCoursesNames.add(course.getName());
-                case 2 -> semesterTwoCoursesNames.add(course.getName());
-                case 3 -> semesterThreeCoursesNames.add(course.getName());
+                case 1 -> semesterOneCoursesNames.add(course.getCourseCode());
+                case 2 -> semesterTwoCoursesNames.add(course.getCourseCode());
+                case 3 -> semesterThreeCoursesNames.add(course.getCourseCode());
                 case 4 -> semesterFourCoursesNames.add(course.getName());
                 case 5 -> semesterFiveCoursesNames.add(course.getName());
                 case 6 -> semesterSixCoursesNames.add(course.getName());
@@ -38,8 +40,14 @@ public class RandomStudentCompletedCourseGenerator{
                 case 1 -> student.setCompletedCourses(null);
                 case 2 -> {
                     for (int i = 0; i < semesterOneCoursesNames.size(); i++){
-                        testArrayList.add(semesterOneCoursesNames.get(i));
+                        completedCoursesTest = new CompletedCourses();
+                        completedCoursesTest.setCourseName(semesterOneCoursesNames.get(i));
+                        completedCoursesTest.setCourseGrade(assignRandomGrades());
+                        completedCoursesList.add(completedCoursesTest);
+
+
                     }
+                    student.setCompletedCourses(completedCoursesList);
 
                 }
                /* case 3 -> semesterThreeCoursesNames.add(course.getName());
@@ -51,8 +59,6 @@ public class RandomStudentCompletedCourseGenerator{
             }
         }
 
-
-        return testArrayList;
 
     }
 
