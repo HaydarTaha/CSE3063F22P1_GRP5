@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class CompletedCourses extends Student {
+public class CompletedCourses{
 
     private String courseName;
     private String courseGrade;
@@ -15,7 +15,7 @@ public class CompletedCourses extends Student {
     public String getCourseGrade() {
         return courseGrade;
     }
-    public void setCCourseGrade(String courseGrade) {
+    public void setCourseGrade(String courseGrade) {
         this.courseGrade = courseGrade;
     }
 

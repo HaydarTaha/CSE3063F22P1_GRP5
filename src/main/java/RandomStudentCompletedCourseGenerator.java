@@ -1,14 +1,16 @@
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Random;
 
 public class RandomStudentCompletedCourseGenerator{
 
     public List<String> addCourseNames(Student[]students, Courses[] courses) throws IOException {
+        int y = 0;
         Random randomCourseAdder = new Random();
         int randomNumber = 0;
-        List<String>testArrayList = new ArrayList<>();
+        List<String> testArrayList = new ArrayList<>();
         List<String> semesterOneCoursesNames = new ArrayList<String>();
         List<String> semesterTwoCoursesNames = new ArrayList<String>();
         List<String> semesterThreeCoursesNames = new ArrayList<String>();
