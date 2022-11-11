@@ -97,13 +97,10 @@ public class gpaCalculator {
            else{
                System.out.println("Hatali giris yaptiniz.");
            }
-
        }
        System.out.println("Total Credit : " + creditSum);
        double GPA = (int)((sum / creditSum) * 100.0) / 100.0 ;
        System.out.println("GPA: " + GPA);
-
-
 
        }
 

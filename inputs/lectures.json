@@ -3,9 +3,7 @@
     {
       "name": "Calculus I",
       "courseCode": "MATH1001",
-      "prerequisite": [
-        ""
-      ],
+      "prerequisite": [""],
       "credit": 6,
       "courseType": 5,
       "semester": 1,
@@ -14,24 +12,20 @@
       "practicalLessonHour": 0
     },
     {
-      "name": "Basic Chemistry",
-      "courseCode": "CHEM1007",
-      "prerequisite": [
-        ""
-      ],
-      "credit": 6,
+      "name": "Introduction to Modern Biology",
+      "courseCode": "MBG1201",
+      "prerequisite": [""],
+      "credit": 5,
       "courseType": 5,
       "semester": 1,
       "courseYear": 1,
-      "theoreticalCourseHour": 4,
+      "theoreticalCourseHour": 3,
       "practicalLessonHour": 0
     },
     {
       "name": "Computer Programming I",
-      "courseCode": "CSE1141",
-      "prerequisite": [
-        ""
-      ],
+      "courseCode": "CSE1241",
+      "prerequisite": [""],
       "credit": 6,
       "courseType": 5,
       "semester": 1,
@@ -42,9 +36,7 @@
     {
       "name": "Physics 1",
       "courseCode": "PHYS1101",
-      "prerequisite": [
-        ""
-      ],
+      "prerequisite": [""],
       "credit": 4,
       "courseType": 5,
       "semester": 1,
@@ -55,9 +47,7 @@
     {
       "name": "Physics Lab I",
       "courseCode": "PHYS1103",
-      "prerequisite": [
-        ""
-      ],
+      "prerequisite": [""],
       "credit": 2,
       "courseType": 5,
       "semester": 1,
@@ -68,9 +58,7 @@
     {
       "name": "Atatürk's Prin. & History I",
       "courseCode": "ATA121",
-      "prerequisite": [
-        ""
-      ],
+      "prerequisite": [""],
       "credit": 2,
       "courseType": 5,
       "semester": 1,
@@ -80,23 +68,19 @@
     },
     {
       "name": "Introduction to Computer Eng.",
-      "courseCode": "CSE1100",
-      "prerequisite": [
-        ""
-      ],
-      "credit": 2,
+      "courseCode": "CSE1200",
+      "prerequisite": [""],
+      "credit": 4,
       "courseType": 5,
       "semester": 1,
       "courseYear": 1,
-      "theoreticalCourseHour": 2,
+      "theoreticalCourseHour": 3,
       "practicalLessonHour": 0
     },
     {
       "name": "Turkish Language I",
       "courseCode": "TRD 121",
-      "prerequisite": [
-        ""
-      ],
+      "prerequisite": [""],
       "credit": 2,
       "courseType": 5,
       "semester": 1,
@@ -107,9 +91,7 @@
     {
       "name": "Calculus II",
       "courseCode": "MATH1002",
-      "prerequisite": [
-        ""
-      ],
+      "prerequisite": [""],
       "credit": 6,
       "courseType": 5,
       "semester": 2,
@@ -120,9 +102,7 @@
     {
       "name": "Physics Lab II",
       "courseCode": "PHYS1104",
-      "prerequisite": [
-        ""
-      ],
+      "prerequisite": [""],
       "credit": 2,
       "courseType": 5,
       "semester": 2,
@@ -132,11 +112,9 @@
     },
     {
       "name": "Computer Programming II",
-      "courseCode": "CSE1142",
-      "prerequisite": [
-        "CSE1141"
-      ],
-      "credit": 7,
+      "courseCode": "CSE1242",
+      "prerequisite": ["CSE1241"],
+      "credit": 6,
       "courseType": 5,
       "semester": 2,
       "courseYear": 1,
@@ -146,9 +124,7 @@
     {
       "name": "Physics II",
       "courseCode": "PHYS1102",
-      "prerequisite": [
-        ""
-      ],
+      "prerequisite": [""],
       "credit": 4,
       "courseType": 5,
       "semester": 2,
@@ -159,9 +135,7 @@
     {
       "name": "Nontechnical Elective I",
       "courseCode": "NTE I",
-      "prerequisite": [
-        ""
-      ],
+      "prerequisite": [""],
       "credit": 3,
       "courseType": 1,
       "semester": 2,
@@ -172,9 +146,7 @@
     {
       "name": "Atatürk's Prin. & History II",
       "courseCode": "ATA122",
-      "prerequisite": [
-        ""
-      ],
+      "prerequisite": [""],
       "credit": 2,
       "courseType": 5,
       "semester": 2,
@@ -183,12 +155,10 @@
       "practicalLessonHour": 0
     },
     {
-      "name": "Linear Algebra",
-      "courseCode": "MATH2056",
-      "prerequisite": [
-        ""
-      ],
-      "credit": 4,
+      "name": "Linear Algebra for Computer Engineering",
+      "courseCode": "MATH2256",
+      "prerequisite": [""],
+      "credit": 5,
       "courseType": 5,
       "semester": 2,
       "courseYear": 1,
@@ -198,9 +168,7 @@
     {
       "name": "Turkish Language II",
       "courseCode": "TRD 122",
-      "prerequisite": [
-        ""
-      ],
+      "prerequisite": [""],
       "credit": 2,
       "courseType": 5,
       "semester": 2,
@@ -211,9 +179,7 @@
     {
       "name": "Differential Equations",
       "courseCode": "MATH2055",
-      "prerequisite": [
-        "MATH1001"
-      ],
+      "prerequisite": [""],
       "credit": 4,
       "courseType": 5,
       "semester": 3,
@@ -223,11 +189,9 @@
     },
     {
       "name": "Data Structures",
-      "courseCode": "CSE2025",
-      "prerequisite": [
-        "CSE1142"
-      ],
-      "credit": 8,
+      "courseCode": "CSE2225",
+      "prerequisite": ["CSE1242"],
+      "credit": 7,
       "courseType": 5,
       "semester": 3,
       "courseYear": 2,
@@ -237,9 +201,7 @@
     {
       "name": "Discrete Comp. Structures",
       "courseCode": "CSE2023",
-      "prerequisite": [
-        ""
-      ],
+      "prerequisite": [""],
       "credit": 6,
       "courseType": 5,
       "semester": 3,
@@ -250,9 +212,7 @@
     {
       "name": "Electric Circuits",
       "courseCode": "EE2031",
-      "prerequisite": [
-        "PHYS1102"
-      ],
+      "prerequisite": ["PHYS1102"],
       "credit": 5,
       "courseType": 5,
       "semester": 3,
@@ -261,26 +221,11 @@
       "practicalLessonHour": 0
     },
     {
-      "name": "Introduction to Economics",
-      "courseCode": "ECON2003",
-      "prerequisite": [
-        ""
-      ],
+      "name": "Engineering Economy",
+      "courseCode": "ECON2004",
+      "prerequisite": [""],
       "credit": 4,
       "courseType": 5,
-      "semester": 3,
-      "courseYear": 2,
-      "theoreticalCourseHour": 3,
-      "practicalLessonHour": 0
-    },
-    {
-      "name": "Nontechnical Elective I",
-      "courseCode": "NTE II",
-      "prerequisite": [
-        ""
-      ],
-      "credit": 3,
-      "courseType": 1,
       "semester": 3,
       "courseYear": 2,
       "theoreticalCourseHour": 2,
@@ -289,48 +234,40 @@
     {
       "name": "Numerical Methods",
       "courseCode": "MATH2059",
-      "prerequisite": [
-        "MATH1001"
-      ],
+      "prerequisite": ["MATH1001"],
       "credit": 4,
       "courseType": 5,
-      "semester": 4,
+      "semester": 3,
       "courseYear": 2,
       "theoreticalCourseHour": 3,
       "practicalLessonHour": 0
     },
     {
       "name": "Analysis of Algorithms",
-      "courseCode": "CSE2046",
-      "prerequisite": [
-        "CSE2025"
-      ],
+      "courseCode": "CSE2246",
+      "prerequisite": ["CSE2225"],
       "credit": 6,
       "courseType": 5,
       "semester": 4,
       "courseYear": 2,
       "theoreticalCourseHour": 3,
-      "practicalLessonHour": 0
+      "practicalLessonHour": 2
     },
     {
-      "name": "Engineering Economy",
-      "courseCode": "ECON2004",
-      "prerequisite": [
-        ""
-      ],
-      "credit": 4,
+      "name": "Principles of Programming Languages",
+      "courseCode": "CSE2260",
+      "prerequisite": ["CSE1242"],
+      "credit": 6,
       "courseType": 5,
       "semester": 4,
       "courseYear": 2,
-      "theoreticalCourseHour": 2,
-      "practicalLessonHour": 0
+      "theoreticalCourseHour": 3,
+      "practicalLessonHour": 2
     },
     {
       "name": "Electronics",
       "courseCode": "EE2032",
-      "prerequisite": [
-        "EE2031"
-      ],
+      "prerequisite": ["EE2031"],
       "credit": 5,
       "courseType": 5,
       "semester": 4,
@@ -341,9 +278,7 @@
     {
       "name": "Systems Programming",
       "courseCode": "CSE2138",
-      "prerequisite": [
-        ""
-      ],
+      "prerequisite": [""],
       "credit": 7,
       "courseType": 5,
       "semester": 4,
@@ -352,18 +287,17 @@
       "practicalLessonHour": 2
     },
     {
-      "name": "Introduction to Probability and Statistics",
-      "courseCode": "STAT2053",
-      "prerequisite": [
-        ""
-      ],
-      "credit": 4,
+      "name": "Probability and Statistics for Computer Engineering",
+      "courseCode": "STAT2253",
+      "prerequisite": [""],
+      "credit": 5,
       "courseType": 5,
       "semester": 4,
       "courseYear": 2,
       "theoreticalCourseHour": 3,
       "practicalLessonHour": 0
     },
+
     {
       "name": "Summer Practice",
       "courseCode": "CSE3000",
