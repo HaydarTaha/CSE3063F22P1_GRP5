@@ -47,10 +47,7 @@ public class Init {
         System.out.println();
         String newStudentId;
         newStudentId = studentID.toString();
-        boolean contains = Arrays.stream(arrayList).anyMatch();
-        if (!contains) {
-            generateStudentId(arrayList);
-        }
+
         return studentID.toString();
     }
 

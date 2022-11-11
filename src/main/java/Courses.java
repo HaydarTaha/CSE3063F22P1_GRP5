@@ -3,12 +3,16 @@ import java.util.List;
 public class Courses  {
 
     private String name;
+    private String status;
     private String courseCode;
     private List<String> prerequisite;
     private int credit;
     private int courseType;
     private int semester;
 
+    Boolean nte;
+    Boolean fte;
+    Boolean UE;
 
 
     private int courseYear;

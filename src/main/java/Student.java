@@ -23,6 +23,7 @@ public class Student {
     private int currentYear;
     private int currentSemester;
     private List<String> currentSelectedCourses;
+    private List<Courses> courses;
 
     private List<CompletedCourses> completedCourses;
 

@@ -1,4 +1,7 @@
-public class CompletedCourses extends Courses {
+import java.util.ArrayList;
+import java.util.List;
+
+public class CompletedCourses extends Student {
 
     private String courseName;
     private String courseGrade;
@@ -20,4 +23,6 @@ public class CompletedCourses extends Courses {
     public String toString(){
         return getCourseName() + ", "+getCourseGrade();
     }
+
+
 }

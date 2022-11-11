@@ -1,8 +1,58 @@
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 public class RandomStudentCompletedCourseGenerator{
+
+    public List<String> addCourseNames(Student[]students, Courses[] courses) throws IOException {
+        Random randomCourseAdder = new Random();
+        int randomNumber = 0;
+        List<String>testArrayList = new ArrayList<>();
+        List<String> semesterOneCoursesNames = new ArrayList<String>();
+        List<String> semesterTwoCoursesNames = new ArrayList<String>();
+        List<String> semesterThreeCoursesNames = new ArrayList<String>();
+        List<String> semesterFourCoursesNames = new ArrayList<String>();
+        List<String> semesterFiveCoursesNames = new ArrayList<String>();
+        List<String> semesterSixCoursesNames = new ArrayList<String>();
+        List<String> semesterSevenCoursesNames = new ArrayList<String>();
+        List<String> semesterEigthCoursesNames = new ArrayList<String>();
+        for (Courses course : courses) {
+            switch (course.getSemester()) {
+                case 1 -> semesterOneCoursesNames.add(course.getName());
+                case 2 -> semesterTwoCoursesNames.add(course.getName());
+                case 3 -> semesterThreeCoursesNames.add(course.getName());
+                case 4 -> semesterFourCoursesNames.add(course.getName());
+                case 5 -> semesterFiveCoursesNames.add(course.getName());
+                case 6 -> semesterSixCoursesNames.add(course.getName());
+                case 7 -> semesterSevenCoursesNames.add(course.getName());
+                case 8 -> semesterEigthCoursesNames.add(course.getName());
+            }
+
+
+        }
+        for (Student student : students){
+            switch (student.getCurrentSemester()){
+                case 1 -> student.setCompletedCourses(null);
+                case 2 -> {
+                    for (int i = 0; i < semesterOneCoursesNames.size(); i++){
+                        testArrayList.add(semesterOneCoursesNames.get(i));
+                    }
+
+                }
+               /* case 3 -> semesterThreeCoursesNames.add(course.getName());
+                case 4 -> semesterFourCoursesNames.add(course.getName());
+                case 5 -> semesterFiveCoursesNames.add(course.getName());
+                case 6 -> semesterSixCoursesNames.add(course.getName());
+                case 7 -> semesterSevenCoursesNames.add(course.getName());
+                case 8 -> semesterEigthCoursesNames.add(course.getName());*/
+            }
+        }
+
+
+        return testArrayList;
+
+    }
 
     public ArrayList<Integer> generate(Student[] students) throws IOException {
         int firstSemester = 0;
@@ -22,8 +72,12 @@ public class RandomStudentCompletedCourseGenerator{
         int max = 54;
         int range = 0;
 
+
         ArrayList<Integer> studentSemester = new ArrayList<>();
         ArrayList<Integer> randomStudentCompletedCourseNumber = new ArrayList<>();
+
+
+
         for(int x = 0; x < students.length; x++){
             studentSemester.add(students[x].getCurrentSemester());
         }
@@ -88,7 +142,6 @@ public class RandomStudentCompletedCourseGenerator{
     public static String assignRandomGrades() throws IOException{
 
         String[] grades = {"AA","BA","BB","CB","CC","DC","DD","FF"};
-        String[] studentsArray = new String[500];
 
         Random random = new Random();
         int number=0;
@@ -101,22 +154,32 @@ public class RandomStudentCompletedCourseGenerator{
         switch(number){
             case 0:
                 randomLetter = "AA";
+                break;
             case 1:
                 randomLetter = "BA";
+                break;
             case 2:
                 randomLetter = "BB";
+                break;
             case 3:
                 randomLetter = "CB";
+                break;
             case 4:
                 randomLetter = "CC";
+                break;
             case 5:
                 randomLetter = "DC";
+                break;
             case 6:
                 randomLetter = "DD";
+                break;
             case 7:
                 if (number2==1) {
                     randomLetter = "FF";
                 }
+                else randomLetter = "CC";
+                break;
+
         }
       /*  FileWriter fileWriter = new FileWriter("./inputs/studentGrades.json");
         JSONArray jsonArray = new JSONArray();
