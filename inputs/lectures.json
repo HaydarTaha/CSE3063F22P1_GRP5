@@ -1,5 +1,4 @@
-
-  [
+[
     {
       "name": "Calculus I",
       "courseCode": "MATH1001",
@@ -301,9 +300,7 @@
     {
       "name": "Summer Practice",
       "courseCode": "CSE3000",
-      "prerequisite": [
-        ""
-      ],
+      "prerequisite": [""],
       "credit": 10,
       "courseType": 5,
       "semester": 5,
@@ -314,9 +311,7 @@
     {
       "name": "Database Systems",
       "courseCode": "CSE3055",
-      "prerequisite": [
-        "CSE2025"
-      ],
+      "prerequisite": ["CSE2225"],
       "credit": 7,
       "courseType": 5,
       "semester": 5,
@@ -327,9 +322,7 @@
     {
       "name": "Operating Systems",
       "courseCode": "CSE3033",
-      "prerequisite": [
-        "CSE2025"
-      ],
+      "prerequisite": ["CSE2225"],
       "credit": 7,
       "courseType": 5,
       "semester": 5,
@@ -340,9 +333,7 @@
     {
       "name": "Object-Oriented Software Design",
       "courseCode": "CSE3063",
-      "prerequisite": [
-        "CSE1142"
-      ],
+      "prerequisite": ["CSE1242"],
       "credit": 5,
       "courseType": 5,
       "semester": 5,
@@ -352,11 +343,9 @@
     },
     {
       "name": "Digital Logic Design",
-      "courseCode": "CSE3015",
-      "prerequisite": [
-        ""
-      ],
-      "credit": 7,
+      "courseCode": "CSE3215",
+      "prerequisite": [""],
+      "credit": 6,
       "courseType": 5,
       "semester": 5,
       "courseYear": 3,
@@ -366,9 +355,7 @@
     {
       "name": "Modeling and Discrete Simulation",
       "courseCode": "IE3081",
-      "prerequisite": [
-        "STAT2053"
-      ],
+      "prerequisite": ["STAT2253"],
       "credit": 4,
       "courseType": 5,
       "semester": 5,
@@ -390,6 +377,17 @@
       "practicalLessonHour": 0
     },
     {
+      "name": "Technical Communications and Entrepreneurship",
+      "courseCode": "COM2276",
+      "prerequisite": [""],
+      "credit": 2,
+      "courseType": 5,
+      "semester": 6,
+      "courseYear": 3,
+      "theoreticalCourseHour": 2,
+      "practicalLessonHour": 0
+    },
+    {
       "name": "Software Engineering",
       "courseCode": "CSE3044",
       "prerequisite": [
@@ -404,11 +402,9 @@
     },
     {
       "name": "Formal Languages and Automata Theory",
-      "courseCode": "CSE3064",
-      "prerequisite": [
-        "CSE2023"
-      ],
-      "credit": 6,
+      "courseCode": "CSE3264",
+      "prerequisite": ["CSE2023"],
+      "credit": 5,
       "courseType": 5,
       "semester": 6,
       "courseYear": 3,
@@ -418,10 +414,7 @@
     {
       "name": "Computer Organization",
       "courseCode": "CSE3038",
-      "prerequisite": [
-        "CSE2138",
-        "CSE3015"
-      ],
+      "prerequisite": ["CSE2138", "CSE3215"],
       "credit": 7,
       "courseType": 5,
       "semester": 6,
@@ -430,11 +423,9 @@
       "practicalLessonHour": 2
     },
     {
-      "name": "Operations Research",
-      "courseCode": "IE3035",
-      "prerequisite": [
-        "MATH2056"
-      ],
+      "name": "Introduction to Signals and Systems",
+      "courseCode": "CSE3048",
+      "prerequisite": ["MATH2055"],
       "credit": 5,
       "courseType": 5,
       "semester": 6,
@@ -443,12 +434,21 @@
       "practicalLessonHour": 0
     },
     {
-      "name": "Engineering Project I",
-      "courseCode": "CSE4197",
-      "prerequisite": [
-        ""
-      ],
+      "name": "Operations Research",
+      "courseCode": "IE3235",
+      "prerequisite": ["MATH2256"],
       "credit": 4,
+      "courseType": 5,
+      "semester": 6,
+      "courseYear": 3,
+      "theoreticalCourseHour": 3,
+      "practicalLessonHour": 0
+    },
+    {
+      "name": "Engineering Project I",
+      "courseCode": "CSE4297",
+      "prerequisite": [""],
+      "credit": 5,
       "courseType": 5,
       "semester": 7,
       "courseYear": 4,
@@ -458,9 +458,7 @@
     {
       "name": "Computer Networks",
       "courseCode": "CSE4074",
-      "prerequisite": [
-        ""
-      ],
+      "prerequisite": [""],
       "credit": 5,
       "courseType": 5,
       "semester": 7,
@@ -471,9 +469,7 @@
     {
       "name": "Technical Elective I",
       "courseCode": "TE I",
-      "prerequisite": [
-        ""
-      ],
+      "prerequisite": [""],
       "credit": 5,
       "courseType": 3,
       "semester": 7,
@@ -482,24 +478,20 @@
       "practicalLessonHour": 0
     },
     {
-      "name": "Technical Elective II",
-      "courseCode": "TE II",
-      "prerequisite": [
-        ""
-      ],
-      "credit": 5,
-      "courseType": 3,
+      "name": "University Elective",
+      "courseCode": "UE",
+      "prerequisite": [""],
+      "credit": 3,
+      "courseType": 2,
       "semester": 7,
       "courseYear": 4,
-      "theoreticalCourseHour": 3,
+      "theoreticalCourseHour": 2,
       "practicalLessonHour": 0
     },
     {
-      "name": "Microprocessors",
-      "courseCode": "CSE4117",
-      "prerequisite": [
-        "CSE3038"
-      ],
+      "name": "Principles of Embedded Systems Design",
+      "courseCode": "CSE4219",
+      "prerequisite": ["CSE3038"],
       "credit": 6,
       "courseType": 5,
       "semester": 7,
@@ -510,9 +502,7 @@
     {
       "name": "Work Safety I",
       "courseCode": "ISG121",
-      "prerequisite": [
-        ""
-      ],
+      "prerequisite": [""],
       "credit": 2,
       "courseType": 5,
       "semester": 7,
@@ -521,14 +511,100 @@
       "practicalLessonHour": 0
     },
     {
-      "name": "University Elective",
-      "courseCode": "UE",
-      "prerequisite": [
-        ""
-      ],
-      "credit": 3,
-      "courseType": 2,
+      "name": "Introduction to Machine Learning",
+      "courseCode": "CSE4288",
+      "prerequisite": ["MATH2256","STAT2253"],
+      "credit": 5,
+      "courseType": 5,
       "semester": 7,
+      "courseYear": 4,
+      "theoreticalCourseHour": 3,
+      "practicalLessonHour": 0
+    },
+    {
+      "name": "Summer Practice",
+      "courseCode": "CSE4000",
+      "prerequisite": [""],
+      "credit": 10,
+      "courseType": 5,
+      "semester": 7,
+      "courseYear": 4,
+      "theoreticalCourseHour": 0,
+      "practicalLessonHour": 0
+    },
+    {
+      "name": "Engineering Project II",
+      "courseCode": "CSE4298",
+      "prerequisite": ["CSE4297"],
+      "credit": 5,
+      "courseType": 5,
+      "semester": 8,
+      "courseYear": 4,
+      "theoreticalCourseHour": 0,
+      "practicalLessonHour": 2
+    },
+    {
+      "name": "Technical Elective II",
+      "courseCode": "TE II",
+      "prerequisite": [""],
+      "credit": 5,
+      "courseType": 3,
+      "semester": 8,
+      "courseYear": 4,
+      "theoreticalCourseHour": 3,
+      "practicalLessonHour": 0
+    },
+    {
+      "name": "Technical Elective III",
+      "courseCode": "TE III",
+      "prerequisite": [""],
+      "credit": 5,
+      "courseType": 3,
+      "semester": 8,
+      "courseYear": 4,
+      "theoreticalCourseHour": 3,
+      "practicalLessonHour": 0
+    },
+    {
+      "name": "Technical Elective IV",
+      "courseCode": "TE IV",
+      "prerequisite": [""],
+      "credit": 5,
+      "courseType": 3,
+      "semester": 8,
+      "courseYear": 4,
+      "theoreticalCourseHour": 3,
+      "practicalLessonHour": 0
+    },
+    {
+      "name": "Faculty Technical Elective",
+      "courseCode": "FTE",
+      "prerequisite": [""],
+      "credit": 5,
+      "courseType": 4,
+      "semester": 8,
+      "courseYear": 4,
+      "theoreticalCourseHour": 3,
+      "practicalLessonHour": 0
+    },
+    {
+      "name": "Work Safety II",
+      "courseCode": "ISG122",
+      "prerequisite": [""],
+      "credit": 2,
+      "courseType": 5,
+      "semester": 8,
+      "courseYear": 4,
+      "theoreticalCourseHour": 2,
+      "practicalLessonHour": 0
+    },
+    {
+      "name": "Nontechnical Elective II",
+      "courseCode": "NTE II",
+      "prerequisite": [""],
+      "credit": 3,
+      "courseType": 1,
+      "semester": 8,
       "courseYear": 4,
       "theoreticalCourseHour": 2,
       "practicalLessonHour": 0
