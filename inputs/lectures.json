@@ -3,9 +3,7 @@
     {
       "name": "Calculus I",
       "courseCode": "MATH1001",
-      "prerequisite": [
-        ""
-      ],
+      "prerequisite": [""],
       "credit": 6,
       "courseType": 5,
       "semester": 1,
@@ -14,24 +12,20 @@
       "practicalLessonHour": 0
     },
     {
-      "name": "Basic Chemistry",
-      "courseCode": "CHEM1007",
-      "prerequisite": [
-        ""
-      ],
-      "credit": 6,
+      "name": "Introduction to Modern Biology",
+      "courseCode": "MBG1201",
+      "prerequisite": [""],
+      "credit": 5,
       "courseType": 5,
       "semester": 1,
       "courseYear": 1,
-      "theoreticalCourseHour": 4,
+      "theoreticalCourseHour": 3,
       "practicalLessonHour": 0
     },
     {
       "name": "Computer Programming I",
-      "courseCode": "CSE1141",
-      "prerequisite": [
-        ""
-      ],
+      "courseCode": "CSE1241",
+      "prerequisite": [""],
       "credit": 6,
       "courseType": 5,
       "semester": 1,
@@ -42,9 +36,7 @@
     {
       "name": "Physics 1",
       "courseCode": "PHYS1101",
-      "prerequisite": [
-        ""
-      ],
+      "prerequisite": [""],
       "credit": 4,
       "courseType": 5,
       "semester": 1,
@@ -55,9 +47,7 @@
     {
       "name": "Physics Lab I",
       "courseCode": "PHYS1103",
-      "prerequisite": [
-        ""
-      ],
+      "prerequisite": [""],
       "credit": 2,
       "courseType": 5,
       "semester": 1,
@@ -68,9 +58,7 @@
     {
       "name": "Atatürk's Prin. & History I",
       "courseCode": "ATA121",
-      "prerequisite": [
-        ""
-      ],
+      "prerequisite": [""],
       "credit": 2,
       "courseType": 5,
       "semester": 1,
@@ -80,23 +68,19 @@
     },
     {
       "name": "Introduction to Computer Eng.",
-      "courseCode": "CSE1100",
-      "prerequisite": [
-        ""
-      ],
-      "credit": 2,
+      "courseCode": "CSE1200",
+      "prerequisite": [""],
+      "credit": 4,
       "courseType": 5,
       "semester": 1,
       "courseYear": 1,
-      "theoreticalCourseHour": 2,
+      "theoreticalCourseHour": 3,
       "practicalLessonHour": 0
     },
     {
       "name": "Turkish Language I",
       "courseCode": "TRD 121",
-      "prerequisite": [
-        ""
-      ],
+      "prerequisite": [""],
       "credit": 2,
       "courseType": 5,
       "semester": 1,
@@ -107,9 +91,7 @@
     {
       "name": "Calculus II",
       "courseCode": "MATH1002",
-      "prerequisite": [
-        ""
-      ],
+      "prerequisite": [""],
       "credit": 6,
       "courseType": 5,
       "semester": 2,
@@ -120,9 +102,7 @@
     {
       "name": "Physics Lab II",
       "courseCode": "PHYS1104",
-      "prerequisite": [
-        ""
-      ],
+      "prerequisite": [""],
       "credit": 2,
       "courseType": 5,
       "semester": 2,
@@ -132,11 +112,9 @@
     },
     {
       "name": "Computer Programming II",
-      "courseCode": "CSE1142",
-      "prerequisite": [
-        "CSE1141"
-      ],
-      "credit": 7,
+      "courseCode": "CSE1242",
+      "prerequisite": ["CSE1241"],
+      "credit": 6,
       "courseType": 5,
       "semester": 2,
       "courseYear": 1,
@@ -146,9 +124,7 @@
     {
       "name": "Physics II",
       "courseCode": "PHYS1102",
-      "prerequisite": [
-        ""
-      ],
+      "prerequisite": [""],
       "credit": 4,
       "courseType": 5,
       "semester": 2,
@@ -159,9 +135,7 @@
     {
       "name": "Nontechnical Elective I",
       "courseCode": "NTE I",
-      "prerequisite": [
-        ""
-      ],
+      "prerequisite": [""],
       "credit": 3,
       "courseType": 1,
       "semester": 2,
@@ -172,9 +146,7 @@
     {
       "name": "Atatürk's Prin. & History II",
       "courseCode": "ATA122",
-      "prerequisite": [
-        ""
-      ],
+      "prerequisite": [""],
       "credit": 2,
       "courseType": 5,
       "semester": 2,
@@ -183,12 +155,10 @@
       "practicalLessonHour": 0
     },
     {
-      "name": "Linear Algebra",
-      "courseCode": "MATH2056",
-      "prerequisite": [
-        ""
-      ],
-      "credit": 4,
+      "name": "Linear Algebra for Computer Engineering",
+      "courseCode": "MATH2256",
+      "prerequisite": [""],
+      "credit": 5,
       "courseType": 5,
       "semester": 2,
       "courseYear": 1,
@@ -198,9 +168,7 @@
     {
       "name": "Turkish Language II",
       "courseCode": "TRD 122",
-      "prerequisite": [
-        ""
-      ],
+      "prerequisite": [""],
       "credit": 2,
       "courseType": 5,
       "semester": 2,
