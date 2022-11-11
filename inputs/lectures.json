@@ -301,9 +301,7 @@
     {
       "name": "Summer Practice",
       "courseCode": "CSE3000",
-      "prerequisite": [
-        ""
-      ],
+      "prerequisite": [""],
       "credit": 10,
       "courseType": 5,
       "semester": 5,
@@ -314,9 +312,7 @@
     {
       "name": "Database Systems",
       "courseCode": "CSE3055",
-      "prerequisite": [
-        "CSE2025"
-      ],
+      "prerequisite": ["CSE2225"],
       "credit": 7,
       "courseType": 5,
       "semester": 5,
@@ -327,9 +323,7 @@
     {
       "name": "Operating Systems",
       "courseCode": "CSE3033",
-      "prerequisite": [
-        "CSE2025"
-      ],
+      "prerequisite": ["CSE2225"],
       "credit": 7,
       "courseType": 5,
       "semester": 5,
@@ -340,9 +334,7 @@
     {
       "name": "Object-Oriented Software Design",
       "courseCode": "CSE3063",
-      "prerequisite": [
-        "CSE1142"
-      ],
+      "prerequisite": ["CSE1242"],
       "credit": 5,
       "courseType": 5,
       "semester": 5,
@@ -352,11 +344,9 @@
     },
     {
       "name": "Digital Logic Design",
-      "courseCode": "CSE3015",
-      "prerequisite": [
-        ""
-      ],
-      "credit": 7,
+      "courseCode": "CSE3215",
+      "prerequisite": [""],
+      "credit": 6,
       "courseType": 5,
       "semester": 5,
       "courseYear": 3,
@@ -366,9 +356,7 @@
     {
       "name": "Modeling and Discrete Simulation",
       "courseCode": "IE3081",
-      "prerequisite": [
-        "STAT2053"
-      ],
+      "prerequisite": ["STAT2253"],
       "credit": 4,
       "courseType": 5,
       "semester": 5,
@@ -390,6 +378,17 @@
       "practicalLessonHour": 0
     },
     {
+      "name": "Technical Communications and Entrepreneurship",
+      "courseCode": "COM2276",
+      "prerequisite": [""],
+      "credit": 2,
+      "courseType": 5,
+      "semester": 6,
+      "courseYear": 3,
+      "theoreticalCourseHour": 2,
+      "practicalLessonHour": 0
+    },
+    {
       "name": "Software Engineering",
       "courseCode": "CSE3044",
       "prerequisite": [
@@ -404,11 +403,9 @@
     },
     {
       "name": "Formal Languages and Automata Theory",
-      "courseCode": "CSE3064",
-      "prerequisite": [
-        "CSE2023"
-      ],
-      "credit": 6,
+      "courseCode": "CSE3264",
+      "prerequisite": ["CSE2023"],
+      "credit": 5,
       "courseType": 5,
       "semester": 6,
       "courseYear": 3,
@@ -418,10 +415,7 @@
     {
       "name": "Computer Organization",
       "courseCode": "CSE3038",
-      "prerequisite": [
-        "CSE2138",
-        "CSE3015"
-      ],
+      "prerequisite": ["CSE2138", "CSE3215"],
       "credit": 7,
       "courseType": 5,
       "semester": 6,
@@ -430,12 +424,21 @@
       "practicalLessonHour": 2
     },
     {
-      "name": "Operations Research",
-      "courseCode": "IE3035",
-      "prerequisite": [
-        "MATH2056"
-      ],
+      "name": "Introduction to Signals and Systems",
+      "courseCode": "CSE3048",
+      "prerequisite": ["MATH2055"],
       "credit": 5,
+      "courseType": 5,
+      "semester": 6,
+      "courseYear": 3,
+      "theoreticalCourseHour": 3,
+      "practicalLessonHour": 0
+    },
+    {
+      "name": "Operations Research",
+      "courseCode": "IE3235",
+      "prerequisite": ["MATH2256"],
+      "credit": 4,
       "courseType": 5,
       "semester": 6,
       "courseYear": 3,
