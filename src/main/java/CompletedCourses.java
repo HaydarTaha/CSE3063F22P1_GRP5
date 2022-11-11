@@ -1,4 +1,7 @@
-public class CompletedCourses {
+import java.util.ArrayList;
+import java.util.List;
+
+public class CompletedCourses{
 
     private String courseName;
     private String courseGrade;
@@ -12,7 +15,7 @@ public class CompletedCourses {
     public String getCourseGrade() {
         return courseGrade;
     }
-    public void setCCourseGrade(String courseGrade) {
+    public void setCourseGrade(String courseGrade) {
         this.courseGrade = courseGrade;
     }
 
@@ -20,4 +23,6 @@ public class CompletedCourses {
     public String toString(){
         return getCourseName() + ", "+getCourseGrade();
     }
+
+
 }

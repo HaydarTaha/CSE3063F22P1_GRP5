@@ -10,6 +10,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+
 import java.io.IOException;
 import java.util.Map;
 
@@ -20,10 +21,10 @@ public class Student {
     private String lName;
     private double gpa;
     private int currentYear;
-    private String currentSemester;
+    private int currentSemester;
     private List<String> currentSelectedCourses;
-
     private List<CompletedCourses> completedCourses;
+
     private List<String> availableCourses;
     private List<FailedCourses> failedCourses;
 
@@ -37,11 +38,11 @@ public class Student {
         this.currentYear = currentYear;
     }
 
-    public String getCurrentSemester() {
+    public int getCurrentSemester() {
         return currentSemester;
     }
 
-    public void setCurrentSemester(String currentSemester) {
+    public void setCurrentSemester(int currentSemester) {
         this.currentSemester = currentSemester;
     }
 
