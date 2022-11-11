@@ -12,12 +12,8 @@
     ],
     "completedCourses": [
       {
-        "courseName": "CSE1141",
-        "courseGrade": "AA"
-      },
-      {
-        "courseName": "Cse 1142",
-        "courseGrade": "AA"
+        "courseName": "",
+        "courseGrade": ""
       }
     ],
     "availableCourses": [

@@ -27,6 +27,7 @@ public class Student {
 
     private List<String> availableCourses;
     private List<FailedCourses> failedCourses;
+    private int counter = 0;
 
 
 
@@ -98,5 +99,18 @@ public class Student {
     List<CompletedCourses> getCompletedCourses() { return completedCourses; }
 
     List<String> getAvailableCourses() { return availableCourses; }
+
+    /*public void setCompletedCoursesFromGivenArray(String courseName, String courseGrade, ArrayList<String> arrayOfCourses){
+        CompletedCourses completedcoursesTest = new CompletedCourses();
+        completedcoursesTest.setCourseName(courseName);
+        completedcoursesTest.setCourseGrade(courseGrade);
+        for (int i = 0 ; i < arrayOfCourses.size(); i ++){
+            this.completedCourses.set(i, completedcoursesTest);
+        }
+
+        for (int i = 0; i < courseName.size(); i++){
+            completedCourses.add(courseName.get(i))
+        }
+    }*/
 
 }

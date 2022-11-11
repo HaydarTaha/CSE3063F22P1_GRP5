@@ -6,6 +6,9 @@ public class CompletedCourses{
     private String courseName;
     private String courseGrade;
 
+
+
+
     public String getCourseName() {
         return courseName;
     }
