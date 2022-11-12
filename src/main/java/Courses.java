@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class Courses  {
@@ -88,6 +89,25 @@ public class Courses  {
 
     public void setCredit(int credit) {
         this.credit = credit;
+    }
+
+    public Boolean checkIfPrerequisite(Courses courses){
+        return courses.getPrerequisite().get(0) != "";
+    }
+    public Boolean checkIfTwoPreRequisite(Courses courses){
+        if (courses.getPrerequisite().get(0) != "" && courses.getPrerequisite().get(1) != ""){
+            return true;
+        }
+        else return false;
+    }
+    public String getPreRequisiteName(Courses courses) {
+        return courses.getPrerequisite().get(0);
+    }
+    public ArrayList<String> getTwoPreRequisiteName(Courses courses){
+        ArrayList<String>preRequisiteNames = new ArrayList<>();
+        preRequisiteNames.add(courses.getPrerequisite().get(0));
+        preRequisiteNames.add(courses.getPrerequisite().get(1));
+        return preRequisiteNames;
     }
 
     public Courses(){
