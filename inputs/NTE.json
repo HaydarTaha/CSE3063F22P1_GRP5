@@ -1,0 +1,57 @@
+[
+  {
+    "name": "Brand Creation/Branding",
+    "courseCode": "MRk3084",
+    "prerequisite": [""],
+    "credit": 3,
+    "courseType": 1,
+    "semester": 0,
+    "courseYear": 0,
+    "theoreticalCourseHour": 2,
+    "practicalLessonHour": 0
+  },
+  {
+    "name": "German for Beginners",
+    "courseCode": "YDA1001",
+    "prerequisite": [""],
+    "credit": 3,
+    "courseType": 1,
+    "semester": 0,
+    "courseYear": 0,
+    "theoreticalCourseHour": 2,
+    "practicalLessonHour": 0
+  },
+  {
+    "name": "Spanish for Beginners",
+    "courseCode": "YDIS1001",
+    "prerequisite": [""],
+    "credit": 3,
+    "courseType": 1,
+    "semester": 0,
+    "courseYear": 0,
+    "theoreticalCourseHour": 2,
+    "practicalLessonHour": 0
+  },
+  {
+    "name": "Introduction to Strategic Human Resources Management",
+    "courseCode": "NTE1014",
+    "prerequisite": [""],
+    "credit": 3,
+    "courseType": 1,
+    "semester": 0,
+    "courseYear": 0,
+    "theoreticalCourseHour": 2,
+    "practicalLessonHour": 0
+  },
+  {
+    "name": "Introduction to Strategy for Engineers",
+    "courseCode": "NTE1016",
+    "prerequisite": [""],
+    "credit": 3,
+    "courseType": 1,
+    "semester": 0,
+    "courseYear": 0,
+    "theoreticalCourseHour": 2,
+    "practicalLessonHour": 0
+  }
+]
