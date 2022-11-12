@@ -16,7 +16,7 @@ import java.util.Map;
 
 
 public class Student {
-    private int studentID;
+    private int studentId;
     private String fName;
     private String lName;
     private double gpa;
@@ -49,8 +49,8 @@ public class Student {
 
 
 
-    public void setStudentID(int studentID) {
-        this.studentID = studentID;
+    public void setStudentId(int studentId) {
+        this.studentId = studentId;
     }
 
     public void setfName(String fName) {
@@ -86,7 +86,7 @@ public class Student {
         this.failedCourses = failedCourses;
     }
 
-    int getStudentID() { return studentID; }
+    int getStudentId() { return studentId; }
 
     String getfName() { return fName; }
 

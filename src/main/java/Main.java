@@ -25,8 +25,11 @@ public class Main {
 
 
 
-        File studentsJsonFile = new File("inputs\\students.json");
+        File studentsJsonFile = new File("inputs\\studentInformation.json");
         Student[] students = objectMapper.readValue(studentsJsonFile, Student[].class);
+        for (int i = 0; i< students.length; i++){
+            System.out.println(students[i].getStudentId());
+        }
         RandomStudentCompletedCourseGenerator randomStudentCompletedCourseGenerator = new RandomStudentCompletedCourseGenerator();
         randomStudentCompletedCourseGenerator.addCourseNames(students, courses);
         System.out.println(students[0].getCompletedCourses());
