@@ -1,18 +1,15 @@
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Random;
+import java.lang.reflect.Array;
+import java.util.*;
 
 public class RandomStudentCompletedCourseGenerator{
+    List<String> availableCourseList = new ArrayList<>();
 
-    public void addCourseNames(Student[]students, Courses[] courses) throws IOException {
-        CompletedCourses completedCoursesTest = new CompletedCourses();
-        List<CompletedCourses> completedCoursesList = new ArrayList<>();
-        int y = 0;
-        Random randomCourseAdder = new Random();
-        int randomNumber = 0;
-        List<String> testArrayList = new ArrayList<>();
+
+    String coursePreRequisite = "";
+    List<String> emptyTestList = new ArrayList<>();
+
+    public void setAvailableCoursesForEachStudent(Student[] students, Courses[] courses){
         List<String> semesterOneCoursesNames = new ArrayList<String>();
         List<String> semesterTwoCoursesNames = new ArrayList<String>();
         List<String> semesterThreeCoursesNames = new ArrayList<String>();
@@ -21,23 +18,89 @@ public class RandomStudentCompletedCourseGenerator{
         List<String> semesterSixCoursesNames = new ArrayList<String>();
         List<String> semesterSevenCoursesNames = new ArrayList<String>();
         List<String> semesterEigthCoursesNames = new ArrayList<String>();
+        List<String> studentCoursesTook = new ArrayList<>();
+        List<String> calculatedSemesterTwoCourseNames = new ArrayList<>(semesterTwoCoursesNames);
+        String courseName = "";
+        String courseGrade = "";
         for (Courses course : courses) {
             switch (course.getSemester()) {
                 case 1 -> semesterOneCoursesNames.add(course.getCourseCode());
                 case 2 -> semesterTwoCoursesNames.add(course.getCourseCode());
                 case 3 -> semesterThreeCoursesNames.add(course.getCourseCode());
-                case 4 -> semesterFourCoursesNames.add(course.getName());
-                case 5 -> semesterFiveCoursesNames.add(course.getName());
-                case 6 -> semesterSixCoursesNames.add(course.getName());
-                case 7 -> semesterSevenCoursesNames.add(course.getName());
-                case 8 -> semesterEigthCoursesNames.add(course.getName());
+                case 4 -> semesterFourCoursesNames.add(course.getCourseCode());
+                case 5 -> semesterFiveCoursesNames.add(course.getCourseCode());
+                case 6 -> semesterSixCoursesNames.add(course.getCourseCode());
+                case 7 -> semesterSevenCoursesNames.add(course.getCourseCode());
+                case 8 -> semesterEigthCoursesNames.add(course.getCourseCode());
             }
+        }
 
+        for (Student student : students){
+            calculatedSemesterTwoCourseNames = new ArrayList<>(semesterTwoCoursesNames);
+            studentCoursesTook = new ArrayList<>();
+            for (CompletedCourses completedCourses : student.getCompletedCourses()){
+                studentCoursesTook.add(completedCourses.getCourseName());
+                studentCoursesTook.add(completedCourses.getCourseGrade());
+            }
+            switch (student.getCurrentSemester()){
+                case 1 -> student.setAvailableCourses(semesterOneCoursesNames);
+                case 2 -> {
+                    for (int i = 0; i< studentCoursesTook.size(); i +=2){
+                        courseName = studentCoursesTook.get(i);
+                        courseGrade = studentCoursesTook.get(i+1);
+                        if (courseGrade == "FF" && courseName == "CSE 1241") {
+                            calculatedSemesterTwoCourseNames.remove("CSE1242");
+                            calculatedSemesterTwoCourseNames.add("CSE 1241");
+                        }
+                        else if (courseGrade == "FF"){
+                            calculatedSemesterTwoCourseNames.add(courseName);
+                        }
 
+                    }
+                    student.setAvailableCourses(calculatedSemesterTwoCourseNames);
+
+                }
+                case 3 -> {
+
+                }
+            }
+        }
+
+    }
+
+    public void addCourseNames(Student[]students, Courses[] courses) throws IOException {
+        List<String> semesterOneCoursesNames = new ArrayList<String>();
+        List<String> semesterTwoCoursesNames = new ArrayList<String>();
+        List<String> semesterThreeCoursesNames = new ArrayList<String>();
+        List<String> semesterFourCoursesNames = new ArrayList<String>();
+        List<String> semesterFiveCoursesNames = new ArrayList<String>();
+        List<String> semesterSixCoursesNames = new ArrayList<String>();
+        List<String> semesterSevenCoursesNames = new ArrayList<String>();
+        List<String> semesterEigthCoursesNames = new ArrayList<String>();
+        CompletedCourses completedCoursesTest = new CompletedCourses();
+        List<CompletedCourses> completedCoursesList = new ArrayList<>();
+        int y = 0;
+        Random randomCourseAdder = new Random();
+        int randomNumber = 0;
+        List<String> testArrayList = new ArrayList<>();
+
+        for (Courses course : courses) {
+            switch (course.getSemester()) {
+                case 1 -> semesterOneCoursesNames.add(course.getCourseCode());
+                case 2 -> semesterTwoCoursesNames.add(course.getCourseCode());
+                case 3 -> semesterThreeCoursesNames.add(course.getCourseCode());
+                case 4 -> semesterFourCoursesNames.add(course.getCourseCode());
+                case 5 -> semesterFiveCoursesNames.add(course.getCourseCode());
+                case 6 -> semesterSixCoursesNames.add(course.getCourseCode());
+                case 7 -> semesterSevenCoursesNames.add(course.getCourseCode());
+                case 8 -> semesterEigthCoursesNames.add(course.getCourseCode());
+            }
         }
         for (Student student : students){
             switch (student.getCurrentSemester()){
-                case 1 -> student.setCompletedCourses(null);
+                case 1 -> {
+                    student.setCompletedCourses(null);
+                }
                 case 2 -> {
                     for (int i = 0; i < semesterOneCoursesNames.size(); i++){
                         completedCoursesTest = new CompletedCourses();

@@ -1,6 +1,6 @@
 [
   {
-    "studentID": 150119643,
+    "studentId": 150119643,
     "fName": "Mert",
     "lName": "Ozincegedik",
     "gpa": 3.12,
@@ -32,7 +32,7 @@
     ]
   },
   {
-    "studentID": 150117002,
+    "studentId": 150117002,
     "fName": "Burak",
     "lName": "Aslan",
     "gpa": 3.12,
@@ -64,7 +64,7 @@
     ]
   },
   {
-    "studentID": 150117002,
+    "studentId": 150117002,
     "fName": "Haydar Taha",
     "lName": "Tunc",
     "gpa": 3.55,
@@ -100,7 +100,7 @@
     ]
   },
   {
-    "studentID": 150117002,
+    "studentId": 150117002,
     "fName": "Burak",
     "lName": "Dursun",
     "gpa": 3.12,
