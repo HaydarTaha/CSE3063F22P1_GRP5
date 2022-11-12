@@ -94,8 +94,8 @@ public class Courses  {
         }
         else return false;
     }
-    public String getPreRequisiteName(Courses courses) {
-        return courses.getPrerequisite().get(0);
+    public String getPreRequisiteName() {
+        return prerequisite.get(0);
     }
     public ArrayList<String> getTwoPreRequisiteName(Courses courses){
         ArrayList<String>preRequisiteNames = new ArrayList<>();

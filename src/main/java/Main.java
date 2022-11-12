@@ -43,8 +43,7 @@ public class Main {
         for (int i = 0; i < 1; i++){
             System.out.println(inputs[i].getNumberOfStudents());
         }
-        Init init = new Init();
-        init.StudentGenerator(inputs[0].getNumberOfStudents());
+
 
       /*  RandomStudentCompletedCourseGenerator randomStudentCompletedCourseGenerator = new RandomStudentCompletedCourseGenerator();
         ArrayList<Integer> randomCompletedCourseNumbers = randomStudentCompletedCourseGenerator.generate(students);
