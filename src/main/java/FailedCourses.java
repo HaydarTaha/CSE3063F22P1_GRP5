@@ -17,4 +17,8 @@ public class FailedCourses extends Courses {
     public void setCourseName(String courseName){
         this.courseName = courseName;
     }
+
+    public String toString(){
+        return getCourseName() + ", "+getCourseGrade();
+    }
 }

@@ -1,25 +1,35 @@
 import java.util.List;
 
-public class TranscriptCreator {
+public class TranscriptCreator{
 
-    public Transcript createTranscript(){
+    private Student[] student;
 
-        return null;
+    public TranscriptCreator(Student[] student) {
+        this.student = student;
     }
-    public List<CompletedCourses> takeCompletedCourses(){
 
-        return null;
+    public void createTranscript(){
+
+        for (int i=0; i<1; i++)
+        System.out.println("Transcript of Student(" + student[i].getStudentId() + ")\nCompleted Courses: " + takeCompletedCourses(student[i]) +
+                "\nFailed Courses: " + takeFailedCourses(student[i]) + "\nGpa : " + calculateGPA(student[i])
+                +"\nTotal Credit: " + calculateTotalCredits(student[i]));
+
     }
-    public List<CompletedCourses> takeFailedCourses(){
+    public List<CompletedCourses> takeCompletedCourses(Student student){
 
-        return null;
+        return student.getCompletedCourses();
     }
-    public double calculateGPA(){
-
-        return 0;
+    public List<FailedCourses> takeFailedCourses(Student student){
+        return student.getFailedCourses();
     }
-    public int calculateTotalCredits(){
-
-        return 0;
+    public double calculateGPA(Student student){
+        gpaCalculator gpaCalculator1 = new gpaCalculator();
+        double gpa = student.getGPA();
+        return gpa;
+    }
+    public int calculateTotalCredits(Student student){
+        int totalCredit=0;
+        return totalCredit;
     }
 }
