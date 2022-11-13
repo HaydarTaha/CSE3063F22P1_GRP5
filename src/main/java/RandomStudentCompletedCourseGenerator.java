@@ -12,15 +12,15 @@ public class RandomStudentCompletedCourseGenerator{
         List<String> semesterSixCoursesNames = new ArrayList<String>();
         List<String> semesterSevenCoursesNames = new ArrayList<String>();
         List<String> semesterEigthCoursesNames = new ArrayList<String>();
-        List<String> studentCoursesTook = new ArrayList<>();
+        List<String> studentCoursesTook;
         String prerequisite;
-        ArrayList<String> calculatedSemesterTwoCourseNames = new ArrayList<>(semesterTwoCoursesNames);
-        ArrayList<String> calculatedSemesterThreeCourseNames = new ArrayList<>(semesterThreeCoursesNames);
-        ArrayList<String> calculatedSemesterFourCourseNames = new ArrayList<>(semesterFourCoursesNames);
-        ArrayList<String> calculatedSemesterFiveCourseNames = new ArrayList<>(semesterFourCoursesNames);
-        ArrayList<String> calculatedSemesterSixCourseNames = new ArrayList<>(semesterFourCoursesNames);
-        ArrayList<String> calculatedSemesterSevenCourseNames = new ArrayList<>(semesterFourCoursesNames);
-        ArrayList<String> calculatedSemesterEigthCourseNames = new ArrayList<>(semesterFourCoursesNames);
+        ArrayList<String> calculatedSemesterTwoCourseNames;
+        ArrayList<String> calculatedSemesterThreeCourseNames;
+        ArrayList<String> calculatedSemesterFourCourseNames;
+        ArrayList<String> calculatedSemesterFiveCourseNames;
+        ArrayList<String> calculatedSemesterSixCourseNames;
+        ArrayList<String> calculatedSemesterSevenCourseNames;
+        ArrayList<String> calculatedSemesterEigthCourseNames;
         String courseName = "";
         String courseGrade = "";
         for (Courses course : courses) {
@@ -56,16 +56,20 @@ public class RandomStudentCompletedCourseGenerator{
                         courseName = studentCoursesTook.get(i);
                         courseGrade = studentCoursesTook.get(i+1);
                             if (courseGrade == "FF"){
+                                boolean test = false;
                                 for (Courses courses1 : courses){
                                     if (Objects.equals(courseName, courses1.getPreRequisiteName())){
                                         prerequisite = courses1.getPreRequisiteName();
                                         calculatedSemesterTwoCourseNames.remove(courses1.getCourseCode());
                                         calculatedSemesterTwoCourseNames.add(prerequisite);
+                                        test = true;
                                         break;
                                     }
                                 }
-                                calculatedSemesterTwoCourseNames.add(courseName);
-                                continue;
+                                if (!test){
+                                    calculatedSemesterTwoCourseNames.add(courseName);
+                                }
+
                             }
 
                         }
@@ -77,16 +81,18 @@ public class RandomStudentCompletedCourseGenerator{
                         courseName = studentCoursesTook.get(i);
                         courseGrade = studentCoursesTook.get(i+1);
                         if (courseGrade == "FF"){
+                            boolean test = false;
                             for (Courses courses1 : courses){
                                 if (Objects.equals(courseName, courses1.getPreRequisiteName())){
                                     prerequisite = courses1.getPreRequisiteName();
                                     calculatedSemesterThreeCourseNames.remove(courses1.getCourseCode());
                                     calculatedSemesterThreeCourseNames.add(prerequisite);
+                                    test = true;
                                     break;
                                 }
                             }
-                            calculatedSemesterThreeCourseNames.add(courseName);
-                            continue;
+                            if (!test) calculatedSemesterThreeCourseNames.add(courseName);
+
                         }
 
                     }
@@ -98,15 +104,18 @@ public class RandomStudentCompletedCourseGenerator{
                         courseName = studentCoursesTook.get(i);
                         courseGrade = studentCoursesTook.get(i+1);
                         if (courseGrade == "FF"){
+                            boolean test = false;
                             for (Courses courses1 : courses){
                                 if (Objects.equals(courseName, courses1.getPreRequisiteName())){
                                     prerequisite = courses1.getPreRequisiteName();
                                     calculatedSemesterFourCourseNames.remove(courses1.getCourseCode());
                                     calculatedSemesterFourCourseNames.add(prerequisite);
+                                    test = true;
                                     break;
                                 }
                             }
-                            calculatedSemesterFourCourseNames.add(courseName);
+                            if (!test) calculatedSemesterThreeCourseNames.add(courseName);
+
                             continue;
                         }
 
@@ -119,16 +128,18 @@ public class RandomStudentCompletedCourseGenerator{
                         courseName = studentCoursesTook.get(i);
                         courseGrade = studentCoursesTook.get(i+1);
                         if (courseGrade == "FF"){
+                            boolean test = false;
                             for (Courses courses1 : courses){
                                 if (Objects.equals(courseName, courses1.getPreRequisiteName())){
                                     prerequisite = courses1.getPreRequisiteName();
                                     calculatedSemesterFiveCourseNames.remove(courses1.getCourseCode());
                                     calculatedSemesterFiveCourseNames.add(prerequisite);
+                                    test = true;
                                     break;
                                 }
                             }
-                            calculatedSemesterFiveCourseNames.add(courseName);
-                            continue;
+                            if (!test) calculatedSemesterFiveCourseNames.add(courseName);
+
                         }
 
                     }
@@ -140,16 +151,18 @@ public class RandomStudentCompletedCourseGenerator{
                         courseName = studentCoursesTook.get(i);
                         courseGrade = studentCoursesTook.get(i+1);
                         if (courseGrade == "FF"){
+                            boolean test = false;
                             for (Courses courses1 : courses){
                                 if (Objects.equals(courseName, courses1.getPreRequisiteName())){
                                     prerequisite = courses1.getPreRequisiteName();
                                     calculatedSemesterSixCourseNames.remove(courses1.getCourseCode());
                                     calculatedSemesterSixCourseNames.add(prerequisite);
+                                    test = true;
                                     break;
                                 }
                             }
-                            calculatedSemesterSixCourseNames.add(courseName);
-                            continue;
+                            if (!test) calculatedSemesterSixCourseNames.add(courseName);
+
                         }
 
                     }
@@ -161,16 +174,17 @@ public class RandomStudentCompletedCourseGenerator{
                         courseName = studentCoursesTook.get(i);
                         courseGrade = studentCoursesTook.get(i+1);
                         if (courseGrade == "FF"){
+                            boolean test = false;
                             for (Courses courses1 : courses){
                                 if (Objects.equals(courseName, courses1.getPreRequisiteName())){
                                     prerequisite = courses1.getPreRequisiteName();
                                     calculatedSemesterSevenCourseNames.remove(courses1.getCourseCode());
                                     calculatedSemesterSevenCourseNames.add(prerequisite);
+                                    test = true;
                                     break;
                                 }
                             }
-                            calculatedSemesterSevenCourseNames.add(courseName);
-                            continue;
+                            if (!test) calculatedSemesterSevenCourseNames.add(courseName);
                         }
 
                     }
@@ -182,16 +196,17 @@ public class RandomStudentCompletedCourseGenerator{
                         courseName = studentCoursesTook.get(i);
                         courseGrade = studentCoursesTook.get(i+1);
                         if (courseGrade == "FF"){
+                            boolean test = false;
                             for (Courses courses1 : courses){
                                 if (Objects.equals(courseName, courses1.getPreRequisiteName())){
                                     prerequisite = courses1.getPreRequisiteName();
                                     calculatedSemesterEigthCourseNames.remove(courses1.getCourseCode());
                                     calculatedSemesterEigthCourseNames.add(prerequisite);
+                                    test = true;
                                     break;
                                 }
                             }
-                            calculatedSemesterEigthCourseNames.add(courseName);
-                            continue;
+                            if (!test) calculatedSemesterEigthCourseNames.add(courseName);
                         }
 
                     }
