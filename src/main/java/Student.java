@@ -19,6 +19,10 @@ public class Student {
     private int studentId;
     private String fName;
     private String lName;
+
+
+
+    private int advisorId;
     private double gpa;
     private int currentYear;
     private int currentSemester;
@@ -33,6 +37,13 @@ public class Student {
 
     public int getCurrentYear() {
         return currentYear;
+    }
+    public int getAdvisorId() {
+        return advisorId;
+    }
+
+    public void setAdvisorId(int advisorId) {
+        this.advisorId = advisorId;
     }
 
     public void setCurrentYear(int currentYear) {
@@ -98,7 +109,55 @@ public class Student {
 
     List<CompletedCourses> getCompletedCourses() { return completedCourses; }
 
+    public void selectFromAvailableCourses(){
+        ArrayList<String> coursesAdd = new ArrayList<>();
+        if (availableCourses.size() > 10){
+            for (String s : availableCourses){
+                if (checkIfCourseFailed(s)) {
+                    coursesAdd.add(s);
+                }
+            }
+            if (coursesAdd.size() < 10){
+                for (String s : availableCourses) {
+                    while (coursesAdd.size() != 10){
+                        coursesAdd.add(s);
+                    }
+                }
+                this.currentSelectedCourses.addAll(coursesAdd);
+            }
+            else if (coursesAdd.size() > 10){
+                while (coursesAdd.size() != 10){
+                    coursesAdd.remove(10);
+                }
+                this.currentSelectedCourses.addAll(coursesAdd);
+            }
+        }
+        else {
+            this.currentSelectedCourses.addAll(availableCourses);
+        }
+
+
+    }
+
+
     List<String> getAvailableCourses() { return availableCourses; }
+
+    boolean checkIfCourseFailed(String courseCode){
+        boolean check = false;
+        for (CompletedCourses completedCourses1 : this.completedCourses){
+            if (completedCourses1.getCourseName().equals(courseCode) && completedCourses1.getCourseGrade().equals("FF")){
+                check = true;
+            }
+        }
+        return check;
+    }
+    public void sendToAdvisorSelectedClasses(Advisor[]advisors){
+        for (Advisor advisor : advisors){
+            if (this.advisorId == advisor.getAdvisorId()){
+                advisor.advisorControl((ArrayList<String>) currentSelectedCourses, this);
+            }
+        }
+    }
 
     /*public void setCompletedCoursesFromGivenArray(String courseName, String courseGrade, ArrayList<String> arrayOfCourses){
         CompletedCourses completedcoursesTest = new CompletedCourses();
