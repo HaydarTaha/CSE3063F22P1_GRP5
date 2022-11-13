@@ -14,6 +14,5 @@ public class Input {
     int numberOfStudents;
     public static void main(String[] args) {
 
-
     }
 }

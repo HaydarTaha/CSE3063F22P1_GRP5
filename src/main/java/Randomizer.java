@@ -1,8 +1,7 @@
 import java.io.IOException;
-import java.lang.reflect.Array;
 import java.util.*;
 
-public class RandomStudentCompletedCourseGenerator{
+public class Randomizer{
     public void setAvailableCoursesForEachStudent(Student[] students, Courses[] courses){
         List<String> semesterOneCoursesNames = new ArrayList<String>();
         List<String> semesterTwoCoursesNames = new ArrayList<String>();

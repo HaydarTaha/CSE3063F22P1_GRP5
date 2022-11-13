@@ -19,4 +19,11 @@ public class Transcript {
     public int getCompletedCredits() {
         return completedCredits;
     }
+    public void printTranscript(Student[] students2){
+        for (Student s: students2) {
+            System.out.println(s.getStudentId() + " " + s.getfName() + " " +  s.getlName() + " " + s.getCompletedCourses() + " " + s.getGPA() + " " + s.getTotalCredit());
+        }
+
+
+    }
 }
