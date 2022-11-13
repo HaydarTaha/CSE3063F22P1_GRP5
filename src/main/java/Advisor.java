@@ -4,12 +4,23 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Advisor extends Student {
+
     private int advisorId;
+
     private String fName;
 
     private String lName;
 
     private List<String> studentsLooking;
+
+    @Override
+    public int getAdvisorId() {
+        return advisorId;
+    }
+    @Override
+    public void setAdvisorId(int advisorId) {
+        this.advisorId = advisorId;
+    }
 
     public void setfName(String fName){ this.fName = fName;}
 
@@ -25,68 +36,48 @@ public class Advisor extends Student {
 
     List<String> getStudentsLooking() { return studentsLooking; }
 
-    public void advisorControl(ArrayList<String> chosenClasses, Student student){
-        Scanner scanner = new Scanner(System.in);
-        String userPromt;
-        String reason;
-        //TODO
+    public void advisorControl(List<String> chosenClasses, Student student){
+
         // student.setRejectedList();
         // Buraya rejectedList yaparken ilk eleman rejected course ismi diğeri sebep şeklinde yapın rejectedListWithReasons = [CSE1142, zaman uyuşmuyor, CSE 3033, kota dolu, CSE3063, kota çok az] gibi
         // ondan sonra student.changeCurrentCourses(approvedList, rejectedListWithReasons) en sonunda yapın
         // En son olarak hoca burada manuel olarak değilde dersleri otomatik approve/reject yapsın demiş. O yüzden mantığınıza göre uydurun.
 
-        //
         Random random = new Random();
         String[] stringArray = new String[3];
         stringArray[0]="Rejected because quota is full";
         stringArray[1]="Rejected because the timing is not appropriate";
         stringArray[2]="Rejected because student cannot take many lessons";
 
+        ArrayList<String> rejectedList = new ArrayList<>();
+
         int randomNumber = random.nextInt(3);
         int randomNumber2 = random.nextInt(3);
         int randomNumber3 = random.nextInt(3);
 
+        Student student1 = new Student();
+        int courseSize = 4;
+        for (int i=0; i<courseSize; i++){
         switch (randomNumber){
             case 1:
                 if (randomNumber2==0 && randomNumber3==0){
+                    rejectedList.add(student1.getCurrentSelectedCourses().get(i));
                     System.out.println(stringArray[0]);
                 }
                 break;
             case 2:
                 if (randomNumber2==1 && randomNumber3==1){
+                    rejectedList.add(student1.getCurrentSelectedCourses().get(i));
                     System.out.println(stringArray[1]);
                 }
                 break;
             case 3:
                 if (randomNumber2==2 && randomNumber3==2){
+                    rejectedList.add(student1.getCurrentSelectedCourses().get(i));
                     System.out.println(stringArray[1]);
                 }
                 break;
         }
-
-        /*for (int i = 0; i< studentCoursesTook.size(); i +=2) {
-            courseName = studentCoursesTook.get(i);
-            courseGrade = studentCoursesTook.get(i + 1);
-        }
-        for (int i = 0; i< studentCoursesTook.size(); i +=2) {
-            courseName = studentCoursesTook.get(i);
-            courseGrade = studentCoursesTook.get(i + 1);
-        }*/
-
-
-        for (int i=0; i<chosenClasses.size(); i++){
-            System.out.println("Do you accept course: " + chosenClasses.get(i) + "from student: " + student.getfName() + " " + student.getlName());
-            userPromt= scanner.nextLine();
-            if (userPromt.equals("Yes")){
-                ;
-            }
-            else if(userPromt.equals("No")){
-                System.out.println("Why do you reject?");
-                reason=scanner.nextLine();
-                System.out.println(chosenClasses.get(i) + " Course is rejected. The reason is " + reason);
-                chosenClasses.remove(i);
-                i--;
-            }
         }
     }
 }
