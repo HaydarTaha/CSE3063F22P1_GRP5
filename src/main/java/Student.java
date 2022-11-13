@@ -159,6 +159,12 @@ public class Student {
         }
     }
 
+    public void changeSelectedCourses(ArrayList<String> advisorApprovedCourses, ArrayList<String> advisorRejectedCoursesAndReasons){
+        currentSelectedCourses.clear();
+        currentSelectedCourses.addAll(advisorApprovedCourses);
+        //TODO: decide what to do with rejected courses and their reasons
+    }
+
     /*public void setCompletedCoursesFromGivenArray(String courseName, String courseGrade, ArrayList<String> arrayOfCourses){
         CompletedCourses completedcoursesTest = new CompletedCourses();
         completedcoursesTest.setCourseName(courseName);
