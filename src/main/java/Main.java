@@ -21,27 +21,25 @@ public class Main {
         ObjectMapper objectMapper = new ObjectMapper();
         File lecturesJsonFile = new File("inputs\\lectures.json");
         Courses[] courses = objectMapper.readValue(lecturesJsonFile, Courses[].class);
-        RandomStudentCompletedCourseGenerator test = new RandomStudentCompletedCourseGenerator();
 
 
         File studentsJsonFile = new File("inputs\\students.json");
         Student[] students = objectMapper.readValue(studentsJsonFile, Student[].class);
-        for (int i = 0; i< students.length; i++){
-            System.out.println(students[i].getStudentId());
-        }
-        RandomStudentCompletedCourseGenerator randomStudentCompletedCourseGenerator = new RandomStudentCompletedCourseGenerator();
-        randomStudentCompletedCourseGenerator.addCourseNames(students, courses);
+
+
+        Randomizer randomizer = new Randomizer();
+        randomizer.addCourseNames(students, courses);
+        randomizer.setAvailableCoursesForEachStudent(students, courses);
         System.out.println(students[0].getCompletedCourses());
         System.out.println(students[1].getCompletedCourses());
-
+        System.out.println(students[0].getAvailableCourses());
+        System.out.println(students[1].getAvailableCourses());
+        students[0].gpaCalculator(courses);
+        students[1].gpaCalculator(courses);
 
         File inputJsonFile = new File("inputs\\input.json");
         Input[] inputs = objectMapper.readValue(inputJsonFile, Input[].class);
-        for (int i = 0; i < 1; i++){
-            System.out.println(inputs[i].getNumberOfStudents());
-        }
-        Transcript transcript = new Transcript();
-        transcript.printTranscript(students);
+
 
       /*  RandomStudentCompletedCourseGenerator randomStudentCompletedCourseGenerator = new RandomStudentCompletedCourseGenerator();
         ArrayList<Integer> randomCompletedCourseNumbers = randomStudentCompletedCourseGenerator.generate(students);
