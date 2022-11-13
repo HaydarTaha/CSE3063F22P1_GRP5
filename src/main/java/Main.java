@@ -39,6 +39,8 @@ public class Main {
 
         File inputJsonFile = new File("inputs\\input.json");
         Input[] inputs = objectMapper.readValue(inputJsonFile, Input[].class);
+        Transcript transcript = new Transcript();
+        transcript.printTranscript(students);
 
 
       /*  RandomStudentCompletedCourseGenerator randomStudentCompletedCourseGenerator = new RandomStudentCompletedCourseGenerator();
