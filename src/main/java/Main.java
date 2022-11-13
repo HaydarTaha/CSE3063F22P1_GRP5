@@ -26,16 +26,13 @@ public class Main {
 
         File studentsJsonFile = new File("inputs\\students.json");
         Student[] students = objectMapper.readValue(studentsJsonFile, Student[].class);
-
-
-
+        for (int i = 0; i< students.length; i++){
+            System.out.println(students[i].getStudentId());
+        }
         RandomStudentCompletedCourseGenerator randomStudentCompletedCourseGenerator = new RandomStudentCompletedCourseGenerator();
         randomStudentCompletedCourseGenerator.addCourseNames(students, courses);
-        randomStudentCompletedCourseGenerator.setAvailableCoursesForEachStudent(students, courses);
         System.out.println(students[0].getCompletedCourses());
         System.out.println(students[1].getCompletedCourses());
-        System.out.println(students[0].getAvailableCourses());
-        System.out.println(students[1].getAvailableCourses());
 
 
         File inputJsonFile = new File("inputs\\input.json");
@@ -43,7 +40,8 @@ public class Main {
         for (int i = 0; i < 1; i++){
             System.out.println(inputs[i].getNumberOfStudents());
         }
-
+        Transcript transcript = new Transcript();
+        transcript.printTranscript(students);
 
       /*  RandomStudentCompletedCourseGenerator randomStudentCompletedCourseGenerator = new RandomStudentCompletedCourseGenerator();
         ArrayList<Integer> randomCompletedCourseNumbers = randomStudentCompletedCourseGenerator.generate(students);
