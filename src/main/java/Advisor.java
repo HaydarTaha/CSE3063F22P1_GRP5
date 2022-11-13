@@ -30,6 +30,9 @@ public class Advisor extends Student {
         String reason;
         //TODO
         // student.setRejectedList();
+        // Buraya rejectedList yaparken ilk eleman rejected course ismi diğeri sebep şeklinde yapın rejectedListWithReasons = [CSE1142, zaman uyuşmuyor, CSE 3033, kota dolu, CSE3063, kota çok az] gibi
+        // ondan sonra student.changeCurrentCourses(approvedList, rejectedListWithReasons) en sonunda yapın
+        // En son olarak hoca burada manuel olarak değilde dersleri otomatik approve/reject yapsın demiş. O yüzden mantığınıza göre uydurun.
 
         for (int i=0; i<chosenClasses.size(); i++){
 

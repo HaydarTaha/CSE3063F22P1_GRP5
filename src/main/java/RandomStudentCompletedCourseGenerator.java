@@ -40,10 +40,10 @@ public class RandomStudentCompletedCourseGenerator{
             calculatedSemesterTwoCourseNames = new ArrayList<>(semesterTwoCoursesNames);
             calculatedSemesterThreeCourseNames = new ArrayList<>(semesterThreeCoursesNames);
             calculatedSemesterFourCourseNames = new ArrayList<>(semesterFourCoursesNames);
-            calculatedSemesterFiveCourseNames = new ArrayList<>(semesterFourCoursesNames);
-            calculatedSemesterSixCourseNames = new ArrayList<>(semesterFourCoursesNames);
-            calculatedSemesterSevenCourseNames = new ArrayList<>(semesterFourCoursesNames);
-            calculatedSemesterEigthCourseNames = new ArrayList<>(semesterFourCoursesNames);
+            calculatedSemesterFiveCourseNames = new ArrayList<>(semesterFiveCoursesNames);
+            calculatedSemesterSixCourseNames = new ArrayList<>(semesterSixCoursesNames);
+            calculatedSemesterSevenCourseNames = new ArrayList<>(semesterSevenCoursesNames);
+            calculatedSemesterEigthCourseNames = new ArrayList<>(semesterEigthCoursesNames);
             studentCoursesTook = new ArrayList<>();
             for (CompletedCourses completedCourses : student.getCompletedCourses()){
                 studentCoursesTook.add(completedCourses.getCourseName());

@@ -145,8 +145,9 @@ public class Student {
     boolean checkIfCourseFailed(String courseCode){
         boolean check = false;
         for (CompletedCourses completedCourses1 : this.completedCourses){
-            if (completedCourses1.getCourseName().equals(courseCode) && completedCourses1.getCourseGrade().equals("FF")){
+            if (completedCourses1.getCourseName().equals(courseCode) && completedCourses1.getCourseGrade().equals("FF")) {
                 check = true;
+                break;
             }
         }
         return check;
