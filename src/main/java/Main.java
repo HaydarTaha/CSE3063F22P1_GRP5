@@ -19,6 +19,9 @@ public class Main {
     public static void main(String[] args) throws IOException, ParseException {
 
         ObjectMapper objectMapper = new ObjectMapper();
+
+        File advisorJsonFile = new File("inputs\\Advisors.json");
+        Advisor[] advisors = objectMapper.readValue(advisorJsonFile, Advisor[].class);
         File lecturesJsonFile = new File("inputs\\lectures.json");
         Courses[] courses = objectMapper.readValue(lecturesJsonFile, Courses[].class);
 
@@ -34,9 +37,10 @@ public class Main {
         System.out.println(students[1].getCompletedCourses());
         System.out.println(students[0].getAvailableCourses());
         System.out.println(students[1].getAvailableCourses());
-        students[0].gpaCalculator(courses);
-        students[1].gpaCalculator(courses);
-
+        for (Student student : students){
+            student.selectFromAvailableCourses();
+            student.sendToAdvisorSelectedClasses(advisors);
+        }
         File inputJsonFile = new File("inputs\\input.json");
         Input[] inputs = objectMapper.readValue(inputJsonFile, Input[].class);
 

@@ -154,7 +154,7 @@ public class Student {
     public void sendToAdvisorSelectedClasses(Advisor[]advisors){
         for (Advisor advisor : advisors){
             if (this.advisorId == advisor.getAdvisorId()){
-                advisor.advisorControl((ArrayList<String>) currentSelectedCourses, this);
+                advisor.advisorControl(currentSelectedCourses, this);
             }
         }
     }
@@ -162,6 +162,7 @@ public class Student {
     public void changeSelectedCourses(ArrayList<String> advisorApprovedCourses, ArrayList<String> advisorRejectedCoursesAndReasons){
         currentSelectedCourses.clear();
         currentSelectedCourses.addAll(advisorApprovedCourses);
+        System.out.println(currentSelectedCourses);
         //TODO: decide what to do with rejected courses and their reasons
     }
     public int getCompletedCourseNumber(){
