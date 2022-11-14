@@ -21,7 +21,7 @@ public class Transcript {
     }
     public void printTranscript(Student[] students2){
         for (Student s: students2) {
-            System.out.println(s.getStudentId() + " " + s.getfName() + " " +  s.getlName() + " " + s.getCompletedCourses());
+            System.out.println(s.getStudentId() + " " + s.getfName() + " " +  s.getlName() + " " + s.getCompletedCourses() + " " + s.getGPA() + " " + s.getTotalCredit());
         }
 
 

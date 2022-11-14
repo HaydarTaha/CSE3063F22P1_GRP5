@@ -1,8 +1,7 @@
 import java.io.File;
 import java.io.FileWriter;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.HashMap;
+import java.util.*;
+
 import org.json.simple.JSONObject;
 import org.json.simple.JSONArray;
 import org.json.simple.parser.JSONParser;
@@ -12,14 +11,13 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 
 import java.io.IOException;
-import java.util.Map;
 
 
 public class Student {
     private int studentId;
     private String fName;
     private String lName;
-
+    private int totalCredit;
 
     private int advisorId;
     private double gpa;
@@ -74,7 +72,13 @@ public class Student {
     public void setGPA(double gpa) {
         this.gpa = gpa;
     }
+    public int getTotalCredit() {
+        return totalCredit;
+    }
 
+    public void setTotalCredit(int totalCredit) {
+        this.totalCredit = totalCredit;
+    }
 
     public void setCurrentSelectedCourses(List<String> currentSelectedCourses) {
         this.currentSelectedCourses = currentSelectedCourses;
@@ -168,6 +172,7 @@ public class Student {
     public int getCompletedCourseNumber(){
         return completedCourses.size();
     }
+
     public void gpaCalculator(Courses[] courses){
         String letterAA = "4.00";
         double AA = Double.parseDouble(letterAA);
@@ -197,77 +202,82 @@ public class Student {
         credit = 0;
         sum = 0;
         for (CompletedCourses completedCourses1 : completedCourses) {
-                for (Courses courses1 : courses){
-                    if (completedCourses1.getCourseName().equals(courses1.getCourseCode())) {
-                        credit = courses1.getCredit();
-                        break;
-                    }
-                }
-                if (completedCourses1.getCourseGrade().equals("AA")) {
-                    sum = sum + (AA * credit);
-                    System.out.println("Sum = " + sum);
-                    creditSum = creditSum + credit;
-                    transcriptCreditSum = transcriptCreditSum + credit;
-
-                } else if (completedCourses1.getCourseGrade().equals("BA")) {
-                    sum = sum + (BA * credit);
-                    System.out.println("Sum = " + sum);
-                    creditSum = creditSum + credit;
-                    transcriptCreditSum = transcriptCreditSum + credit;
-
-                } else if (completedCourses1.getCourseGrade().equals("BB")) {
-                    sum = sum + (BB * credit);
-                    System.out.println("Sum = " + sum);
-                    creditSum = creditSum + credit;
-                    transcriptCreditSum = transcriptCreditSum + credit;
-
-                } else if (completedCourses1.getCourseGrade().equals("CB")) {
-                    sum = sum + (CB * credit);
-                    System.out.println("Sum = " + sum);
-                    creditSum = creditSum + credit;
-                    transcriptCreditSum = transcriptCreditSum + credit;
-
-                } else if (completedCourses1.getCourseGrade().equals("CC")) {
-                    sum = sum + (CC * credit);
-                    System.out.println("Sum = " + sum);
-                    creditSum = creditSum + credit;
-                    transcriptCreditSum = transcriptCreditSum + credit;
-
-                } else if (completedCourses1.getCourseGrade().equals("DC")) {
-                    sum = sum + (DC * credit);
-                    System.out.println("Sum = " + sum);
-                    creditSum = creditSum + credit;
-                    transcriptCreditSum = transcriptCreditSum + credit;
-
-                } else if (completedCourses1.getCourseGrade().equals("DD")) {
-                    sum = sum + (DD * credit);
-                    System.out.println("Sum = " + sum);
-                    creditSum = creditSum + credit;
-                    transcriptCreditSum = transcriptCreditSum + credit;
-
-                } else if (completedCourses1.getCourseGrade().equals("FD")) {
-                    sum = sum + (FD * credit);
-                    System.out.println("Sum = " + sum);
-                    creditSum = creditSum + credit;
-
-                } else if (completedCourses1.getCourseGrade().equals("FF")) {
-                    sum = sum + (FF * credit);
-                    System.out.println("Sum = " + sum);
-                    creditSum = creditSum + credit;
-
-                } else {
-                    System.out.println("Hatali giris yaptiniz.");
+            for (Courses courses1 : courses){
+                if (completedCourses1.getCourseName().equals(courses1.getCourseCode())) {
+                    credit = courses1.getCredit();
+                    break;
                 }
             }
+            if (completedCourses1.getCourseGrade().equals("AA")) {
+                sum = sum + (AA * credit);
+                System.out.println("Sum = " + sum);
+                creditSum = creditSum + credit;
+                transcriptCreditSum = transcriptCreditSum + credit;
+
+            } else if (completedCourses1.getCourseGrade().equals("BA")) {
+                sum = sum + (BA * credit);
+                System.out.println("Sum = " + sum);
+                creditSum = creditSum + credit;
+                transcriptCreditSum = transcriptCreditSum + credit;
+
+            } else if (completedCourses1.getCourseGrade().equals("BB")) {
+                sum = sum + (BB * credit);
+                System.out.println("Sum = " + sum);
+                creditSum = creditSum + credit;
+                transcriptCreditSum = transcriptCreditSum + credit;
+
+            } else if (completedCourses1.getCourseGrade().equals("CB")) {
+                sum = sum + (CB * credit);
+                System.out.println("Sum = " + sum);
+                creditSum = creditSum + credit;
+                transcriptCreditSum = transcriptCreditSum + credit;
+
+            } else if (completedCourses1.getCourseGrade().equals("CC")) {
+                sum = sum + (CC * credit);
+                System.out.println("Sum = " + sum);
+                creditSum = creditSum + credit;
+                transcriptCreditSum = transcriptCreditSum + credit;
+
+            } else if (completedCourses1.getCourseGrade().equals("DC")) {
+                sum = sum + (DC * credit);
+                System.out.println("Sum = " + sum);
+                creditSum = creditSum + credit;
+                transcriptCreditSum = transcriptCreditSum + credit;
+
+            } else if (completedCourses1.getCourseGrade().equals("DD")) {
+                sum = sum + (DD * credit);
+                System.out.println("Sum = " + sum);
+                creditSum = creditSum + credit;
+                transcriptCreditSum = transcriptCreditSum + credit;
+
+            } else if (completedCourses1.getCourseGrade().equals("FD")) {
+                sum = sum + (FD * credit);
+                System.out.println("Sum = " + sum);
+                creditSum = creditSum + credit;
+
+            } else if (completedCourses1.getCourseGrade().equals("FF")) {
+                sum = sum + (FF * credit);
+                System.out.println("Sum = " + sum);
+                creditSum = creditSum + credit;
+
+            } else {
+                System.out.println("Hatali giris yaptiniz.");
+            }
+        }
 
         //  System.out.println("Total Credit : " + creditSum);
         double GPA = (int)((sum / creditSum) * 100.0) / 100.0 ;
         this.gpa = GPA;
-        System.out.println("gpa : " + gpa);
-        System.out.println(transcriptCreditSum);
+       // System.out.println("gpa : " + gpa);
+        // System.out.println(transcriptCreditSum);
         creditSum = 0;
+        totalCredit = transcriptCreditSum;
 
     }
+
+
+
+}
 
     /*public void setCompletedCoursesFromGivenArray(String courseName, String courseGrade, ArrayList<String> arrayOfCourses){
         CompletedCourses completedcoursesTest = new CompletedCourses();
@@ -282,4 +292,3 @@ public class Student {
         }
     }*/
 
-}
