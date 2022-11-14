@@ -1,7 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
-import java.util.Scanner;
 
 public class Advisor extends Student {
 
@@ -11,13 +10,10 @@ public class Advisor extends Student {
 
     private String lName;
 
-    private List<String> studentsLooking;
-
-    @Override
     public int getAdvisorId() {
         return advisorId;
     }
-    @Override
+
     public void setAdvisorId(int advisorId) {
         this.advisorId = advisorId;
     }
@@ -26,22 +22,11 @@ public class Advisor extends Student {
 
     public void setlName(String lName){ this.lName = lName;}
 
-    public void setStudentsLooking(List<String> studentsLooking){
-        this.studentsLooking = studentsLooking;
-    }
-
     String getfName() { return fName; }
 
     String getlName() { return lName; }
 
-    List<String> getStudentsLooking() { return studentsLooking; }
-
     public void advisorControl(List<String> chosenClasses, Student student){
-
-        // student.setRejectedList();
-        // Buraya rejectedList yaparken ilk eleman rejected course ismi diğeri sebep şeklinde yapın rejectedListWithReasons = [CSE1142, zaman uyuşmuyor, CSE 3033, kota dolu, CSE3063, kota çok az] gibi
-        // ondan sonra student.changeCurrentCourses(approvedList, rejectedListWithReasons) en sonunda yapın
-        // En son olarak hoca burada manuel olarak değilde dersleri otomatik approve/reject yapsın demiş. O yüzden mantığınıza göre uydurun.
 
         Random random = new Random();
         String[] stringArray = new String[3];
@@ -50,34 +35,47 @@ public class Advisor extends Student {
         stringArray[2]="Rejected because student cannot take many lessons";
 
         ArrayList<String> rejectedList = new ArrayList<>();
+        ArrayList<String> acceptedList = new ArrayList<>();
 
-        int randomNumber = random.nextInt(3);
-        int randomNumber2 = random.nextInt(3);
-        int randomNumber3 = random.nextInt(3);
+        int randomNumber;
+        int randomNumber2;
+        int randomNumber3;
 
-        Student student1 = new Student();
-        int courseSize = 4;
+        int courseSize = chosenClasses.size();
         for (int i=0; i<courseSize; i++){
-        switch (randomNumber){
-            case 1:
-                if (randomNumber2==0 && randomNumber3==0){
-                    rejectedList.add(student1.getCurrentSelectedCourses().get(i));
-                    System.out.println(stringArray[0]);
-                }
-                break;
-            case 2:
-                if (randomNumber2==1 && randomNumber3==1){
-                    rejectedList.add(student1.getCurrentSelectedCourses().get(i));
-                    System.out.println(stringArray[1]);
-                }
-                break;
-            case 3:
-                if (randomNumber2==2 && randomNumber3==2){
-                    rejectedList.add(student1.getCurrentSelectedCourses().get(i));
-                    System.out.println(stringArray[1]);
-                }
-                break;
+            randomNumber = random.nextInt(3);
+            randomNumber2 = random.nextInt(3);
+            randomNumber3 = random.nextInt(3);
+            switch (randomNumber){
+                case 0:
+                    if (randomNumber2==0 && randomNumber3==0){
+                        rejectedList.add(student.getCurrentSelectedCourses().get(i));
+                        System.out.println(stringArray[0]);
+                    }else{
+                        acceptedList.add(student.getCurrentSelectedCourses().get(i));
+                        System.out.println("Lecture is added");
+                    }
+                    break;
+                case 1:
+                    if (randomNumber2==1 && randomNumber3==1){
+                        rejectedList.add(student.getCurrentSelectedCourses().get(i));
+                        System.out.println(stringArray[1]);
+                    }else{
+                        acceptedList.add(student.getCurrentSelectedCourses().get(i));
+                        System.out.println("Lecture is added");
+                    }
+                    break;
+                case 2:
+                    if (randomNumber2==2 && randomNumber3==2){
+                        rejectedList.add(student.getCurrentSelectedCourses().get(i));
+                        System.out.println(stringArray[1]);
+                    }else{
+                        acceptedList.add(student.getCurrentSelectedCourses().get(i));
+                        System.out.println("Lecture is added");
+                    }
+                    break;
+            }
         }
-        }
+        student.changeSelectedCourses(acceptedList,rejectedList);
     }
 }
