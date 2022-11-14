@@ -166,8 +166,9 @@ public class Student {
     public void changeSelectedCourses(ArrayList<String> advisorApprovedCourses, ArrayList<String> advisorRejectedCoursesAndReasons){
         currentSelectedCourses.clear();
         currentSelectedCourses.addAll(advisorApprovedCourses);
-        System.out.println(currentSelectedCourses);
         //TODO: decide what to do with rejected courses and their reasons
+        //todo:createTranscript();
+
     }
     public int getCompletedCourseNumber(){
         return completedCourses.size();
@@ -208,60 +209,51 @@ public class Student {
                     break;
                 }
             }
-            if (completedCourses1.getCourseGrade().equals("AA")) {
-                sum = sum + (AA * credit);
-                System.out.println("Sum = " + sum);
-                creditSum = creditSum + credit;
-                transcriptCreditSum = transcriptCreditSum + credit;
-
-            } else if (completedCourses1.getCourseGrade().equals("BA")) {
-                sum = sum + (BA * credit);
-                System.out.println("Sum = " + sum);
-                creditSum = creditSum + credit;
-                transcriptCreditSum = transcriptCreditSum + credit;
-
-            } else if (completedCourses1.getCourseGrade().equals("BB")) {
-                sum = sum + (BB * credit);
-                System.out.println("Sum = " + sum);
-                creditSum = creditSum + credit;
-                transcriptCreditSum = transcriptCreditSum + credit;
-
-            } else if (completedCourses1.getCourseGrade().equals("CB")) {
-                sum = sum + (CB * credit);
-                System.out.println("Sum = " + sum);
-                creditSum = creditSum + credit;
-                transcriptCreditSum = transcriptCreditSum + credit;
-
-            } else if (completedCourses1.getCourseGrade().equals("CC")) {
-                sum = sum + (CC * credit);
-                System.out.println("Sum = " + sum);
-                creditSum = creditSum + credit;
-                transcriptCreditSum = transcriptCreditSum + credit;
-
-            } else if (completedCourses1.getCourseGrade().equals("DC")) {
-                sum = sum + (DC * credit);
-                System.out.println("Sum = " + sum);
-                creditSum = creditSum + credit;
-                transcriptCreditSum = transcriptCreditSum + credit;
-
-            } else if (completedCourses1.getCourseGrade().equals("DD")) {
-                sum = sum + (DD * credit);
-                System.out.println("Sum = " + sum);
-                creditSum = creditSum + credit;
-                transcriptCreditSum = transcriptCreditSum + credit;
-
-            } else if (completedCourses1.getCourseGrade().equals("FD")) {
-                sum = sum + (FD * credit);
-                System.out.println("Sum = " + sum);
-                creditSum = creditSum + credit;
-
-            } else if (completedCourses1.getCourseGrade().equals("FF")) {
-                sum = sum + (FF * credit);
-                System.out.println("Sum = " + sum);
-                creditSum = creditSum + credit;
-
-            } else {
-                System.out.println("Hatali giris yaptiniz.");
+            switch (completedCourses1.getCourseGrade()) {
+                case "AA" -> {
+                    sum = sum + (AA * credit);
+                    creditSum = creditSum + credit;
+                    transcriptCreditSum = transcriptCreditSum + credit;
+                }
+                case "BA" -> {
+                    sum = sum + (BA * credit);
+                    creditSum = creditSum + credit;
+                    transcriptCreditSum = transcriptCreditSum + credit;
+                }
+                case "BB" -> {
+                    sum = sum + (BB * credit);
+                    creditSum = creditSum + credit;
+                    transcriptCreditSum = transcriptCreditSum + credit;
+                }
+                case "CB" -> {
+                    sum = sum + (CB * credit);
+                    creditSum = creditSum + credit;
+                    transcriptCreditSum = transcriptCreditSum + credit;
+                }
+                case "CC" -> {
+                    sum = sum + (CC * credit);
+                    creditSum = creditSum + credit;
+                    transcriptCreditSum = transcriptCreditSum + credit;
+                }
+                case "DC" -> {
+                    sum = sum + (DC * credit);
+                    creditSum = creditSum + credit;
+                    transcriptCreditSum = transcriptCreditSum + credit;
+                }
+                case "DD" -> {
+                    sum = sum + (DD * credit);
+                    creditSum = creditSum + credit;
+                    transcriptCreditSum = transcriptCreditSum + credit;
+                }
+                case "FD" -> {
+                    sum = sum + (FD * credit);
+                    creditSum = creditSum + credit;
+                }
+                case "FF" -> {
+                    sum = sum + (FF * credit);
+                    creditSum = creditSum + credit;
+                }
+                default -> System.out.println("Hatali giris yaptiniz.");
             }
         }
 

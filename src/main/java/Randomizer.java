@@ -2,7 +2,8 @@ import java.io.IOException;
 import java.util.*;
 
 public class Randomizer{
-    public void setAvailableCoursesForEachStudent(Student[] students, Courses[] courses){
+    public void setAvailableCoursesForEachStudent(Student[] students, Courses[] courses , Advisor[] advisors) throws IOException {
+        addCourseNames(students, courses);
         List<String> semesterOneCoursesNames = new ArrayList<String>();
         List<String> semesterTwoCoursesNames = new ArrayList<String>();
         List<String> semesterThreeCoursesNames = new ArrayList<String>();
@@ -214,7 +215,11 @@ public class Randomizer{
                 }
             }
         }
-
+        for (Student student : students){
+            student.selectFromAvailableCourses();
+            student.sendToAdvisorSelectedClasses(advisors);
+            student.gpaCalculator(courses);
+        }
     }
 
     public void addCourseNames(Student[]students, Courses[] courses) throws IOException {

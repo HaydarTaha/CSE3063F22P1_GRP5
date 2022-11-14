@@ -57,7 +57,7 @@
     "lName": "Tunc",
     "gpa": 3.55,
     "currentYear": 4,
-    "currentSemester": 8,
+    "currentSemester": 2,
     "currentSelectedCourses": [],
     "completedCourses": [{
       "courseName": "",
@@ -83,7 +83,7 @@
     "lName": "Dursun",
     "gpa": 3.12,
     "currentYear": 3,
-    "currentSemester": 6,
+    "currentSemester": 2,
     "currentSelectedCourses": [],
     "completedCourses": [{
       "courseName": "",
@@ -100,5 +100,4014 @@
         "courseGrade": "FF"
       }
     ]
+  },
+  {
+    "studentId": 150117002,
+    "fName": "Haydar Taha",
+    "lName": "Tunc",
+    "gpa": 3.55,
+    "currentYear": 4,
+    "currentSemester": 2,
+    "currentSelectedCourses": [],
+    "completedCourses": [{
+      "courseName": "",
+      "courseGrade": ""
+    }
+    ],
+    "availableCourses": [
+    ],
+    "failedCourses": [
+      {
+        "courseName": "CSE1140",
+        "courseGrade": "FF"
+      },
+      {
+        "courseName": "Cse 1145",
+        "courseGrade": "FF"
+      }
+    ]
+  },
+  {
+    "studentId": 150117002,
+    "fName": "Haydar Taha",
+    "lName": "Tunc",
+    "gpa": 3.55,
+    "currentYear": 4,
+    "currentSemester": 2,
+    "currentSelectedCourses": [],
+    "completedCourses": [{
+      "courseName": "",
+      "courseGrade": ""
+    }
+    ],
+    "availableCourses": [
+    ],
+    "failedCourses": [
+      {
+        "courseName": "CSE1140",
+        "courseGrade": "FF"
+      },
+      {
+        "courseName": "Cse 1145",
+        "courseGrade": "FF"
+      }
+    ]
+  },
+  {
+    "studentId": 150117002,
+    "fName": "Haydar Taha",
+    "lName": "Tunc",
+    "gpa": 3.55,
+    "currentYear": 4,
+    "currentSemester": 2,
+    "currentSelectedCourses": [],
+    "completedCourses": [{
+      "courseName": "",
+      "courseGrade": ""
+    }
+    ],
+    "availableCourses": [
+    ],
+    "failedCourses": [
+      {
+        "courseName": "CSE1140",
+        "courseGrade": "FF"
+      },
+      {
+        "courseName": "Cse 1145",
+        "courseGrade": "FF"
+      }
+    ]
+  },
+  {
+    "studentId": 150117002,
+    "fName": "Haydar Taha",
+    "lName": "Tunc",
+    "gpa": 3.55,
+    "currentYear": 4,
+    "currentSemester": 2,
+    "currentSelectedCourses": [],
+    "completedCourses": [{
+      "courseName": "",
+      "courseGrade": ""
+    }
+    ],
+    "availableCourses": [
+    ],
+    "failedCourses": [
+      {
+        "courseName": "CSE1140",
+        "courseGrade": "FF"
+      },
+      {
+        "courseName": "Cse 1145",
+        "courseGrade": "FF"
+      }
+    ]
+  },
+  {
+    "studentId": 150117002,
+    "fName": "Haydar Taha",
+    "lName": "Tunc",
+    "gpa": 3.55,
+    "currentYear": 4,
+    "currentSemester": 2,
+    "currentSelectedCourses": [],
+    "completedCourses": [{
+      "courseName": "",
+      "courseGrade": ""
+    }
+    ],
+    "availableCourses": [
+    ],
+    "failedCourses": [
+      {
+        "courseName": "CSE1140",
+        "courseGrade": "FF"
+      },
+      {
+        "courseName": "Cse 1145",
+        "courseGrade": "FF"
+      }
+    ]
+  },
+  {
+    "studentId": 150117002,
+    "fName": "Haydar Taha",
+    "lName": "Tunc",
+    "gpa": 3.55,
+    "currentYear": 4,
+    "currentSemester": 2,
+    "currentSelectedCourses": [],
+    "completedCourses": [{
+      "courseName": "",
+      "courseGrade": ""
+    }
+    ],
+    "availableCourses": [
+    ],
+    "failedCourses": [
+      {
+        "courseName": "CSE1140",
+        "courseGrade": "FF"
+      },
+      {
+        "courseName": "Cse 1145",
+        "courseGrade": "FF"
+      }
+    ]
+  },
+  {
+    "studentId": 150117002,
+    "fName": "Haydar Taha",
+    "lName": "Tunc",
+    "gpa": 3.55,
+    "currentYear": 4,
+    "currentSemester": 2,
+    "currentSelectedCourses": [],
+    "completedCourses": [{
+      "courseName": "",
+      "courseGrade": ""
+    }
+    ],
+    "availableCourses": [
+    ],
+    "failedCourses": [
+      {
+        "courseName": "CSE1140",
+        "courseGrade": "FF"
+      },
+      {
+        "courseName": "Cse 1145",
+        "courseGrade": "FF"
+      }
+    ]
+  },
+  {
+    "studentId": 150117002,
+    "fName": "Haydar Taha",
+    "lName": "Tunc",
+    "gpa": 3.55,
+    "currentYear": 4,
+    "currentSemester": 2,
+    "currentSelectedCourses": [],
+    "completedCourses": [{
+      "courseName": "",
+      "courseGrade": ""
+    }
+    ],
+    "availableCourses": [
+    ],
+    "failedCourses": [
+      {
+        "courseName": "CSE1140",
+        "courseGrade": "FF"
+      },
+      {
+        "courseName": "Cse 1145",
+        "courseGrade": "FF"
+      }
+    ]
+  },
+  {
+    "studentId": 150117002,
+    "fName": "Haydar Taha",
+    "lName": "Tunc",
+    "gpa": 3.55,
+    "currentYear": 4,
+    "currentSemester": 2,
+    "currentSelectedCourses": [],
+    "completedCourses": [{
+      "courseName": "",
+      "courseGrade": ""
+    }
+    ],
+    "availableCourses": [
+    ],
+    "failedCourses": [
+      {
+        "courseName": "CSE1140",
+        "courseGrade": "FF"
+      },
+      {
+        "courseName": "Cse 1145",
+        "courseGrade": "FF"
+      }
+    ]
+  },{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
   }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+},{
+  "studentId": 150117002,
+  "fName": "Haydar Taha",
+  "lName": "Tunc",
+  "gpa": 3.55,
+  "currentYear": 4,
+  "currentSemester": 2,
+  "currentSelectedCourses": [],
+  "completedCourses": [{
+    "courseName": "",
+    "courseGrade": ""
+  }
+  ],
+  "availableCourses": [
+  ],
+  "failedCourses": [
+    {
+      "courseName": "CSE1140",
+      "courseGrade": "FF"
+    },
+    {
+      "courseName": "Cse 1145",
+      "courseGrade": "FF"
+    }
+  ]
+}
 ]
