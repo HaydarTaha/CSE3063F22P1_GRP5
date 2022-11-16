@@ -356,9 +356,7 @@ public class GenerateStudent {
     public void simulateSemester(Student s, String semester) throws IOException {
         semesterSetter(s, semester);
         List<CompletedCourses> currentSemesterCompleted = new ArrayList<>();
-        List<FailedCourses> failedCoursesList = new ArrayList<>();
         List<FailedCourses> currentSemesterFailed = new ArrayList<>();
-        List<String> availableCourses = new ArrayList<>();
         HashMap<String, List<String>> lockedCourses= new HashMap<>();
         for (int i = 1; i <= s.getCurrentSemester(); i++) {
             if (i == 1){
