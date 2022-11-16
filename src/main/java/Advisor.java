@@ -50,28 +50,22 @@ public class Advisor extends Student {
                 case 0:
                     if (randomNumber2==0 && randomNumber3==0){
                         rejectedList.add(student.getCurrentSelectedCourses().get(i));
-                        System.out.println(stringArray[0]);
                     }else{
                         acceptedList.add(student.getCurrentSelectedCourses().get(i));
-                        System.out.println("Lecture is added");
                     }
                     break;
                 case 1:
                     if (randomNumber2==1 && randomNumber3==1){
                         rejectedList.add(student.getCurrentSelectedCourses().get(i));
-                        System.out.println(stringArray[1]);
                     }else{
                         acceptedList.add(student.getCurrentSelectedCourses().get(i));
-                        System.out.println("Lecture is added");
                     }
                     break;
                 case 2:
                     if (randomNumber2==2 && randomNumber3==2){
                         rejectedList.add(student.getCurrentSelectedCourses().get(i));
-                        System.out.println(stringArray[1]);
                     }else{
                         acceptedList.add(student.getCurrentSelectedCourses().get(i));
-                        System.out.println("Lecture is added");
                     }
                     break;
             }
