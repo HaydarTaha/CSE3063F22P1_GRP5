@@ -1,11 +1,16 @@
-public class Courses {
+import java.util.ArrayList;
+import java.util.List;
+
+public class Courses  {
 
     private String name;
     private String courseCode;
-    private String prerequisite;
+    private List<String> prerequisite;
     private int credit;
     private int courseType;
     private int semester;
+
+    private int courseYear;
     private int theoreticalCourseHour;
     private int practicalLessonHour;
 
@@ -28,6 +33,13 @@ public class Courses {
     public int getSemester() {
         return semester;
     }
+    public int getCourseYear() {
+        return courseYear;
+    }
+
+    public void setCourseYear(int courseYear) {
+        this.courseYear = courseYear;
+    }
 
     public int getTheoreticalCourseHour() {
         return theoreticalCourseHour;
@@ -49,7 +61,7 @@ public class Courses {
         return courseCode;
     }
 
-    public String getPrerequisite() {
+    public List<String> getPrerequisite() {
         return prerequisite;
     }
 
@@ -65,7 +77,7 @@ public class Courses {
         this.courseCode = courseCode;
     }
 
-    public void setPrerequisite(String prerequisite) {
+    public void setPrerequisite(List<String> prerequisite) {
         this.prerequisite = prerequisite;
     }
 
@@ -73,13 +85,26 @@ public class Courses {
         this.credit = credit;
     }
 
+    public Boolean checkIfPrerequisite(Courses courses){
+        return courses.getPrerequisite().get(0) != "";
+    }
+    public Boolean checkIfTwoPreRequisite(Courses courses){
+        if (courses.getPrerequisite().get(0) != "" && courses.getPrerequisite().get(1) != ""){
+            return true;
+        }
+        else return false;
+    }
+    public String getPreRequisiteName() {
+        return prerequisite.get(0);
+    }
+    public ArrayList<String> getTwoPreRequisiteName(Courses courses){
+        ArrayList<String>preRequisiteNames = new ArrayList<>();
+        preRequisiteNames.add(courses.getPrerequisite().get(0));
+        preRequisiteNames.add(courses.getPrerequisite().get(1));
+        return preRequisiteNames;
+    }
+
     public Courses(){
-
-
-
-
-
-
 
     }
 

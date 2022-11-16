@@ -1,0 +1,57 @@
+[
+  {
+    "name": "Self Management",
+    "courseCode": "CAS1001",
+    "prerequisite": [""],
+    "credit": 3,
+    "courseType": 2,
+    "semester": 0,
+    "courseYear": 0,
+    "theoreticalCourseHour": 2,
+    "practicalLessonHour": 0
+  },
+  {
+    "name": "Cinema",
+    "courseCode": "NTE1008",
+    "prerequisite": [""],
+    "credit": 3,
+    "courseType": 2,
+    "semester": 0,
+    "courseYear": 0,
+    "theoreticalCourseHour": 2,
+    "practicalLessonHour": 0
+  },
+  {
+    "name": "Career Development",
+    "courseCode": "HR1013",
+    "prerequisite": [""],
+    "credit": 3,
+    "courseType": 2,
+    "semester": 0,
+    "courseYear": 0,
+    "theoreticalCourseHour": 2,
+    "practicalLessonHour": 0
+  },
+  {
+    "name": "World Cultures",
+    "courseCode": "NTE1004",
+    "prerequisite": [""],
+    "credit": 3,
+    "courseType": 2,
+    "semester": 0,
+    "courseYear": 0,
+    "theoreticalCourseHour": 2,
+    "practicalLessonHour": 0
+  },
+  {
+    "name": "Positive Thinking",
+    "courseCode": "CAS3044",
+    "prerequisite": [""],
+    "credit": 3,
+    "courseType": 2,
+    "semester": 0,
+    "courseYear": 0,
+    "theoreticalCourseHour": 2,
+    "practicalLessonHour": 0
+  }
+]

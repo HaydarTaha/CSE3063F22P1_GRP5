@@ -1,19 +1,22 @@
 import java.io.*;
-import java.util.*;
-
+import java.io.IOException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.json.simple.*;
-import org.json.simple.parser.*;
+
 public class Main {
     public static void main(String[] args) throws IOException {
         ObjectMapper objectMapper = new ObjectMapper();
-        File studentsJsonFile = new File("deneme.json");
+        File advisorJsonFile = new File("inputs/Advisors.json");
+        Advisor[] advisors = objectMapper.readValue(advisorJsonFile, Advisor[].class);
+        File lecturesJsonFile = new File("inputs/lectures.json");
+        Courses[] courses = objectMapper.readValue(lecturesJsonFile, Courses[].class);
+        File studentsJsonFile = new File("inputs/studentInformation.json");
         Student[] students = objectMapper.readValue(studentsJsonFile, Student[].class);
-        for(int i = 0; i < 2; i++){
-            System.out.println(students[i].getfName());
-            for(int j = 0; j < 2; j++){
-                System.out.println(students[i].getCompletedCourses().get(j).getCourseName());
-            }
-        }
+        GenerateStudent generateStudent = new GenerateStudent(students, courses);
+        generateStudent.simulate();
+        Randomizer randomizer = new Randomizer();
+        randomizer.setAvailableCoursesForEachStudent(students, courses, advisors);
+        Transcript transcript = new Transcript();
+        System.out.println("----------------------------------------------------------------------------------------------------------------------------");
+        transcript.printTranscript(students);
     }
 }

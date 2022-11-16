@@ -1,555 +1,607 @@
-
-  [
+[
     {
       "name": "Calculus I",
       "courseCode": "MATH1001",
-      "prerequisite": [
-        ""
-      ],
+      "prerequisite" : [""],
       "credit": 6,
       "courseType": 5,
       "semester": 1,
+      "courseYear": 1,
       "theoreticalCourseHour": 4,
       "practicalLessonHour": 0
     },
     {
-      "name": "Basic Chemistry",
-      "courseCode": "CHEM1007",
-      "prerequisite": [
-        ""
-      ],
-      "credit": 6,
+      "name": "Introduction to Modern Biology",
+      "courseCode": "MBG1201",
+      "prerequisite" : [""],
+      "credit": 5,
       "courseType": 5,
       "semester": 1,
-      "theoreticalCourseHour": 4,
+      "courseYear": 1,
+      "theoreticalCourseHour": 3,
       "practicalLessonHour": 0
     },
     {
       "name": "Computer Programming I",
-      "courseCode": "CSE1141",
-      "prerequisite": [
-        ""
-      ],
+      "courseCode": "CSE1241",
+      "prerequisite" : [""],
       "credit": 6,
       "courseType": 5,
       "semester": 1,
+      "courseYear": 1,
       "theoreticalCourseHour": 3,
       "practicalLessonHour": 2
     },
     {
       "name": "Physics 1",
       "courseCode": "PHYS1101",
-      "prerequisite": [
-        ""
-      ],
+      "prerequisite" : [""],
       "credit": 4,
       "courseType": 5,
       "semester": 1,
+      "courseYear": 1,
       "theoreticalCourseHour": 3,
       "practicalLessonHour": 0
     },
     {
       "name": "Physics Lab I",
       "courseCode": "PHYS1103",
-      "prerequisite": [
-        ""
-      ],
+      "prerequisite" : [""],
       "credit": 2,
       "courseType": 5,
       "semester": 1,
+      "courseYear": 1,
       "theoreticalCourseHour": 0,
       "practicalLessonHour": 2
     },
     {
       "name": "Atatürk's Prin. & History I",
       "courseCode": "ATA121",
-      "prerequisite": [
-        ""
-      ],
+      "prerequisite" : [""],
       "credit": 2,
       "courseType": 5,
       "semester": 1,
+      "courseYear": 1,
       "theoreticalCourseHour": 2,
       "practicalLessonHour": 0
     },
     {
       "name": "Introduction to Computer Eng.",
-      "courseCode": "CSE1100",
-      "prerequisite": [
-        ""
-      ],
-      "credit": 2,
+      "courseCode": "CSE1200",
+      "prerequisite" : [""],
+      "credit": 4,
       "courseType": 5,
       "semester": 1,
-      "theoreticalCourseHour": 2,
+      "courseYear": 1,
+      "theoreticalCourseHour": 3,
       "practicalLessonHour": 0
     },
     {
       "name": "Turkish Language I",
-      "courseCode": "TRD 121",
-      "prerequisite": [
-        ""
-      ],
+      "courseCode": "TRD121",
+      "prerequisite" : [""],
       "credit": 2,
       "courseType": 5,
       "semester": 1,
+      "courseYear": 1,
       "theoreticalCourseHour": 2,
       "practicalLessonHour": 0
     },
     {
       "name": "Calculus II",
       "courseCode": "MATH1002",
-      "prerequisite": [
-        ""
-      ],
+      "prerequisite" : [""],
       "credit": 6,
       "courseType": 5,
       "semester": 2,
+      "courseYear": 1,
       "theoreticalCourseHour": 4,
       "practicalLessonHour": 0
     },
     {
       "name": "Physics Lab II",
       "courseCode": "PHYS1104",
-      "prerequisite": [
-        ""
-      ],
+      "prerequisite" : [""],
       "credit": 2,
       "courseType": 5,
       "semester": 2,
+      "courseYear": 1,
       "theoreticalCourseHour": 0,
       "practicalLessonHour": 2
     },
     {
       "name": "Computer Programming II",
-      "courseCode": "CSE1142",
-      "prerequisite": [
-        "CSE1141"
-      ],
-      "credit": 7,
+      "courseCode": "CSE1242",
+      "prerequisite": ["CSE1241"],
+      "credit": 6,
       "courseType": 5,
       "semester": 2,
+      "courseYear": 1,
       "theoreticalCourseHour": 3,
       "practicalLessonHour": 2
     },
     {
       "name": "Physics II",
       "courseCode": "PHYS1102",
-      "prerequisite": [
-        ""
-      ],
+      "prerequisite" : [""],
       "credit": 4,
       "courseType": 5,
       "semester": 2,
+      "courseYear": 1,
       "theoreticalCourseHour": 3,
       "practicalLessonHour": 0
     },
     {
       "name": "Nontechnical Elective I",
       "courseCode": "NTE I",
-      "prerequisite": [
-        ""
-      ],
+      "prerequisite" : [""],
       "credit": 3,
       "courseType": 1,
       "semester": 2,
+      "courseYear": 1,
       "theoreticalCourseHour": 2,
       "practicalLessonHour": 0
     },
     {
       "name": "Atatürk's Prin. & History II",
       "courseCode": "ATA122",
-      "prerequisite": [
-        ""
-      ],
+      "prerequisite" : [""],
       "credit": 2,
       "courseType": 5,
       "semester": 2,
+      "courseYear": 1,
       "theoreticalCourseHour": 2,
       "practicalLessonHour": 0
     },
     {
-      "name": "Linear Algebra",
-      "courseCode": "MATH2056",
-      "prerequisite": [
-        ""
-      ],
-      "credit": 4,
+      "name": "Linear Algebra for Computer Engineering",
+      "courseCode": "MATH2256",
+      "prerequisite" : [""],
+      "credit": 5,
       "courseType": 5,
       "semester": 2,
+      "courseYear": 1,
       "theoreticalCourseHour": 3,
       "practicalLessonHour": 0
     },
     {
       "name": "Turkish Language II",
       "courseCode": "TRD 122",
-      "prerequisite": [
-        ""
-      ],
+      "prerequisite" : [""],
       "credit": 2,
       "courseType": 5,
       "semester": 2,
+      "courseYear": 1,
       "theoreticalCourseHour": 2,
       "practicalLessonHour": 0
     },
     {
       "name": "Differential Equations",
       "courseCode": "MATH2055",
-      "prerequisite": [
-        "MATH1001"
-      ],
+      "prerequisite" : [""],
       "credit": 4,
       "courseType": 5,
       "semester": 3,
+      "courseYear": 2,
       "theoreticalCourseHour": 3,
       "practicalLessonHour": 0
     },
     {
       "name": "Data Structures",
-      "courseCode": "CSE2025",
-      "prerequisite": [
-        "CSE1142"
-      ],
-      "credit": 8,
+      "courseCode": "CSE2225",
+      "prerequisite": ["CSE1242"],
+      "credit": 7,
       "courseType": 5,
       "semester": 3,
+      "courseYear": 2,
       "theoreticalCourseHour": 3,
       "practicalLessonHour": 2
     },
     {
       "name": "Discrete Comp. Structures",
       "courseCode": "CSE2023",
-      "prerequisite": [
-        ""
-      ],
+      "prerequisite" : [""],
       "credit": 6,
       "courseType": 5,
       "semester": 3,
+      "courseYear": 2,
       "theoreticalCourseHour": 3,
       "practicalLessonHour": 0
     },
     {
       "name": "Electric Circuits",
       "courseCode": "EE2031",
-      "prerequisite": [
-        "PHYS1102"
-      ],
+      "prerequisite": ["PHYS1102"],
       "credit": 5,
       "courseType": 5,
       "semester": 3,
-      "theoreticalCourseHour": 3,
-      "practicalLessonHour": 0
-    },
-    {
-      "name": "Introduction to Economics",
-      "courseCode": "ECON2003",
-      "prerequisite": [
-        ""
-      ],
-      "credit": 4,
-      "courseType": 5,
-      "semester": 3,
-      "theoreticalCourseHour": 3,
-      "practicalLessonHour": 0
-    },
-    {
-      "name": "Nontechnical Elective I",
-      "courseCode": "NTE II",
-      "prerequisite": [
-        ""
-      ],
-      "credit": 3,
-      "courseType": 1,
-      "semester": 3,
-      "theoreticalCourseHour": 2,
-      "practicalLessonHour": 0
-    },
-    {
-      "name": "Numerical Methods",
-      "courseCode": "MATH2059",
-      "prerequisite": [
-        "MATH1001"
-      ],
-      "credit": 4,
-      "courseType": 5,
-      "semester": 4,
-      "theoreticalCourseHour": 3,
-      "practicalLessonHour": 0
-    },
-    {
-      "name": "Analysis of Algorithms",
-      "courseCode": "CSE2046",
-      "prerequisite": [
-        "CSE2025"
-      ],
-      "credit": 6,
-      "courseType": 5,
-      "semester": 4,
+      "courseYear": 2,
       "theoreticalCourseHour": 3,
       "practicalLessonHour": 0
     },
     {
       "name": "Engineering Economy",
       "courseCode": "ECON2004",
-      "prerequisite": [
-        ""
-      ],
+      "prerequisite" : [""],
       "credit": 4,
       "courseType": 5,
-      "semester": 4,
+      "semester": 3,
+      "courseYear": 2,
       "theoreticalCourseHour": 2,
       "practicalLessonHour": 0
     },
     {
+      "name": "Numerical Methods",
+      "courseCode": "MATH2059",
+      "prerequisite": ["MATH1001"],
+      "credit": 4,
+      "courseType": 5,
+      "semester": 3,
+      "courseYear": 2,
+      "theoreticalCourseHour": 3,
+      "practicalLessonHour": 0
+    },
+    {
+      "name": "Analysis of Algorithms",
+      "courseCode": "CSE2246",
+      "prerequisite": ["CSE2225"],
+      "credit": 6,
+      "courseType": 5,
+      "semester": 4,
+      "courseYear": 2,
+      "theoreticalCourseHour": 3,
+      "practicalLessonHour": 2
+    },
+    {
+      "name": "Principles of Programming Languages",
+      "courseCode": "CSE2260",
+      "prerequisite": ["CSE1242"],
+      "credit": 6,
+      "courseType": 5,
+      "semester": 4,
+      "courseYear": 2,
+      "theoreticalCourseHour": 3,
+      "practicalLessonHour": 2
+    },
+    {
       "name": "Electronics",
       "courseCode": "EE2032",
-      "prerequisite": [
-        "EE2031"
-      ],
+      "prerequisite": ["EE2031"],
       "credit": 5,
       "courseType": 5,
       "semester": 4,
+      "courseYear": 2,
       "theoreticalCourseHour": 2,
       "practicalLessonHour": 2
     },
     {
       "name": "Systems Programming",
       "courseCode": "CSE2138",
-      "prerequisite": [
-        ""
-      ],
+      "prerequisite" : [""],
       "credit": 7,
       "courseType": 5,
       "semester": 4,
+      "courseYear": 2,
       "theoreticalCourseHour": 3,
       "practicalLessonHour": 2
     },
     {
-      "name": "Introduction to Probability and Statistics",
-      "courseCode": "STAT2053",
-      "prerequisite": [
-        ""
-      ],
-      "credit": 4,
+      "name": "Probability and Statistics for Computer Engineering",
+      "courseCode": "STAT2253",
+      "prerequisite" : [""],
+      "credit": 5,
       "courseType": 5,
       "semester": 4,
+      "courseYear": 2,
       "theoreticalCourseHour": 3,
       "practicalLessonHour": 0
     },
+
     {
       "name": "Summer Practice",
       "courseCode": "CSE3000",
-      "prerequisite": [
-        ""
-      ],
+      "prerequisite" : [""],
       "credit": 10,
       "courseType": 5,
       "semester": 5,
+      "courseYear": 3,
       "theoreticalCourseHour": 0,
       "practicalLessonHour": 0
     },
     {
       "name": "Database Systems",
       "courseCode": "CSE3055",
-      "prerequisite": [
-        "CSE2025"
-      ],
+      "prerequisite": ["CSE2225"],
       "credit": 7,
       "courseType": 5,
       "semester": 5,
+      "courseYear": 3,
       "theoreticalCourseHour": 3,
       "practicalLessonHour": 2
     },
     {
       "name": "Operating Systems",
       "courseCode": "CSE3033",
-      "prerequisite": [
-        "CSE2025"
-      ],
+      "prerequisite": ["CSE2225"],
       "credit": 7,
       "courseType": 5,
       "semester": 5,
+      "courseYear": 3,
       "theoreticalCourseHour": 3,
       "practicalLessonHour": 2
     },
     {
       "name": "Object-Oriented Software Design",
       "courseCode": "CSE3063",
-      "prerequisite": [
-        "CSE1142"
-      ],
+      "prerequisite": ["CSE1242"],
       "credit": 5,
       "courseType": 5,
       "semester": 5,
+      "courseYear": 3,
       "theoreticalCourseHour": 3,
       "practicalLessonHour": 0
     },
     {
       "name": "Digital Logic Design",
-      "courseCode": "CSE3015",
-      "prerequisite": [
-        ""
-      ],
-      "credit": 7,
+      "courseCode": "CSE3215",
+      "prerequisite" : [""],
+      "credit": 6,
       "courseType": 5,
       "semester": 5,
+      "courseYear": 3,
       "theoreticalCourseHour": 3,
       "practicalLessonHour": 2
     },
     {
       "name": "Modeling and Discrete Simulation",
       "courseCode": "IE3081",
-      "prerequisite": [
-        "STAT2053"
-      ],
+      "prerequisite": ["STAT2253"],
       "credit": 4,
       "courseType": 5,
       "semester": 5,
+      "courseYear": 3,
       "theoreticalCourseHour": 3,
       "practicalLessonHour": 0
     },
     {
       "name": "Introduction to Signals and Systems",
       "courseCode": "CSE3048",
-      "prerequisite": [
-        "MATH2055"
-      ],
+      "prerequisite": ["MATH2055"],
       "credit": 5,
       "courseType": 5,
       "semester": 6,
+      "courseYear": 3,
       "theoreticalCourseHour": 3,
+      "practicalLessonHour": 0
+    },
+    {
+      "name": "Technical Communications and Entrepreneurship",
+      "courseCode": "COM2276",
+      "prerequisite" : [""],
+      "credit": 2,
+      "courseType": 5,
+      "semester": 6,
+      "courseYear": 3,
+      "theoreticalCourseHour": 2,
       "practicalLessonHour": 0
     },
     {
       "name": "Software Engineering",
       "courseCode": "CSE3044",
-      "prerequisite": [
-        "CSE3055"
-      ],
+      "prerequisite": ["CSE3055"],
       "credit": 7,
       "courseType": 5,
       "semester": 6,
+      "courseYear": 3,
       "theoreticalCourseHour": 3,
       "practicalLessonHour": 2
     },
     {
       "name": "Formal Languages and Automata Theory",
-      "courseCode": "CSE3064",
-      "prerequisite": [
-        "CSE2023"
-      ],
-      "credit": 6,
+      "courseCode": "CSE3264",
+      "prerequisite": ["CSE2023"],
+      "credit": 5,
       "courseType": 5,
       "semester": 6,
+      "courseYear": 3,
       "theoreticalCourseHour": 3,
       "practicalLessonHour": 0
     },
     {
       "name": "Computer Organization",
       "courseCode": "CSE3038",
-      "prerequisite": [
-        "CSE2138",
-        "CSE3015"
-      ],
+      "prerequisite": ["CSE2138"],
       "credit": 7,
       "courseType": 5,
       "semester": 6,
+      "courseYear": 3,
       "theoreticalCourseHour": 3,
       "practicalLessonHour": 2
     },
     {
-      "name": "Operations Research",
-      "courseCode": "IE3035",
-      "prerequisite": [
-        "MATH2056"
-      ],
+      "name": "Introduction to Signals and Systems",
+      "courseCode": "CSE3048",
+      "prerequisite": ["MATH2055"],
       "credit": 5,
       "courseType": 5,
       "semester": 6,
+      "courseYear": 3,
+      "theoreticalCourseHour": 3,
+      "practicalLessonHour": 0
+    },
+    {
+      "name": "Operations Research",
+      "courseCode": "IE3235",
+      "prerequisite": ["MATH2256"],
+      "credit": 4,
+      "courseType": 5,
+      "semester": 6,
+      "courseYear": 3,
       "theoreticalCourseHour": 3,
       "practicalLessonHour": 0
     },
     {
       "name": "Engineering Project I",
-      "courseCode": "CSE4197",
-      "prerequisite": [
-        ""
-      ],
-      "credit": 4,
+      "courseCode": "CSE4297",
+      "prerequisite" : [""],
+      "credit": 5,
       "courseType": 5,
       "semester": 7,
+      "courseYear": 4,
       "theoreticalCourseHour": 0,
       "practicalLessonHour": 2
     },
     {
       "name": "Computer Networks",
       "courseCode": "CSE4074",
-      "prerequisite": [
-        ""
-      ],
+      "prerequisite" : [""],
       "credit": 5,
       "courseType": 5,
       "semester": 7,
+      "courseYear": 4,
       "theoreticalCourseHour": 3,
       "practicalLessonHour": 0
     },
     {
       "name": "Technical Elective I",
       "courseCode": "TE I",
-      "prerequisite": [
-        ""
-      ],
+      "prerequisite" : [""],
       "credit": 5,
       "courseType": 3,
       "semester": 7,
+      "courseYear": 4,
       "theoreticalCourseHour": 3,
       "practicalLessonHour": 0
     },
     {
-      "name": "Technical Elective II",
-      "courseCode": "TE II",
-      "prerequisite": [
-        ""
-      ],
-      "credit": 5,
-      "courseType": 3,
+      "name": "University Elective",
+      "courseCode": "UE",
+      "prerequisite" : [""],
+      "credit": 3,
+      "courseType": 2,
       "semester": 7,
-      "theoreticalCourseHour": 3,
+      "courseYear": 4,
+      "theoreticalCourseHour": 2,
       "practicalLessonHour": 0
     },
     {
-      "name": "Microprocessors",
-      "courseCode": "CSE4117",
-      "prerequisite": [
-        "CSE3038"
-      ],
+      "name": "Principles of Embedded Systems Design",
+      "courseCode": "CSE4219",
+      "prerequisite": ["CSE3038"],
       "credit": 6,
       "courseType": 5,
       "semester": 7,
+      "courseYear": 4,
       "theoreticalCourseHour": 3,
       "practicalLessonHour": 2
     },
     {
       "name": "Work Safety I",
       "courseCode": "ISG121",
-      "prerequisite": [
-        ""
-      ],
+      "prerequisite" : [""],
       "credit": 2,
       "courseType": 5,
       "semester": 7,
+      "courseYear": 4,
       "theoreticalCourseHour": 2,
       "practicalLessonHour": 0
     },
     {
-      "name": "University Elective",
-      "courseCode": "UE",
-      "prerequisite": [
-        ""
-      ],
-      "credit": 3,
-      "courseType": 2,
+      "name": "Introduction to Machine Learning",
+      "courseCode": "CSE4288",
+      "prerequisite": ["MATH2256"],
+      "credit": 5,
+      "courseType": 5,
       "semester": 7,
+      "courseYear": 4,
+      "theoreticalCourseHour": 3,
+      "practicalLessonHour": 0
+    },
+    {
+      "name": "Summer Practice",
+      "courseCode": "CSE4000",
+      "prerequisite" : [""],
+      "credit": 10,
+      "courseType": 5,
+      "semester": 7,
+      "courseYear": 4,
+      "theoreticalCourseHour": 0,
+      "practicalLessonHour": 0
+    },
+    {
+      "name": "Engineering Project II",
+      "courseCode": "CSE4298",
+      "prerequisite": ["CSE4297"],
+      "credit": 5,
+      "courseType": 5,
+      "semester": 8,
+      "courseYear": 4,
+      "theoreticalCourseHour": 0,
+      "practicalLessonHour": 2
+    },
+    {
+      "name": "Technical Elective II",
+      "courseCode": "TE II",
+      "prerequisite" : [""],
+      "credit": 5,
+      "courseType": 3,
+      "semester": 8,
+      "courseYear": 4,
+      "theoreticalCourseHour": 3,
+      "practicalLessonHour": 0
+    },
+    {
+      "name": "Technical Elective III",
+      "courseCode": "TE III",
+      "prerequisite" : [""],
+      "credit": 5,
+      "courseType": 3,
+      "semester": 8,
+      "courseYear": 4,
+      "theoreticalCourseHour": 3,
+      "practicalLessonHour": 0
+    },
+    {
+      "name": "Technical Elective IV",
+      "courseCode": "TE IV",
+      "prerequisite" : [""],
+      "credit": 5,
+      "courseType": 3,
+      "semester": 8,
+      "courseYear": 4,
+      "theoreticalCourseHour": 3,
+      "practicalLessonHour": 0
+    },
+    {
+      "name": "Faculty Technical Elective",
+      "courseCode": "FTE",
+      "prerequisite" : [""],
+      "credit": 5,
+      "courseType": 4,
+      "semester": 8,
+      "courseYear": 4,
+      "theoreticalCourseHour": 3,
+      "practicalLessonHour": 0
+    },
+    {
+      "name": "Work Safety II",
+      "courseCode": "ISG122",
+      "prerequisite" : [""],
+      "credit": 2,
+      "courseType": 5,
+      "semester": 8,
+      "courseYear": 4,
+      "theoreticalCourseHour": 2,
+      "practicalLessonHour": 0
+    },
+    {
+      "name": "Nontechnical Elective II",
+      "courseCode": "NTE II",
+      "prerequisite" : [""],
+      "credit": 3,
+      "courseType": 1,
+      "semester": 8,
+      "courseYear": 4,
       "theoreticalCourseHour": 2,
       "practicalLessonHour": 0
     }
