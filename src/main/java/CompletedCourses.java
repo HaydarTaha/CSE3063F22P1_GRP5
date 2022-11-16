@@ -5,8 +5,7 @@ public class CompletedCourses{
 
     private String courseName;
     private String courseGrade;
-
-
+    private int givenSemester;
 
 
     public String getCourseName() {
@@ -22,9 +21,17 @@ public class CompletedCourses{
         this.courseGrade = courseGrade;
     }
 
+    public int getGivenSemester() {
+        return givenSemester;
+    }
+
+    public void setGivenSemester(int givenSemester) {
+        this.givenSemester = givenSemester;
+    }
+
     @Override
     public String toString(){
-        return getCourseName() + ", "+getCourseGrade();
+        return getCourseName() + ", " + getCourseGrade() + ", " + getGivenSemester();
     }
 
 
