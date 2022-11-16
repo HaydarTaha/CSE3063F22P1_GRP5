@@ -8,4 +8,7 @@
 5- Mert Özincegedik 150119643
 6- Emir Devran 150119749
 7- Kerem Kolay 150119773
+8- Osama Mustafa 150119885
+9- Aimen Daddi 150119879
+10- Burak Aslan 150117002
 ````
