@@ -14,6 +14,7 @@ import java.io.IOException;
 
 
 public class Student {
+    //Attributes for students are here
     private int studentId;
     private String fName;
     private String lName;
@@ -28,10 +29,10 @@ public class Student {
 
     private List<String> availableCourses;
     private List<FailedCourses> failedCourses;
-    private int counter = 0;
+    //private int counter = 0;
 
 
-
+    //Setters and Getters
     public int getCurrentYear() {
         return currentYear;
     }
@@ -111,23 +112,30 @@ public class Student {
     List<String> getCurrentSelectedCourses() { return currentSelectedCourses; }
 
     List<CompletedCourses> getCompletedCourses() { return completedCourses; }
-
+    //This method selects courses which are in availableCourses
     public void selectFromAvailableCourses(){
         ArrayList<String> coursesAdd = new ArrayList<>();
+        //Here if we have more than 10 available courses we first check failed courses
+        //and add them first, after that we randomly select other classes until it's size is 10
         if (availableCourses.size() > 10){
             for (String s : availableCourses){
                 if (checkIfCourseFailed(s)) {
                     coursesAdd.add(s);
                 }
             }
+            //Here we check the list again and if it has less than 10 we add them until it becomes size 10
+            //we add those to the list. until it's size is 10
             if (coursesAdd.size() < 10){
                 for (String s : availableCourses) {
                     while (coursesAdd.size() != 10){
                         coursesAdd.add(s);
                     }
                 }
+                //then we update selectedCourses with this method
                 this.currentSelectedCourses.addAll(coursesAdd);
             }
+            //If however the size becomes more than 10
+            //we remove some until it goes back to size 10 again.
             else if (coursesAdd.size() > 10){
                 while (coursesAdd.size() != 10){
                     coursesAdd.remove(10);
@@ -135,6 +143,7 @@ public class Student {
                 this.currentSelectedCourses.addAll(coursesAdd);
             }
         }
+        //If the size is not more than 10 we add every available course to selectedCourses attr.
         else {
             this.currentSelectedCourses.addAll(availableCourses);
         }
@@ -144,7 +153,8 @@ public class Student {
 
 
     List<String> getAvailableCourses() { return availableCourses; }
-
+    //This checks if the course is failed for this student
+    //and returns true if failed or false if passed
     boolean checkIfCourseFailed(String courseCode){
         boolean check = false;
         for (CompletedCourses completedCourses1 : this.completedCourses){
@@ -155,6 +165,7 @@ public class Student {
         }
         return check;
     }
+    //This method sends currentSelectedCourses to the corresponding advisor for this student
     public void sendToAdvisorSelectedClasses(Advisor[]advisors){
         for (Advisor advisor : advisors){
             if (this.advisorId == advisor.getAdvisorId()){
@@ -162,7 +173,8 @@ public class Student {
             }
         }
     }
-
+    //This is a method the advisor calls
+    //it changes selected courses depending on if each course is accepted or rejected and then updates it
     public void changeSelectedCourses(ArrayList<String> advisorApprovedCourses, ArrayList<String> advisorRejectedCoursesAndReasons){
         currentSelectedCourses.clear();
         currentSelectedCourses.addAll(advisorApprovedCourses);
@@ -170,10 +182,11 @@ public class Student {
         //todo:createTranscript();
 
     }
+    //this returns how many courses this student finished.
     public int getCompletedCourseNumber(){
         return completedCourses.size();
     }
-
+    //We call this to calculate GPA of this student
     public void gpaCalculator(Courses[] courses){
         String letterAA = "4.00";
         double AA = Double.parseDouble(letterAA);
