@@ -16,11 +16,15 @@ public class GenerateStudent {
     private HashMap<String, List<String>> eighthSemesterCoursesHash;
     private HashMap<String, List<String>> prerequisiteList;
 
+    //This constructor called in Main class and send student and courses arrays
     public GenerateStudent(Student[] student, Courses[] courses){
         this.student = student;
         this.courses = courses;
     }
 
+    //This method get courseCodesFrom Courses array and check their semester and add to named (CourseSemester)SemesterCourses
+    //For the first semester courses, type is List for the other semester type is HashMap. In the HashMap we are holding courseCode
+    //and their prerequisite courses
     public void addCourseNames(){
         this.firstSemesterCourses = new ArrayList<String>();
         this.secondSemesterCoursesHash = new HashMap<>();
@@ -59,6 +63,7 @@ public class GenerateStudent {
                     eighthSemesterCoursesHash.put(course.getCourseCode(), course.getPrerequisite());
                     break;
             }
+            //In the prerequisiteList we are storing all courses who have prerequisite
             if (course.getPrerequisite() != null){
                 for (String prerequisite : course.getPrerequisite()){
                     if (!prerequisite.equals("")){
@@ -69,6 +74,8 @@ public class GenerateStudent {
         }
     }
 
+    //In this method we are setting year to student
+    //We are calculating year from their studentNumbers
     public void generateYear(Student student){
         int number = student.getStudentId();
         int yearNumber = ((number/1000) - 150000);
@@ -84,6 +91,8 @@ public class GenerateStudent {
         }
     }
 
+    //In this method we are setting semester to student
+    //We are giving semester from their currentYear and which semester user want to simulate
     public void semesterSetter(Student s, String semester){
         if (semester == "Fall"){
             switch (s.getCurrentYear()){
@@ -117,6 +126,8 @@ public class GenerateStudent {
             }
         }
     }
+
+    //In this method we are setting completedCourses, failedCourses and availableCourses in the student we sent to this method as a parameter
     public void setCoursesList(Student s){
         List<CompletedCourses> completedCourses = new ArrayList<>();
         List<FailedCourses> failedCourses = new ArrayList<>();
@@ -125,12 +136,16 @@ public class GenerateStudent {
         s.setFailedCourses(failedCourses);
         s.setAvailableCourses(availableCourses);
     }
+
+    //In this method we are assigning FF grade and CourseCode to currentSemesterFailed courses list
     public void assignFailedCourses(List<FailedCourses> currentSemesterFailed, String courseCode){
         FailedCourses failedCourses = new FailedCourses();
         failedCourses.setCourseGrade("FF");
         failedCourses.setCourseName(courseCode);
         currentSemesterFailed.add(failedCourses);
     }
+
+    //In this method we are locking course if the course prerequisite course is failed
     public void prerequisiteControlAndLock(String courseCode, HashMap<String, List<String>> lockedCourses){
         prerequisiteList.forEach((courseName, prerequisite) -> {
             if (prerequisite.contains(courseCode)){
@@ -141,6 +156,7 @@ public class GenerateStudent {
         });
     }
 
+    //In this method we are adding courseCode, courseGrade and given semester to currentSemesterCompleted List
     public void addCompletedCourses(List<CompletedCourses> currentSemesterCompleted, String courseCode, String grade, int finishedSemester){
         CompletedCourses completedCourses = new CompletedCourses();
         completedCourses.setCourseName(courseCode);
@@ -149,6 +165,7 @@ public class GenerateStudent {
         currentSemesterCompleted.add(completedCourses);
     }
 
+    //In this method we are simulating failed courses if passed add to currentSemesterCompleted else keep it in failedCoursesList
     public void simulateFailedCourses(Student s ,List<CompletedCourses> currentSemesterCompleted, int currentSemester){
         int failedCoursesSize = s.getFailedCourses().size();
         if (failedCoursesSize > 0){
@@ -178,6 +195,7 @@ public class GenerateStudent {
         }
     }
 
+    //In this method we are checking If the course is locked and prerequisite is given set to student AvailableCoursesList
     public void unlockLockedCoursesAndSetAvailable(Student s, List<CompletedCourses> completedCourses, HashMap<String, List<String>> lockedCourses){
         if (completedCourses.size() > 0){
             if (lockedCourses.size() > 0){
@@ -200,6 +218,7 @@ public class GenerateStudent {
         }
     }
 
+    //In this method we are checking AvailableCoursesList if there is a course we are simulating these courses
     public void checkAvailableCourses(Student s, int semester, List<CompletedCourses> currentSemesterCompleted, List<FailedCourses> currentSemesterFailed, HashMap<String, List<String>> lockedCourses, HashMap<String, List<String>> currentSemesterCourses){
         for (Courses courseList : courses){
             if (s.getAvailableCourses().size() > 0){
@@ -252,6 +271,7 @@ public class GenerateStudent {
         }
     }
 
+    //In this method we are checking the course is given already from failed courses list
     public void checkCourseGiven(Student s){
         for (CompletedCourses completed : s.getCompletedCourses()){
             String courseCode = completed.getCourseName();
@@ -264,7 +284,8 @@ public class GenerateStudent {
             }
         }
     }
-    
+
+    //In this method we are removing duplicate values from Student completedCourses List
     public void removeDuplicates(Student s){
         List<CompletedCourses> completedCourses = new ArrayList<>(s.getCompletedCourses());
         List<String> duplicateCourses = new ArrayList<>();
@@ -303,6 +324,8 @@ public class GenerateStudent {
             }
         }
     }
+
+    //In this method we are checking if the course has Prerequisite course
     public boolean checkCourseHasPrerequisite(String courseCode){
         AtomicBoolean IsCoursePrerequisite = new AtomicBoolean(false);
         prerequisiteList.forEach((courseName, prerequisite) -> {
@@ -313,6 +336,7 @@ public class GenerateStudent {
         return IsCoursePrerequisite.get();
     }
 
+    //In this method we are checking if the prerequisite course is given
     public boolean checkPrerequisiteCourseIsGiven(Student s, String courseCode, int semester){
         List<String> prerequisiteCourses = new ArrayList<>();
         prerequisiteList.forEach((courseName, prerequisite) -> {
@@ -337,6 +361,8 @@ public class GenerateStudent {
         }
         return false;
     }
+
+    //In this method we are checking the course is given already
     public boolean courseIsGivenAlready(Student s, String courseCode){
         for (CompletedCourses completedCourses : s.getCompletedCourses()){
             if (completedCourses.getCourseName() == courseCode){
@@ -346,6 +372,7 @@ public class GenerateStudent {
         return false;
     }
 
+    //In this method we are assigning Advisor to student
     public void setStudentAdvisor(Student s){
         Random random = new Random();
         int number = 0;
@@ -353,6 +380,7 @@ public class GenerateStudent {
         s.setAdvisorId(number);
     }
 
+    //In this method we simulate the semester up to the student's semester
     public void simulateSemester(Student s, String semester) throws IOException {
         semesterSetter(s, semester);
         List<CompletedCourses> currentSemesterCompleted = new ArrayList<>();
@@ -714,6 +742,7 @@ public class GenerateStudent {
         }
     }
 
+    //In this method we are calling generateYear, simulateSemester, removeDuplicates and setStudentAdvisor methods
     void simulate() throws IOException {
         addCourseNames();
         for (Student s : student){
@@ -739,6 +768,7 @@ public class GenerateStudent {
         }
     }
 
+    //In this method we are returning random grades for the simulate method
     public String assignRandomGrades() throws IOException {
 
         Random random = new Random();
