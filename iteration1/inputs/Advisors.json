@@ -1,0 +1,27 @@
+[
+  {
+    "advisorId": 0,
+    "fName": "Ahmet",
+    "lName": "Can"
+  },
+  {
+    "advisorId": 1,
+    "fName": "Mehmet",
+    "lName": "Baba"
+  },
+  {
+    "advisorId": 2,
+    "fName": "Ali",
+    "lName": "Lalala"
+  },
+  {
+    "advisorId": 3,
+    "fName": "Veli",
+    "lName": "Merhaba"
+  },
+  {
+    "advisorId": 4,
+    "fName": "Can",
+    "lName": "Abadik"
+  }
+]
