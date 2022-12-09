@@ -64,10 +64,20 @@ public class Transcript extends Student {
 
 
     }
+    public void seperateFailedCourses(){
+        failedCoursesStrings = new ArrayList<>();
+        for (CompletedCourses completedCourse : this.completedCourses){
+            if (completedCourse.getCourseGrade().equals("FF")){
+                failedCoursesStrings.add(completedCourse.getCourseName());
+                failedCoursesStrings.add(completedCourse.getCourseGrade());
+            }
+
+        }
+    }
     public void printTranscriptSpecificStudent(Student student){
         student.getTranscript().transformSpecificStudentTranscriptElementsToList(student);
         System.out.println("------------------------------------------------------------------------------------------------");
-        System.out.println("ID: " + student.getStudentId() + "\nFullName: " + student.getfName() + " " + student.getlName() + "\nAdvisor: " + this.advisorName + "\nCourses Taken:" + this.completedCourseStrings + "\nGPA: " + this.gpa + "\nTotal Credits: " + this.completedCredits + "\nSelected Courses: " + this.studentSelectedCourses );
+        System.out.println("ID: " + student.getStudentId() + "\nFullName: " + student.getfName() + " " + student.getlName() + "\nAdvisor: " + this.advisorName + "\nCourses Taken:" + this.completedCourseStrings + "\nGPA: " + this.gpa + "\nTotal Credits: " + this.completedCredits + "\nCurrent Selected Courses: " + this.studentSelectedCourses + "\nFailed Courses: " + this.failedCoursesStrings );
     }
     public void transformTranscriptElementsToList(){
         this.completedCourseStrings = new ArrayList<>();
@@ -82,6 +92,7 @@ public class Transcript extends Student {
             completedCourseStrings.add(completedCourses.getCourseName());
             completedCourseStrings.add(completedCourses.getCourseGrade());
         }
+        seperateFailedCourses();
     }
 
     public void generateTranscriptJson(Student[] students) throws IllegalAccessException {
