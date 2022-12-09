@@ -579,6 +579,14 @@ public class GenerateStudent {
         for (int i = 1; i <= s.getCurrentSemester(); i++) {
             if (i == 1){
                 setCoursesList(s);
+            } else if (i == 2){
+                caseTwo(currentSemesterCompleted, s, i, currentSemesterFailed, lockedCourses);
+            } else if(i == 3){
+                caseThree(currentSemesterCompleted, s, i, currentSemesterFailed, lockedCourses);
+            } else if (i == 4) {
+                caseFour(currentSemesterCompleted, s, i, currentSemesterFailed, lockedCourses);
+            } else if (i == 5){
+                otherCases(currentSemesterCompleted, s, i, currentSemesterFailed, lockedCourses, fourthSemesterCoursesHash);
             }
             checkCourseGiven(s);
         }
