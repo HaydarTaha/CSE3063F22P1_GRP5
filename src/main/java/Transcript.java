@@ -14,7 +14,7 @@ public class Transcript extends Student {
     private List<FailedCourses> failedCourses;
     private Double gpa;
     private int completedCredits;
-    private String advisorName
+    private String advisorName;
     private List<String> studentSelectedCourses;
     private List<String> completedCourseStrings;
     private List<String> failedCoursesStrings;
@@ -31,8 +31,9 @@ public class Transcript extends Student {
         this.failedCourses = failedCourses;
         this.gpa = gpa;
         this.completedCredits = completedCredits;
-        this.studentSelectedCourses = studentSelectedCourses;
         this.advisorName = advisorName;
+        this.studentSelectedCourses = studentSelectedCourses;
+
     }
 
     public List<CompletedCourses> getCompletedCourses() {
@@ -66,7 +67,7 @@ public class Transcript extends Student {
     public void printTranscriptSpecificStudent(Student student){
         student.getTranscript().transformSpecificStudentTranscriptElementsToList(student);
         System.out.println("------------------------------------------------------------------------------------------------");
-        System.out.println("ID: " + student.getStudentId() + "\nFullName: " + student.getfName() + " " + student.getlName() + "\nCourses Taken:" + this.completedCourseStrings + "\nGPA: " + this.gpa + "\nTotal Credits: " + this.completedCredits + "\nSelected Courses: " + this.studentSelectedCourses );
+        System.out.println("ID: " + student.getStudentId() + "\nFullName: " + student.getfName() + " " + student.getlName() + "\nAdvisor: " + this.advisorName + "\nCourses Taken:" + this.completedCourseStrings + "\nGPA: " + this.gpa + "\nTotal Credits: " + this.completedCredits + "\nSelected Courses: " + this.studentSelectedCourses );
     }
     public void transformTranscriptElementsToList(){
         this.completedCourseStrings = new ArrayList<>();
