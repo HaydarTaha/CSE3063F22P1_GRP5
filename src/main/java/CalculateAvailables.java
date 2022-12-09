@@ -1,7 +1,9 @@
 import java.io.IOException;
 import java.util.*;
+import java.util.logging.Logger;
 
 public class CalculateAvailables {
+    Logger logger = Logger.getLogger(CalculateAvailables.class.getName());
     List<String> semesterOneCoursesNames = new ArrayList<String>();
     List<String> semesterTwoCoursesNames = new ArrayList<String>();
     List<String> semesterThreeCoursesNames = new ArrayList<String>();
@@ -48,6 +50,7 @@ public class CalculateAvailables {
                     //We delete that course in calculated list and add the failed course back to the calculatedlist
                     if (Objects.equals(courseName, courses1.getPreRequisiteName())){
                         prerequisite = courses1.getPreRequisiteName();
+                        logger.info("Student failed: " + prerequisite + " He cannot choose " + courses1.getCourseCode());
                         calculatedSemesterTwoCourseNames.remove(courses1.getCourseCode());
                         calculatedSemesterTwoCourseNames.add(prerequisite);
                         test = true;

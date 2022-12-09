@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.IOException;
 
 
-public class Student {
+public class Student  {
     static Logger logger = Logger.getLogger(Student.class.getName());
     //Attributes for students are here
     private int studentId;
@@ -31,6 +31,7 @@ public class Student {
     private List<String> availableCourses;
     private List<FailedCourses> failedCourses;
     private Transcript transcript;
+    private Advisor[] advisors;
     //private int counter = 0;
 
 
@@ -283,8 +284,15 @@ public class Student {
         totalCredit = transcriptCreditSum;
 
     }
-    public void generateTranscript(){
-        Transcript transcript = new Transcript(this.getCompletedCourses(), this.getFailedCourses(), this.getGPA(), this.getTotalCredit(), this.getCurrentSelectedCourses());
+    public String getAdvisorName(Advisor[] advisors){
+        for (Advisor advisor : advisors)
+            if (advisor.getAdvisorId() == this.advisorId){
+                return advisor.getfName() + " " + advisor.getlName();
+            }
+        return null;
+    }
+    public void generateTranscript(Advisor[] advisors){
+        Transcript transcript = new Transcript(this.getCompletedCourses(), this.getFailedCourses(), this.getGPA(), this.getTotalCredit(), this.getCurrentSelectedCourses(), getAdvisorName(advisors));
         this.setTranscript(transcript);
         transcript.printTranscriptSpecificStudent(this);
     }
