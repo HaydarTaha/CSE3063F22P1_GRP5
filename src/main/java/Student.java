@@ -31,7 +31,6 @@ public class Student  {
     private List<String> availableCourses;
     private List<FailedCourses> failedCourses;
     private Transcript transcript;
-    private Advisor[] advisors;
     //private int counter = 0;
 
 
