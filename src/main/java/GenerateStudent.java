@@ -629,11 +629,9 @@ public class GenerateStudent {
 
         Random random = new Random();
         String randomLetter = null;
-        int number = 0;
-        int number2 = 0;
 
-        number = random.nextInt(7);
-        number2 = random.nextInt(2);
+        int number = random.nextInt(7);
+        int number2 = random.nextInt(2);
 
         switch (number){
             case 0:

@@ -1,8 +1,13 @@
 import java.io.*;
 import java.io.IOException;
+import java.lang.reflect.Field;
+import org.apache.log4j.Logger;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+
 public class Main {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, IllegalAccessException {
         ObjectMapper objectMapper = new ObjectMapper();
         //We used Jackson Library from Maven here to map these jsons to create corresponding lists of objects
         File advisorJsonFile = new File("inputs/Advisors.json");
@@ -14,12 +19,13 @@ public class Main {
         //We go to generateStudent here to simulate their CompletedCourses
         GenerateStudent generateStudent = new GenerateStudent(students, courses);
         generateStudent.simulate();
-        //We then go to randomizer to get their availableCourses calculated from CompletedCourses
-        Randomizer randomizer = new Randomizer();
-        randomizer.setAvailableCoursesForEachStudent(students, courses, advisors);
         //Then we print the transcript
         Transcript transcript = new Transcript();
+        transcript.generateAvailableCourses(students, advisors, courses);
         System.out.println("----------------------------------------------------------------------------------------------------------------------------");
-        transcript.printTranscript(students);
+        transcript.printTranscriptAll(students);
+        transcript.generateTranscriptForAllStudents(students);
+        transcript.generateTranscriptJson(students);
+
     }
 }

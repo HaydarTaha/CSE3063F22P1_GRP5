@@ -2,6 +2,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.util.*;
 
+import org.apache.log4j.Logger;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONArray;
 import org.json.simple.parser.JSONParser;
@@ -14,6 +15,7 @@ import java.io.IOException;
 
 
 public class Student {
+    static Logger logger = Logger.getLogger(Student.class.getName());
     //Attributes for students are here
     private int studentId;
     private String fName;
@@ -26,13 +28,17 @@ public class Student {
     private int currentSemester;
     private List<String> currentSelectedCourses;
     private List<CompletedCourses> completedCourses;
-
     private List<String> availableCourses;
     private List<FailedCourses> failedCourses;
+    private Transcript transcript;
     //private int counter = 0;
 
 
     //Setters and Getters
+    public Transcript getTranscript() { return transcript; }
+    public void setTranscript(Transcript transcript){
+        this.transcript = transcript;
+    }
     public int getCurrentYear() {
         return currentYear;
     }
@@ -121,14 +127,17 @@ public class Student {
             for (String s : availableCourses){
                 if (checkIfCourseFailed(s)) {
                     coursesAdd.add(s);
+                    logger.info(getfName() + " " +  getlName()+" Prioritized choosing: " + s + " Because of failing before");
                 }
             }
             //Here we check the list again and if it has less than 10 we add them until it becomes size 10
             //we add those to the list. until it's size is 10
             if (coursesAdd.size() < 10){
                 for (String s : availableCourses) {
-                    while (coursesAdd.size() != 10){
+                    if (!coursesAdd.contains(s))
                         coursesAdd.add(s);
+                    if (coursesAdd.size() == 10){
+                        break;
                     }
                 }
                 //then we update selectedCourses with this method
@@ -269,15 +278,15 @@ public class Student {
                 default -> System.out.println("Hatali giris yaptiniz.");
             }
         }
-
-        //  System.out.println("Total Credit : " + creditSum);
         double GPA = (int)((sum / creditSum) * 100.0) / 100.0 ;
         this.gpa = GPA;
-       // System.out.println("gpa : " + gpa);
-        // System.out.println(transcriptCreditSum);
-        creditSum = 0;
         totalCredit = transcriptCreditSum;
 
+    }
+    public void generateTranscript(){
+        Transcript transcript = new Transcript(this.getCompletedCourses(), this.getFailedCourses(), this.getGPA(), this.getTotalCredit(), this.getCurrentSelectedCourses());
+        this.setTranscript(transcript);
+        transcript.printTranscriptSpecificStudent(this);
     }
 
 

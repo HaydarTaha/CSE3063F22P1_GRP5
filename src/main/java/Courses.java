@@ -12,6 +12,16 @@ public class Courses  {
     private int courseType;
     private int semester;
 
+    public int getQuota() {
+        return quota;
+    }
+
+    public void setQuota(int quota) {
+        this.quota = quota;
+    }
+
+    private int quota;
+
     private int courseYear;
     private int theoreticalCourseHour;
     private int practicalLessonHour;
