@@ -587,6 +587,12 @@ public class GenerateStudent {
                 caseFour(currentSemesterCompleted, s, i, currentSemesterFailed, lockedCourses);
             } else if (i == 5){
                 otherCases(currentSemesterCompleted, s, i, currentSemesterFailed, lockedCourses, fourthSemesterCoursesHash);
+            } else if (i == 6) {
+                otherCases(currentSemesterCompleted, s, i, currentSemesterFailed, lockedCourses, fifthSemesterCourses);
+            } else if (i == 7) {
+                otherCases(currentSemesterCompleted, s, i, currentSemesterFailed, lockedCourses, sixthSemesterCoursesHash);
+            } else if (i == 8) {
+                otherCases(currentSemesterCompleted, s, i, currentSemesterFailed, lockedCourses, seventhSemesterCoursesHash);
             }
             checkCourseGiven(s);
         }
