@@ -196,10 +196,7 @@ public class Student  {
     public void changeSelectedCourses(ArrayList<String> advisorApprovedCourses, ArrayList<String> advisorRejectedCoursesAndReasons, String advisorName){
         currentSelectedCourses.clear();
         currentSelectedCourses.addAll(advisorApprovedCourses);
-        logger.info(advisorName + " approved: " + advisorApprovedCourses + "\nrejected: " + advisorRejectedCoursesAndReasons);
-        //TODO: decide what to do with rejected courses and their reasons
-        //todo:createTranscript();
-
+        logger.info("For student: " + this.getfName() + " " + this.getlName() + "\n" +advisorName + " approved: " + advisorApprovedCourses + "\nrejected: " + advisorRejectedCoursesAndReasons);
     }
     //this returns how many courses this student finished.
     public int getCompletedCourseNumber(){

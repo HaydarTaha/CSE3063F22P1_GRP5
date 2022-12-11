@@ -38,7 +38,7 @@ public class CalculateAvailables {
             }
         }
     }
-    public ArrayList<String> putAvailableCoursesCaseTwo(Courses[] courses, List<String> studentCoursesTook){
+    public ArrayList<String> putAvailableCoursesCaseTwo(Courses[] courses, List<String> studentCoursesTook,String stdName){
         for (int i = 0; i< studentCoursesTook.size(); i +=2){
             courseName = studentCoursesTook.get(i);
             courseGrade = studentCoursesTook.get(i+1);
@@ -50,7 +50,7 @@ public class CalculateAvailables {
                     //We delete that course in calculated list and add the failed course back to the calculatedlist
                     if (Objects.equals(courseName, courses1.getPreRequisiteName())){
                         prerequisite = courses1.getPreRequisiteName();
-                        logger.info("Student failed: " + prerequisite + " He cannot choose " + courses1.getCourseCode());
+                        logger.info(stdName + " Failed: " + prerequisite + " He cannot choose " + courses1.getCourseCode());
                         calculatedSemesterTwoCourseNames.remove(courses1.getCourseCode());
                         calculatedSemesterTwoCourseNames.add(prerequisite);
                         test = true;
@@ -66,7 +66,7 @@ public class CalculateAvailables {
         }
         return calculatedSemesterTwoCourseNames;
     }
-    public ArrayList<String> putAvailableCoursesCaseThree(Courses[] courses, List<String> studentCoursesTook){
+    public ArrayList<String> putAvailableCoursesCaseThree(Courses[] courses, List<String> studentCoursesTook,String stdName){
         for (int i = 0; i< studentCoursesTook.size(); i +=2){
             courseName = studentCoursesTook.get(i);
             courseGrade = studentCoursesTook.get(i+1);
@@ -75,6 +75,7 @@ public class CalculateAvailables {
                 for (Courses courses1 : courses){
                     if (Objects.equals(courseName, courses1.getPreRequisiteName())){
                         prerequisite = courses1.getPreRequisiteName();
+                        logger.info(stdName + " Failed: " + prerequisite + " He cannot choose " + courses1.getCourseCode());
                         calculatedSemesterThreeCourseNames.remove(courses1.getCourseCode());
                         calculatedSemesterThreeCourseNames.add(prerequisite);
                         test = true;
@@ -86,7 +87,7 @@ public class CalculateAvailables {
         }
         return calculatedSemesterThreeCourseNames;
     }
-    public ArrayList<String> putAvailableCoursesCaseFour(Courses[] courses, List<String> studentCoursesTook){
+    public ArrayList<String> putAvailableCoursesCaseFour(Courses[] courses, List<String> studentCoursesTook,String stdName){
         for (int i = 0; i< studentCoursesTook.size(); i +=2){
             courseName = studentCoursesTook.get(i);
             courseGrade = studentCoursesTook.get(i+1);
@@ -95,6 +96,7 @@ public class CalculateAvailables {
                 for (Courses courses1 : courses){
                     if (Objects.equals(courseName, courses1.getPreRequisiteName())){
                         prerequisite = courses1.getPreRequisiteName();
+                        logger.info(stdName + " Failed: " + prerequisite + " He cannot choose " + courses1.getCourseCode());
                         calculatedSemesterFourCourseNames.remove(courses1.getCourseCode());
                         calculatedSemesterFourCourseNames.add(prerequisite);
                         test = true;
@@ -106,7 +108,7 @@ public class CalculateAvailables {
         }
         return calculatedSemesterFourCourseNames;
     }
-    public ArrayList<String> putAvailableCoursesCaseFive(Courses[] courses, List<String> studentCoursesTook){
+    public ArrayList<String> putAvailableCoursesCaseFive(Courses[] courses, List<String> studentCoursesTook,String stdName){
         for (int i = 0; i< studentCoursesTook.size(); i +=2){
             courseName = studentCoursesTook.get(i);
             courseGrade = studentCoursesTook.get(i+1);
@@ -115,6 +117,7 @@ public class CalculateAvailables {
                 for (Courses courses1 : courses){
                     if (Objects.equals(courseName, courses1.getPreRequisiteName())){
                         prerequisite = courses1.getPreRequisiteName();
+                        logger.info(stdName + " Failed: " + prerequisite + " He cannot choose " + courses1.getCourseCode());
                         calculatedSemesterFiveCourseNames.remove(courses1.getCourseCode());
                         calculatedSemesterFiveCourseNames.add(prerequisite);
                         test = true;
@@ -126,7 +129,7 @@ public class CalculateAvailables {
         }
         return calculatedSemesterFiveCourseNames;
     }
-    public ArrayList<String> putAvailableCoursesCaseSix(Courses[] courses, List<String> studentCoursesTook){
+    public ArrayList<String> putAvailableCoursesCaseSix(Courses[] courses, List<String> studentCoursesTook,String stdName){
         for (int i = 0; i< studentCoursesTook.size(); i +=2){
             courseName = studentCoursesTook.get(i);
             courseGrade = studentCoursesTook.get(i+1);
@@ -135,6 +138,7 @@ public class CalculateAvailables {
                 for (Courses courses1 : courses){
                     if (Objects.equals(courseName, courses1.getPreRequisiteName())){
                         prerequisite = courses1.getPreRequisiteName();
+                        logger.warning(stdName + " Failed: " + prerequisite + " He cannot choose " + courses1.getCourseCode());
                         calculatedSemesterSixCourseNames.remove(courses1.getCourseCode());
                         calculatedSemesterSixCourseNames.add(prerequisite);
                         test = true;
@@ -146,7 +150,7 @@ public class CalculateAvailables {
         }
         return calculatedSemesterSixCourseNames;
     }
-    public ArrayList<String> putAvailableCoursesCaseSeven(Courses[] courses, List<String> studentCoursesTook){
+    public ArrayList<String> putAvailableCoursesCaseSeven(Courses[] courses, List<String> studentCoursesTook,String stdName){
         for (int i = 0; i< studentCoursesTook.size(); i +=2){
             courseName = studentCoursesTook.get(i);
             courseGrade = studentCoursesTook.get(i+1);
@@ -155,6 +159,7 @@ public class CalculateAvailables {
                 for (Courses courses1 : courses){
                     if (Objects.equals(courseName, courses1.getPreRequisiteName())){
                         prerequisite = courses1.getPreRequisiteName();
+                        logger.info(stdName + " Failed: " + prerequisite + " He cannot choose " + courses1.getCourseCode());
                         calculatedSemesterSevenCourseNames.remove(courses1.getCourseCode());
                         calculatedSemesterSevenCourseNames.add(prerequisite);
                         test = true;
@@ -166,7 +171,7 @@ public class CalculateAvailables {
         }
         return calculatedSemesterSevenCourseNames;
     }
-    public ArrayList<String> putAvailableCoursesCaseEigth(Courses[] courses, List<String> studentCoursesTook){
+    public ArrayList<String> putAvailableCoursesCaseEigth(Courses[] courses, List<String> studentCoursesTook,String stdName){
         for (int i = 0; i< studentCoursesTook.size(); i +=2){
             courseName = studentCoursesTook.get(i);
             courseGrade = studentCoursesTook.get(i+1);
@@ -175,6 +180,7 @@ public class CalculateAvailables {
                 for (Courses courses1 : courses){
                     if (Objects.equals(courseName, courses1.getPreRequisiteName())){
                         prerequisite = courses1.getPreRequisiteName();
+                        logger.info(stdName + " Failed: " + prerequisite + " He cannot choose " + courses1.getCourseCode());
                         calculatedSemesterEigthCourseNames.remove(courses1.getCourseCode());
                         calculatedSemesterEigthCourseNames.add(prerequisite);
                         test = true;
@@ -216,13 +222,13 @@ public class CalculateAvailables {
                 //Now after finally checking through every course he failed or not we add the calculated list
                 //to his available courses for selection.
                 case 1 -> student.setAvailableCourses(semesterOneCoursesNames);
-                case 2 -> student.setAvailableCourses(putAvailableCoursesCaseTwo(courses, studentCoursesTook));
-                case 3 -> student.setAvailableCourses(putAvailableCoursesCaseThree(courses, studentCoursesTook));
-                case 4 -> student.setAvailableCourses(putAvailableCoursesCaseFour(courses, studentCoursesTook));
-                case 5 -> student.setAvailableCourses(putAvailableCoursesCaseFive(courses, studentCoursesTook));
-                case 6 -> student.setAvailableCourses(putAvailableCoursesCaseSix(courses, studentCoursesTook));
-                case 7 -> student.setAvailableCourses(putAvailableCoursesCaseSeven(courses, studentCoursesTook));
-                case 8 -> student.setAvailableCourses(putAvailableCoursesCaseEigth(courses, studentCoursesTook));
+                case 2 -> student.setAvailableCourses(putAvailableCoursesCaseTwo(courses, studentCoursesTook, student.getfName() + " " + student.getlName()));
+                case 3 -> student.setAvailableCourses(putAvailableCoursesCaseThree(courses, studentCoursesTook, student.getfName() + " " + student.getlName()));
+                case 4 -> student.setAvailableCourses(putAvailableCoursesCaseFour(courses, studentCoursesTook, student.getfName() + " " + student.getlName()));
+                case 5 -> student.setAvailableCourses(putAvailableCoursesCaseFive(courses, studentCoursesTook, student.getfName() + " " + student.getlName()));
+                case 6 -> student.setAvailableCourses(putAvailableCoursesCaseSix(courses, studentCoursesTook, student.getfName() + " " + student.getlName()));
+                case 7 -> student.setAvailableCourses(putAvailableCoursesCaseSeven(courses, studentCoursesTook, student.getfName() + " " + student.getlName()));
+                case 8 -> student.setAvailableCourses(putAvailableCoursesCaseEigth(courses, studentCoursesTook, student.getfName() + " " + student.getlName()));
             }
         }
         //After we finish iterating every students and setting their availableCourses lists
@@ -232,6 +238,7 @@ public class CalculateAvailables {
         for (Student student : students){
             student.selectFromAvailableCourses();
             student.sendToAdvisorSelectedClasses(advisors);
+            student.addQuota(courses);
             student.gpaCalculator(courses);
         }
     }

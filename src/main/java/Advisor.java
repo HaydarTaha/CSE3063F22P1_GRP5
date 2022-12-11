@@ -58,6 +58,7 @@ public class Advisor extends Student {
                     //For this we have 1/3 chance of rejection with the reason
                     if (randomNumber2==0 && randomNumber3==0){
                         rejectedList.add(student.getCurrentSelectedCourses().get(i));
+                        rejectedList.add(stringArray[0]);
                     }else{
                         acceptedList.add(student.getCurrentSelectedCourses().get(i));
                     }
@@ -66,6 +67,7 @@ public class Advisor extends Student {
                     // another 1/3 chance of rejection but with another reason
                     if (randomNumber2==1 && randomNumber3==1){
                         rejectedList.add(student.getCurrentSelectedCourses().get(i));
+                        rejectedList.add(stringArray[1]);
                     }else{
                         acceptedList.add(student.getCurrentSelectedCourses().get(i));
                     }
@@ -74,6 +76,7 @@ public class Advisor extends Student {
                     //same as above with another reason
                     if (randomNumber2==2 && randomNumber3==2){
                         rejectedList.add(student.getCurrentSelectedCourses().get(i));
+                        rejectedList.add(stringArray[2]);
                     }else{
                         acceptedList.add(student.getCurrentSelectedCourses().get(i));
                     }
