@@ -22,10 +22,15 @@ public class Main {
         //Then we print the transcript
         Transcript transcript = new Transcript();
         transcript.generateAvailableCourses(students, advisors, courses);
-        System.out.println("----------------------------------------------------------------------------------------------------------------------------");
         transcript.printTranscriptAll(students);
-        transcript.generateTranscriptForAllStudents(students);
+        transcript.generateTranscriptForAllStudents(students, advisors);
         transcript.generateTranscriptJson(students);
+        for (Student student : students){
+            student.addQuota(courses);
+        }
+        for (Courses courses1 : courses){
+            System.out.println(courses1.getCourseCode() + " " + courses1.getQuota());
+        }
 
     }
 }

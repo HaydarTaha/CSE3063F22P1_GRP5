@@ -3,8 +3,6 @@ import java.util.List;
 
 public class Courses  {
     //Attributes of Courses object
-    //We didn't add quota here
-    //because our code had some problems with that we decided we can do that in iteration2
     private String name;
     private String courseCode;
     private List<String> prerequisite;
@@ -117,6 +115,9 @@ public class Courses  {
         preRequisiteNames.add(courses.getPrerequisite().get(0));
         preRequisiteNames.add(courses.getPrerequisite().get(1));
         return preRequisiteNames;
+    }
+    public void incrementQuota(Courses courses){
+        courses.quota += 1;
     }
 
 

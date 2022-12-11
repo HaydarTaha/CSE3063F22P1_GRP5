@@ -82,6 +82,6 @@ public class Advisor extends Student {
         }
         //Then we call changeSelectedCourses method with courses which we accepted and rejected
         //to update their selection
-        student.changeSelectedCourses(acceptedList,rejectedList);
+        student.changeSelectedCourses(acceptedList,rejectedList, this.getfName() + " " + this.getlName());
     }
 }

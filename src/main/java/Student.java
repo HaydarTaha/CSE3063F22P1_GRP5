@@ -127,7 +127,7 @@ public class Student  {
             for (String s : availableCourses){
                 if (checkIfCourseFailed(s)) {
                     coursesAdd.add(s);
-                    logger.info(getfName() + " " +  getlName()+" Prioritized choosing: " + s + " Because of failing before");
+                    logger.info(getfName() + " " +  getlName()+" Prioritized choosing: " + s + " Because of failing before because he had more than 10 courses available for choosing");
                 }
             }
             //Here we check the list again and if it has less than 10 we add them until it becomes size 10
@@ -159,6 +159,15 @@ public class Student  {
 
 
     }
+    public void addQuota(Courses[] courses){
+        for (String s : this.currentSelectedCourses){
+            for (Courses courses1 : courses){
+                if (s == courses1.getCourseCode()){
+                    courses1.incrementQuota(courses1);
+                }
+            }
+        }
+    }
 
 
     List<String> getAvailableCourses() { return availableCourses; }
@@ -184,9 +193,10 @@ public class Student  {
     }
     //This is a method the advisor calls
     //it changes selected courses depending on if each course is accepted or rejected and then updates it
-    public void changeSelectedCourses(ArrayList<String> advisorApprovedCourses, ArrayList<String> advisorRejectedCoursesAndReasons){
+    public void changeSelectedCourses(ArrayList<String> advisorApprovedCourses, ArrayList<String> advisorRejectedCoursesAndReasons, String advisorName){
         currentSelectedCourses.clear();
         currentSelectedCourses.addAll(advisorApprovedCourses);
+        logger.info(advisorName + " approved: " + advisorApprovedCourses + "\nrejected: " + advisorRejectedCoursesAndReasons);
         //TODO: decide what to do with rejected courses and their reasons
         //todo:createTranscript();
 

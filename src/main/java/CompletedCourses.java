@@ -29,7 +29,6 @@ public class CompletedCourses extends Courses{
         this.givenSemester = givenSemester;
     }
 
-
     @Override
     public String toString(){
         return getCourseName() + ", " + getCourseGrade() + ", " + getGivenSemester();

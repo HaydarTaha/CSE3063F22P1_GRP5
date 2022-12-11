@@ -635,74 +635,52 @@ public class GenerateStudent {
 
         switch (number){
             case 0:
-                switch (number2){
-                    case 0:
-                        randomLetter = "AA";
-                        break;
-                    case 1:
-                        randomLetter = "BA";
-                        break;
+                switch (number2) {
+                    case 0 -> randomLetter = "AA";
+                    case 1 -> randomLetter = "BA";
                 }
                 break;
             case 1:
-                switch (number2){
-                    case 0:
-                        randomLetter = "BA";
-                        break;
-                    case 1:
-                        randomLetter = "BB";
-                        break;
-                }
+                randomLetter = switch (number2) {
+                    case 0 -> "BA";
+                    case 1 -> "BB";
+                    default -> randomLetter;
+                };
                 break;
             case 2:
-                switch (number2){
-                    case 0:
-                        randomLetter = "BB";
-                        break;
-                    case 1:
-                        randomLetter = "CB";
-                        break;
-                }
+                randomLetter = switch (number2) {
+                    case 0 -> "BB";
+                    case 1 -> "CB";
+                    default -> randomLetter;
+                };
                 break;
             case 3:
-                switch (number2){
-                    case 0:
-                        randomLetter = "CB";
-                        break;
-                    case 1:
-                        randomLetter = "CC";
-                        break;
-                }
+                randomLetter = switch (number2) {
+                    case 0 -> "CB";
+                    case 1 -> "CC";
+                    default -> randomLetter;
+                };
                 break;
             case 4:
-                switch (number2){
-                    case 0:
-                        randomLetter = "CC";
-                        break;
-                    case 1:
-                        randomLetter = "DC";
-                        break;
-                }
+                randomLetter = switch (number2) {
+                    case 0 -> "CC";
+                    case 1 -> "DC";
+                    default -> randomLetter;
+                };
                 break;
             case 5:
-                switch (number2){
-                    case 0:
-                        randomLetter = "DC";
-                        break;
-                    case 1:
-                        randomLetter = "DD";
-                        break;
-                }
+                randomLetter = switch (number2) {
+                    case 0 -> "DC";
+                    case 1 -> "DD";
+                    default -> randomLetter;
+                };
                 break;
             case 6:
-                switch (number2){
-                    case 0:
-                        randomLetter = "DD";
-                        break;
-                    case 1:
-                        randomLetter = "FF";
-                        break;
-                }
+                randomLetter = switch (number2) {
+                    case 0 -> "DD";
+                    case 1 -> "FF";
+                    default -> randomLetter;
+                };
                 break;
         }
         return randomLetter;
