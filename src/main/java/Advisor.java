@@ -2,13 +2,15 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class Advisor extends Student {
+public class Advisor extends Courses {
     //Basic attributes of advisors
     private int advisorId;
 
     private String fName;
 
     private String lName;
+
+    private List<Student> studentsList;
 
     public int getAdvisorId() {
         return advisorId;
@@ -87,4 +89,18 @@ public class Advisor extends Student {
         //to update their selection
         student.changeSelectedCourses(acceptedList,rejectedList, this.getfName() + " " + this.getlName());
     }
+    public void setAdvisorsLookingList(Student[] students){
+        for (Student student : students){
+            if(student.getAdvisorId() == this.getAdvisorId()){
+                this.studentsList.add(student);
+            }
+        }
+    }
+    public List<Student> getStudentsList() {
+        return studentsList;
+    }
+    public void checkCourseQuota(){
+
+    }
+
 }

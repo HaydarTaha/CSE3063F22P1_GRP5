@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.IOException;
 
 
-public class Student  {
+public class Student{
     static Logger logger = Logger.getLogger(Student.class.getName());
     //Attributes for students are here
     private int studentId;
@@ -31,6 +31,7 @@ public class Student  {
     private List<String> availableCourses;
     private List<FailedCourses> failedCourses;
     private Transcript transcript;
+
     //private int counter = 0;
 
 
@@ -162,13 +163,12 @@ public class Student  {
     public void addQuota(Courses[] courses){
         for (String s : this.currentSelectedCourses){
             for (Courses courses1 : courses){
-                if (s == courses1.getCourseCode()){
+                if (Objects.equals(s, courses1.getCourseCode())){
                     courses1.incrementQuota(courses1);
                 }
             }
         }
     }
-
 
     List<String> getAvailableCourses() { return availableCourses; }
     //This checks if the course is failed for this student
