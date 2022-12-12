@@ -299,6 +299,7 @@ public class GenerateStudent {
         for (int i = 0; i < s.getCompletedCourses().size(); i++) {
             int count = 0;
             String courseCode = s.getCompletedCourses().get(i).getCourseName();
+
             for (int j = i; j < s.getCompletedCourses().size(); j++) {
                 String checkCode = s.getCompletedCourses().get(j).getCourseName();
                 if (courseCode.equals(checkCode)){
@@ -328,6 +329,26 @@ public class GenerateStudent {
                     courseSize--;
                 }
             }
+        }
+
+
+        for (CompletedCourses completedCourses1 : s.getCompletedCourses()){
+            Random random = new Random();
+            int value = random.nextInt(5);
+            if (completedCourses1.getCourseName().contains("UE")){
+                completedCourses1.setCourseName(UE[value].getCourseCode());
+                System.out.println(completedCourses1.getCourseName());
+            } else if (completedCourses1.getCourseName().contains("FTE")){
+                completedCourses1.setCourseName(FTE[value].getCourseCode());
+                System.out.println(completedCourses1.getCourseName());
+            } else if (completedCourses1.getCourseName().contains("NTE")){
+                completedCourses1.setCourseName(NTE[value].getCourseCode());
+                System.out.println(completedCourses1.getCourseName());
+            } else if (completedCourses1.getCourseName().contains("TE")){
+                completedCourses1.setCourseName(TE[value].getCourseCode());
+                System.out.println(completedCourses1.getCourseName());
+            }
+
         }
     }
 
