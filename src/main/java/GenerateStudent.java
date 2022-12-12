@@ -1,5 +1,4 @@
 import java.io.IOException;
-import java.text.ParseException;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicBoolean;
 
@@ -15,11 +14,19 @@ public class GenerateStudent {
     private HashMap<String, List<String>> seventhSemesterCoursesHash;
     private HashMap<String, List<String>> eighthSemesterCoursesHash;
     private HashMap<String, List<String>> prerequisiteList;
+    private Courses[] UE;
+    private Courses[] TE;
+    private Courses[] NTE;
+    private Courses[] FTE;
 
     //This constructor called in Main class and send student and courses arrays
-    public GenerateStudent(Student[] student, Courses[] courses){
+    public GenerateStudent(Student[] student, Courses[] courses,Courses[] UE,Courses[] TE, Courses[] NTE,Courses[] FTE){
         this.student = student;
         this.courses = courses;
+        this.UE=UE;
+        this.TE=TE;
+        this.NTE=NTE;
+        this.FTE=FTE;
     }
 
     //This method get courseCodesFrom Courses array and check their semester and add to named (CourseSemester)SemesterCourses
@@ -285,7 +292,7 @@ public class GenerateStudent {
     }
 
     //In this method we are removing duplicate values from Student completedCourses List
-    public void removeDuplicates(Student s){
+    public void removeUnnamedCourses(Student s){
         List<CompletedCourses> completedCourses = new ArrayList<>(s.getCompletedCourses());
         List<String> duplicateCourses = new ArrayList<>();
         List<Integer> duplicateTime = new ArrayList<>();
@@ -598,13 +605,13 @@ public class GenerateStudent {
         }
     }
 
-    //In this method we are calling generateYear, simulateSemester, removeDuplicates and setStudentAdvisor methods
+    //In this method we are calling generateYear, simulateSemester, removeUnnamedCourses and setStudentAdvisor methods
     void simulate() throws IOException {
         addCourseNames();
         for (Student s : student){
             generateYear(s);
             simulateSemester(s, "Spring");
-            removeDuplicates(s);
+            removeUnnamedCourses(s);
             setStudentAdvisor(s);
             int availableCoursesSize = s.getAvailableCourses().size();
             for (int i = 0; i < availableCoursesSize; i++) {

@@ -742,7 +742,7 @@ public class GenerateStudent {
         }
     }
 
-    //In this method we are calling generateYear, simulateSemester, removeDuplicates and setStudentAdvisor methods
+    //In this method we are calling generateYear, simulateSemester, removeUnnamedCourses and setStudentAdvisor methods
     void simulate() throws IOException {
         addCourseNames();
         for (Student s : student){

@@ -17,10 +17,25 @@ public class Main {
         Advisor[] advisors = objectMapper.readValue(advisorJsonFile, Advisor[].class);
         File lecturesJsonFile = new File("inputs/lectures.json");
         Courses[] courses = objectMapper.readValue(lecturesJsonFile, Courses[].class);
+
+
+        File UEJson = new File("inputs/UE.json");
+        Courses[] UE = objectMapper.readValue(UEJson, Courses[].class);
+
+        File TEJson = new File("inputs/TE.json");
+        Courses[] TE = objectMapper.readValue(TEJson, Courses[].class);
+
+        File NTEJson = new File("inputs/NTE.json");
+        Courses[] NTE = objectMapper.readValue(NTEJson, Courses[].class);
+
+        File FTEJson = new File("inputs/FTE.json");
+        Courses[] FTE = objectMapper.readValue(FTEJson, Courses[].class);
+
+
         File studentsJsonFile = new File("inputs/studentInformation.json");
         Student[] students = objectMapper.readValue(studentsJsonFile, Student[].class);
         //We go to generateStudent here to simulate their CompletedCourses
-        GenerateStudent generateStudent = new GenerateStudent(students, courses);
+        GenerateStudent generateStudent = new GenerateStudent(students, courses,UE,TE,NTE,FTE);
         generateStudent.simulate();
         //Then we print the transcript
         Transcript transcript = new Transcript();
