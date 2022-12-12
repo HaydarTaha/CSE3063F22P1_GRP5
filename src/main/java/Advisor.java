@@ -10,7 +10,7 @@ public class Advisor extends Courses {
 
     private String lName;
 
-    private List<Student> studentsList;
+    private List<Student> studentsList = new ArrayList<>();
 
     public int getAdvisorId() {
         return advisorId;
@@ -89,12 +89,8 @@ public class Advisor extends Courses {
         //to update their selection
         student.changeSelectedCourses(acceptedList,rejectedList, this.getfName() + " " + this.getlName());
     }
-    public void setAdvisorsLookingList(Student[] students){
-        for (Student student : students){
-            if(student.getAdvisorId() == this.getAdvisorId()){
-                this.studentsList.add(student);
-            }
-        }
+    public void setAdvisorsLookingList(Student std){
+        this.studentsList.add(std);
     }
     public List<Student> getStudentsList() {
         return studentsList;

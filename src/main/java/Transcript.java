@@ -15,6 +15,7 @@ public class Transcript extends Student {
     private Double gpa;
     private int completedCredits;
     private String advisorName;
+    private Student student;
     private List<String> studentSelectedCourses;
     private List<String> completedCourseStrings;
     private List<String> failedCoursesStrings;
@@ -26,13 +27,14 @@ public class Transcript extends Student {
         this.gpa = gpa;
         this.completedCredits = completedCredits;
     }
-    public Transcript(List<CompletedCourses> completedCourses, List<FailedCourses> failedCourses, Double gpa, int completedCredits, List<String> studentSelectedCourses, String advisorName){
+    public Transcript(List<CompletedCourses> completedCourses, List<FailedCourses> failedCourses, Double gpa, int completedCredits, List<String> studentSelectedCourses, String advisorName, Student student){
         this.completedCourses = completedCourses;
         this.failedCourses = failedCourses;
         this.gpa = gpa;
         this.completedCredits = completedCredits;
         this.advisorName = advisorName;
         this.studentSelectedCourses = studentSelectedCourses;
+        this.student = student;
 
     }
 
@@ -42,26 +44,20 @@ public class Transcript extends Student {
     public List<FailedCourses> getFailedCourses() {
         return failedCourses;
     }
-    public Double getGpa() {
-        return gpa;
-    }
-    public int getCompletedCredits() {
-        return completedCredits;
-    }
     public void generateAvailableCourses(Student[] students, Advisor[] advisors, Courses[] courses) throws IOException {
         CalculateAvailables calculateAvailables = new CalculateAvailables();
         calculateAvailables.setAvailableCoursesForEachStudent(students, courses, advisors);
     }
-    public void generateTranscriptForAllStudents(Student[] students, Advisor[] advisors){
+    public void generateTranscriptForAllStudents(Student[] students){
         for (Student student : students){
-            student.generateTranscript(advisors);
+            student.generateTranscript();
         }
     }
-    public void printTranscriptAll(Student[] students2){
+    /*public void printTranscriptAll(Student[] students2){
         for (Student s: students2) {
             System.out.println("ID: "+s.getStudentId() + "\nName: " + s.getfName() + " " +  s.getlName() + "\nCourses: " + s.getCompletedCourses() + "\nSelected Courses:" + s.getCurrentSelectedCourses() + "\nGPA: " + s.getGPA() + "\nTotalCredits: " + s.getTotalCredit() + "\n-------------------------------------------------------------------------------------------------------------------------------------------------");
         }
-    }
+    }*/
     public void seperateFailedCourses(){
         failedCoursesStrings = new ArrayList<>();
         for (CompletedCourses completedCourse : this.completedCourses){
@@ -75,7 +71,7 @@ public class Transcript extends Student {
     public void printTranscriptSpecificStudent(Student student){
         student.getTranscript().transformSpecificStudentTranscriptElementsToList(student);
         System.out.println("------------------------------------------------------------------------------------------------");
-        System.out.println("ID: " + student.getStudentId() + "\nFullName: " + student.getfName() + " " + student.getlName() + "\nAdvisor: " + this.advisorName + "\nCourses Taken:" + this.completedCourseStrings + "\nGPA: " + this.gpa + "\nTotal Credits: " + this.completedCredits + "\nCurrent Selected Courses: " + this.studentSelectedCourses + "\nFailed Courses: " + this.failedCoursesStrings );
+        System.out.println("ID: " + student.getStudentId() + "\nFullName: " + student.getfName() + " " + student.getlName() + "\nAdvisor: " + this.advisorName + "\nCourses Taken:" + this.completedCourseStrings + "\nGPA: " + this.gpa + "\nTotal Credits: " + this.completedCredits + "\nAvailable Courses:" + student.getAvailableCourses()  + "\nAdvisor Approved Courses: " + this.studentSelectedCourses + "\nFailed Courses: " + this.failedCoursesStrings );
     }
     public void transformTranscriptElementsToList(){
         this.completedCourseStrings = new ArrayList<>();
@@ -87,8 +83,7 @@ public class Transcript extends Student {
     public void transformSpecificStudentTranscriptElementsToList(Student student){
         this.completedCourseStrings = new ArrayList<>();
         for (CompletedCourses completedCourses : student.getCompletedCourses()){
-            completedCourseStrings.add(completedCourses.getCourseName());
-            completedCourseStrings.add(completedCourses.getCourseGrade());
+            completedCourseStrings.add(completedCourses.getCourseName() + " " + completedCourses.getCourseGrade() + " Given: " + completedCourses.getGivenSemester());
         }
         seperateFailedCourses();
     }

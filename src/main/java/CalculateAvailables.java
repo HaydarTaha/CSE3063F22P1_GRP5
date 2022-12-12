@@ -235,11 +235,33 @@ public class CalculateAvailables {
         //We then call methods inside students to make them select courses mathematically
         //and then send that to advisors then advisors either accepts/rejects courses and updates their list
         //and then we calculate gpa for everystudent
+        setAdvisorsForEachStudent(advisors, students);
+        setStudentsForEachAdvisor(students, advisors);
         for (Student student : students){
             student.selectFromAvailableCourses();
-            student.sendToAdvisorSelectedClasses(advisors);
+            student.sendToAdvisorSelectedClasses();
             student.addQuota(courses);
             student.gpaCalculator(courses);
+        }
+
+    }
+    public void setAdvisorsForEachStudent(Advisor[] advisors, Student[] students){
+        for (Student student : students){
+            for (Advisor advisor : advisors){
+                if (advisor.getAdvisorId() == student.getAdvisorId()){
+                    student.setAdvisor(advisor);
+                }
+            }
+        }
+
+    }
+    public void setStudentsForEachAdvisor(Student[] students, Advisor[] advisors){
+        for (Advisor advisor : advisors){
+            for (Student student : students){
+                if (student.getAdvisorId() == advisor.getAdvisorId()){
+                    advisor.setAdvisorsLookingList(student);
+                }
+            }
         }
     }
 }

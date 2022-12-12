@@ -25,7 +25,7 @@ public class Main {
         //Then we print the transcript
         Transcript transcript = new Transcript();
         transcript.generateAvailableCourses(students, advisors, courses);
-        transcript.generateTranscriptForAllStudents(students, advisors);
+        transcript.generateTranscriptForAllStudents(students);
         transcript.generateTranscriptJson(students);
         for (Courses courses1 : courses){
             System.out.println(courses1.getCourseCode() + " " + courses1.getQuota());

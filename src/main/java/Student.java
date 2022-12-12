@@ -21,8 +21,8 @@ public class Student{
     private String fName;
     private String lName;
     private int totalCredit;
-
     private int advisorId;
+    private Advisor advisor;
     private double gpa;
     private int currentYear;
     private int currentSemester;
@@ -37,8 +37,8 @@ public class Student{
 
     //Setters and Getters
     public Transcript getTranscript() { return transcript; }
-    public void setTranscript(Transcript transcript){
-        this.transcript = transcript;
+    public void setAdvisor(Advisor advisor) {
+        this.advisor = advisor;
     }
     public int getCurrentYear() {
         return currentYear;
@@ -77,16 +77,10 @@ public class Student{
         this.lName = lName;
     }
 
-    public void setGPA(double gpa) {
-        this.gpa = gpa;
-    }
     public int getTotalCredit() {
         return totalCredit;
     }
 
-    public void setTotalCredit(int totalCredit) {
-        this.totalCredit = totalCredit;
-    }
 
     public void setCurrentSelectedCourses(List<String> currentSelectedCourses) {
         this.currentSelectedCourses = currentSelectedCourses;
@@ -184,19 +178,15 @@ public class Student{
         return check;
     }
     //This method sends currentSelectedCourses to the corresponding advisor for this student
-    public void sendToAdvisorSelectedClasses(Advisor[]advisors){
-        for (Advisor advisor : advisors){
-            if (this.advisorId == advisor.getAdvisorId()){
-                advisor.advisorControl(currentSelectedCourses, this);
-            }
-        }
+    public void sendToAdvisorSelectedClasses(){
+        advisor.advisorControl(currentSelectedCourses, this);
     }
     //This is a method the advisor calls
     //it changes selected courses depending on if each course is accepted or rejected and then updates it
     public void changeSelectedCourses(ArrayList<String> advisorApprovedCourses, ArrayList<String> advisorRejectedCoursesAndReasons, String advisorName){
         currentSelectedCourses.clear();
         currentSelectedCourses.addAll(advisorApprovedCourses);
-        logger.info("For student: " + this.getfName() + " " + this.getlName() + "\n" +advisorName + " approved: " + advisorApprovedCourses + "\nrejected: " + advisorRejectedCoursesAndReasons);
+        logger.info("For student: " + this.fName + " " + this.lName + "\n" +advisorName + " approved: " + advisorApprovedCourses + "\nrejected: " + advisorRejectedCoursesAndReasons);
     }
     //this returns how many courses this student finished.
     public int getCompletedCourseNumber(){
@@ -287,19 +277,15 @@ public class Student{
         }
         double GPA = (int)((sum / creditSum) * 100.0) / 100.0 ;
         this.gpa = GPA;
-        totalCredit = transcriptCreditSum;
+        this.totalCredit = transcriptCreditSum;
 
     }
-    public String getAdvisorName(Advisor[] advisors){
-        for (Advisor advisor : advisors)
-            if (advisor.getAdvisorId() == this.advisorId){
-                return advisor.getfName() + " " + advisor.getlName();
-            }
-        return null;
+    public String getAdvisorName(){
+        return advisor.getfName() + " " + advisor.getlName();
     }
-    public void generateTranscript(Advisor[] advisors){
-        Transcript transcript = new Transcript(this.getCompletedCourses(), this.getFailedCourses(), this.getGPA(), this.getTotalCredit(), this.getCurrentSelectedCourses(), getAdvisorName(advisors));
-        this.setTranscript(transcript);
+    public void generateTranscript(){
+        Transcript transcript = new Transcript(this.completedCourses, this.failedCourses, this.getGPA(), this.totalCredit, this.getCurrentSelectedCourses(), getAdvisorName(), this);
+        this.transcript = transcript;
         transcript.printTranscriptSpecificStudent(this);
     }
 
