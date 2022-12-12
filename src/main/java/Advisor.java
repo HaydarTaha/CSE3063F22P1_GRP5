@@ -89,7 +89,7 @@ public class Advisor extends Courses {
         //to update their selection
         student.changeSelectedCourses(acceptedList,rejectedList, this.getfName() + " " + this.getlName());
     }
-    public void setAdvisorsLookingList(Student std){
+    public void addAdvisorsLookingList(Student std){
         this.studentsList.add(std);
     }
     public List<Student> getStudentsList() {

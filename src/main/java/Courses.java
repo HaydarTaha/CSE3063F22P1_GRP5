@@ -19,6 +19,7 @@ public class Courses  {
     private int courseYear;
     private int theoreticalCourseHour;
     private int practicalLessonHour;
+    private List<Student> listOfStudents = new ArrayList<>();
     //Basic Setters and Getters
     public void setCourseType(int courseType) {
         this.courseType = courseType;
@@ -114,6 +115,9 @@ public class Courses  {
     }
     public void incrementQuota(Courses courses){
         courses.quota += 1;
+    }
+    public void addToListOfStudents(Student student){
+        this.listOfStudents.add(student);
     }
 
 

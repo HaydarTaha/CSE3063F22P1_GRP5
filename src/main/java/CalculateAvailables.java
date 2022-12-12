@@ -243,6 +243,7 @@ public class CalculateAvailables {
             student.addQuota(courses);
             student.gpaCalculator(courses);
         }
+        setStudentsForEachCourses(students, courses);
 
     }
     public void setAdvisorsForEachStudent(Advisor[] advisors, Student[] students){
@@ -259,7 +260,18 @@ public class CalculateAvailables {
         for (Advisor advisor : advisors){
             for (Student student : students){
                 if (student.getAdvisorId() == advisor.getAdvisorId()){
-                    advisor.setAdvisorsLookingList(student);
+                    advisor.addAdvisorsLookingList(student);
+                }
+            }
+        }
+    }
+    public void setStudentsForEachCourses(Student[] students, Courses[] courses){
+        for (Student std : students){
+            for (String s : std.getCurrentSelectedCourses()){
+                for (Courses crs : courses){
+                    if (Objects.equals(crs.getCourseCode(), s)){
+                        crs.addToListOfStudents(std);
+                    }
                 }
             }
         }
