@@ -337,16 +337,16 @@ public class GenerateStudent {
             int value = random.nextInt(5);
             if (completedCourses1.getCourseName().contains("UE")){
                 completedCourses1.setCourseName(UE[value].getCourseCode());
-                System.out.println(completedCourses1.getCourseName());
+
             } else if (completedCourses1.getCourseName().contains("FTE")){
                 completedCourses1.setCourseName(FTE[value].getCourseCode());
-                System.out.println(completedCourses1.getCourseName());
+
             } else if (completedCourses1.getCourseName().contains("NTE")){
                 completedCourses1.setCourseName(NTE[value].getCourseCode());
-                System.out.println(completedCourses1.getCourseName());
+
             } else if (completedCourses1.getCourseName().contains("TE")){
                 completedCourses1.setCourseName(TE[value].getCourseCode());
-                System.out.println(completedCourses1.getCourseName());
+
             }
 
         }
