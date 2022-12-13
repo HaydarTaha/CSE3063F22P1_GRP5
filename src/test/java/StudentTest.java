@@ -14,7 +14,7 @@ class StudentTest {
     File studentJson = new File("inputs/studentNames.json");
     Student[] studentArray = objectMapper.readValue(studentJson, Student[].class);
 
-    StudentTest() throws IOException, IOException {
+    StudentTest() throws IOException {
     }
 
     @Test
