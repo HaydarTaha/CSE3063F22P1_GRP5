@@ -5,8 +5,6 @@ import java.lang.reflect.Field;
 import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
 
 public class Main {
     public static void main(String[] args) throws IOException, IllegalAccessException {
@@ -37,15 +35,10 @@ public class Main {
 
 
 
-        GenerateStudent generateStudent = new GenerateStudent((Student[]) students, courses,UE,TE,NTE,FTE);
+        GenerateStudent generateStudent = new GenerateStudent((Student[]) students, courses, UE, TE, NTE, FTE, (Advisor[]) advisors);
         generateStudent.simulate();
         //Then we print the transcript
 
-
-        Transcript transcript = new Transcript();
-        transcript.generateAvailableCourses((Student[]) students, (Advisor[]) advisors, courses);
-        transcript.generateTranscriptForAllStudents((Student[]) students);
-        transcript.generateTranscriptJson((Student[]) students);
         for (Courses courses1 : courses){
             System.out.println(courses1.getCourseCode() + " " + courses1.getQuota());
         }

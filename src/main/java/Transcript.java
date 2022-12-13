@@ -44,10 +44,6 @@ public class Transcript extends Student {
     public List<FailedCourses> getFailedCourses() {
         return failedCourses;
     }
-    public void generateAvailableCourses(Student[] students, Advisor[] advisors, Courses[] courses) throws IOException {
-        CalculateAvailables calculateAvailables = new CalculateAvailables();
-        calculateAvailables.setAvailableCoursesForEachStudent(students, courses, advisors);
-    }
     public void generateTranscriptForAllStudents(Student[] students){
         for (Student student : students){
             student.generateTranscript();

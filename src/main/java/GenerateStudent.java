@@ -5,6 +5,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
 public class GenerateStudent {
     private Student[] student;
     private Courses[] courses;
+    private Advisor[] advisors;
     private List<String> firstSemesterCourses;
     private HashMap<String, List<String>> secondSemesterCoursesHash;
     private HashMap<String, List<String>> thirdSemesterCoursesHash;
@@ -20,13 +21,14 @@ public class GenerateStudent {
     private Courses[] FTE;
 
     //This constructor called in Main class and send student and courses arrays
-    public GenerateStudent(Student[] student, Courses[] courses,Courses[] UE,Courses[] TE, Courses[] NTE,Courses[] FTE){
+    public GenerateStudent(Student[] student, Courses[] courses, Courses[] UE, Courses[] TE, Courses[] NTE, Courses[] FTE, Advisor[] advisors){
         this.student = student;
+        this.advisors = advisors;
         this.courses = courses;
-        this.UE=UE;
-        this.TE=TE;
-        this.NTE=NTE;
-        this.FTE=FTE;
+        this.UE = UE;
+        this.TE = TE;
+        this.NTE = NTE;
+        this.FTE = FTE;
     }
 
     //This method get courseCodesFrom Courses array and check their semester and add to named (CourseSemester)SemesterCourses
@@ -160,6 +162,16 @@ public class GenerateStudent {
                 lockedCourses.put(courseName, failedPrerequisite);
             }
         });
+    }
+
+    //We are printing Transcript for all Students
+    public void printTranscript() throws IOException, IllegalAccessException {
+        Transcript transcript = new Transcript();
+        generateAvailableCourses(student, advisors, courses);
+        System.out.println("----------------------------------------------------------------------------------------------------------------------------");
+        //transcript.printTranscriptAll(student);
+        transcript.generateTranscriptForAllStudents(student);
+        transcript.generateTranscriptJson(student);
     }
 
     //In this method we are adding courseCode, courseGrade and given semester to currentSemesterCompleted List
@@ -348,7 +360,6 @@ public class GenerateStudent {
                 completedCourses1.setCourseName(TE[value].getCourseCode());
 
             }
-
         }
     }
 
@@ -405,6 +416,11 @@ public class GenerateStudent {
         int number = 0;
         number = random.nextInt(5);
         s.setAdvisorId(number);
+    }
+
+    public void generateAvailableCourses(Student[] students, Advisor[] advisors, Courses[] courses) throws IOException {
+        CalculateAvailables calculateAvailables = new CalculateAvailables();
+        calculateAvailables.setAvailableCoursesForEachStudent(students, courses, advisors, UE, TE, FTE, NTE);
     }
 
     public void caseTwo(List<CompletedCourses> currentSemesterCompleted, Student s, int i, List<FailedCourses> currentSemesterFailed, HashMap<String, List<String>> lockedCourses) throws IOException {
@@ -627,7 +643,7 @@ public class GenerateStudent {
     }
 
     //In this method we are calling generateYear, simulateSemester, removeUnnamedCourses and setStudentAdvisor methods
-    void simulate() throws IOException {
+    void simulate() throws IOException, IllegalAccessException {
         addCourseNames();
         for (Student s : student){
             generateYear(s);
@@ -650,6 +666,7 @@ public class GenerateStudent {
                 }
             }
         }
+        printTranscript();
     }
 
     //In this method we are returning random grades for the simulate method

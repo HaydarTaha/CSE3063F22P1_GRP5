@@ -1,18 +1,6 @@
-import java.io.File;
-import java.io.FileWriter;
+
 import java.util.*;
-
 import org.apache.log4j.Logger;
-import org.json.simple.JSONObject;
-import org.json.simple.JSONArray;
-import org.json.simple.parser.JSONParser;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import com.fasterxml.jackson.databind.ObjectMapper;
-
-
-import java.io.IOException;
-
 
 public class Student extends Person{
     static Logger logger = Logger.getLogger(Student.class.getName());
@@ -150,6 +138,23 @@ public class Student extends Person{
 
 
     }
+
+    public void chooseFromElectiveCourses(Courses[] UE, Courses[] FTE, Courses[] NTE, Courses[] TE){
+        for (int i = 0; i < currentSelectedCourses.size(); i++) {
+            Random random = new Random();
+            int value = random.nextInt(5);
+            if (currentSelectedCourses.get(i).contains("UE")){
+                currentSelectedCourses.set(i, UE[value].getCourseCode());
+            } else if (currentSelectedCourses.get(i).contains("FTE")){
+                currentSelectedCourses.set(i, FTE[value].getCourseCode());
+            } else if (currentSelectedCourses.get(i).contains("NTE")){
+                currentSelectedCourses.set(i, NTE[value].getCourseCode());
+            } else if (currentSelectedCourses.get(i).contains("TE")){
+                currentSelectedCourses.set(i, TE[value].getCourseCode());
+            }
+        }
+    }
+
     public void addQuota(Courses[] courses){
         for (String s : this.currentSelectedCourses){
             for (Courses courses1 : courses){
@@ -284,7 +289,6 @@ public class Student extends Person{
         this.transcript = transcript;
         transcript.printTranscriptSpecificStudent(this);
     }
-
 
 
 }

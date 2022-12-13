@@ -205,7 +205,7 @@ public class CalculateAvailables {
     //This method basically sets AvailableCourses for every student
     //While reading CompletedCourses and checking if he failed a course he has to take it again
     //Or if it is a prerequisite for another course we delete that course so he cant take it
-    public void setAvailableCoursesForEachStudent(Student[] students, Courses[] courses , Advisor[] advisors) throws IOException {
+    public void setAvailableCoursesForEachStudent(Student[] students, Courses[] courses , Advisor[] advisors, Courses[] UE, Courses[] TE, Courses[] FTE, Courses[] NTE) throws IOException {
         //First we add every course to an arraylist for each semester for later use.
         setAttributes(courses);
         for (Student student : students){
@@ -239,6 +239,7 @@ public class CalculateAvailables {
         setStudentsForEachAdvisor(students, advisors);
         for (Student student : students){
             student.selectFromAvailableCourses();
+            student.chooseFromElectiveCourses(UE, FTE, NTE, TE);
             student.sendToAdvisorSelectedClasses();
             student.addQuota(courses);
             student.gpaCalculator(courses);
