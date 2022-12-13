@@ -2,15 +2,15 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class Advisor extends Courses {
+public class Advisor extends Person {
     //Basic attributes of advisors
     private int advisorId;
 
-    private String fName;
-
-    private String lName;
-
     private List<Student> studentsList = new ArrayList<>();
+
+    public void setfName(String fName){ super.setfName(fName);}
+
+    public void setlName(String lName){  super.setlName(lName);}
 
     public int getAdvisorId() {
         return advisorId;
@@ -20,13 +20,6 @@ public class Advisor extends Courses {
         this.advisorId = advisorId;
     }
 
-    public void setfName(String fName){ this.fName = fName;}
-
-    public void setlName(String lName){ this.lName = lName;}
-
-    String getfName() { return fName; }
-
-    String getlName() { return lName; }
     //This function has a mathematical operation
     //it either accepts a course or rejects it and each has a chance
     //explained below

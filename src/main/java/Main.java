@@ -14,10 +14,9 @@ public class Main {
         BasicConfigurator.configure();
         //We used Jackson Library from Maven here to map these jsons to create corresponding lists of objects
         File advisorJsonFile = new File("inputs/Advisors.json");
-        Advisor[] advisors = objectMapper.readValue(advisorJsonFile, Advisor[].class);
+        Person[] advisors = objectMapper.readValue(advisorJsonFile, Advisor[].class);
         File lecturesJsonFile = new File("inputs/lectures.json");
         Courses[] courses = objectMapper.readValue(lecturesJsonFile, Courses[].class);
-
 
         File UEJson = new File("inputs/UE.json");
         Courses[] UE = objectMapper.readValue(UEJson, Courses[].class);
@@ -33,15 +32,20 @@ public class Main {
 
 
         File studentsJsonFile = new File("inputs/studentInformation.json");
-        Student[] students = objectMapper.readValue(studentsJsonFile, Student[].class);
+        Person[] students = objectMapper.readValue(studentsJsonFile, Student[].class);
         //We go to generateStudent here to simulate their CompletedCourses
-        GenerateStudent generateStudent = new GenerateStudent(students, courses,UE,TE,NTE,FTE);
+
+
+
+        GenerateStudent generateStudent = new GenerateStudent((Student[]) students, courses,UE,TE,NTE,FTE);
         generateStudent.simulate();
         //Then we print the transcript
+
+
         Transcript transcript = new Transcript();
-        transcript.generateAvailableCourses(students, advisors, courses);
-        transcript.generateTranscriptForAllStudents(students);
-        transcript.generateTranscriptJson(students);
+        transcript.generateAvailableCourses((Student[]) students, (Advisor[]) advisors, courses);
+        transcript.generateTranscriptForAllStudents((Student[]) students);
+        transcript.generateTranscriptJson((Student[]) students);
         for (Courses courses1 : courses){
             System.out.println(courses1.getCourseCode() + " " + courses1.getQuota());
         }

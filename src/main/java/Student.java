@@ -14,12 +14,19 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.IOException;
 
 
-public class Student{
+public class Student extends Person{
     static Logger logger = Logger.getLogger(Student.class.getName());
     //Attributes for students are here
     private int studentId;
-    private String fName;
-    private String lName;
+
+    public void setfName(String fName) {
+        super.setfName(fName);
+    }
+
+    public void setlName(String lName) {
+        super.setlName(lName);
+    }
+
     private int totalCredit;
     private int advisorId;
     private Advisor advisor;
@@ -32,8 +39,8 @@ public class Student{
     private List<FailedCourses> failedCourses;
     private Transcript transcript;
 
-    //private int counter = 0;
 
+    //private int counter = 0;
 
     //Setters and Getters
     public Transcript getTranscript() { return transcript; }
@@ -69,13 +76,6 @@ public class Student{
         this.studentId = studentId;
     }
 
-    public void setfName(String fName) {
-        this.fName = fName;
-    }
-
-    public void setlName(String lName) {
-        this.lName = lName;
-    }
 
     public int getTotalCredit() {
         return totalCredit;
@@ -103,10 +103,6 @@ public class Student{
     }
 
     int getStudentId() { return studentId; }
-
-    String getfName() { return fName; }
-
-    String getlName() { return lName; }
 
     double getGPA() { return gpa; }
 
@@ -186,7 +182,7 @@ public class Student{
     public void changeSelectedCourses(ArrayList<String> advisorApprovedCourses, ArrayList<String> advisorRejectedCoursesAndReasons, String advisorName){
         currentSelectedCourses.clear();
         currentSelectedCourses.addAll(advisorApprovedCourses);
-        logger.info("For student: " + this.fName + " " + this.lName + "\n" +advisorName + " approved: " + advisorApprovedCourses + "\nrejected: " + advisorRejectedCoursesAndReasons);
+        logger.info("For student: " + getfName() + " " + getlName() + "\n" +advisorName + " approved: " + advisorApprovedCourses + "\nrejected: " + advisorRejectedCoursesAndReasons);
     }
     //this returns how many courses this student finished.
     public int getCompletedCourseNumber(){
