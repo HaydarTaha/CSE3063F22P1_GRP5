@@ -18,7 +18,6 @@ class CoursesTest  {
     }
 
     // I choose 10. element as test object because it is one of the ones whose prerequisite is filled
-    // TODO: Sort test functions as main func
 
     @Test
     void testGetName() {
@@ -33,45 +32,68 @@ class CoursesTest  {
     }
 
     @Test
-    void getSemester() {
-        int expectedSemester = 2;
-        assertEquals(expectedSemester,coursesArray[10].getSemester());
+    void testGetPrerequisite() {
+        String expectedPrerequisite = "CSE1241";
+        assertEquals(expectedPrerequisite,coursesArray[10].getPrerequisite().get(0));
     }
-    @Test
-    void getCourseYear() {
 
-        int expectedCourseYear = 1;
-        assertEquals(expectedCourseYear,coursesArray[10].getCourseYear());
-    }
     @Test
-    void getTheoreticalCourseHour() {
-        int expectedTheoreticalCourseHour = 3;
-        assertEquals(expectedTheoreticalCourseHour,coursesArray[10].getTheoreticalCourseHour());
+    void testGetPreRequisiteName() {
+        String expectedPrerequisite = "CSE1241";
+        assertEquals(expectedPrerequisite,coursesArray[10].getPreRequisiteName());
     }
-    @Test
-    void getPracticalLessonHour() {
-        int expectedPracticalLessonHour = 2;
-        assertEquals(expectedPracticalLessonHour,coursesArray[10].getPracticalLessonHour());
-    }
-    @Test
-    void getCourseType() {
-        int expectedCourseType = 5;
-        assertEquals(expectedCourseType,coursesArray[10].getCourseType());
-    }
-    @Test
-    void getPrerequisite() {
-        // will be edited later
 
-    }
     @Test
-    void getCredit() {
+    void testGetCredit() {
         int expectedCredit = 6;
         assertEquals(expectedCredit,coursesArray[10].getCredit());
     }
-    @Test
-    void getPreRequisiteName() {
-        // will be edited later
 
+    @Test
+    void testGetCourseType() {
+        int expectedCourseType = 5;
+        assertEquals(expectedCourseType,coursesArray[10].getCourseType());
     }
+
+    @Test
+    void testGetSemester() {
+        int expectedSemester = 2;
+        assertEquals(expectedSemester,coursesArray[10].getSemester());
+    }
+
+    @Test
+    void testGetCourseYear() {
+        int expectedCourseYear = 1;
+        assertEquals(expectedCourseYear,coursesArray[10].getCourseYear());
+    }
+
+    @Test
+    void testGetTheoreticalCourseHour() {
+        int expectedTheoreticalCourseHour = 3;
+        assertEquals(expectedTheoreticalCourseHour,coursesArray[10].getTheoreticalCourseHour());
+    }
+
+    @Test
+    void testGetPracticalLessonHour() {
+        int expectedPracticalLessonHour = 2;
+        assertEquals(expectedPracticalLessonHour,coursesArray[10].getPracticalLessonHour());
+    }
+
+    @Test
+    void testCheckIfPrerequisite() {
+        // For who has prereq
+        boolean expectedCheckIfPrerequisite1 = true;
+        assertEquals(expectedCheckIfPrerequisite1,coursesArray[10].checkIfPrerequisite(coursesArray[10]));
+        // For who has not prereq
+        boolean expectedCheckIfPrerequisite0 = false;
+        assertEquals(expectedCheckIfPrerequisite0,coursesArray[9].checkIfPrerequisite(coursesArray[9]));
+    }
+
+    @Test
+    void testCheckIfTwoPreRequisite() {
+        boolean expectedCheckIfTwoPreRequisite =  false;
+        assertEquals(expectedCheckIfTwoPreRequisite,coursesArray[0].checkIfTwoPreRequisite(coursesArray[0]));
+    }
+
 
 }
