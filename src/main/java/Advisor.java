@@ -12,9 +12,7 @@ public class Advisor extends Person {
 
     public void setlName(String lName){  super.setlName(lName);}
 
-    public int getAdvisorId() {
-        return advisorId;
-    }
+
 
     public void setAdvisorId(int advisorId) {
         this.advisorId = advisorId;
