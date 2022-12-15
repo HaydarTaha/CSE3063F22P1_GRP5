@@ -170,7 +170,9 @@ public class GenerateStudent {
         generateAvailableCourses(student, advisors, courses);
         System.out.println("----------------------------------------------------------------------------------------------------------------------------");
         //transcript.printTranscriptAll(student);
-        transcript.generateTranscriptForAllStudents(student);
+        for (Student std : student){
+            std.generateTranscript();
+        }
         transcript.generateTranscriptJson(student);
     }
 
@@ -415,7 +417,7 @@ public class GenerateStudent {
         Random random = new Random();
         int number = 0;
         number = random.nextInt(5);
-        s.setAdvisorId(number);
+        s.setAdvisor(advisors[number]);
     }
 
     public void generateAvailableCourses(Student[] students, Advisor[] advisors, Courses[] courses) throws IOException {

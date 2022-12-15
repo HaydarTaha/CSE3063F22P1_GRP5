@@ -22,11 +22,6 @@ public class Transcript extends Student {
 
     public Transcript() {
     }
-    public Transcript(List<String> coursesTook, Double gpa, int completedCredits){
-        this.studentSelectedCourses = coursesTook;
-        this.gpa = gpa;
-        this.completedCredits = completedCredits;
-    }
     public Transcript(List<CompletedCourses> completedCourses, List<FailedCourses> failedCourses, Double gpa, int completedCredits, List<String> studentSelectedCourses, String advisorName, Student student){
         this.completedCourses = completedCourses;
         this.failedCourses = failedCourses;
@@ -43,11 +38,6 @@ public class Transcript extends Student {
     }
     public List<FailedCourses> getFailedCourses() {
         return failedCourses;
-    }
-    public void generateTranscriptForAllStudents(Student[] students){
-        for (Student student : students){
-            student.generateTranscript();
-        }
     }
     /*public void printTranscriptAll(Student[] students2){
         for (Student s: students2) {

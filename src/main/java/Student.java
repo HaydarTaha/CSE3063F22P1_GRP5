@@ -7,16 +7,8 @@ public class Student extends Person{
     //Attributes for students are here
     private int studentId;
 
-    public void setfName(String fName) {
-        super.setfName(fName);
-    }
-
-    public void setlName(String lName) {
-        super.setlName(lName);
-    }
-
     private int totalCredit;
-    private int advisorId;
+
     private Advisor advisor;
     private double gpa;
     private int currentYear;
@@ -31,19 +23,22 @@ public class Student extends Person{
     //private int counter = 0;
 
     //Setters and Getters
+    public void setfName(String fName) {
+        super.setfName(fName);
+    }
+
+    public void setlName(String lName) {
+        super.setlName(lName);
+    }
     public Transcript getTranscript() { return transcript; }
     public void setAdvisor(Advisor advisor) {
         this.advisor = advisor;
     }
+    public Advisor getAdvisor() {
+        return advisor;
+    }
     public int getCurrentYear() {
         return currentYear;
-    }
-    public int getAdvisorId() {
-        return advisorId;
-    }
-
-    public void setAdvisorId(int advisorId) {
-        this.advisorId = advisorId;
     }
 
     public void setCurrentYear(int currentYear) {
@@ -65,9 +60,6 @@ public class Student extends Person{
     }
 
 
-    public int getTotalCredit() {
-        return totalCredit;
-    }
 
 
     public void setCurrentSelectedCourses(List<String> currentSelectedCourses) {
@@ -137,7 +129,9 @@ public class Student extends Person{
         }
 
 
+
     }
+
 
     public void chooseFromElectiveCourses(Courses[] UE, Courses[] FTE, Courses[] NTE, Courses[] TE){
         for (int i = 0; i < currentSelectedCourses.size(); i++) {
