@@ -3,6 +3,7 @@ import java.util.*;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 public class GenerateStudent {
+    private int courseFFRate;
     private Student[] student;
     private Courses[] courses;
     private Advisor[] advisors;
@@ -21,7 +22,7 @@ public class GenerateStudent {
     private Courses[] FTE;
 
     //This constructor called in Main class and send student and courses arrays
-    public GenerateStudent(Student[] student, Courses[] courses, Courses[] UE, Courses[] TE, Courses[] NTE, Courses[] FTE, Advisor[] advisors){
+    public GenerateStudent(Student[] student, Courses[] courses, Courses[] UE, Courses[] TE, Courses[] NTE, Courses[] FTE, Advisor[] advisors, int courseFFRate){
         this.student = student;
         this.advisors = advisors;
         this.courses = courses;
@@ -29,6 +30,7 @@ public class GenerateStudent {
         this.TE = TE;
         this.NTE = NTE;
         this.FTE = FTE;
+        this.courseFFRate = courseFFRate;
     }
 
     //This method get courseCodesFrom Courses array and check their semester and add to named (CourseSemester)SemesterCourses
@@ -673,63 +675,30 @@ public class GenerateStudent {
 
     //In this method we are returning random grades for the simulate method
     public String assignRandomGrades() throws IOException {
-
+        double ffRate = courseFFRate / 100.0;
+        double otherGradesRate = (1 - ffRate) / 7;
         Random random = new Random();
-        String randomLetter = null;
+        double rnd = random.nextDouble();
+        String randomLetter = "";
 
-        int number = random.nextInt(7);
-        int number2 = random.nextInt(2);
-
-        switch (number){
-            case 0:
-                switch (number2) {
-                    case 0 -> randomLetter = "AA";
-                    case 1 -> randomLetter = "BA";
-                }
-                break;
-            case 1:
-                randomLetter = switch (number2) {
-                    case 0 -> "BA";
-                    case 1 -> "BB";
-                    default -> randomLetter;
-                };
-                break;
-            case 2:
-                randomLetter = switch (number2) {
-                    case 0 -> "BB";
-                    case 1 -> "CB";
-                    default -> randomLetter;
-                };
-                break;
-            case 3:
-                randomLetter = switch (number2) {
-                    case 0 -> "CB";
-                    case 1 -> "CC";
-                    default -> randomLetter;
-                };
-                break;
-            case 4:
-                randomLetter = switch (number2) {
-                    case 0 -> "CC";
-                    case 1 -> "DC";
-                    default -> randomLetter;
-                };
-                break;
-            case 5:
-                randomLetter = switch (number2) {
-                    case 0 -> "DC";
-                    case 1 -> "DD";
-                    default -> randomLetter;
-                };
-                break;
-            case 6:
-                randomLetter = switch (number2) {
-                    case 0 -> "DD";
-                    case 1 -> "FF";
-                    default -> randomLetter;
-                };
-                break;
+        if(rnd < ffRate){
+            randomLetter = "FF";
+        }else if(rnd < otherGradesRate){
+            randomLetter = "DD";
+        }else if(rnd < otherGradesRate * 2){
+            randomLetter = "DC";
+        }else if(rnd < otherGradesRate * 3){
+            randomLetter = "CC";
+        }else if(rnd < otherGradesRate * 4){
+            randomLetter = "CB";
+        }else if(rnd < otherGradesRate * 5){
+            randomLetter = "BB";
+        }else if(rnd < otherGradesRate * 6){
+            randomLetter = "BA";
+        }else if(rnd < otherGradesRate * 7){
+            randomLetter = "AA";
         }
+
         return randomLetter;
     }
 }
