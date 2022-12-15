@@ -55,9 +55,7 @@ public class Student extends Person{
 
 
 
-    public void setStudentId(int studentId) {
-        this.studentId = studentId;
-    }
+
 
 
 
