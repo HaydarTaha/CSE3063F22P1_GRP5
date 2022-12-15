@@ -683,19 +683,19 @@ public class GenerateStudent {
 
         if(rnd < ffRate){
             randomLetter = "FF";
-        }else if(rnd < otherGradesRate){
+        }else if(rnd < otherGradesRate + ffRate){
             randomLetter = "DD";
-        }else if(rnd < otherGradesRate * 2){
+        }else if(rnd < otherGradesRate * 2 + ffRate){
             randomLetter = "DC";
-        }else if(rnd < otherGradesRate * 3){
+        }else if(rnd < otherGradesRate * 3 + ffRate){
             randomLetter = "CC";
-        }else if(rnd < otherGradesRate * 4){
+        }else if(rnd < otherGradesRate * 4 + ffRate){
             randomLetter = "CB";
-        }else if(rnd < otherGradesRate * 5){
+        }else if(rnd < otherGradesRate * 5 + ffRate){
             randomLetter = "BB";
-        }else if(rnd < otherGradesRate * 6){
+        }else if(rnd < otherGradesRate * 6 + ffRate){
             randomLetter = "BA";
-        }else if(rnd < otherGradesRate * 7){
+        }else{
             randomLetter = "AA";
         }
 
