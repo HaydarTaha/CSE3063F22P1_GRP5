@@ -4,6 +4,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
 
 public class GenerateStudent {
     private int courseFFRate;
+    private int maxNumberOfSelectionForCourses;
     private Student[] student;
     private Courses[] courses;
     private Advisor[] advisors;
@@ -22,7 +23,7 @@ public class GenerateStudent {
     private Courses[] FTE;
 
     //This constructor called in Main class and send student and courses arrays
-    public GenerateStudent(Student[] student, Courses[] courses, Courses[] UE, Courses[] TE, Courses[] NTE, Courses[] FTE, Advisor[] advisors, int courseFFRate){
+    public GenerateStudent(Student[] student, Courses[] courses, Courses[] UE, Courses[] TE, Courses[] NTE, Courses[] FTE, Advisor[] advisors, int courseFFRate, int maxNumberOfSelectionForCourses){
         this.student = student;
         this.advisors = advisors;
         this.courses = courses;
@@ -31,6 +32,7 @@ public class GenerateStudent {
         this.NTE = NTE;
         this.FTE = FTE;
         this.courseFFRate = courseFFRate;
+        this.maxNumberOfSelectionForCourses = maxNumberOfSelectionForCourses;
     }
 
     //This method get courseCodesFrom Courses array and check their semester and add to named (CourseSemester)SemesterCourses
@@ -424,7 +426,7 @@ public class GenerateStudent {
 
     public void generateAvailableCourses(Student[] students, Advisor[] advisors, Courses[] courses) throws IOException {
         CalculateAvailables calculateAvailables = new CalculateAvailables();
-        calculateAvailables.setAvailableCoursesForEachStudent(students, courses, advisors, UE, TE, FTE, NTE);
+        calculateAvailables.setAvailableCoursesForEachStudent(students, courses, advisors, UE, TE, FTE, NTE, maxNumberOfSelectionForCourses);
     }
 
     public void caseTwo(List<CompletedCourses> currentSemesterCompleted, Student s, int i, List<FailedCourses> currentSemesterFailed, HashMap<String, List<String>> lockedCourses) throws IOException {
