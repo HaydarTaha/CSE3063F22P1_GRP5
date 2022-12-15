@@ -53,12 +53,9 @@ public class Student extends Person{
         this.currentSemester = currentSemester;
     }
 
-
-
-
-
-
-
+    public void setStudentId(int studentId) {
+        this.studentId = studentId;
+    }
 
     public void setCurrentSelectedCourses(List<String> currentSelectedCourses) {
         this.currentSelectedCourses = currentSelectedCourses;
