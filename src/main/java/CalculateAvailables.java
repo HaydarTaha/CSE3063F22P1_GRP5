@@ -23,6 +23,13 @@ public class CalculateAvailables {
     String courseName;
     String courseGrade;
     String prerequisite;
+
+    public void setMaxNumberOfSelectionForCourses(int maxNumberOfSelectionForCourses) {
+        this.maxNumberOfSelectionForCourses = maxNumberOfSelectionForCourses;
+    }
+
+    int maxNumberOfSelectionForCourses;
+
     public void setAttributes(Courses[] courses){
         //Everytime i call this method i need to update these lists again
         for (Courses course : courses) {
@@ -205,7 +212,7 @@ public class CalculateAvailables {
     //This method basically sets AvailableCourses for every student
     //While reading CompletedCourses and checking if he failed a course he has to take it again
     //Or if it is a prerequisite for another course we delete that course so he cant take it
-    public void setAvailableCoursesForEachStudent(Student[] students, Courses[] courses , Advisor[] advisors, Courses[] UE, Courses[] TE, Courses[] FTE, Courses[] NTE) throws IOException {
+    public void setAvailableCoursesForEachStudent(Student[] students, Courses[] courses , Advisor[] advisors, Courses[] UE, Courses[] TE, Courses[] FTE, Courses[] NTE, int maxNumberOfSelectionForCourses) throws IOException {
         //First we add every course to an arraylist for each semester for later use.
         setAttributes(courses);
         for (Student student : students){
@@ -237,10 +244,9 @@ public class CalculateAvailables {
         //and then we calculate gpa for everystudent
         setStudentsForEachAdvisor(students, advisors);
         for (Student student : students){
-            student.selectFromAvailableCourses();
+            student.selectFromAvailableCourses(maxNumberOfSelectionForCourses);
             student.chooseFromElectiveCourses(UE, FTE, NTE, TE);
             student.sendToAdvisorSelectedClasses();
-            student.addQuota(courses);
             student.gpaCalculator(courses);
         }
         setStudentsForEachCourses(students, courses);
