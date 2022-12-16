@@ -1,8 +1,10 @@
 import java.io.IOException;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.logging.Logger;
 
 public class GenerateStudent {
+    private Logger logger = Logger.getLogger(GenerateStudent.class.getName());
     private int courseFFRate;
     private int maxNumberOfSelectionForCourses;
     private Student[] student;
@@ -158,12 +160,13 @@ public class GenerateStudent {
     }
 
     //In this method we are locking course if the course prerequisite course is failed
-    public void prerequisiteControlAndLock(String courseCode, HashMap<String, List<String>> lockedCourses){
+    public void prerequisiteControlAndLock(String courseCode, HashMap<String, List<String>> lockedCourses, String studentName){
         prerequisiteList.forEach((courseName, prerequisite) -> {
             if (prerequisite.contains(courseCode)){
                 List <String> failedPrerequisite = new ArrayList<>();
                 failedPrerequisite.add(courseCode);
                 lockedCourses.put(courseName, failedPrerequisite);
+                logger.info(studentName + " Failed: " + courseCode + " can not simulate " + courseName);
             }
         });
     }
@@ -264,7 +267,7 @@ public class GenerateStudent {
                                         }
                                         if (grade == "FF"){
                                             assignFailedCourses(currentSemesterFailed, courseCode);
-                                            prerequisiteControlAndLock(courseCode, lockedCourses);
+                                            prerequisiteControlAndLock(courseCode, lockedCourses,s.getfName() + " " + s.getlName());
                                         } else {
                                             addCompletedCourses(currentSemesterCompleted, courseCode, grade, semester);
                                             s.getAvailableCourses().remove(courseCode);
@@ -280,7 +283,7 @@ public class GenerateStudent {
                                     }
                                     if (grade == "FF"){
                                         assignFailedCourses(currentSemesterFailed, courseCode);
-                                        prerequisiteControlAndLock(courseCode, lockedCourses);
+                                        prerequisiteControlAndLock(courseCode, lockedCourses,s.getfName() + " " + s.getlName());
                                     } else {
                                         addCompletedCourses(currentSemesterCompleted, courseCode, grade, semester);
                                         s.getAvailableCourses().remove(courseCode);
@@ -436,7 +439,7 @@ public class GenerateStudent {
                 if (!courseIsGivenAlready(s, courseCode)){
                     if (grade == "FF"){
                         assignFailedCourses(currentSemesterFailed, courseCode);
-                        prerequisiteControlAndLock(courseCode, lockedCourses);
+                        prerequisiteControlAndLock(courseCode, lockedCourses,s.getfName() + " " + s.getlName());
                     } else {
                         addCompletedCourses(currentSemesterCompleted, courseCode, grade, i);
                     }
@@ -469,7 +472,7 @@ public class GenerateStudent {
                         if (!courseIsGivenAlready(s, courseCode)){
                             if (grade == "FF"){
                                 assignFailedCourses(currentSemesterFailed, courseCode);
-                                prerequisiteControlAndLock(courseCode, lockedCourses);
+                                prerequisiteControlAndLock(courseCode, lockedCourses,s.getfName() + " " + s.getlName());
                             } else {
                                 addCompletedCourses(currentSemesterCompleted, courseCode, grade, finalI);
                             }
@@ -485,7 +488,7 @@ public class GenerateStudent {
                             if (!courseIsGivenAlready(s, courseCode)){
                                 if (grade == "FF"){
                                     assignFailedCourses(currentSemesterFailed, courseCode);
-                                    prerequisiteControlAndLock(courseCode, lockedCourses);
+                                    prerequisiteControlAndLock(courseCode, lockedCourses,s.getfName() + " " + s.getlName());
                                 } else {
                                     addCompletedCourses(currentSemesterCompleted, courseCode, grade, finalI);
                                 }
@@ -524,7 +527,7 @@ public class GenerateStudent {
                         if (!courseIsGivenAlready(s, courseCode)){
                             if (grade == "FF"){
                                 assignFailedCourses(currentSemesterFailed, courseCode);
-                                prerequisiteControlAndLock(courseCode, lockedCourses);
+                                prerequisiteControlAndLock(courseCode, lockedCourses,s.getfName() + " " + s.getlName());
                             } else {
                                 addCompletedCourses(currentSemesterCompleted, courseCode, grade, finalI);
                             }
@@ -540,7 +543,7 @@ public class GenerateStudent {
                             if (!courseIsGivenAlready(s, courseCode)){
                                 if (grade == "FF"){
                                     assignFailedCourses(currentSemesterFailed, courseCode);
-                                    prerequisiteControlAndLock(courseCode, lockedCourses);
+                                    prerequisiteControlAndLock(courseCode, lockedCourses,s.getfName() + " " + s.getlName());
                                 } else {
                                     addCompletedCourses(currentSemesterCompleted, courseCode, grade, finalI);
                                 }
@@ -579,7 +582,7 @@ public class GenerateStudent {
                         if (!courseIsGivenAlready(s, courseCode)){
                             if (grade == "FF"){
                                 assignFailedCourses(currentSemesterFailed, courseCode);
-                                prerequisiteControlAndLock(courseCode, lockedCourses);
+                                prerequisiteControlAndLock(courseCode, lockedCourses,s.getfName() + " " + s.getlName());
                             } else {
                                 addCompletedCourses(currentSemesterCompleted, courseCode, grade, finalI);
                             }
@@ -595,7 +598,7 @@ public class GenerateStudent {
                             if (!courseIsGivenAlready(s, courseCode)){
                                 if (grade == "FF"){
                                     assignFailedCourses(currentSemesterFailed, courseCode);
-                                    prerequisiteControlAndLock(courseCode, lockedCourses);
+                                    prerequisiteControlAndLock(courseCode, lockedCourses,s.getfName() + " " + s.getlName());
                                 } else {
                                     addCompletedCourses(currentSemesterCompleted, courseCode, grade, finalI);
                                 }
