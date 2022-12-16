@@ -85,11 +85,11 @@ public class Student extends Person{
 
     List<CompletedCourses> getCompletedCourses() { return completedCourses; }
     //This method selects courses which are in availableCourses
-    public void selectFromAvailableCourses(){
+    public void selectFromAvailableCourses(int maxNumberOfSelectionForCourses){
         ArrayList<String> coursesAdd = new ArrayList<>();
         //Here if we have more than 10 available courses we first check failed courses
         //and add them first, after that we randomly select other classes until it's size is 10
-        if (availableCourses.size() > 10){
+        if (availableCourses.size() > maxNumberOfSelectionForCourses){
             for (String s : availableCourses){
                 if (checkIfCourseFailed(s)) {
                     coursesAdd.add(s);
@@ -98,11 +98,11 @@ public class Student extends Person{
             }
             //Here we check the list again and if it has less than 10 we add them until it becomes size 10
             //we add those to the list. until it's size is 10
-            if (coursesAdd.size() < 10){
+            if (coursesAdd.size() < maxNumberOfSelectionForCourses){
                 for (String s : availableCourses) {
                     if (!coursesAdd.contains(s))
                         coursesAdd.add(s);
-                    if (coursesAdd.size() == 10){
+                    if (coursesAdd.size() == maxNumberOfSelectionForCourses){
                         break;
                     }
                 }
@@ -111,9 +111,9 @@ public class Student extends Person{
             }
             //If however the size becomes more than 10
             //we remove some until it goes back to size 10 again.
-            else if (coursesAdd.size() > 10){
-                while (coursesAdd.size() != 10){
-                    coursesAdd.remove(10);
+            else if (coursesAdd.size() > maxNumberOfSelectionForCourses){
+                while (coursesAdd.size() != maxNumberOfSelectionForCourses){
+                    coursesAdd.remove(maxNumberOfSelectionForCourses);
                 }
                 this.currentSelectedCourses.addAll(coursesAdd);
             }
@@ -144,15 +144,7 @@ public class Student extends Person{
         }
     }
 
-    public void addQuota(Courses[] courses){
-        for (String s : this.currentSelectedCourses){
-            for (Courses courses1 : courses){
-                if (Objects.equals(s, courses1.getCourseCode())){
-                    courses1.incrementQuota(courses1);
-                }
-            }
-        }
-    }
+
 
     List<String> getAvailableCourses() { return availableCourses; }
     //This checks if the course is failed for this student

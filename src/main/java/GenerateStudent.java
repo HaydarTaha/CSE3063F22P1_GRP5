@@ -3,11 +3,7 @@ import java.util.*;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 public class GenerateStudent {
-    public void setCourseFFRate(double courseFFRate) {
-        this.courseFFRate = courseFFRate;
-    }
-
-    private double courseFFRate;
+    private int courseFFRate;
     private Student[] student;
     private Courses[] courses;
     private Advisor[] advisors;
@@ -36,11 +32,6 @@ public class GenerateStudent {
         this.FTE = FTE;
         this.courseFFRate = courseFFRate;
     }
-
-    public GenerateStudent(){
-
-    }
-
 
     //This method get courseCodesFrom Courses array and check their semester and add to named (CourseSemester)SemesterCourses
     //For the first semester courses, type is List for the other semester type is HashMap. In the HashMap we are holding courseCode

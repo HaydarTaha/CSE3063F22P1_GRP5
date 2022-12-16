@@ -9,12 +9,13 @@ public class Courses  {
     private int credit;
     private int courseType;
     private int semester;
+    private int quota;
 
-    public int getQuota() {
-        return quota;
+    public void setQuota(int quota) {
+        this.quota = quota;
     }
 
-    private int quota;
+
 
     private int courseYear;
     private int theoreticalCourseHour;
@@ -113,9 +114,7 @@ public class Courses  {
         preRequisiteNames.add(courses.getPrerequisite().get(1));
         return preRequisiteNames;
     }
-    public void incrementQuota(Courses courses){
-        courses.quota += 1;
-    }
+
     public void addToListOfStudents(Student student){
         this.listOfStudents.add(student);
     }

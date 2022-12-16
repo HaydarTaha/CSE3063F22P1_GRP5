@@ -56,8 +56,8 @@ public class Input {
     }
 
 
-    public void setMaxNumberOfSelectionForCourses(int maxNumberOfSelectonForCourses) {
-        this.maxNumberOfSelectionForCourses = maxNumberOfSelectonForCourses;
+    public void setMaxNumberOfSelectionForCourses(int maxNumberOfSelectionForCourses) {
+        this.maxNumberOfSelectionForCourses = maxNumberOfSelectionForCourses;
     }
 
     public void setCoursesJsonName(String coursesJsonName) {
@@ -88,31 +88,40 @@ public class Input {
         this.studentsJsonName = studentsJsonName;
     }
 
+    public void setQuota(){
+        for(Courses crs : courses){
+            crs.setQuota(quotaForMandatory);
+        }
+        for(Courses crs : UE){
+            crs.setQuota(quotaForElectives);
+        }
+        for(Courses crs : TE){
+            crs.setQuota(quotaForElectives);
+        }
+        for(Courses crs : NTE){
+            crs.setQuota(quotaForElectives);
+        }
+        for(Courses crs : FTE){
+            crs.setQuota(quotaForElectives);
+        }
+    }
+
     public void createObjects() throws IOException {
         ObjectMapper objectMapper = new ObjectMapper();
-
         File advisorJsonFile = new File(advisorsJsonName);
         Person[] advisors = objectMapper.readValue(advisorJsonFile, Advisor[].class);
-
         File lecturesJsonFile = new File(coursesJsonName);
         Courses[] courses = objectMapper.readValue(lecturesJsonFile, Courses[].class);
-
         File UEJson = new File(electiveUEJsonFileName);
         Courses[] UE = objectMapper.readValue(UEJson, Courses[].class);
-
         File TEJson = new File(electiveTEJsonFileName);
         Courses[] TE = objectMapper.readValue(TEJson, Courses[].class);
-
         File NTEJson = new File(electiveNTEJsonFileName);
         Courses[] NTE = objectMapper.readValue(NTEJson, Courses[].class);
-
         File FTEJson = new File(electiveFTEJsonFileName);
         Courses[] FTE = objectMapper.readValue(FTEJson, Courses[].class);
-
-
         File studentsJsonFile = new File(studentsJsonName);
         Person[] students = objectMapper.readValue(studentsJsonFile, Student[].class);
-
         this.advisors = advisors;
         this.courses = courses;
         this.UE = UE;
@@ -120,11 +129,11 @@ public class Input {
         this.NTE = NTE;
         this.FTE = FTE;
         this.students = students;
-
+        setQuota();
     }
 
     public void startSimulationWithInputs() throws IOException, IllegalAccessException {
-        GenerateStudent generateStudent = new GenerateStudent((Student[]) students, courses, UE, TE, NTE, FTE, (Advisor[]) advisors, courseFFRate);
+        GenerateStudent generateStudent = new GenerateStudent((Student[]) students, courses, UE, TE, NTE, FTE, (Advisor[]) advisors, courseFFRate, maxNumberOfSelectionForCourses);
         generateStudent.simulate();
     }
 }
