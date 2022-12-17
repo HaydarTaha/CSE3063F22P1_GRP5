@@ -66,10 +66,36 @@ class CoursesTest  {
         int expect=2;
         assertEquals(expect,actual);
     }
+    @Test
+    void testGetSemester() {
 
+        // I tested for different variations.
+        /*int expect = 3;
+        int actual = coursesArray[17].getSemester();*/
 
+        int expect2 = 4;
+        int actual2 = coursesArray[22].getSemester();
 
+        assertEquals(expect2,actual2);
+    }
 
+    @Test
+    void testGetCourseYear() {
+        int expect = 2;
+        int actual = coursesArray[24].getCourseYear();
 
+        assertEquals(expect,actual);
+    }
+
+    @Test
+    void testGetCourseType() {
+        // I tested for different variations.
+        /*int actual=coursesArray[29].getCourseType();
+        int expect=5;*/
+
+        int actual2=coursesArray[12].getCourseType();
+        int expect2=1;
+        assertEquals(expect2,actual2);
+    }
 
 }
