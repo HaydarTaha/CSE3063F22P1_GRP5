@@ -2,8 +2,8 @@ import java.io.IOException;
 import java.util.*;
 import java.util.logging.Logger;
 
-public class CalculateAvailables {
-    Logger logger = Logger.getLogger(CalculateAvailables.class.getName());
+public class CalculateAvailable {
+    Logger logger = Logger.getLogger(CalculateAvailable.class.getName());
     List<String> semesterOneCoursesNames = new ArrayList<String>();
     List<String> semesterTwoCoursesNames = new ArrayList<String>();
     List<String> semesterThreeCoursesNames = new ArrayList<String>();
@@ -18,7 +18,7 @@ public class CalculateAvailables {
     ArrayList<String> calculatedSemesterFiveCourseNames;
     ArrayList<String> calculatedSemesterSixCourseNames;
     ArrayList<String> calculatedSemesterSevenCourseNames;
-    ArrayList<String> calculatedSemesterEigthCourseNames;
+    ArrayList<String> calculatedSemesterEightCourseNames;
     List<String> studentCoursesTook;
     String courseName;
     String courseGrade;
@@ -53,7 +53,7 @@ public class CalculateAvailables {
         for (int i = 0; i< studentCoursesTook.size(); i +=2){
             courseName = studentCoursesTook.get(i);
             courseGrade = studentCoursesTook.get(i+1);
-            if (courseGrade == "FF"){
+            if (Objects.equals(courseGrade, "FF")){
                 boolean test = false;
                 //Here we iterate every courses available until we find the same course with the completed one of the student.
                 for (Courses courses1 : courses){
@@ -81,7 +81,7 @@ public class CalculateAvailables {
         for (int i = 0; i< studentCoursesTook.size(); i +=2){
             courseName = studentCoursesTook.get(i);
             courseGrade = studentCoursesTook.get(i+1);
-            if (courseGrade == "FF"){
+            if (Objects.equals(courseGrade, "FF")){
                 boolean test = false;
                 for (Courses courses1 : courses){
                     if (Objects.equals(courseName, courses1.getPreRequisiteName())){
@@ -102,7 +102,7 @@ public class CalculateAvailables {
         for (int i = 0; i< studentCoursesTook.size(); i +=2){
             courseName = studentCoursesTook.get(i);
             courseGrade = studentCoursesTook.get(i+1);
-            if (courseGrade == "FF"){
+            if (Objects.equals(courseGrade, "FF")){
                 boolean test = false;
                 for (Courses courses1 : courses){
                     if (Objects.equals(courseName, courses1.getPreRequisiteName())){
@@ -123,7 +123,7 @@ public class CalculateAvailables {
         for (int i = 0; i< studentCoursesTook.size(); i +=2){
             courseName = studentCoursesTook.get(i);
             courseGrade = studentCoursesTook.get(i+1);
-            if (courseGrade == "FF"){
+            if (Objects.equals(courseGrade, "FF")){
                 boolean test = false;
                 for (Courses courses1 : courses){
                     if (Objects.equals(courseName, courses1.getPreRequisiteName())){
@@ -144,7 +144,7 @@ public class CalculateAvailables {
         for (int i = 0; i< studentCoursesTook.size(); i +=2){
             courseName = studentCoursesTook.get(i);
             courseGrade = studentCoursesTook.get(i+1);
-            if (courseGrade == "FF"){
+            if (Objects.equals(courseGrade, "FF")){
                 boolean test = false;
                 for (Courses courses1 : courses){
                     if (Objects.equals(courseName, courses1.getPreRequisiteName())){
@@ -165,7 +165,7 @@ public class CalculateAvailables {
         for (int i = 0; i< studentCoursesTook.size(); i +=2){
             courseName = studentCoursesTook.get(i);
             courseGrade = studentCoursesTook.get(i+1);
-            if (courseGrade == "FF"){
+            if (Objects.equals(courseGrade, "FF")){
                 boolean test = false;
                 for (Courses courses1 : courses){
                     if (Objects.equals(courseName, courses1.getPreRequisiteName())){
@@ -186,31 +186,31 @@ public class CalculateAvailables {
         for (int i = 0; i< studentCoursesTook.size(); i +=2){
             courseName = studentCoursesTook.get(i);
             courseGrade = studentCoursesTook.get(i+1);
-            if (courseGrade == "FF"){
+            if (Objects.equals(courseGrade, "FF")){
                 boolean test = false;
                 for (Courses courses1 : courses){
                     if (Objects.equals(courseName, courses1.getPreRequisiteName())){
                         prerequisite = courses1.getPreRequisiteName();
                         logger.info(stdName + " Failed: " + prerequisite + " He cannot choose " + courses1.getCourseCode());
-                        calculatedSemesterEigthCourseNames.remove(courses1.getCourseCode());
-                        calculatedSemesterEigthCourseNames.add(prerequisite);
+                        calculatedSemesterEightCourseNames.remove(courses1.getCourseCode());
+                        calculatedSemesterEightCourseNames.add(prerequisite);
                         test = true;
                         break;
                     }
                 }
-                if (!test) calculatedSemesterEigthCourseNames.add(courseName);
+                if (!test) calculatedSemesterEightCourseNames.add(courseName);
             }
         }
-        return calculatedSemesterEigthCourseNames;
+        return calculatedSemesterEightCourseNames;
     }
-    public void calculatedCoursesResetter(){
+    public void calculatedCoursesSetter(){
         calculatedSemesterTwoCourseNames = new ArrayList<>(semesterTwoCoursesNames);
         calculatedSemesterThreeCourseNames = new ArrayList<>(semesterThreeCoursesNames);
         calculatedSemesterFourCourseNames = new ArrayList<>(semesterFourCoursesNames);
         calculatedSemesterFiveCourseNames = new ArrayList<>(semesterFiveCoursesNames);
         calculatedSemesterSixCourseNames = new ArrayList<>(semesterSixCoursesNames);
         calculatedSemesterSevenCourseNames = new ArrayList<>(semesterSevenCoursesNames);
-        calculatedSemesterEigthCourseNames = new ArrayList<>(semesterEigthCoursesNames);
+        calculatedSemesterEightCourseNames = new ArrayList<>(semesterEigthCoursesNames);
         studentCoursesTook = new ArrayList<>();
     }
     //This method basically sets AvailableCourses for every student
@@ -221,7 +221,7 @@ public class CalculateAvailables {
         setAttributes(courses);
         for (Student student : students){
             //And also here we need to reset calculatedSemesterCourses lists to fresh ones
-            calculatedCoursesResetter();
+            calculatedCoursesSetter();
             //Look through completed courses for each student here and add it to student courses took list.
             for (Courses completedCourses : student.getCompletedCourses()){
                 studentCoursesTook.add(completedCourses.getName());

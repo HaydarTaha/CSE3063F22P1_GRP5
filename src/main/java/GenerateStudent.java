@@ -400,8 +400,8 @@ public class GenerateStudent {
     }
 
     public void generateAvailableCourses(Student[] students, Advisor[] advisors, Courses[] courses) throws IOException {
-        CalculateAvailables calculateAvailables = new CalculateAvailables();
-        calculateAvailables.setAvailableCoursesForEachStudent(students, courses, advisors, UE, TE, FTE, NTE, calculateAvailables.maxNumberOfSelectionForCourses);
+        CalculateAvailable calculateAvailable = new CalculateAvailable();
+        calculateAvailable.setAvailableCoursesForEachStudent(students, courses, advisors, UE, TE, FTE, NTE, calculateAvailable.maxNumberOfSelectionForCourses);
     }
 
     public void caseTwo(List<Courses> currentSemesterCompleted, Student s, int i, List<Courses> currentSemesterFailed, HashMap<String, List<String>> lockedCourses) throws IOException {
