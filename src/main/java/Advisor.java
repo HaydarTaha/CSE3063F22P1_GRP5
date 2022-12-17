@@ -2,29 +2,21 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class Advisor extends Student {
+public class Advisor extends Person {
     //Basic attributes of advisors
     private int advisorId;
 
-    private String fName;
+    private List<Student> studentsList = new ArrayList<>();
 
-    private String lName;
+    public void setfName(String fName){ super.setfName(fName);}
 
-    public int getAdvisorId() {
-        return advisorId;
-    }
+    public void setlName(String lName){  super.setlName(lName);}
+    
 
     public void setAdvisorId(int advisorId) {
         this.advisorId = advisorId;
     }
 
-    public void setfName(String fName){ this.fName = fName;}
-
-    public void setlName(String lName){ this.lName = lName;}
-
-    String getfName() { return fName; }
-
-    String getlName() { return lName; }
     //This function has a mathematical operation
     //it either accepts a course or rejects it and each has a chance
     //explained below
@@ -58,6 +50,7 @@ public class Advisor extends Student {
                     //For this we have 1/3 chance of rejection with the reason
                     if (randomNumber2==0 && randomNumber3==0){
                         rejectedList.add(student.getCurrentSelectedCourses().get(i));
+                        rejectedList.add(stringArray[0]);
                     }else{
                         acceptedList.add(student.getCurrentSelectedCourses().get(i));
                     }
@@ -66,6 +59,7 @@ public class Advisor extends Student {
                     // another 1/3 chance of rejection but with another reason
                     if (randomNumber2==1 && randomNumber3==1){
                         rejectedList.add(student.getCurrentSelectedCourses().get(i));
+                        rejectedList.add(stringArray[1]);
                     }else{
                         acceptedList.add(student.getCurrentSelectedCourses().get(i));
                     }
@@ -74,6 +68,7 @@ public class Advisor extends Student {
                     //same as above with another reason
                     if (randomNumber2==2 && randomNumber3==2){
                         rejectedList.add(student.getCurrentSelectedCourses().get(i));
+                        rejectedList.add(stringArray[2]);
                     }else{
                         acceptedList.add(student.getCurrentSelectedCourses().get(i));
                     }
@@ -82,6 +77,16 @@ public class Advisor extends Student {
         }
         //Then we call changeSelectedCourses method with courses which we accepted and rejected
         //to update their selection
-        student.changeSelectedCourses(acceptedList,rejectedList);
+        student.changeSelectedCourses(acceptedList,rejectedList, this.getfName() + " " + this.getlName());
     }
+    public void addAdvisorsLookingList(Student std){
+        this.studentsList.add(std);
+    }
+    public List<Student> getStudentsList() {
+        return studentsList;
+    }
+    public void checkCourseQuota(){
+
+    }
+
 }

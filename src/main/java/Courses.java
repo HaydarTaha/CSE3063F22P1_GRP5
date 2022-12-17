@@ -3,18 +3,24 @@ import java.util.List;
 
 public class Courses  {
     //Attributes of Courses object
-    //We didn't add quota here
-    //because our code had some problems with that we decided we can do that in iteration2
     private String name;
     private String courseCode;
     private List<String> prerequisite;
     private int credit;
     private int courseType;
     private int semester;
+    private int quota;
+
+    public void setQuota(int quota) {
+        this.quota = quota;
+    }
+
+
 
     private int courseYear;
     private int theoreticalCourseHour;
     private int practicalLessonHour;
+    private List<Student> listOfStudents = new ArrayList<>();
     //Basic Setters and Getters
     public void setCourseType(int courseType) {
         this.courseType = courseType;
@@ -107,6 +113,10 @@ public class Courses  {
         preRequisiteNames.add(courses.getPrerequisite().get(0));
         preRequisiteNames.add(courses.getPrerequisite().get(1));
         return preRequisiteNames;
+    }
+
+    public void addToListOfStudents(Student student){
+        this.listOfStudents.add(student);
     }
 
 

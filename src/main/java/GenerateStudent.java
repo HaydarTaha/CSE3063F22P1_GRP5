@@ -1,11 +1,14 @@
 import java.io.IOException;
-import java.text.ParseException;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 public class GenerateStudent {
+    private int courseFFRate;
+    private int maxNumberOfSelectionForCourses;
+    private String semester;
     private Student[] student;
     private Courses[] courses;
+    private Advisor[] advisors;
     private List<String> firstSemesterCourses;
     private HashMap<String, List<String>> secondSemesterCoursesHash;
     private HashMap<String, List<String>> thirdSemesterCoursesHash;
@@ -15,11 +18,27 @@ public class GenerateStudent {
     private HashMap<String, List<String>> seventhSemesterCoursesHash;
     private HashMap<String, List<String>> eighthSemesterCoursesHash;
     private HashMap<String, List<String>> prerequisiteList;
+    private Courses[] UE;
+    private Courses[] TE;
+    private Courses[] NTE;
+    private Courses[] FTE;
 
     //This constructor called in Main class and send student and courses arrays
-    public GenerateStudent(Student[] student, Courses[] courses){
+    public GenerateStudent(Student[] student, Courses[] courses, Courses[] UE, Courses[] TE, Courses[] NTE, Courses[] FTE, Advisor[] advisors, int courseFFRate, int maxNumberOfSelectionForCourses, String semester){
         this.student = student;
+        this.advisors = advisors;
         this.courses = courses;
+        this.UE = UE;
+        this.TE = TE;
+        this.NTE = NTE;
+        this.FTE = FTE;
+        this.courseFFRate = courseFFRate;
+        this.maxNumberOfSelectionForCourses = maxNumberOfSelectionForCourses;
+        this.semester = semester;
+    }
+
+    public GenerateStudent(){
+
     }
 
     //This method get courseCodesFrom Courses array and check their semester and add to named (CourseSemester)SemesterCourses
@@ -35,7 +54,6 @@ public class GenerateStudent {
         this.seventhSemesterCoursesHash = new HashMap<>();
         this.eighthSemesterCoursesHash = new HashMap<>();
         this.prerequisiteList = new HashMap<>();
-
         for (Courses course : this.courses) {
             switch (course.getSemester()){
                 case 1:
@@ -93,8 +111,8 @@ public class GenerateStudent {
 
     //In this method we are setting semester to student
     //We are giving semester from their currentYear and which semester user want to simulate
-    public void semesterSetter(Student s, String semester){
-        if (semester == "Fall"){
+    public void semesterSetter(Student s){
+        if (semester.equals("Fall")){
             switch (s.getCurrentYear()){
                 case 1:
                     s.setCurrentSemester(1);
@@ -109,7 +127,7 @@ public class GenerateStudent {
                     s.setCurrentSemester(7);
                     break;
             }
-        } else if (semester == "Spring") {
+        } else if (semester.equals("Spring")) {
             switch (s.getCurrentYear()){
                 case 1:
                     s.setCurrentSemester(2);
@@ -154,6 +172,18 @@ public class GenerateStudent {
                 lockedCourses.put(courseName, failedPrerequisite);
             }
         });
+    }
+
+    //We are printing Transcript for all Students
+    public void printTranscript() throws IOException, IllegalAccessException {
+        Transcript transcript = new Transcript();
+        generateAvailableCourses(student, advisors, courses);
+        System.out.println("----------------------------------------------------------------------------------------------------------------------------");
+        //transcript.printTranscriptAll(student);
+        for (Student std : student){
+            std.generateTranscript();
+        }
+        transcript.generateTranscriptJson(student);
     }
 
     //In this method we are adding courseCode, courseGrade and given semester to currentSemesterCompleted List
@@ -286,13 +316,14 @@ public class GenerateStudent {
     }
 
     //In this method we are removing duplicate values from Student completedCourses List
-    public void removeDuplicates(Student s){
+    public void removeUnnamedCourses(Student s){
         List<CompletedCourses> completedCourses = new ArrayList<>(s.getCompletedCourses());
         List<String> duplicateCourses = new ArrayList<>();
         List<Integer> duplicateTime = new ArrayList<>();
         for (int i = 0; i < s.getCompletedCourses().size(); i++) {
             int count = 0;
             String courseCode = s.getCompletedCourses().get(i).getCourseName();
+
             for (int j = i; j < s.getCompletedCourses().size(); j++) {
                 String checkCode = s.getCompletedCourses().get(j).getCourseName();
                 if (courseCode.equals(checkCode)){
@@ -321,6 +352,25 @@ public class GenerateStudent {
                     s.getCompletedCourses().remove(j);
                     courseSize--;
                 }
+            }
+        }
+
+
+        for (CompletedCourses completedCourses1 : s.getCompletedCourses()){
+            Random random = new Random();
+            int value = random.nextInt(5);
+            if (completedCourses1.getCourseName().contains("UE")){
+                completedCourses1.setCourseName(UE[value].getCourseCode());
+
+            } else if (completedCourses1.getCourseName().contains("FTE")){
+                completedCourses1.setCourseName(FTE[value].getCourseCode());
+
+            } else if (completedCourses1.getCourseName().contains("NTE")){
+                completedCourses1.setCourseName(NTE[value].getCourseCode());
+
+            } else if (completedCourses1.getCourseName().contains("TE")){
+                completedCourses1.setCourseName(TE[value].getCourseCode());
+
             }
         }
     }
@@ -377,378 +427,240 @@ public class GenerateStudent {
         Random random = new Random();
         int number = 0;
         number = random.nextInt(5);
-        s.setAdvisorId(number);
+        s.setAdvisor(advisors[number]);
     }
 
-    //In this method we simulate the semester up to the student's semester
-    public void simulateSemester(Student s, String semester) throws IOException {
-        semesterSetter(s, semester);
-        List<CompletedCourses> currentSemesterCompleted = new ArrayList<>();
-        List<FailedCourses> currentSemesterFailed = new ArrayList<>();
-        HashMap<String, List<String>> lockedCourses= new HashMap<>();
-        for (int i = 1; i <= s.getCurrentSemester(); i++) {
-            if (i == 1){
-                setCoursesList(s);
-            } else if (i == 2){
-                for (String courseCode : firstSemesterCourses){
-                    if (!currentSemesterCompleted.contains(courseCode)){
-                        String grade = assignRandomGrades();
+    public void generateAvailableCourses(Student[] students, Advisor[] advisors, Courses[] courses) throws IOException {
+        CalculateAvailables calculateAvailables = new CalculateAvailables();
+        calculateAvailables.setAvailableCoursesForEachStudent(students, courses, advisors, UE, TE, FTE, NTE, maxNumberOfSelectionForCourses);
+    }
+
+    public void caseTwo(List<CompletedCourses> currentSemesterCompleted, Student s, int i, List<FailedCourses> currentSemesterFailed, HashMap<String, List<String>> lockedCourses) throws IOException {
+        for (String courseCode : firstSemesterCourses){
+            if (!currentSemesterCompleted.contains(courseCode)){
+                String grade = assignRandomGrades();
+                if (!courseIsGivenAlready(s, courseCode)){
+                    if (grade == "FF"){
+                        assignFailedCourses(currentSemesterFailed, courseCode);
+                        prerequisiteControlAndLock(courseCode, lockedCourses);
+                    } else {
+                        addCompletedCourses(currentSemesterCompleted, courseCode, grade, i);
+                    }
+                }
+            }
+        }
+        int currentSemesterCompletedSize = currentSemesterCompleted.size();
+        int currentSemesterFailedSize = currentSemesterFailed.size();
+        for (int j = 0; j < currentSemesterCompletedSize; j++) {
+            s.getCompletedCourses().add(currentSemesterCompleted.get(j));
+        }
+        for (int j = 0; j < currentSemesterFailedSize; j++) {
+            s.getFailedCourses().add(currentSemesterFailed.get(j));
+        }
+        currentSemesterCompleted.clear();
+        currentSemesterFailed.clear();
+    }
+    public void caseThree(List<CompletedCourses> currentSemesterCompleted, Student s, int i, List<FailedCourses> currentSemesterFailed, HashMap<String, List<String>> lockedCourses){
+        int finalI = i;
+        secondSemesterCoursesHash.forEach((courseCode, prerequisite) -> {
+            if (!currentSemesterCompleted.contains(courseCode)){
+                if (!lockedCourses.containsKey(courseCode)){
+                    if (!checkCourseHasPrerequisite(courseCode)){
+                        String grade = null;
+                        try {
+                            grade = assignRandomGrades();
+                        } catch (IOException e) {
+                            throw new RuntimeException(e);
+                        }
                         if (!courseIsGivenAlready(s, courseCode)){
                             if (grade == "FF"){
                                 assignFailedCourses(currentSemesterFailed, courseCode);
                                 prerequisiteControlAndLock(courseCode, lockedCourses);
                             } else {
-                                addCompletedCourses(currentSemesterCompleted, courseCode, grade, i);
+                                addCompletedCourses(currentSemesterCompleted, courseCode, grade, finalI);
+                            }
+                        }
+                    } else {
+                        if (checkPrerequisiteCourseIsGiven(s, courseCode, finalI)){
+                            String grade = null;
+                            try {
+                                grade = assignRandomGrades();
+                            } catch (IOException e) {
+                                throw new RuntimeException(e);
+                            }
+                            if (!courseIsGivenAlready(s, courseCode)){
+                                if (grade == "FF"){
+                                    assignFailedCourses(currentSemesterFailed, courseCode);
+                                    prerequisiteControlAndLock(courseCode, lockedCourses);
+                                } else {
+                                    addCompletedCourses(currentSemesterCompleted, courseCode, grade, finalI);
+                                }
                             }
                         }
                     }
                 }
-                int currentSemesterCompletedSize = currentSemesterCompleted.size();
-                int currentSemesterFailedSize = currentSemesterFailed.size();
-                for (int j = 0; j < currentSemesterCompletedSize; j++) {
-                    s.getCompletedCourses().add(currentSemesterCompleted.get(j));
-                }
-                for (int j = 0; j < currentSemesterFailedSize; j++) {
-                    s.getFailedCourses().add(currentSemesterFailed.get(j));
-                }
-                currentSemesterCompleted.clear();
-                currentSemesterFailed.clear();
-            } else if(i == 3){
-                int finalI = i;
-                secondSemesterCoursesHash.forEach((courseCode, prerequisite) -> {
-                    if (!currentSemesterCompleted.contains(courseCode)){
-                        if (!lockedCourses.containsKey(courseCode)){
-                            if (!checkCourseHasPrerequisite(courseCode)){
-                                String grade = null;
-                                try {
-                                    grade = assignRandomGrades();
-                                } catch (IOException e) {
-                                    throw new RuntimeException(e);
-                                }
-                                if (!courseIsGivenAlready(s, courseCode)){
-                                    if (grade == "FF"){
-                                        assignFailedCourses(currentSemesterFailed, courseCode);
-                                        prerequisiteControlAndLock(courseCode, lockedCourses);
-                                    } else {
-                                        addCompletedCourses(currentSemesterCompleted, courseCode, grade, finalI);
-                                    }
-                                }
+            }
+        });
+        simulateFailedCourses(s, currentSemesterCompleted, finalI);
+        int currentSemesterCompletedSize = currentSemesterCompleted.size();
+        int currentSemesterFailedSize = currentSemesterFailed.size();
+        for (int j = 0; j < currentSemesterCompletedSize; j++) {
+            s.getCompletedCourses().add(currentSemesterCompleted.get(j));
+        }
+        for (int j = 0; j < currentSemesterFailedSize; j++) {
+            s.getFailedCourses().add(currentSemesterFailed.get(j));
+        }
+        currentSemesterCompleted.clear();
+        currentSemesterFailed.clear();
+        unlockLockedCoursesAndSetAvailable(s, s.getCompletedCourses(), lockedCourses);
+    }
+    public void caseFour(List<CompletedCourses> currentSemesterCompleted, Student s, int i, List<FailedCourses> currentSemesterFailed, HashMap<String, List<String>> lockedCourses){
+        int finalI = i;
+        checkAvailableCourses(s, finalI, currentSemesterCompleted, currentSemesterFailed, lockedCourses, thirdSemesterCoursesHash);
+        thirdSemesterCoursesHash.forEach((courseCode, prerequisite) -> {
+            if (!currentSemesterCompleted.contains(courseCode)){
+                if (!lockedCourses.containsKey(courseCode)){
+                    if (!checkCourseHasPrerequisite(courseCode)){
+                        String grade = null;
+                        try {
+                            grade = assignRandomGrades();
+                        } catch (IOException e) {
+                            throw new RuntimeException(e);
+                        }
+                        if (!courseIsGivenAlready(s, courseCode)){
+                            if (grade == "FF"){
+                                assignFailedCourses(currentSemesterFailed, courseCode);
+                                prerequisiteControlAndLock(courseCode, lockedCourses);
                             } else {
-                                if (checkPrerequisiteCourseIsGiven(s, courseCode, finalI)){
-                                    String grade = null;
-                                    try {
-                                        grade = assignRandomGrades();
-                                    } catch (IOException e) {
-                                        throw new RuntimeException(e);
-                                    }
-                                    if (!courseIsGivenAlready(s, courseCode)){
-                                        if (grade == "FF"){
-                                            assignFailedCourses(currentSemesterFailed, courseCode);
-                                            prerequisiteControlAndLock(courseCode, lockedCourses);
-                                        } else {
-                                            addCompletedCourses(currentSemesterCompleted, courseCode, grade, finalI);
-                                        }
-                                    }
+                                addCompletedCourses(currentSemesterCompleted, courseCode, grade, finalI);
+                            }
+                        }
+                    } else {
+                        if (checkPrerequisiteCourseIsGiven(s, courseCode, finalI)){
+                            String grade = null;
+                            try {
+                                grade = assignRandomGrades();
+                            } catch (IOException e) {
+                                throw new RuntimeException(e);
+                            }
+                            if (!courseIsGivenAlready(s, courseCode)){
+                                if (grade == "FF"){
+                                    assignFailedCourses(currentSemesterFailed, courseCode);
+                                    prerequisiteControlAndLock(courseCode, lockedCourses);
+                                } else {
+                                    addCompletedCourses(currentSemesterCompleted, courseCode, grade, finalI);
                                 }
                             }
                         }
                     }
-                });
-                simulateFailedCourses(s, currentSemesterCompleted, finalI);
-                int currentSemesterCompletedSize = currentSemesterCompleted.size();
-                int currentSemesterFailedSize = currentSemesterFailed.size();
-                for (int j = 0; j < currentSemesterCompletedSize; j++) {
-                    s.getCompletedCourses().add(currentSemesterCompleted.get(j));
                 }
-                for (int j = 0; j < currentSemesterFailedSize; j++) {
-                    s.getFailedCourses().add(currentSemesterFailed.get(j));
-                }
-                currentSemesterCompleted.clear();
-                currentSemesterFailed.clear();
-                unlockLockedCoursesAndSetAvailable(s, s.getCompletedCourses(), lockedCourses);
-            } else if (i == 4) {
-                int finalI = i;
-                checkAvailableCourses(s, finalI, currentSemesterCompleted, currentSemesterFailed, lockedCourses, thirdSemesterCoursesHash);
-                thirdSemesterCoursesHash.forEach((courseCode, prerequisite) -> {
-                    if (!currentSemesterCompleted.contains(courseCode)){
-                        if (!lockedCourses.containsKey(courseCode)){
-                            if (!checkCourseHasPrerequisite(courseCode)){
-                                String grade = null;
-                                try {
-                                    grade = assignRandomGrades();
-                                } catch (IOException e) {
-                                    throw new RuntimeException(e);
-                                }
-                                if (!courseIsGivenAlready(s, courseCode)){
-                                    if (grade == "FF"){
-                                        assignFailedCourses(currentSemesterFailed, courseCode);
-                                        prerequisiteControlAndLock(courseCode, lockedCourses);
-                                    } else {
-                                        addCompletedCourses(currentSemesterCompleted, courseCode, grade, finalI);
-                                    }
-                                }
+            }
+        });
+        simulateFailedCourses(s, currentSemesterCompleted, finalI);
+        int currentSemesterCompletedSize = currentSemesterCompleted.size();
+        int currentSemesterFailedSize = currentSemesterFailed.size();
+        for (int j = 0; j < currentSemesterCompletedSize; j++) {
+            s.getCompletedCourses().add(currentSemesterCompleted.get(j));
+        }
+        for (int j = 0; j < currentSemesterFailedSize; j++) {
+            s.getFailedCourses().add(currentSemesterFailed.get(j));
+        }
+        currentSemesterCompleted.clear();
+        currentSemesterFailed.clear();
+        unlockLockedCoursesAndSetAvailable(s, s.getCompletedCourses(), lockedCourses);
+    }
+    public void otherCases(List<CompletedCourses> currentSemesterCompleted, Student s, int i, List<FailedCourses> currentSemesterFailed, HashMap<String, List<String>> lockedCourses, HashMap<String, List<String>> semesterCourses){
+        int finalI = i;
+        checkAvailableCourses(s, finalI, currentSemesterCompleted, currentSemesterFailed, lockedCourses, fourthSemesterCoursesHash);
+        semesterCourses.forEach((courseCode, prerequisite) -> {
+            if (!currentSemesterCompleted.contains(courseCode)){
+                if (!lockedCourses.containsKey(courseCode)){
+                    if (!checkCourseHasPrerequisite(courseCode)){
+                        String grade = null;
+                        try {
+                            grade = assignRandomGrades();
+                        } catch (IOException e) {
+                            throw new RuntimeException(e);
+                        }
+                        if (!courseIsGivenAlready(s, courseCode)){
+                            if (grade == "FF"){
+                                assignFailedCourses(currentSemesterFailed, courseCode);
+                                prerequisiteControlAndLock(courseCode, lockedCourses);
                             } else {
-                                if (checkPrerequisiteCourseIsGiven(s, courseCode, finalI)){
-                                    String grade = null;
-                                    try {
-                                        grade = assignRandomGrades();
-                                    } catch (IOException e) {
-                                        throw new RuntimeException(e);
-                                    }
-                                    if (!courseIsGivenAlready(s, courseCode)){
-                                        if (grade == "FF"){
-                                            assignFailedCourses(currentSemesterFailed, courseCode);
-                                            prerequisiteControlAndLock(courseCode, lockedCourses);
-                                        } else {
-                                            addCompletedCourses(currentSemesterCompleted, courseCode, grade, finalI);
-                                        }
-                                    }
+                                addCompletedCourses(currentSemesterCompleted, courseCode, grade, finalI);
+                            }
+                        }
+                    } else {
+                        if (checkPrerequisiteCourseIsGiven(s, courseCode, finalI)){
+                            String grade = null;
+                            try {
+                                grade = assignRandomGrades();
+                            } catch (IOException e) {
+                                throw new RuntimeException(e);
+                            }
+                            if (!courseIsGivenAlready(s, courseCode)){
+                                if (grade == "FF"){
+                                    assignFailedCourses(currentSemesterFailed, courseCode);
+                                    prerequisiteControlAndLock(courseCode, lockedCourses);
+                                } else {
+                                    addCompletedCourses(currentSemesterCompleted, courseCode, grade, finalI);
                                 }
                             }
                         }
                     }
-                });
-                simulateFailedCourses(s, currentSemesterCompleted, finalI);
-                int currentSemesterCompletedSize = currentSemesterCompleted.size();
-                int currentSemesterFailedSize = currentSemesterFailed.size();
-                for (int j = 0; j < currentSemesterCompletedSize; j++) {
-                    s.getCompletedCourses().add(currentSemesterCompleted.get(j));
                 }
-                for (int j = 0; j < currentSemesterFailedSize; j++) {
-                    s.getFailedCourses().add(currentSemesterFailed.get(j));
-                }
-                currentSemesterCompleted.clear();
-                currentSemesterFailed.clear();
-                unlockLockedCoursesAndSetAvailable(s, s.getCompletedCourses(), lockedCourses);
-            } else if (i == 5){
-                int finalI = i;
-                checkAvailableCourses(s, finalI, currentSemesterCompleted, currentSemesterFailed, lockedCourses, fourthSemesterCoursesHash);
-                fourthSemesterCoursesHash.forEach((courseCode, prerequisite) -> {
-                    if (!currentSemesterCompleted.contains(courseCode)){
-                        if (!lockedCourses.containsKey(courseCode)){
-                            if (!checkCourseHasPrerequisite(courseCode)){
-                                String grade = null;
-                                try {
-                                    grade = assignRandomGrades();
-                                } catch (IOException e) {
-                                    throw new RuntimeException(e);
-                                }
-                                if (!courseIsGivenAlready(s, courseCode)){
-                                    if (grade == "FF"){
-                                        assignFailedCourses(currentSemesterFailed, courseCode);
-                                        prerequisiteControlAndLock(courseCode, lockedCourses);
-                                    } else {
-                                        addCompletedCourses(currentSemesterCompleted, courseCode, grade, finalI);
-                                    }
-                                }
-                            } else {
-                                if (checkPrerequisiteCourseIsGiven(s, courseCode, finalI)){
-                                    String grade = null;
-                                    try {
-                                        grade = assignRandomGrades();
-                                    } catch (IOException e) {
-                                        throw new RuntimeException(e);
-                                    }
-                                    if (!courseIsGivenAlready(s, courseCode)){
-                                        if (grade == "FF"){
-                                            assignFailedCourses(currentSemesterFailed, courseCode);
-                                            prerequisiteControlAndLock(courseCode, lockedCourses);
-                                        } else {
-                                            addCompletedCourses(currentSemesterCompleted, courseCode, grade, finalI);
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
+            }
 
-                });
-                simulateFailedCourses(s, currentSemesterCompleted, finalI);
-                int currentSemesterCompletedSize = currentSemesterCompleted.size();
-                int currentSemesterFailedSize = currentSemesterFailed.size();
-                for (int j = 0; j < currentSemesterCompletedSize; j++) {
-                    s.getCompletedCourses().add(currentSemesterCompleted.get(j));
-                }
-                for (int j = 0; j < currentSemesterFailedSize; j++) {
-                    s.getFailedCourses().add(currentSemesterFailed.get(j));
-                }
-                currentSemesterCompleted.clear();
-                currentSemesterFailed.clear();
-                unlockLockedCoursesAndSetAvailable(s, s.getCompletedCourses(), lockedCourses);
+        });
+        simulateFailedCourses(s, currentSemesterCompleted, finalI);
+        int currentSemesterCompletedSize = currentSemesterCompleted.size();
+        int currentSemesterFailedSize = currentSemesterFailed.size();
+        for (int j = 0; j < currentSemesterCompletedSize; j++) {
+            s.getCompletedCourses().add(currentSemesterCompleted.get(j));
+        }
+        for (int j = 0; j < currentSemesterFailedSize; j++) {
+            s.getFailedCourses().add(currentSemesterFailed.get(j));
+        }
+        currentSemesterCompleted.clear();
+        currentSemesterFailed.clear();
+        unlockLockedCoursesAndSetAvailable(s, s.getCompletedCourses(), lockedCourses);
+    }
+
+    //In this method we simulate the semester up to the student's semester
+    public void simulateSemester(Student s) throws IOException {
+        semesterSetter(s);
+        List<CompletedCourses> currentSemesterCompleted = new ArrayList<>();
+        List<FailedCourses> currentSemesterFailed = new ArrayList<>();
+        HashMap<String, List<String>> lockedCourses = new HashMap<>();
+        for (int i = 1; i <= s.getCurrentSemester(); i++) {
+            if (i == 1){
+                setCoursesList(s);
+            } else if (i == 2){
+                caseTwo(currentSemesterCompleted, s, i, currentSemesterFailed, lockedCourses);
+            } else if(i == 3){
+                caseThree(currentSemesterCompleted, s, i, currentSemesterFailed, lockedCourses);
+            } else if (i == 4) {
+                caseFour(currentSemesterCompleted, s, i, currentSemesterFailed, lockedCourses);
+            } else if (i == 5){
+                otherCases(currentSemesterCompleted, s, i, currentSemesterFailed, lockedCourses, fourthSemesterCoursesHash);
             } else if (i == 6) {
-                int finalI = i;
-                checkAvailableCourses(s, finalI, currentSemesterCompleted, currentSemesterFailed, lockedCourses, fifthSemesterCourses);
-                fifthSemesterCourses.forEach((courseCode, prerequisite) -> {
-                    if (!currentSemesterCompleted.contains(courseCode)){
-                        if (!lockedCourses.containsKey(courseCode)){
-                            if (!checkCourseHasPrerequisite(courseCode)){
-                                String grade = null;
-                                try {
-                                    grade = assignRandomGrades();
-                                } catch (IOException e) {
-                                    throw new RuntimeException(e);
-                                }
-                                if (!courseIsGivenAlready(s, courseCode)){
-                                    if (grade == "FF"){
-                                        assignFailedCourses(currentSemesterFailed, courseCode);
-                                        prerequisiteControlAndLock(courseCode, lockedCourses);
-                                    } else {
-                                        addCompletedCourses(currentSemesterCompleted, courseCode, grade, finalI);
-                                    }
-                                }
-                            } else {
-                                if (checkPrerequisiteCourseIsGiven(s, courseCode, finalI)){
-                                    String grade = null;
-                                    try {
-                                        grade = assignRandomGrades();
-                                    } catch (IOException e) {
-                                        throw new RuntimeException(e);
-                                    }
-                                    if (!courseIsGivenAlready(s, courseCode)){
-                                        if (grade == "FF"){
-                                            assignFailedCourses(currentSemesterFailed, courseCode);
-                                            prerequisiteControlAndLock(courseCode, lockedCourses);
-                                        } else {
-                                            addCompletedCourses(currentSemesterCompleted, courseCode, grade, finalI);
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                });
-                simulateFailedCourses(s, currentSemesterCompleted, finalI);
-                int currentSemesterCompletedSize = currentSemesterCompleted.size();
-                int currentSemesterFailedSize = currentSemesterFailed.size();
-                for (int j = 0; j < currentSemesterCompletedSize; j++) {
-                    s.getCompletedCourses().add(currentSemesterCompleted.get(j));
-                }
-                for (int j = 0; j < currentSemesterFailedSize; j++) {
-                    s.getFailedCourses().add(currentSemesterFailed.get(j));
-                }
-                currentSemesterCompleted.clear();
-                currentSemesterFailed.clear();
-                unlockLockedCoursesAndSetAvailable(s, s.getCompletedCourses(), lockedCourses);
+                otherCases(currentSemesterCompleted, s, i, currentSemesterFailed, lockedCourses, fifthSemesterCourses);
             } else if (i == 7) {
-                int finalI = i;
-                checkAvailableCourses(s, finalI, currentSemesterCompleted, currentSemesterFailed, lockedCourses, sixthSemesterCoursesHash);
-                sixthSemesterCoursesHash.forEach((courseCode, prerequisite) -> {
-                    if (!currentSemesterCompleted.contains(courseCode)){
-                        if (!lockedCourses.containsKey(courseCode)){
-                            if (!checkCourseHasPrerequisite(courseCode)){
-                                String grade = null;
-                                try {
-                                    grade = assignRandomGrades();
-                                } catch (IOException e) {
-                                    throw new RuntimeException(e);
-                                }
-                                if (!courseIsGivenAlready(s, courseCode)){
-                                    if (grade == "FF"){
-                                        assignFailedCourses(currentSemesterFailed, courseCode);
-                                        prerequisiteControlAndLock(courseCode, lockedCourses);
-                                    } else {
-                                        addCompletedCourses(currentSemesterCompleted, courseCode, grade, finalI);
-                                    }
-                                }
-                            } else {
-                                if (checkPrerequisiteCourseIsGiven(s, courseCode, finalI)){
-                                    String grade = null;
-                                    try {
-                                        grade = assignRandomGrades();
-                                    } catch (IOException e) {
-                                        throw new RuntimeException(e);
-                                    }
-                                    if (!courseIsGivenAlready(s, courseCode)){
-                                        if (grade == "FF"){
-                                            assignFailedCourses(currentSemesterFailed, courseCode);
-                                            prerequisiteControlAndLock(courseCode, lockedCourses);
-                                        } else {
-                                            addCompletedCourses(currentSemesterCompleted, courseCode, grade, finalI);
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                });
-                simulateFailedCourses(s, currentSemesterCompleted, finalI);
-                int currentSemesterCompletedSize = currentSemesterCompleted.size();
-                int currentSemesterFailedSize = currentSemesterFailed.size();
-                for (int j = 0; j < currentSemesterCompletedSize; j++) {
-                    s.getCompletedCourses().add(currentSemesterCompleted.get(j));
-                }
-                for (int j = 0; j < currentSemesterFailedSize; j++) {
-                    s.getFailedCourses().add(currentSemesterFailed.get(j));
-                }
-                currentSemesterCompleted.clear();
-                currentSemesterFailed.clear();
-                unlockLockedCoursesAndSetAvailable(s, s.getCompletedCourses(), lockedCourses);
+                otherCases(currentSemesterCompleted, s, i, currentSemesterFailed, lockedCourses, sixthSemesterCoursesHash);
             } else if (i == 8) {
-                int finalI = i;
-                checkAvailableCourses(s, finalI, currentSemesterCompleted, currentSemesterFailed, lockedCourses, seventhSemesterCoursesHash);
-                seventhSemesterCoursesHash.forEach((courseCode, prerequisite) -> {
-                    if (!currentSemesterCompleted.contains(courseCode)){
-                        if (!lockedCourses.containsKey(courseCode)){
-                            if (!checkCourseHasPrerequisite(courseCode)){
-                                String grade = null;
-                                try {
-                                    grade = assignRandomGrades();
-                                } catch (IOException e) {
-                                    throw new RuntimeException(e);
-                                }
-                                if (!courseIsGivenAlready(s, courseCode)){
-                                    if (grade == "FF"){
-                                        assignFailedCourses(currentSemesterFailed, courseCode);
-                                        prerequisiteControlAndLock(courseCode, lockedCourses);
-                                    } else {
-                                        addCompletedCourses(currentSemesterCompleted, courseCode, grade, finalI);
-                                    }
-                                }
-                            } else {
-                                if (checkPrerequisiteCourseIsGiven(s, courseCode, finalI)){
-                                    String grade = null;
-                                    try {
-                                        grade = assignRandomGrades();
-                                    } catch (IOException e) {
-                                        throw new RuntimeException(e);
-                                    }
-                                    if (!courseIsGivenAlready(s, courseCode)){
-                                        if (grade == "FF"){
-                                            assignFailedCourses(currentSemesterFailed, courseCode);
-                                            prerequisiteControlAndLock(courseCode, lockedCourses);
-                                        } else {
-                                            addCompletedCourses(currentSemesterCompleted, courseCode, grade, finalI);
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                });
-                simulateFailedCourses(s, currentSemesterCompleted, finalI);
-                int currentSemesterCompletedSize = currentSemesterCompleted.size();
-                int currentSemesterFailedSize = currentSemesterFailed.size();
-                for (int j = 0; j < currentSemesterCompletedSize; j++) {
-                    s.getCompletedCourses().add(currentSemesterCompleted.get(j));
-                }
-                for (int j = 0; j < currentSemesterFailedSize; j++) {
-                    s.getFailedCourses().add(currentSemesterFailed.get(j));
-                }
-                currentSemesterCompleted.clear();
-                currentSemesterFailed.clear();
-                unlockLockedCoursesAndSetAvailable(s, s.getCompletedCourses(), lockedCourses);
+                otherCases(currentSemesterCompleted, s, i, currentSemesterFailed, lockedCourses, seventhSemesterCoursesHash);
             }
             checkCourseGiven(s);
         }
     }
 
-    //In this method we are calling generateYear, simulateSemester, removeDuplicates and setStudentAdvisor methods
-    void simulate() throws IOException {
+    //In this method we are calling generateYear, simulateSemester, removeUnnamedCourses and setStudentAdvisor methods
+    void simulate() throws IOException, IllegalAccessException {
         addCourseNames();
         for (Student s : student){
             generateYear(s);
-            simulateSemester(s, "Spring");
-            removeDuplicates(s);
+            simulateSemester(s);
+            removeUnnamedCourses(s);
             setStudentAdvisor(s);
             int availableCoursesSize = s.getAvailableCourses().size();
             for (int i = 0; i < availableCoursesSize; i++) {
@@ -766,91 +678,35 @@ public class GenerateStudent {
                 }
             }
         }
+        printTranscript();
     }
 
     //In this method we are returning random grades for the simulate method
     public String assignRandomGrades() throws IOException {
-
+        double ffRate = courseFFRate / 100.0;
+        double otherGradesRate = (1 - ffRate) / 7;
         Random random = new Random();
-        String randomLetter = null;
-        int number = 0;
-        int number2 = 0;
+        double rnd = random.nextDouble();
+        String randomLetter = "";
 
-        number = random.nextInt(7);
-        number2 = random.nextInt(2);
-
-        switch (number){
-            case 0:
-                switch (number2){
-                    case 0:
-                        randomLetter = "AA";
-                        break;
-                    case 1:
-                        randomLetter = "BA";
-                        break;
-                }
-                break;
-            case 1:
-                switch (number2){
-                    case 0:
-                        randomLetter = "BA";
-                        break;
-                    case 1:
-                        randomLetter = "BB";
-                        break;
-                }
-                break;
-            case 2:
-                switch (number2){
-                    case 0:
-                        randomLetter = "BB";
-                        break;
-                    case 1:
-                        randomLetter = "CB";
-                        break;
-                }
-                break;
-            case 3:
-                switch (number2){
-                    case 0:
-                        randomLetter = "CB";
-                        break;
-                    case 1:
-                        randomLetter = "CC";
-                        break;
-                }
-                break;
-            case 4:
-                switch (number2){
-                    case 0:
-                        randomLetter = "CC";
-                        break;
-                    case 1:
-                        randomLetter = "DC";
-                        break;
-                }
-                break;
-            case 5:
-                switch (number2){
-                    case 0:
-                        randomLetter = "DC";
-                        break;
-                    case 1:
-                        randomLetter = "DD";
-                        break;
-                }
-                break;
-            case 6:
-                switch (number2){
-                    case 0:
-                        randomLetter = "DD";
-                        break;
-                    case 1:
-                        randomLetter = "FF";
-                        break;
-                }
-                break;
+        if(rnd < ffRate){
+            randomLetter = "FF";
+        }else if(rnd < otherGradesRate + ffRate){
+            randomLetter = "DD";
+        }else if(rnd < otherGradesRate * 2 + ffRate){
+            randomLetter = "DC";
+        }else if(rnd < otherGradesRate * 3 + ffRate){
+            randomLetter = "CC";
+        }else if(rnd < otherGradesRate * 4 + ffRate){
+            randomLetter = "CB";
+        }else if(rnd < otherGradesRate * 5 + ffRate){
+            randomLetter = "BB";
+        }else if(rnd < otherGradesRate * 6 + ffRate){
+            randomLetter = "BA";
+        }else{
+            randomLetter = "AA";
         }
+
         return randomLetter;
     }
 }

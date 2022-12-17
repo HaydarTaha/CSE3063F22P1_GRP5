@@ -1,47 +1,43 @@
-import java.io.File;
-import java.io.FileWriter;
 import java.util.*;
+import org.apache.log4j.Logger;
 
-import org.json.simple.JSONObject;
-import org.json.simple.JSONArray;
-import org.json.simple.parser.JSONParser;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import com.fasterxml.jackson.databind.ObjectMapper;
-
-
-import java.io.IOException;
-
-
-public class Student {
+public class Student extends Person{
+    Logger logger = Logger.getLogger(Student.class.getName());
     //Attributes for students are here
     private int studentId;
-    private String fName;
-    private String lName;
+
     private int totalCredit;
 
-    private int advisorId;
+    private Advisor advisor;
     private double gpa;
     private int currentYear;
     private int currentSemester;
     private List<String> currentSelectedCourses;
     private List<CompletedCourses> completedCourses;
-
     private List<String> availableCourses;
     private List<FailedCourses> failedCourses;
+    private Transcript transcript;
+
+
     //private int counter = 0;
 
-
     //Setters and Getters
+    public void setfName(String fName) {
+        super.setfName(fName);
+    }
+
+    public void setlName(String lName) {
+        super.setlName(lName);
+    }
+    public Transcript getTranscript() { return transcript; }
+    public void setAdvisor(Advisor advisor) {
+        this.advisor = advisor;
+    }
+    public Advisor getAdvisor() {
+        return advisor;
+    }
     public int getCurrentYear() {
         return currentYear;
-    }
-    public int getAdvisorId() {
-        return advisorId;
-    }
-
-    public void setAdvisorId(int advisorId) {
-        this.advisorId = advisorId;
     }
 
     public void setCurrentYear(int currentYear) {
@@ -62,24 +58,8 @@ public class Student {
         this.studentId = studentId;
     }
 
-    public void setfName(String fName) {
-        this.fName = fName;
-    }
 
-    public void setlName(String lName) {
-        this.lName = lName;
-    }
 
-    public void setGPA(double gpa) {
-        this.gpa = gpa;
-    }
-    public int getTotalCredit() {
-        return totalCredit;
-    }
-
-    public void setTotalCredit(int totalCredit) {
-        this.totalCredit = totalCredit;
-    }
 
     public void setCurrentSelectedCourses(List<String> currentSelectedCourses) {
         this.currentSelectedCourses = currentSelectedCourses;
@@ -103,32 +83,31 @@ public class Student {
 
     int getStudentId() { return studentId; }
 
-    String getfName() { return fName; }
-
-    String getlName() { return lName; }
-
     double getGPA() { return gpa; }
 
     List<String> getCurrentSelectedCourses() { return currentSelectedCourses; }
 
     List<CompletedCourses> getCompletedCourses() { return completedCourses; }
     //This method selects courses which are in availableCourses
-    public void selectFromAvailableCourses(){
+    public void selectFromAvailableCourses(int maxNumberOfSelectionForCourses){
         ArrayList<String> coursesAdd = new ArrayList<>();
         //Here if we have more than 10 available courses we first check failed courses
         //and add them first, after that we randomly select other classes until it's size is 10
-        if (availableCourses.size() > 10){
+        if (availableCourses.size() > maxNumberOfSelectionForCourses){
             for (String s : availableCourses){
                 if (checkIfCourseFailed(s)) {
                     coursesAdd.add(s);
+                    logger.info(getfName() + " " +  getlName()+" Prioritized choosing: " + s + " Because of failing before because he had more than 10 courses available for choosing");
                 }
             }
             //Here we check the list again and if it has less than 10 we add them until it becomes size 10
             //we add those to the list. until it's size is 10
-            if (coursesAdd.size() < 10){
+            if (coursesAdd.size() < maxNumberOfSelectionForCourses){
                 for (String s : availableCourses) {
-                    while (coursesAdd.size() != 10){
+                    if (!coursesAdd.contains(s))
                         coursesAdd.add(s);
+                    if (coursesAdd.size() == maxNumberOfSelectionForCourses){
+                        break;
                     }
                 }
                 //then we update selectedCourses with this method
@@ -136,9 +115,9 @@ public class Student {
             }
             //If however the size becomes more than 10
             //we remove some until it goes back to size 10 again.
-            else if (coursesAdd.size() > 10){
-                while (coursesAdd.size() != 10){
-                    coursesAdd.remove(10);
+            else if (coursesAdd.size() > maxNumberOfSelectionForCourses){
+                while (coursesAdd.size() != maxNumberOfSelectionForCourses){
+                    coursesAdd.remove(maxNumberOfSelectionForCourses);
                 }
                 this.currentSelectedCourses.addAll(coursesAdd);
             }
@@ -149,7 +128,26 @@ public class Student {
         }
 
 
+
     }
+
+
+    public void chooseFromElectiveCourses(Courses[] UE, Courses[] FTE, Courses[] NTE, Courses[] TE){
+        for (int i = 0; i < currentSelectedCourses.size(); i++) {
+            Random random = new Random();
+            int value = random.nextInt(5);
+            if (currentSelectedCourses.get(i).contains("UE")){
+                currentSelectedCourses.set(i, UE[value].getCourseCode());
+            } else if (currentSelectedCourses.get(i).contains("FTE")){
+                currentSelectedCourses.set(i, FTE[value].getCourseCode());
+            } else if (currentSelectedCourses.get(i).contains("NTE")){
+                currentSelectedCourses.set(i, NTE[value].getCourseCode());
+            } else if (currentSelectedCourses.get(i).contains("TE")){
+                currentSelectedCourses.set(i, TE[value].getCourseCode());
+            }
+        }
+    }
+
 
 
     List<String> getAvailableCourses() { return availableCourses; }
@@ -166,21 +164,15 @@ public class Student {
         return check;
     }
     //This method sends currentSelectedCourses to the corresponding advisor for this student
-    public void sendToAdvisorSelectedClasses(Advisor[]advisors){
-        for (Advisor advisor : advisors){
-            if (this.advisorId == advisor.getAdvisorId()){
-                advisor.advisorControl(currentSelectedCourses, this);
-            }
-        }
+    public void sendToAdvisorSelectedClasses(){
+        advisor.advisorControl(currentSelectedCourses, this);
     }
     //This is a method the advisor calls
     //it changes selected courses depending on if each course is accepted or rejected and then updates it
-    public void changeSelectedCourses(ArrayList<String> advisorApprovedCourses, ArrayList<String> advisorRejectedCoursesAndReasons){
+    public void changeSelectedCourses(ArrayList<String> advisorApprovedCourses, ArrayList<String> advisorRejectedCoursesAndReasons, String advisorName){
         currentSelectedCourses.clear();
         currentSelectedCourses.addAll(advisorApprovedCourses);
-        //TODO: decide what to do with rejected courses and their reasons
-        //todo:createTranscript();
-
+        logger.info("For student: " + getfName() + " " + getlName() + "\n" +advisorName + " approved: " + advisorApprovedCourses + "\nrejected: " + advisorRejectedCoursesAndReasons);
     }
     //this returns how many courses this student finished.
     public int getCompletedCourseNumber(){
@@ -269,17 +261,19 @@ public class Student {
                 default -> System.out.println("Hatali giris yaptiniz.");
             }
         }
-
-        //  System.out.println("Total Credit : " + creditSum);
         double GPA = (int)((sum / creditSum) * 100.0) / 100.0 ;
         this.gpa = GPA;
-       // System.out.println("gpa : " + gpa);
-        // System.out.println(transcriptCreditSum);
-        creditSum = 0;
-        totalCredit = transcriptCreditSum;
+        this.totalCredit = transcriptCreditSum;
 
     }
-
+    public String getAdvisorName(){
+        return advisor.getfName() + " " + advisor.getlName();
+    }
+    public void generateTranscript(){
+        Transcript transcript = new Transcript(this.completedCourses, this.failedCourses, this.gpa, this.totalCredit, this.getCurrentSelectedCourses(), this);
+        this.transcript = transcript;
+        transcript.printTranscriptSpecificStudent(this);
+    }
 
 
 }
@@ -291,9 +285,7 @@ public class Student {
         for (int i = 0 ; i < arrayOfCourses.size(); i ++){
             this.completedCourses.set(i, completedcoursesTest);
         }
-
         for (int i = 0; i < courseName.size(); i++){
             completedCourses.add(courseName.get(i))
         }
     }*/
-

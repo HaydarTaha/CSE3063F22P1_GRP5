@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class CompletedCourses{
+public class CompletedCourses extends Courses{
 
     private String courseName;
     private String courseGrade;
