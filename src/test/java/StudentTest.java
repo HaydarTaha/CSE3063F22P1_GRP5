@@ -94,14 +94,14 @@ class StudentTest {
         int semester = 1;
         int year = 1;
 
-        CompletedCourses testCompletedCourses = new CompletedCourses();
-        testCompletedCourses.setCourseName("MATH1001");
+        Courses testCompletedCourses = new Courses();
+        testCompletedCourses.setName("MATH1001");
         testCompletedCourses.setCourseGrade("CC");
         testCompletedCourses.setCredit(6);
         testCompletedCourses.setSemester(1);
         testCompletedCourses.setCourseYear(1);
 
-        assertEquals(testCompletedCourses.getCourseName(), courseName);
+        assertEquals(testCompletedCourses.getName(), courseName);
         assertEquals(testCompletedCourses.getCourseGrade(), grade);
         assertEquals(testCompletedCourses.getCredit(), credit);
         assertEquals(testCompletedCourses.getSemester(), semester);
@@ -116,14 +116,14 @@ class StudentTest {
         int expectedSemester = 3;
         int expectedYear = 2;
 
-        FailedCourses testFailedCourses = new FailedCourses();
-        testFailedCourses.setCourseName("ECON2004");
+        Courses testFailedCourses = new Courses();
+        testFailedCourses.setName("ECON2004");
         testFailedCourses.setCourseGrade("DC");
         testFailedCourses.setCredit(4);
         testFailedCourses.setSemester(3);
         testFailedCourses.setCourseYear(2);
 
-        assertEquals(testFailedCourses.getCourseName(), expectedCourseName);
+        assertEquals(testFailedCourses.getName(), expectedCourseName);
         assertEquals(testFailedCourses.getCourseGrade(), expectedGrade);
         assertEquals(testFailedCourses.getCredit(), expectedCredit);
         assertEquals(testFailedCourses.getSemester(), expectedSemester);
