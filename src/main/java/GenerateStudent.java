@@ -5,6 +5,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
 public class GenerateStudent {
     private int courseFFRate;
     private int maxNumberOfSelectionForCourses;
+    private String semester;
     private Student[] student;
     private Courses[] courses;
     private Advisor[] advisors;
@@ -23,7 +24,7 @@ public class GenerateStudent {
     private Courses[] FTE;
 
     //This constructor called in Main class and send student and courses arrays
-    public GenerateStudent(Student[] student, Courses[] courses, Courses[] UE, Courses[] TE, Courses[] NTE, Courses[] FTE, Advisor[] advisors, int courseFFRate, int maxNumberOfSelectionForCourses){
+    public GenerateStudent(Student[] student, Courses[] courses, Courses[] UE, Courses[] TE, Courses[] NTE, Courses[] FTE, Advisor[] advisors, int courseFFRate, int maxNumberOfSelectionForCourses, String semester){
         this.student = student;
         this.advisors = advisors;
         this.courses = courses;
@@ -33,6 +34,11 @@ public class GenerateStudent {
         this.FTE = FTE;
         this.courseFFRate = courseFFRate;
         this.maxNumberOfSelectionForCourses = maxNumberOfSelectionForCourses;
+        this.semester = semester;
+    }
+
+    public GenerateStudent(){
+
     }
 
     //This method get courseCodesFrom Courses array and check their semester and add to named (CourseSemester)SemesterCourses
@@ -105,8 +111,8 @@ public class GenerateStudent {
 
     //In this method we are setting semester to student
     //We are giving semester from their currentYear and which semester user want to simulate
-    public void semesterSetter(Student s, String semester){
-        if (semester == "Fall"){
+    public void semesterSetter(Student s){
+        if (semester.equals("Fall")){
             switch (s.getCurrentYear()){
                 case 1:
                     s.setCurrentSemester(1);
@@ -121,7 +127,7 @@ public class GenerateStudent {
                     s.setCurrentSemester(7);
                     break;
             }
-        } else if (semester == "Spring") {
+        } else if (semester.equals("Spring")) {
             switch (s.getCurrentYear()){
                 case 1:
                     s.setCurrentSemester(2);
@@ -621,8 +627,8 @@ public class GenerateStudent {
     }
 
     //In this method we simulate the semester up to the student's semester
-    public void simulateSemester(Student s, String semester) throws IOException {
-        semesterSetter(s, semester);
+    public void simulateSemester(Student s) throws IOException {
+        semesterSetter(s);
         List<CompletedCourses> currentSemesterCompleted = new ArrayList<>();
         List<FailedCourses> currentSemesterFailed = new ArrayList<>();
         HashMap<String, List<String>> lockedCourses = new HashMap<>();
@@ -653,7 +659,7 @@ public class GenerateStudent {
         addCourseNames();
         for (Student s : student){
             generateYear(s);
-            simulateSemester(s, "Spring");
+            simulateSemester(s);
             removeUnnamedCourses(s);
             setStudentAdvisor(s);
             int availableCoursesSize = s.getAvailableCourses().size();

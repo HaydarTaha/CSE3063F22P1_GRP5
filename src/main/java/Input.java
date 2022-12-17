@@ -145,7 +145,7 @@ public class Input {
     }
 
     public void startSimulationWithInputs() throws IOException, IllegalAccessException {
-        GenerateStudent generateStudent = new GenerateStudent((Student[]) students, courses, UE, TE, NTE, FTE, (Advisor[]) advisors, courseFFRate, maxNumberOfSelectionForCourses);
+        GenerateStudent generateStudent = new GenerateStudent((Student[]) students, courses, UE, TE, NTE, FTE, (Advisor[]) advisors, courseFFRate, maxNumberOfSelectionForCourses, semester);
         generateStudent.simulate();
     }
 }
