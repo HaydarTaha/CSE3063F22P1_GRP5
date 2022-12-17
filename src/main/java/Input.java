@@ -6,7 +6,6 @@ import java.io.IOException;
 public class Input {
 
 
-    private String semester;
     private int courseFFRate;
     private int quotaForElectives;
     private int quotaForMandatory;
@@ -37,7 +36,6 @@ public class Input {
 
 
     public void setSemester(String semester) {
-        this.semester = semester;
     }
 
 
