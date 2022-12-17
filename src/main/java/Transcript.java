@@ -10,8 +10,8 @@ import java.util.List;
 
 public class Transcript extends Student {
 
-    private List<CompletedCourses> completedCourses;
-    private List<FailedCourses> failedCourses;
+    private List<Courses> completedCourses;
+    private List<Courses> failedCourses;
     private Double gpa;
     private int completedCredits;
     private String advisorName;
@@ -22,7 +22,7 @@ public class Transcript extends Student {
 
     public Transcript() {
     }
-    public Transcript(List<CompletedCourses> completedCourses, List<FailedCourses> failedCourses, Double gpa, int completedCredits, List<String> studentSelectedCourses, String advisorName, Student student){
+    public Transcript(List<Courses> completedCourses, List<Courses> failedCourses, Double gpa, int completedCredits, List<String> studentSelectedCourses, String advisorName, Student student){
         this.completedCourses = completedCourses;
         this.failedCourses = failedCourses;
         this.gpa = gpa;
@@ -33,10 +33,10 @@ public class Transcript extends Student {
 
     }
 
-    public List<CompletedCourses> getCompletedCourses() {
+    public List<Courses> getCompletedCourses() {
         return completedCourses;
     }
-    public List<FailedCourses> getFailedCourses() {
+    public List<Courses> getFailedCourses() {
         return failedCourses;
     }
     /*public void printTranscriptAll(Student[] students2){
@@ -46,9 +46,9 @@ public class Transcript extends Student {
     }*/
     public void seperateFailedCourses(){
         failedCoursesStrings = new ArrayList<>();
-        for (CompletedCourses completedCourse : this.completedCourses){
+        for (Courses completedCourse : this.completedCourses){
             if (completedCourse.getCourseGrade().equals("FF")){
-                failedCoursesStrings.add(completedCourse.getCourseName());
+                failedCoursesStrings.add(completedCourse.getName());
                 failedCoursesStrings.add(completedCourse.getCourseGrade());
             }
 
@@ -61,15 +61,15 @@ public class Transcript extends Student {
     }
     public void transformTranscriptElementsToList(){
         this.completedCourseStrings = new ArrayList<>();
-        for (CompletedCourses completedCourses : this.completedCourses){
-            completedCourseStrings.add(completedCourses.getCourseName());
+        for (Courses completedCourses : this.completedCourses){
+            completedCourseStrings.add(completedCourses.getName());
             completedCourseStrings.add(completedCourses.getCourseGrade());
         }
     }
     public void transformSpecificStudentTranscriptElementsToList(Student student){
         this.completedCourseStrings = new ArrayList<>();
-        for (CompletedCourses completedCourses : student.getCompletedCourses()){
-            completedCourseStrings.add(completedCourses.getCourseName() + " " + completedCourses.getCourseGrade() + " Given: " + completedCourses.getGivenSemester());
+        for (Courses completedCourses : student.getCompletedCourses()){
+            completedCourseStrings.add(completedCourses.getName() + " " + completedCourses.getCourseGrade() + " Given: " + completedCourses.getGivenSemester());
         }
         seperateFailedCourses();
     }
