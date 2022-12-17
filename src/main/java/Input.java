@@ -6,6 +6,7 @@ import java.io.IOException;
 public class Input {
 
 
+    private String semester;
     private int courseFFRate;
     private int quotaForElectives;
     private int quotaForMandatory;
@@ -36,23 +37,36 @@ public class Input {
 
 
     public void setSemester(String semester) {
+        this.semester = semester;
     }
 
+    public int getCourseFFRate() {
+        return courseFFRate;
+    }
 
     public void setCourseFFRate(int courseFFRate) {
         this.courseFFRate = courseFFRate;
     }
 
+    public int getQuotaForElectives() {
+        return quotaForElectives;
+    }
 
     public void setQuotaForElectives(int quotaForElectives) {
         this.quotaForElectives = quotaForElectives;
     }
 
+    public int getQuotaForMandatory() {
+        return quotaForMandatory;
+    }
 
     public void setQuotaForMandatory(int quotaForMandatory) {
         this.quotaForMandatory = quotaForMandatory;
     }
 
+    public int getMaxNumberOfSelectionForCourses() {
+        return maxNumberOfSelectionForCourses;
+    }
 
     public void setMaxNumberOfSelectionForCourses(int maxNumberOfSelectionForCourses) {
         this.maxNumberOfSelectionForCourses = maxNumberOfSelectionForCourses;
@@ -133,8 +147,5 @@ public class Input {
     public void startSimulationWithInputs() throws IOException, IllegalAccessException {
         GenerateStudent generateStudent = new GenerateStudent((Student[]) students, courses, UE, TE, NTE, FTE, (Advisor[]) advisors, courseFFRate, maxNumberOfSelectionForCourses);
         generateStudent.simulate();
-        for (Courses crs : courses){
-            System.out.println(crs.getCourseGrade());
-        }
     }
 }

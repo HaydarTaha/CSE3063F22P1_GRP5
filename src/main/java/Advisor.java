@@ -3,17 +3,21 @@ import java.util.List;
 import java.util.Random;
 
 public class Advisor extends Person {
+    //Basic attributes of advisors
+    private int advisorId;
 
-    private final List<Student> studentsList = new ArrayList<>();
+    private List<Student> studentsList = new ArrayList<>();
 
     public void setfName(String fName){ super.setfName(fName);}
 
     public void setlName(String lName){  super.setlName(lName);}
 
-
+    public int getAdvisorId() {
+        return advisorId;
+    }
 
     public void setAdvisorId(int advisorId) {
-        //Basic attributes of advisors
+        this.advisorId = advisorId;
     }
 
     //This function has a mathematical operation

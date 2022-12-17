@@ -14,9 +14,9 @@ public class Student extends Person{
     private int currentYear;
     private int currentSemester;
     private List<String> currentSelectedCourses;
-    private List<Courses> completedCourses;
+    private List<CompletedCourses> completedCourses;
     private List<String> availableCourses;
-    private List<Courses> failedCourses;
+    private List<FailedCourses> failedCourses;
     private Transcript transcript;
 
 
@@ -53,15 +53,20 @@ public class Student extends Person{
         this.currentSemester = currentSemester;
     }
 
+
+
     public void setStudentId(int studentId) {
         this.studentId = studentId;
     }
+
+
+
 
     public void setCurrentSelectedCourses(List<String> currentSelectedCourses) {
         this.currentSelectedCourses = currentSelectedCourses;
     }
 
-    public void setCompletedCourses(List<Courses> completedCourses) {
+    public void setCompletedCourses(List<CompletedCourses> completedCourses) {
         this.completedCourses = completedCourses;
     }
 
@@ -69,19 +74,21 @@ public class Student extends Person{
         this.availableCourses = mandatoryCourses;
     }
 
-    public List<Courses> getFailedCourses() {
+    public List<FailedCourses> getFailedCourses() {
         return failedCourses;
     }
 
-    public void setFailedCourses(List<Courses> failedCourses) {
+    public void setFailedCourses(List<FailedCourses> failedCourses) {
         this.failedCourses = failedCourses;
     }
 
     int getStudentId() { return studentId; }
 
+    double getGPA() { return gpa; }
+
     List<String> getCurrentSelectedCourses() { return currentSelectedCourses; }
 
-    List<Courses> getCompletedCourses() { return completedCourses; }
+    List<CompletedCourses> getCompletedCourses() { return completedCourses; }
     //This method selects courses which are in availableCourses
     public void selectFromAvailableCourses(int maxNumberOfSelectionForCourses){
         ArrayList<String> coursesAdd = new ArrayList<>();
@@ -149,8 +156,8 @@ public class Student extends Person{
     //and returns true if failed or false if passed
     boolean checkIfCourseFailed(String courseCode){
         boolean check = false;
-        for (Courses completedCourses1 : this.completedCourses){
-            if (completedCourses1.getName().equals(courseCode) && completedCourses1.getCourseGrade().equals("FF")) {
+        for (CompletedCourses completedCourses1 : this.completedCourses){
+            if (completedCourses1.getCourseName().equals(courseCode) && completedCourses1.getCourseGrade().equals("FF")) {
                 check = true;
                 break;
             }
@@ -158,7 +165,7 @@ public class Student extends Person{
         return check;
     }
     //This method sends currentSelectedCourses to the corresponding advisor for this student
-    public void sendToAdvisorSelectedCourses(){
+    public void sendToAdvisorSelectedClasses(){
         advisor.advisorControl(currentSelectedCourses, this);
     }
     //This is a method the advisor calls
@@ -201,9 +208,9 @@ public class Student extends Person{
         int transcriptCreditSum = 0;
         credit = 0;
         sum = 0;
-        for (Courses completedCourses1 : completedCourses) {
+        for (CompletedCourses completedCourses1 : completedCourses) {
             for (Courses courses1 : courses){
-                if (completedCourses1.getName().equals(courses1.getCourseCode())) {
+                if (completedCourses1.getCourseName().equals(courses1.getCourseCode())) {
                     credit = courses1.getCredit();
                     break;
                 }

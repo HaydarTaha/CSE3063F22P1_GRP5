@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 public class Courses  {
     //Attributes of Courses object
@@ -10,36 +9,18 @@ public class Courses  {
     private int credit;
     private int courseType;
     private int semester;
-
-    private String courseGrade;
-    private int givenSemester;
-
-    public void setCourseGrade(String courseGrade) {
-        this.courseGrade = courseGrade;
-    }
-
-    public void setGivenSemester(int givenSemester) {
-        this.givenSemester = givenSemester;
-    }
-
-    public String getCourseGrade() {
-        return courseGrade;
-    }
-
-    public int getGivenSemester() {
-        return givenSemester;
-    }
-
-
-
+    private int quota;
 
     public void setQuota(int quota) {
+        this.quota = quota;
     }
+
+
 
     private int courseYear;
     private int theoreticalCourseHour;
     private int practicalLessonHour;
-    private final List<Student> listOfStudents = new ArrayList<>();
+    private List<Student> listOfStudents = new ArrayList<>();
     //Basic Setters and Getters
     public void setCourseType(int courseType) {
         this.courseType = courseType;
@@ -113,11 +94,14 @@ public class Courses  {
     }
     //This is used to check if the given course has a prerequisite
     public Boolean checkIfPrerequisite(Courses courses){
-        return !Objects.equals(courses.getPrerequisite().get(0), "");
+        return courses.getPrerequisite().get(0) != "";
     }
     //This checks if it has two pre requisites
     public Boolean checkIfTwoPreRequisite(Courses courses){
-        return !Objects.equals(courses.getPrerequisite().get(0), "") && !Objects.equals(courses.getPrerequisite().get(1), "");
+        if (courses.getPrerequisite().get(0) != "" && courses.getPrerequisite().get(1) != ""){
+            return true;
+        }
+        else return false;
     }
     //Gets first pre requisite name of this course
     public String getPreRequisiteName() {
