@@ -3,7 +3,7 @@ import java.util.*;
 import org.apache.log4j.Logger;
 
 public class Student extends Person{
-    static Logger logger = Logger.getLogger(Student.class.getName());
+    Logger logger = Logger.getLogger(Student.class.getName());
     //Attributes for students are here
     private int studentId;
 
