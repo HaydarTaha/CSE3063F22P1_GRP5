@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class Courses  {
     //Attributes of Courses object
@@ -10,16 +11,35 @@ public class Courses  {
     private int courseType;
     private int semester;
 
-    public int getQuota() {
-        return quota;
+    private String courseGrade;
+    private int givenSemester;
+
+    public void setCourseGrade(String courseGrade) {
+        this.courseGrade = courseGrade;
     }
 
-    private int quota;
+    public void setGivenSemester(int givenSemester) {
+        this.givenSemester = givenSemester;
+    }
+
+    public String getCourseGrade() {
+        return courseGrade;
+    }
+
+    public int getGivenSemester() {
+        return givenSemester;
+    }
+
+
+
+
+    public void setQuota(int quota) {
+    }
 
     private int courseYear;
     private int theoreticalCourseHour;
     private int practicalLessonHour;
-    private List<Student> listOfStudents = new ArrayList<>();
+    private final List<Student> listOfStudents = new ArrayList<>();
     //Basic Setters and Getters
     public void setCourseType(int courseType) {
         this.courseType = courseType;
@@ -93,14 +113,11 @@ public class Courses  {
     }
     //This is used to check if the given course has a prerequisite
     public Boolean checkIfPrerequisite(Courses courses){
-        return courses.getPrerequisite().get(0) != "";
+        return !Objects.equals(courses.getPrerequisite().get(0), "");
     }
     //This checks if it has two pre requisites
     public Boolean checkIfTwoPreRequisite(Courses courses){
-        if (courses.getPrerequisite().get(0) != "" && courses.getPrerequisite().get(1) != ""){
-            return true;
-        }
-        else return false;
+        return !Objects.equals(courses.getPrerequisite().get(0), "") && !Objects.equals(courses.getPrerequisite().get(1), "");
     }
     //Gets first pre requisite name of this course
     public String getPreRequisiteName() {
@@ -113,9 +130,7 @@ public class Courses  {
         preRequisiteNames.add(courses.getPrerequisite().get(1));
         return preRequisiteNames;
     }
-    public void incrementQuota(Courses courses){
-        courses.quota += 1;
-    }
+
     public void addToListOfStudents(Student student){
         this.listOfStudents.add(student);
     }

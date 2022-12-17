@@ -33,4 +33,13 @@ class GenerateStudentTest {
     void checkPrerequisiteCourseIsGiven() {
 
     }
+
+    @Test
+    void checkAssignedGrade() throws IOException {
+        GenerateStudent s1 = new GenerateStudent();
+        s1.setCourseFFRate(100);
+        String result1 = s1.assignRandomGrades();
+        assertNotEquals("", result1);
+    }
+
 }

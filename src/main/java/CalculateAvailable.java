@@ -2,8 +2,8 @@ import java.io.IOException;
 import java.util.*;
 import java.util.logging.Logger;
 
-public class CalculateAvailables {
-    Logger logger = Logger.getLogger(CalculateAvailables.class.getName());
+public class CalculateAvailable {
+    Logger logger = Logger.getLogger(CalculateAvailable.class.getName());
     List<String> semesterOneCoursesNames = new ArrayList<String>();
     List<String> semesterTwoCoursesNames = new ArrayList<String>();
     List<String> semesterThreeCoursesNames = new ArrayList<String>();
@@ -18,11 +18,22 @@ public class CalculateAvailables {
     ArrayList<String> calculatedSemesterFiveCourseNames;
     ArrayList<String> calculatedSemesterSixCourseNames;
     ArrayList<String> calculatedSemesterSevenCourseNames;
-    ArrayList<String> calculatedSemesterEigthCourseNames;
+    ArrayList<String> calculatedSemesterEightCourseNames;
     List<String> studentCoursesTook;
     String courseName;
     String courseGrade;
     String prerequisite;
+
+    public void setMaxNumberOfSelectionForCourses(int maxNumberOfSelectionForCourses) {
+        this.maxNumberOfSelectionForCourses = maxNumberOfSelectionForCourses;
+    }
+
+    public int getMaxNumberOfSelectionForCourses() {
+        return maxNumberOfSelectionForCourses;
+    }
+
+    int maxNumberOfSelectionForCourses;
+
     public void setAttributes(Courses[] courses){
         //Everytime i call this method i need to update these lists again
         for (Courses course : courses) {
@@ -42,7 +53,7 @@ public class CalculateAvailables {
         for (int i = 0; i< studentCoursesTook.size(); i +=2){
             courseName = studentCoursesTook.get(i);
             courseGrade = studentCoursesTook.get(i+1);
-            if (courseGrade == "FF"){
+            if (Objects.equals(courseGrade, "FF")){
                 boolean test = false;
                 //Here we iterate every courses available until we find the same course with the completed one of the student.
                 for (Courses courses1 : courses){
@@ -70,7 +81,7 @@ public class CalculateAvailables {
         for (int i = 0; i< studentCoursesTook.size(); i +=2){
             courseName = studentCoursesTook.get(i);
             courseGrade = studentCoursesTook.get(i+1);
-            if (courseGrade == "FF"){
+            if (Objects.equals(courseGrade, "FF")){
                 boolean test = false;
                 for (Courses courses1 : courses){
                     if (Objects.equals(courseName, courses1.getPreRequisiteName())){
@@ -91,7 +102,7 @@ public class CalculateAvailables {
         for (int i = 0; i< studentCoursesTook.size(); i +=2){
             courseName = studentCoursesTook.get(i);
             courseGrade = studentCoursesTook.get(i+1);
-            if (courseGrade == "FF"){
+            if (Objects.equals(courseGrade, "FF")){
                 boolean test = false;
                 for (Courses courses1 : courses){
                     if (Objects.equals(courseName, courses1.getPreRequisiteName())){
@@ -112,7 +123,7 @@ public class CalculateAvailables {
         for (int i = 0; i< studentCoursesTook.size(); i +=2){
             courseName = studentCoursesTook.get(i);
             courseGrade = studentCoursesTook.get(i+1);
-            if (courseGrade == "FF"){
+            if (Objects.equals(courseGrade, "FF")){
                 boolean test = false;
                 for (Courses courses1 : courses){
                     if (Objects.equals(courseName, courses1.getPreRequisiteName())){
@@ -133,7 +144,7 @@ public class CalculateAvailables {
         for (int i = 0; i< studentCoursesTook.size(); i +=2){
             courseName = studentCoursesTook.get(i);
             courseGrade = studentCoursesTook.get(i+1);
-            if (courseGrade == "FF"){
+            if (Objects.equals(courseGrade, "FF")){
                 boolean test = false;
                 for (Courses courses1 : courses){
                     if (Objects.equals(courseName, courses1.getPreRequisiteName())){
@@ -154,7 +165,7 @@ public class CalculateAvailables {
         for (int i = 0; i< studentCoursesTook.size(); i +=2){
             courseName = studentCoursesTook.get(i);
             courseGrade = studentCoursesTook.get(i+1);
-            if (courseGrade == "FF"){
+            if (Objects.equals(courseGrade, "FF")){
                 boolean test = false;
                 for (Courses courses1 : courses){
                     if (Objects.equals(courseName, courses1.getPreRequisiteName())){
@@ -175,45 +186,45 @@ public class CalculateAvailables {
         for (int i = 0; i< studentCoursesTook.size(); i +=2){
             courseName = studentCoursesTook.get(i);
             courseGrade = studentCoursesTook.get(i+1);
-            if (courseGrade == "FF"){
+            if (Objects.equals(courseGrade, "FF")){
                 boolean test = false;
                 for (Courses courses1 : courses){
                     if (Objects.equals(courseName, courses1.getPreRequisiteName())){
                         prerequisite = courses1.getPreRequisiteName();
                         logger.info(stdName + " Failed: " + prerequisite + " He cannot choose " + courses1.getCourseCode());
-                        calculatedSemesterEigthCourseNames.remove(courses1.getCourseCode());
-                        calculatedSemesterEigthCourseNames.add(prerequisite);
+                        calculatedSemesterEightCourseNames.remove(courses1.getCourseCode());
+                        calculatedSemesterEightCourseNames.add(prerequisite);
                         test = true;
                         break;
                     }
                 }
-                if (!test) calculatedSemesterEigthCourseNames.add(courseName);
+                if (!test) calculatedSemesterEightCourseNames.add(courseName);
             }
         }
-        return calculatedSemesterEigthCourseNames;
+        return calculatedSemesterEightCourseNames;
     }
-    public void calculatedCoursesResetter(){
+    public void calculatedCoursesSetter(){
         calculatedSemesterTwoCourseNames = new ArrayList<>(semesterTwoCoursesNames);
         calculatedSemesterThreeCourseNames = new ArrayList<>(semesterThreeCoursesNames);
         calculatedSemesterFourCourseNames = new ArrayList<>(semesterFourCoursesNames);
         calculatedSemesterFiveCourseNames = new ArrayList<>(semesterFiveCoursesNames);
         calculatedSemesterSixCourseNames = new ArrayList<>(semesterSixCoursesNames);
         calculatedSemesterSevenCourseNames = new ArrayList<>(semesterSevenCoursesNames);
-        calculatedSemesterEigthCourseNames = new ArrayList<>(semesterEigthCoursesNames);
+        calculatedSemesterEightCourseNames = new ArrayList<>(semesterEigthCoursesNames);
         studentCoursesTook = new ArrayList<>();
     }
     //This method basically sets AvailableCourses for every student
     //While reading CompletedCourses and checking if he failed a course he has to take it again
     //Or if it is a prerequisite for another course we delete that course so he cant take it
-    public void setAvailableCoursesForEachStudent(Student[] students, Courses[] courses , Advisor[] advisors, Courses[] UE, Courses[] TE, Courses[] FTE, Courses[] NTE) throws IOException {
+    public void setAvailableCoursesForEachStudent(Student[] students, Courses[] courses , Advisor[] advisors, Courses[] UE, Courses[] TE, Courses[] FTE, Courses[] NTE, int maxNumberOfSelectionForCourses) throws IOException {
         //First we add every course to an arraylist for each semester for later use.
         setAttributes(courses);
         for (Student student : students){
             //And also here we need to reset calculatedSemesterCourses lists to fresh ones
-            calculatedCoursesResetter();
+            calculatedCoursesSetter();
             //Look through completed courses for each student here and add it to student courses took list.
-            for (CompletedCourses completedCourses : student.getCompletedCourses()){
-                studentCoursesTook.add(completedCourses.getCourseName());
+            for (Courses completedCourses : student.getCompletedCourses()){
+                studentCoursesTook.add(completedCourses.getName());
                 studentCoursesTook.add(completedCourses.getCourseGrade());
             }
             //We check for the student's semester here
@@ -237,10 +248,9 @@ public class CalculateAvailables {
         //and then we calculate gpa for everystudent
         setStudentsForEachAdvisor(students, advisors);
         for (Student student : students){
-            student.selectFromAvailableCourses();
+            student.selectFromAvailableCourses(maxNumberOfSelectionForCourses);
             student.chooseFromElectiveCourses(UE, FTE, NTE, TE);
             student.sendToAdvisorSelectedClasses();
-            student.addQuota(courses);
             student.gpaCalculator(courses);
         }
         setStudentsForEachCourses(students, courses);
