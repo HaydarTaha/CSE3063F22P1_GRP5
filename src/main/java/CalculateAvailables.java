@@ -28,6 +28,10 @@ public class CalculateAvailables {
         this.maxNumberOfSelectionForCourses = maxNumberOfSelectionForCourses;
     }
 
+    public int getMaxNumberOfSelectionForCourses() {
+        return maxNumberOfSelectionForCourses;
+    }
+
     int maxNumberOfSelectionForCourses;
 
     public void setAttributes(Courses[] courses){
