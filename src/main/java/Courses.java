@@ -11,11 +11,31 @@ public class Courses  {
     private int semester;
     private int quota;
 
-    public void setQuota(int quota) {
-        this.quota = quota;
+    private String courseGrade;
+    private int givenSemester;
+
+    public void setCourseGrade(String courseGrade) {
+        this.courseGrade = courseGrade;
+    }
+
+    public void setGivenSemester(int givenSemester) {
+        this.givenSemester = givenSemester;
+    }
+
+    public String getCourseGrade() {
+        return courseGrade;
+    }
+
+    public int getGivenSemester() {
+        return givenSemester;
     }
 
 
+
+
+    public void setQuota(int quota) {
+        this.quota = quota;
+    }
 
     private int courseYear;
     private int theoreticalCourseHour;

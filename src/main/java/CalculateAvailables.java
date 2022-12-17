@@ -219,8 +219,8 @@ public class CalculateAvailables {
             //And also here we need to reset calculatedSemesterCourses lists to fresh ones
             calculatedCoursesResetter();
             //Look through completed courses for each student here and add it to student courses took list.
-            for (CompletedCourses completedCourses : student.getCompletedCourses()){
-                studentCoursesTook.add(completedCourses.getCourseName());
+            for (Courses completedCourses : student.getCompletedCourses()){
+                studentCoursesTook.add(completedCourses.getName());
                 studentCoursesTook.add(completedCourses.getCourseGrade());
             }
             //We check for the student's semester here
