@@ -14,30 +14,6 @@ public class InputTest {
     InputTest() throws IOException {
     }
 
-    @Test
-    void testGetCourseFFRate() {
-        int expectedCourseFFRate = 20;
-        assertEquals(expectedCourseFFRate,input.getCourseFFRate());
-    }
-
-    @Test
-    void testGetQuotaForElectives() {
-        int expecteQuotaForElectives = 20;
-        assertEquals(expecteQuotaForElectives,input.getCourseFFRate());
-    }
-
-    @Test
-    void testgetQuotaForMandatory() {
-        int expectedQuotaForMandatory = 150;
-        assertEquals(expectedQuotaForMandatory,input.getQuotaForMandatory());
-    }
-
-    @Test
-    void testgetMaxNumberOfSelectionForCourses() {
-        int expectedMaxNumberOfSelectionForCourses = 10;
-        assertEquals(expectedMaxNumberOfSelectionForCourses,input.getMaxNumberOfSelectionForCourses());
-    }
-
 
     // TODO: both will be updated later
     @Test

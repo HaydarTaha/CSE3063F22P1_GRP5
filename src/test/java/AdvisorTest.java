@@ -25,12 +25,4 @@ public class AdvisorTest {
         assertEquals("SOYTÜRK",advisorTest.getlName());
     }
 
-    @Test
-    void testAdvisorId() {
-        Advisor advisorTest = new Advisor();
-        advisorTest.setAdvisorId(4);
-        assertEquals(4,advisorTest.getAdvisorId());
-    }
-
-
 }
