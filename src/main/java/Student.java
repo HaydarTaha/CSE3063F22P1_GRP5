@@ -79,8 +79,6 @@ public class Student extends Person{
 
     int getStudentId() { return studentId; }
 
-    double getGPA() { return gpa; }
-
     List<String> getCurrentSelectedCourses() { return currentSelectedCourses; }
 
     List<Courses> getCompletedCourses() { return completedCourses; }
@@ -160,7 +158,7 @@ public class Student extends Person{
         return check;
     }
     //This method sends currentSelectedCourses to the corresponding advisor for this student
-    public void sendToAdvisorSelectedClasses(){
+    public void sendToAdvisorSelectedCourses(){
         advisor.advisorControl(currentSelectedCourses, this);
     }
     //This is a method the advisor calls
@@ -266,7 +264,7 @@ public class Student extends Person{
         return advisor.getfName() + " " + advisor.getlName();
     }
     public void generateTranscript(){
-        Transcript transcript = new Transcript(this.completedCourses, this.failedCourses, this.getGPA(), this.totalCredit, this.getCurrentSelectedCourses(), getAdvisorName(), this);
+        Transcript transcript = new Transcript(this.completedCourses, this.failedCourses, this.gpa, this.totalCredit, this.getCurrentSelectedCourses(), this);
         this.transcript = transcript;
         transcript.printTranscriptSpecificStudent(this);
     }

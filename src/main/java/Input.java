@@ -133,5 +133,8 @@ public class Input {
     public void startSimulationWithInputs() throws IOException, IllegalAccessException {
         GenerateStudent generateStudent = new GenerateStudent((Student[]) students, courses, UE, TE, NTE, FTE, (Advisor[]) advisors, courseFFRate, maxNumberOfSelectionForCourses);
         generateStudent.simulate();
+        for (Courses crs : courses){
+            System.out.println(crs.getCourseGrade());
+        }
     }
 }

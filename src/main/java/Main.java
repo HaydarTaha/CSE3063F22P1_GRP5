@@ -15,5 +15,6 @@ public class Main {
         Input input = objectMapper.readValue(inputsJsonFile, Input.class);
         input.createObjects();
         input.startSimulationWithInputs();
+
     }
 }

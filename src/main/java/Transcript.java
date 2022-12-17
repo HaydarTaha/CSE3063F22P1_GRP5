@@ -14,19 +14,22 @@ public class Transcript extends Student {
     private List<Courses> failedCourses;
     private Double gpa;
     private int completedCredits;
-    private String advisorName;
+
+    private Advisor studentAdvisor;
+    private Student student;
     private List<String> studentSelectedCourses;
     private List<String> completedCourseStrings;
     private List<String> failedCoursesStrings;
 
     public Transcript() {
     }
-    public Transcript(List<Courses> completedCourses, List<Courses> failedCourses, Double gpa, int completedCredits, List<String> studentSelectedCourses, String advisorName, Student student){
+    public Transcript(List<Courses> completedCourses, List<Courses> failedCourses, Double gpa, int completedCredits, List<String> studentSelectedCourses, Student student){
         this.completedCourses = completedCourses;
         this.failedCourses = failedCourses;
         this.gpa = gpa;
         this.completedCredits = completedCredits;
-        this.advisorName = advisorName;
+        this.student = student;
+        this.studentAdvisor = student.getAdvisor();
         this.studentSelectedCourses = studentSelectedCourses;
 
     }
@@ -55,7 +58,7 @@ public class Transcript extends Student {
     public void printTranscriptSpecificStudent(Student student){
         student.getTranscript().transformSpecificStudentTranscriptElementsToList(student);
         System.out.println("------------------------------------------------------------------------------------------------");
-        System.out.println("ID: " + student.getStudentId() + "\nFullName: " + student.getfName() + " " + student.getlName() + "\nAdvisor: " + this.advisorName + "\nCourses Taken:" + this.completedCourseStrings + "\nGPA: " + this.gpa + "\nTotal Credits: " + this.completedCredits + "\nAvailable Courses:" + student.getAvailableCourses()  + "\nAdvisor Approved Courses: " + this.studentSelectedCourses + "\nFailed Courses: " + this.failedCoursesStrings );
+        System.out.println("ID: " + student.getStudentId() + "\nFullName: " + student.getfName() + " " + student.getlName() + "\nAdvisor: " + this.student.getAdvisorName() + "\nCourses Taken:" + this.completedCourseStrings + "\nGPA: " + this.gpa + "\nTotal Credits: " + this.completedCredits + "\nAvailable Courses:" + student.getAvailableCourses()  + "\nAdvisor Approved Courses: " + this.studentSelectedCourses + "\nFailed Courses: " + this.failedCoursesStrings );
     }
     public void transformTranscriptElementsToList(){
         this.completedCourseStrings = new ArrayList<>();

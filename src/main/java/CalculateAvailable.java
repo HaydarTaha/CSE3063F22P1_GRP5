@@ -250,7 +250,7 @@ public class CalculateAvailable {
         for (Student student : students){
             student.selectFromAvailableCourses(maxNumberOfSelectionForCourses);
             student.chooseFromElectiveCourses(UE, FTE, NTE, TE);
-            student.sendToAdvisorSelectedClasses();
+            student.sendToAdvisorSelectedCourses();
             student.gpaCalculator(courses);
         }
         setStudentsForEachCourses(students, courses);
