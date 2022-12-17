@@ -15,6 +15,7 @@ public class Transcript extends Student {
     private Double gpa;
     private int completedCredits;
     private Student student;
+    private Advisor studentAdvisor;
     private List<String> studentSelectedCourses;
     private List<String> completedCourseStrings;
     private List<String> failedCoursesStrings;
@@ -28,6 +29,7 @@ public class Transcript extends Student {
         this.completedCredits = completedCredits;
         this.studentSelectedCourses = studentSelectedCourses;
         this.student = student;
+        this.studentAdvisor = student.getAdvisor();
 
     }
 

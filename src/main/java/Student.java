@@ -1,4 +1,3 @@
-
 import java.util.*;
 import org.apache.log4j.Logger;
 
@@ -84,6 +83,7 @@ public class Student extends Person{
 
     int getStudentId() { return studentId; }
 
+    double getGPA() { return gpa; }
 
     List<String> getCurrentSelectedCourses() { return currentSelectedCourses; }
 
@@ -285,9 +285,7 @@ public class Student extends Person{
         for (int i = 0 ; i < arrayOfCourses.size(); i ++){
             this.completedCourses.set(i, completedcoursesTest);
         }
-
         for (int i = 0; i < courseName.size(); i++){
             completedCourses.add(courseName.get(i))
         }
     }*/
-
