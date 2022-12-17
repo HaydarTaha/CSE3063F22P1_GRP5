@@ -31,5 +31,26 @@ class CoursesTest  {
 
     @Test
     void testGetCredit() {
+        // I wrote unit testing for getting credit.
+        int creditExpect = 6;
+        int creditActual = coursesArray[0].getCredit();
+        int creditExpect2 = 4;
+        int creditActual2 = coursesArray[6].getCredit();
+        assertEquals(creditExpect2,creditActual2);
+    }
+
+    @Test
+    void testGetPrerequisite() {
+
+        String expect="[CSE1242]";
+        String actual= String.valueOf(coursesArray[17].getPrerequisite());
+
+        if(coursesArray[17].getPrerequisite().contains("")){
+            System.out.println("There is no prerequisite.");
+
+        }else{
+            assertEquals(expect,actual);
+        }
+
     }
 }
