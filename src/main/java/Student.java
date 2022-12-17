@@ -84,7 +84,6 @@ public class Student extends Person{
 
     int getStudentId() { return studentId; }
 
-    double getGPA() { return gpa; }
 
     List<String> getCurrentSelectedCourses() { return currentSelectedCourses; }
 
