@@ -80,7 +80,7 @@ public class Transcript extends Student {
             JSONObject jsonObj=new JSONObject();
             for (Field f:std.getClass().getDeclaredFields()){
                 f.setAccessible(true);
-                if(!f.getName().equals("failedCourses") && !f.getName().equals("availableCourses"))
+                if(!f.getName().equals("failedCourses") && !f.getName().equals("availableCourses") && !f.getName().equals("transcript") && !f.getName().equals("advisor") && !f.getName().equals("logger"))
                     jsonObj.put(f.getName(),f.get(std));
             }
             arr.add(jsonObj);
