@@ -40,33 +40,25 @@ public class Input {
         this.semester = semester;
     }
 
-    public int getCourseFFRate() {
-        return courseFFRate;
-    }
+
 
     public void setCourseFFRate(int courseFFRate) {
         this.courseFFRate = courseFFRate;
     }
 
-    public int getQuotaForElectives() {
-        return quotaForElectives;
-    }
+
 
     public void setQuotaForElectives(int quotaForElectives) {
         this.quotaForElectives = quotaForElectives;
     }
 
-    public int getQuotaForMandatory() {
-        return quotaForMandatory;
-    }
+
 
     public void setQuotaForMandatory(int quotaForMandatory) {
         this.quotaForMandatory = quotaForMandatory;
     }
 
-    public int getMaxNumberOfSelectionForCourses() {
-        return maxNumberOfSelectionForCourses;
-    }
+
 
     public void setMaxNumberOfSelectionForCourses(int maxNumberOfSelectionForCourses) {
         this.maxNumberOfSelectionForCourses = maxNumberOfSelectionForCourses;
