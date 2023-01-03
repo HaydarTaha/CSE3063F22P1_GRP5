@@ -51,3 +51,38 @@ class Transcript:
             self.completedCourseStrings.append(completedCourses.get_course_name() + " " +
                                                completedCourses.get_course_grade() + " Given: " +
                                                completedCourses.get_given_semester())
+    def seperate_failed_courses(self):
+        self.failedCoursesStrings = []
+        for completedCourse in self.completedCourses:
+            if completedCourse.get_course_grade() == "FF":
+                self.failedCoursesStrings.append(completedCourse.get_course_name())
+                self.failedCoursesStrings.append(completedCourse.get_course_grade())
+
+    def save_transcript_to_json(self):
+        data = {}
+        data['completedCourses'] = []
+        for completedCourse in self.completedCourses:
+            data['completedCourses'].append({
+                'courseName': completedCourse.get_course_name(),
+                'courseGrade': completedCourse.get_course_grade(),
+                'givenSemester': completedCourse.get_given_semester()
+            })
+        data['failedCourses'] = []
+        for failedCourse in self.failedCourses:
+            data['failedCourses'].append({
+                'courseName': failedCourse.get_course_name(),
+                'courseGrade': failedCourse.get_course_grade(),
+                'givenSemester': failedCourse.get_given_semester()
+            })
+        data['gpa'] = self.gpa
+        data['completedCredits'] = self.completedCredits
+        data['studentSelectedCourses'] = self.studentSelectedCourses
+        data['student'] = {
+            'studentId': self.student.get_student_id(),
+            'fName': self.student.get_f_name(),
+            'lName': self.student.get_l_name(),
+            'advisor': self.student.get_advisor_name()
+        }
+
+        with open('transcript.json', 'w') as outfile:
+            json.dump(data, outfile)
