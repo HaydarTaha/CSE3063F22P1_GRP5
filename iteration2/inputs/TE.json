@@ -1,0 +1,57 @@
+[
+  {
+    "name": "Wireless & Mobile Networks",
+    "courseCode": "CSE4075",
+    "prerequisite": ["CSE4074"],
+    "credit": 5,
+    "courseType": 3,
+    "semester": 0,
+    "courseYear": 0,
+    "theoreticalCourseHour": 3,
+    "practicalLessonHour": 0
+  },
+  {
+    "name": "Advanced Unix Programming",
+    "courseCode": "CSE4034",
+    "prerequisite": ["CSE3033"],
+    "credit": 5,
+    "courseType": 3,
+    "semester": 0,
+    "courseYear": 0,
+    "theoreticalCourseHour": 3,
+    "practicalLessonHour": 0
+  },
+  {
+    "name": "Compiler Design",
+    "courseCode": "CSE4061",
+    "prerequisite": ["CSE3264"],
+    "credit": 5,
+    "courseType": 3,
+    "semester": 0,
+    "courseYear": 0,
+    "theoreticalCourseHour": 3,
+    "practicalLessonHour": 0
+  },
+  {
+    "name": "Microprocessors",
+    "courseCode": "CSE4217",
+    "prerequisite": ["CSE3038"],
+    "credit": 5,
+    "courseType": 3,
+    "semester": 0,
+    "courseYear": 0,
+    "theoreticalCourseHour": 3,
+    "practicalLessonHour": 0
+  },
+  {
+    "name": "Artificial Intelligence",
+    "courseCode": "CSE4082",
+    "prerequisite": [""],
+    "credit": 5,
+    "courseType": 3,
+    "semester": 0,
+    "courseYear": 0,
+    "theoreticalCourseHour": 3,
+    "practicalLessonHour": 0
+  }
+]

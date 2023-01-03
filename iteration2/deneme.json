@@ -1,0 +1,74 @@
+[
+  {
+    "studentID": 150119643,
+    "fName": "Mert",
+    "lName": "Ozincegedik",
+    "gpa": 3.12,
+    "currentYear": 3,
+    "currentSemester": "Fall",
+    "currentSelectedCourses": [
+      "CSE1142",
+      "CSE1143"
+    ],
+    "completedCourses": [
+      {
+        "courseName": "CSE1141",
+        "courseGrade": "AA"
+      },
+      {
+        "courseName": "Cse 1142",
+        "courseGrade": "AA"
+      }
+    ],
+    "availableCourses": [
+      "IE3081",
+      "CSE3063"
+    ],
+    "failedCourses": [
+      {
+        "courseName": "CSE1141",
+        "courseGrade": "FF"
+      },
+      {
+        "courseName": "Cse 1142",
+        "courseGrade": "FF"
+      }
+    ]
+  },
+  {
+    "studentID": 150117002,
+    "fName": "Burak",
+    "lName": "Aslan",
+    "gpa": 3.12,
+    "currentYear": 3,
+    "currentSemester": "Fall",
+    "currentSelectedCourses": [
+      "CSE1141",
+      "CSE1142"
+    ],
+    "completedCourses": [
+      {
+        "courseName": "CSE1140",
+        "courseGrade": "AA"
+      },
+      {
+        "courseName": "Cse 1148",
+        "courseGrade": "AA"
+      }
+    ],
+    "availableCourses": [
+      "IE3081",
+      "CSE3063"
+    ],
+    "failedCourses": [
+      {
+        "courseName": "CSE1140",
+        "courseGrade": "FF"
+      },
+      {
+        "courseName": "Cse 1145",
+        "courseGrade": "FF"
+      }
+    ]
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "semester" : "Spring",
+  "courseFFRate" : 20,
+  "quotaForElectives" : 20,
+  "quotaForMandatory" : 150,
+  "maxNumberOfSelectionForCourses" : 10,
+  "coursesJsonName" : "inputs/lectures.json",
+  "electiveNTEJsonFileName" : "inputs/NTE.json",
+  "electiveFTEJsonFileName" : "inputs/FTE.json",
+  "electiveUEJsonFileName" : "inputs/UE.json",
+  "electiveTEJsonFileName" : "inputs/TE.json",
+  "advisorsJsonName" : "inputs/Advisors.json",
+  "studentsJsonName" : "inputs/studentInformation.json"
+}
