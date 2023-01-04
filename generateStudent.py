@@ -4,6 +4,9 @@ from typing import List, Dict
 from Student import Student
 from courses import Courses
 from advisor import Advisor
+from failedCourses import FailedCourses
+from transcript import Transcript
+from completedCourses import CompletedCourses
 
 
 class GenerateStudent:
@@ -91,4 +94,79 @@ class GenerateStudent:
         if self.checkCourseLimit(selectedCourses):
             return []
         return selectedCourses
+
+    def generateYear(student: Student):
+        number = student.getStudentId()
+        yearNumber = (number // 1000) - 150000
+        if yearNumber == 116:
+            student.setCurrentYear(4)
+        elif yearNumber == 117:
+            student.setCurrentYear(3)
+        elif yearNumber == 118:
+            student.setCurrentYear(2)
+        else:
+            student.setCurrentYear(1)
+
+    def semesterSetter(student: Student, semester=None):
+        if semester == "Fall":
+            if student.getCurrentYear() == 1:
+                student.setCurrentSemester(1)
+            elif student.getCurrentYear() == 2:
+                student.setCurrentSemester(3)
+            elif student.getCurrentYear() == 3:
+                student.setCurrentSemester(5)
+            elif student.getCurrentYear() == 4:
+                student.setCurrentSemester(7)
+        elif semester == "Spring":
+            if student.getCurrentYear() == 1:
+                student.setCurrentSemester(2)
+            elif student.getCurrentYear() == 2:
+                student.setCurrentSemester(4)
+            elif student.getCurrentYear() == 3:
+                student.setCurrentSemester(6)
+            elif student.getCurrentYear() == 4:
+                student.setCurrentSemester(8)
+
+    def setCoursesList(student: Student):
+        completedCourses = []
+        failedCourses = []
+        availableCourses = []
+        student.setCompletedCourses(completedCourses)
+        student.setFailedCourses(failedCourses)
+        student.setAvailableCourses(availableCourses)
+
+    def assignFailedCourses(currentSemesterFailed: List[FailedCourses], courseCode: str):
+        failedCourses = FailedCourses()
+        failedCourses.setCourseGrade("FF")
+        failedCourses.setCourseName(courseCode)
+        currentSemesterFailed.append(failedCourses)
+
+    def prerequisiteControlAndLock(courseCode: str, lockedCourses: Dict[str, List[str]], prerequisiteList=None):
+        for courseName, prerequisite in prerequisiteList.items():
+            if courseCode in prerequisite:
+                failedPrerequisite = [courseCode]
+                lockedCourses[courseName] = failedPrerequisite
+
+    def printTranscript(self, generateAvailableCourses=None):
+        transcript = Transcript()
+        generateAvailableCourses(self.student, self.advisors, self.courses)
+        print(
+            "----------------------------------------------------------------------------------------------------------------------------")
+        for std in self.student:
+            std.generateTranscript()
+        transcript.generateTranscriptJson(self.student)
+
+    def addCompletedCourses(currentSemesterCompleted: List[CompletedCourses], courseCode: str, grade: str,
+                            finishedSemester: int):
+        completedCourses = CompletedCourses()
+        completedCourses.setCourseName(courseCode)
+        completedCourses.setCourseGrade(grade)
+        completedCourses.setGivenSemester(finishedSemester)
+        currentSemesterCompleted.append(completedCourses)
+
+
+
+
+
+
 
