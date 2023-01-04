@@ -1,5 +1,5 @@
 import random
-from typing import List
+from typing import List, Dict
 
 from Student import Student
 from courses import Courses
@@ -55,3 +55,40 @@ class GenerateStudent:
 
     def getAdvisor(self) -> Advisor:
         return random.choice(self.advisors)
+
+    def selectCoursesForSemester(self, student: Student, completedCourses: List[str], currentSemesterCourses: Dict[str, List[str]]) -> List[str]:
+        selectedCourses = []
+        for courseCode, prerequisites in currentSemesterCourses.items():
+            if prerequisites is None or all(prereq in completedCourses for prereq in prerequisites):
+                selectedCourses.append(courseCode)
+        return selectedCourses
+
+    def isFF(self, student: Student) -> bool:
+        return student.getCourseFFRate() >= self.courseFFRate
+
+    def checkCourseLimit(self, selectedCourses: List[str]) -> bool:
+        return len(selectedCourses) > self.maxNumberOfSelectionForCourses
+
+    def generateRandom(self, student: Student) -> List[str]:
+        completedCourses = student.getCompletedCourses()
+        selectedCourses = []
+        if self.semester == "First":
+            selectedCourses = random.sample(self.firstSemesterCourses, self.maxNumberOfSelectionForCourses)
+        elif self.semester == "Second":
+            selectedCourses = self.selectCoursesForSemester(student, completedCourses, self.secondSemesterCoursesHash)
+        elif self.semester == "Third":
+            selectedCourses = self.selectCoursesForSemester(student, completedCourses, self.thirdSemesterCoursesHash)
+        elif self.semester == "Fourth":
+            selectedCourses = self.selectCoursesForSemester(student, completedCourses, self.fourthSemesterCoursesHash)
+        elif self.semester == "Fifth":
+            selectedCourses = self.selectCoursesForSemester(student, completedCourses, self.fifthSemesterCourses)
+        elif self.semester == "Sixth":
+            selectedCourses = self.selectCoursesForSemester(student, completedCourses, self.sixthSemesterCoursesHash)
+        elif self.semester == "Seventh":
+            selectedCourses = self.selectCoursesForSemester(student, completedCourses, self.seventhSemesterCoursesHash)
+        elif self.semester == "Eighth":
+            selectedCourses = self.selectCoursesForSemester(student, completedCourses, self.eighthSemesterCoursesHash)
+        if self.checkCourseLimit(selectedCourses):
+            return []
+        return selectedCourses
+
