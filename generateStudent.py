@@ -1,5 +1,5 @@
 import random
-from typing import List, Dict
+from typing import List
 
 from Student import Student
 from courses import Courses
