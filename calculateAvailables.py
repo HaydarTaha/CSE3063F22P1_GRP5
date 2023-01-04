@@ -97,3 +97,42 @@ def put_available_courses_case_three(courses, student_courses_took, std_name):
             if not test:
                 calculated_semester_three_course_names.add(course_name)
     return calculated_semester_three_course_names
+
+def put_available_courses_case_four(courses, student_courses_took, std_name):
+    calculated_semester_four_course_names = []
+    for i in range(0, len(student_courses_took), 2):
+        course_name = student_courses_took[i]
+        course_grade = student_courses_took[i+1]
+        if course_grade == "FF":
+            test = False
+            for course in courses:
+                if course_name == course.pre_requisite_name:
+                    prerequisite = course.pre_requisite_name
+                    logger.info(f"{std_name} Failed: {prerequisite} He cannot choose {course.course_code}")
+                    calculated_semester_four_course_names.remove(course.course_code)
+                    calculated_semester_four_course_names.append(prerequisite)
+                    test = True
+                    break
+            if not test:
+                calculated_semester_four_course_names.append(course_name)
+    return calculated_semester_four_course_names
+
+def put_available_courses_case_five(courses, student_courses_took, std_name):
+    calculated_semester_five_course_names = []
+    for i in range(0, len(student_courses_took), 2):
+        course_name = student_courses_took[i]
+        course_grade = student_courses_took[i+1]
+        if course_grade == "FF":
+            test = False
+            for course in courses:
+                if course_name == course.pre_requisite_name:
+                    prerequisite = course.pre_requisite_name
+                    logger.info(f"{std_name} Failed: {prerequisite} He cannot choose {course.course_code}")
+                    calculated_semester_five_course_names.remove(course.course_code)
+                    calculated_semester_five_course_names.append(prerequisite)
+                    test = True
+                    break
+            if not test:
+                calculated_semester_five_course_names.append(course_name)
+    return calculated_semester_five_course_names
+
