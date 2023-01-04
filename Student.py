@@ -158,5 +158,81 @@ def get_completed_course_number(self):
 
 
 
+def gpa_calculator(self, courses):
+    aa = 4.00
+    ba = 3.50
+    bb = 3.00
+    cb = 2.50
+    cc = 2.00
+    dc = 1.50
+    dd = 1.00
+    fd = 0.50
+    ff = 0.00
+
+    credit = 0
+    sum_ = 0
+    credit_sum = 0
+    transcript_credit_sum = 0
+    for completed_course in self.completed_courses:
+        for course in courses:
+            if completed_course.course_name == course.course_code:
+                credit = course.credit
+                break
+        if completed_course.course_grade == "AA":
+            sum_ += aa * credit
+            credit_sum += credit
+            transcript_credit_sum += credit
+        elif completed_course.course_grade == "BA":
+            sum_ += ba * credit
+            credit_sum += credit
+            transcript_credit_sum += credit
+        elif completed_course.course_grade == "BB":
+            sum_ += bb * credit
+            credit_sum += credit
+            transcript_credit_sum += credit
+        elif completed_course.course_grade == "CB":
+            sum_ += cb * credit
+            credit_sum += credit
+            transcript_credit_sum += credit
+        elif completed_course.course_grade == "CC":
+            sum_ += cc * credit
+            credit_sum += credit
+            transcript_credit_sum += credit
+        elif completed_course.course_grade == "DC":
+            sum_ += dc * credit
+            credit_sum += credit
+            transcript_credit_sum += credit
+        elif completed_course.course_grade == "DD":
+            sum_ += dd * credit
+            credit_sum += credit
+            transcript_credit_sum += credit
+        elif completed_course.course_grade == "FD":
+            sum_ += fd * credit
+            credit_sum += credit
+        elif completed_course.course_grade == "FF":
+            sum_ += ff * credit
+            credit_sum += credit
+        else:
+            print("Hatali giris yaptiniz.")
+
+    gpa = round(sum_ / credit_sum, 2)
+    self.gpa = gpa
+    self.total_credit = transcript_credit_sum
+
+
+
+
+
+
+def get_advisor_name(self):
+    return f"{self.advisor.get_f_name()} {self.advisor.get_l_name()}"
+
+def generate_transcript(self):
+    transcript = Transcript(self.completed_courses, self.failed_courses, self.gpa, self.total_credit, self.get_current_selected_courses(), self)
+    self.transcript = transcript
+    transcript.print_transcript_specific_student(self)
+
+
+
 
 
