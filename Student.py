@@ -79,9 +79,6 @@ class Student(Person):
         return self.completed_courses
 
 
-
-
-
 def select_from_available_courses(self, max_number_of_selection_for_courses):
     courses_add = []
     # Here if we have more than 10 available courses we first check failed courses
@@ -110,6 +107,56 @@ def select_from_available_courses(self, max_number_of_selection_for_courses):
     # If the size is not more than 10 we add every available course to selected_courses attr.
     else:
         self.current_selected_courses.extend(self.available_courses)
+
+
+
+
+
+
+def choose_from_elective_courses(self, ue, fte, nte, te):
+    for i in range(len(self.current_selected_courses)):
+        value = random.randint(5)
+        if "UE" in self.current_selected_courses[i]:
+            self.current_selected_courses[i] = ue[value].course_code
+        elif "FTE" in self.current_selected_courses[i]:
+            self.current_selected_courses[i] = fte[value].course_code
+        elif "NTE" in self.current_selected_courses[i]:
+            self.current_selected_courses[i] = nte[value].course_code
+        elif "TE" in self.current_selected_courses[i]:
+            self.current_selected_courses[i] = te[value].course_code
+
+
+
+
+
+
+def get_available_courses(self):
+    return self.available_courses
+
+# This checks if the course is failed for this student
+# and returns true if failed or false if passed
+def check_if_course_failed(self, course_code):
+    for completed_course in self.completed_courses:
+        if completed_course.course_name == course_code and completed_course.course_grade == "FF":
+            return True
+    return False
+
+# This method sends current_selected_courses to the corresponding advisor for this student
+def send_to_advisor_selected_classes(self):
+    self.advisor.advisor_control(self.current_selected_courses, self)
+
+# This is a method the advisor calls
+# it changes selected courses depending on if each course is accepted or rejected and then updates it
+def change_selected_courses(self, advisor_approved_courses, advisor_rejected_courses_and_reasons, advisor_name):
+    self.current_selected_courses.clear()
+    self.current_selected_courses.extend(advisor_approved_courses)
+    logger.info(f"For student: {self.get_f_name()} {self.get_l_name()}\n{advisor_name} approved: {advisor_approved_courses}\nrejected: {advisor_rejected_courses_and_reasons}")
+
+# this returns how many courses this student finished.
+def get_completed_course_number(self):
+    return len(self.completed_courses)
+
+
 
 
 
