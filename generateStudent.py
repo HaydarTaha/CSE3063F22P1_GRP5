@@ -92,3 +92,39 @@ class GenerateStudent:
             return []
         return selectedCourses
 
+    def generateYear(student: Student):
+        number = student.getStudentId()
+        yearNumber = (number // 1000) - 150000
+        if yearNumber == 116:
+            student.setCurrentYear(4)
+        elif yearNumber == 117:
+            student.setCurrentYear(3)
+        elif yearNumber == 118:
+            student.setCurrentYear(2)
+        else:
+            student.setCurrentYear(1)
+
+    def semesterSetter(student: Student, semester=None):
+        if semester == "Fall":
+            if student.getCurrentYear() == 1:
+                student.setCurrentSemester(1)
+            elif student.getCurrentYear() == 2:
+                student.setCurrentSemester(3)
+            elif student.getCurrentYear() == 3:
+                student.setCurrentSemester(5)
+            elif student.getCurrentYear() == 4:
+                student.setCurrentSemester(7)
+        elif semester == "Spring":
+            if student.getCurrentYear() == 1:
+                student.setCurrentSemester(2)
+            elif student.getCurrentYear() == 2:
+                student.setCurrentSemester(4)
+            elif student.getCurrentYear() == 3:
+                student.setCurrentSemester(6)
+            elif student.getCurrentYear() == 4:
+                student.setCurrentSemester(8)
+
+
+
+
+
