@@ -1,6 +1,10 @@
 import logging
 from typing import List, Tuple
 from logger import logger
+from typing import List
+
+from courses import Courses
+
 
 class CalculateAvailables:
     logger = logging.getLogger(__name__)
@@ -135,4 +139,44 @@ def put_available_courses_case_five(courses, student_courses_took, std_name):
             if not test:
                 calculated_semester_five_course_names.append(course_name)
     return calculated_semester_five_course_names
+
+def put_available_courses_case_six(courses: List[Courses], student_courses_took: List[str], std_name: str) -> List[str]:
+    calculated_semester_six_course_names = []
+    for i in range(0, len(student_courses_took), 2):
+        course_name = student_courses_took[i]
+        course_grade = student_courses_took[i + 1]
+        if course_grade == "FF":
+            test = False
+            for courses1 in courses:
+                if course_name == courses1.get_pre_requisite_name():
+                    prerequisite = courses1.get_pre_requisite_name()
+                    logger.warning(f"{std_name} Failed: {prerequisite} He cannot choose {courses1.get_course_code()}")
+                    calculated_semester_six_course_names.remove(courses1.get_course_code())
+                    calculated_semester_six_course_names.add(prerequisite)
+                    test = True
+                    break
+            if not test:
+                calculated_semester_six_course_names.add(course_name)
+    return calculated_semester_six_course_names
+
+
+def put_available_courses_case_seven(courses: List[Courses], student_courses_took: List[str], std_name: str) -> List[
+    str]:
+    calculated_semester_seven_course_names = []
+    for i in range(0, len(student_courses_took), 2):
+        course_name = student_courses_took[i]
+        course_grade = student_courses_took[i + 1]
+        if course_grade == "FF":
+            test = False
+            for courses1 in courses:
+                if course_name == courses1.get_pre_requisite_name():
+                    prerequisite = courses1.get_pre_requisite_name()
+                    logger.info(f"{std_name} Failed: {prerequisite} He cannot choose {courses1.get_course_code()}")
+                    calculated_semester_seven_course_names.remove(courses1.get_course_code())
+                    calculated_semester_seven_course_names.add(prerequisite)
+                    test = True
+                    break
+            if not test:
+                calculated_semester_seven_course_names.add(course_name)
+    return calculated_semester_seven_course_names
 
