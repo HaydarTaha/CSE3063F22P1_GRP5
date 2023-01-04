@@ -4,6 +4,9 @@ from typing import List, Dict
 from Student import Student
 from courses import Courses
 from advisor import Advisor
+from failedCourses import FailedCourses
+from transcript import Transcript
+from completedCourses import CompletedCourses
 
 
 class GenerateStudent:
@@ -123,6 +126,45 @@ class GenerateStudent:
                 student.setCurrentSemester(6)
             elif student.getCurrentYear() == 4:
                 student.setCurrentSemester(8)
+
+    def setCoursesList(student: Student):
+        completedCourses = []
+        failedCourses = []
+        availableCourses = []
+        student.setCompletedCourses(completedCourses)
+        student.setFailedCourses(failedCourses)
+        student.setAvailableCourses(availableCourses)
+
+    def assignFailedCourses(currentSemesterFailed: List[FailedCourses], courseCode: str):
+        failedCourses = FailedCourses()
+        failedCourses.setCourseGrade("FF")
+        failedCourses.setCourseName(courseCode)
+        currentSemesterFailed.append(failedCourses)
+
+    def prerequisiteControlAndLock(courseCode: str, lockedCourses: Dict[str, List[str]], prerequisiteList=None):
+        for courseName, prerequisite in prerequisiteList.items():
+            if courseCode in prerequisite:
+                failedPrerequisite = [courseCode]
+                lockedCourses[courseName] = failedPrerequisite
+
+    def printTranscript(self, generateAvailableCourses=None):
+        transcript = Transcript()
+        generateAvailableCourses(self.student, self.advisors, self.courses)
+        print(
+            "----------------------------------------------------------------------------------------------------------------------------")
+        for std in self.student:
+            std.generateTranscript()
+        transcript.generateTranscriptJson(self.student)
+
+    def addCompletedCourses(currentSemesterCompleted: List[CompletedCourses], courseCode: str, grade: str,
+                            finishedSemester: int):
+        completedCourses = CompletedCourses()
+        completedCourses.setCourseName(courseCode)
+        completedCourses.setCourseGrade(grade)
+        completedCourses.setGivenSemester(finishedSemester)
+        currentSemesterCompleted.append(completedCourses)
+
+
 
 
 
