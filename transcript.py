@@ -51,12 +51,6 @@ class Transcript:
             self.completedCourseStrings.append(completedCourses.get_course_name() + " " +
                                                completedCourses.get_course_grade() + " Given: " +
                                                completedCourses.get_given_semester())
-    def seperate_failed_courses(self):
-        self.failedCoursesStrings = []
-        for completedCourse in self.completedCourses:
-            if completedCourse.get_course_grade() == "FF":
-                self.failedCoursesStrings.append(completedCourse.get_course_name())
-                self.failedCoursesStrings.append(completedCourse.get_course_grade())
 
     def save_transcript_to_json(self):
         data = {}
