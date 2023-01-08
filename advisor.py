@@ -1,33 +1,21 @@
 import random
-
 from person import Person
 
 
 class Advisor(Person):
 
-    def __init__(self):
-        self._advisorId = None
-        self._studentsList = []
+    def __init__(self, data):
+        self.advisor_id = data['advisorId']
+        super().__init__(data['fName'], data['lName'])
+        self.students_list = []
 
-    def set_fName(self, fName):
-        super().set_fName(fName)
-
-    def set_lName(self, lName):
-        super().set_lName(lName)
-
-    def set_advisor(self, advisorId):
-        self._advisorId = advisorId
-
-    def advisor_control(self, chosenClasses, student):
-        stringArray = []
-        stringArray.append('Rejected because quota is full')
-        stringArray.append('Rejected because the timing is not appropriate')
-        stringArray.append('Rejected because student cannot take many lessons')
-
+    def advisor_control(self, chosen_classes, student):
+        stringArray = ['Rejected because quota is full', 'Rejected because the timing is not appropriate',
+                       'Rejected because student cannot take many lessons']
         rejectedList = []
         acceptedList = []
 
-        courseSize = len(chosenClasses)
+        courseSize = len(chosen_classes)
 
         for i in range(courseSize):
             randomNumber = random.randint(0, 3)
@@ -53,10 +41,7 @@ class Advisor(Person):
                 else:
                     acceptedList.append(student.get_current_selected_courses()[i])
 
-        student.change_selected_courses(acceptedList, rejectedList, self.get_fName() + ' ' + self.get_lName)
+        student.change_selected_courses(acceptedList, rejectedList, super().f_name + ' ' + super().l_name)
 
-    def add_advisors_looking_list(self, std):
-        self._studentsList.append(std)
-
-    def get_students_list(self):
-        return self._studentsList
+    def add_advisors_looking_list(self, student):
+        self.students_list.append(student)

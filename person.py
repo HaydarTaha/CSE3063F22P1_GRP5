@@ -1,13 +1,13 @@
-class Person:
+from abc import ABC
 
-    def set_fName(self, fName):
-        self._fName = fName
 
-    def set_lName(self, lName):
-        self._lName = lName
+class Person(ABC):
+    def __init__(self, f_name, l_name):
+        self.f_name = f_name
+        self.l_name = l_name
 
-    def get_fName(self):
-        return self._fName
+    def get_f_name(self):
+        return self.f_name
 
-    def get_lName(self):
-        return self._lName
+    def get_l_name(self):
+        return self.l_name
