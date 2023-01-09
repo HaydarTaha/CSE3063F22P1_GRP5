@@ -1,6 +1,6 @@
 {
   "semester" : "Spring",
-  "courseFFRate" : 0,
+  "courseFFRate" : 27,
   "quotaForElectives" : 20,
   "quotaForMandatory" : 150,
   "maxNumberOfSelectionForCourses" : 10,

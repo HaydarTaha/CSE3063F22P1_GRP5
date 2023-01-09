@@ -103,13 +103,12 @@ class GenerateStudent:
                 locked_courses[course_name] = failed_prerequisite
 
     def print_transcript(self):
-        transcript = Transcript()
+        transcript = Transcript
         self.generate_available_courses(self.__student, self.__advisors, self.__courses)
         print(
             "----------------------------------------------------------------------------------------------------------------------------")
         for std in self.__student:
             std.generate_transcript()
-        transcript.generate_transcript_json(self.__student)
 
     def add_completed_courses(self, current_semester_completed, course_code, grade, finished_semester):
         completed_courses = CompletedCourses()
@@ -122,7 +121,7 @@ class GenerateStudent:
         failed_courses_size = len(s.get_failed_courses())
         if failed_courses_size > 0:
             for i in range(failed_courses_size):
-                course_code = s.get_failed_courses()[i].get_course_name()
+                course_code = str("")
                 if course_code not in current_semester_completed:
                     if self.course_is_given_already(s, course_code):
                         continue
@@ -134,9 +133,13 @@ class GenerateStudent:
                             raise RuntimeError(e)
                         if grade != "FF":
                             if not self.course_is_given_already(s, course_code) != False:
-                                print(s.get_failed_courses)
                                 self.add_completed_courses(current_semester_completed, course_code, grade, current_semester)
-                                s.get_failed_courses().remove(course_code)
+                                index = 0
+                                for code in s.get_failed_courses():
+                                    if code.get_course_name() == course_code:
+                                        break
+                                    index = index + 1
+                                # s.get_failed_courses().pop(index)
                                 failed_courses_size -= 1
 
     def unlock_locked_courses_and_set_available(self, s, completed_courses, locked_courses):
@@ -147,10 +150,11 @@ class GenerateStudent:
                     for course_name, prerequisite in locked_courses.items():
                         for prerequisite_code in prerequisite:
                             if prerequisite_code == completed_courses[i].get_course_name():
-                                s.get_available_courses().add(course_name)
+                                s.get_available_courses().append(course_name)
                                 locked_check = True
                     if locked_check:
-                        locked_courses.pop(completed_courses[i].get_course_name())
+                        pass
+                        # del locked_courses[completed_courses[i].get_course_name()]
 
     def check_available_courses(self, s, semester, current_semester_completed, current_semester_failed, locked_courses,
                                 current_semester_courses):
@@ -428,7 +432,7 @@ class GenerateStudent:
             self.set_student_advisor(s)
             available_courses_size = len(s.get_available_courses())
             for i in range(available_courses_size):
-                s.get_available_courses().remove(i)
+                # s.get_available_courses().pop(i)
                 available_courses_size = available_courses_size - 1
             current_selected = []
             s.set_current_selected_courses(current_selected)
@@ -437,7 +441,7 @@ class GenerateStudent:
                     completed_courses = CompletedCourses()
                     completed_courses.set_course_name(failed_courses.get_course_name())
                     completed_courses.set_course_grade(failed_courses.get_course_grade())
-                    s.completed_courses.add(completed_courses)
+                    # s.completed_courses.append(completed_courses)
         self.print_transcript()
 
     def assign_random_grades(self):

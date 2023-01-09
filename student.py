@@ -9,6 +9,7 @@ from advisor import Advisor
 class Student(Person):
     def __init__(self, data):
         super().__init__(data['fName'], data['lName'])
+        self.transcript = None
         self.__advisor = None
         self.__advisor: Advisor
         self.__student_id = data['studentId']
@@ -170,7 +171,7 @@ class Student(Person):
             else:
                 print("Invalid input.")
 
-        gpa = round(sum_ / credit_sum, 2)
+        gpa = round(sum_ // credit_sum, 2)
         self.__gpa = gpa
         self.__total_credit = transcript_credit_sum
 

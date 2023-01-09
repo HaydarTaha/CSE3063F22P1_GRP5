@@ -2,30 +2,26 @@ import json
 
 
 class Transcript:
-
-    def __init__(self):
-        self.completedCourses = []
-    def __int__(self, completed_courses, failed_courses, gpa, completed_credits, student_selected_courses, student):
-        self.completedCourses = completed_courses
-        self.failedCourses = failed_courses
+    def __init__(self, completedCourses, failedCourses, gpa, completedCredits, studentSelectedCourses, student):
+        self.completedCourses = completedCourses
+        self.failedCourses = failedCourses
         self.gpa = gpa
-        self.completedCredits = completed_credits
-        self.student_selected_courses = student_selected_courses
+        self.completedCredits = completedCredits
+        self.studentSelectedCourses = studentSelectedCourses
         self.student = student
-        self.student_advisor = student.get_advisor()
+        self.failedCoursesStrings = []
+        self.completedCourseStrings = []
 
     def separate_failed_courses(self):
-        self.failedCoursesStrings = []
         for completedCourse in self.completedCourses:
             if completedCourse.get_course_grade == "FF":
                 self.failedCoursesStrings.append(completedCourse.get_course_name())
                 self.failedCoursesStrings.append(completedCourse.get_course_grade())
 
     def print_transcript_specific_student(self, student):
-        student.get_transcript().transform_specific_student_transcript_elements_to_list(student)
+        student.transcript.transform_specific_student_transcript_elements_to_list(student)
         print("------------------------------------------------------------------------------------------------")
-        print(
-            "ID: " + student.get_student_id() + "\nFullName: " + student.get_f_name() + " " + student.get_l_name() + "\nAdvisor: " + self.student.get_advisor_name() + "\nCourses Taken:" + self.completedCourseStrings + "\nGPA: " + self.gpa + "\nTotal Credits: " + self.completedCredits + "\nAvailable Courses:" + student.get_available_courses() + "\nAdvisor Approved Courses: " + self.studentSelectedCourses + "\nFailed Courses: " + self.failedCoursesStrings)
+        print(str("ID: {}\nFullName: {}\nCourses Taken: {}\nGPA: {}\nTotal Credits: {}\nAvailable Courses: {}\nAdvisor Approved Courses: {}\nFailed Courses: {}".format(student.get_student_id(), student.get_full_name(), self.completedCourseStrings, self.gpa, self.completedCredits, student.get_available_courses(), self.studentSelectedCourses, self.failedCoursesStrings)))
 
     def transform_transcript_elements_to_list(self):
         self.completedCourseStrings = []
@@ -34,11 +30,8 @@ class Transcript:
             self.completedCourseStrings.append(completedCourses.get_course_grade())
 
     def transform_specific_student_transcript_elements_to_list(self, student):
-        self.completedCourseStrings = []
         for completedCourses in student.get_completed_courses():
-            self.completedCourseStrings.append(completedCourses.get_course_name() + " " +
-                                               completedCourses.get_course_grade() + " Given: " +
-                                               completedCourses.get_given_semester())
+            self.completedCourseStrings.append(str("{} {} Given: {}".format(completedCourses.get_course_name(), completedCourses.get_course_grade(), completedCourses.get_given_semester())))
 
     def save_transcript_to_json(self):
         data = {}
